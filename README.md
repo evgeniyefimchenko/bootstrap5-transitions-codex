@@ -1,4 +1,3 @@
-````markdown
 # Bootstrap 5 Transitions Codex
 
 Каталог готовых анимаций и микровзаимодействий для интерфейсов на Bootstrap 5.
@@ -19,14 +18,9 @@
 - CS-Cart;
 - Bootstrap-админках;
 - CRM/ERP-панелях;
-- legacy-проектах;
-- React;
-- Vue;
-- Svelte;
-- Angular;
-- проектах, где уже используется jQuery.
+- legacy-проектах на Bootstrap 5.
 
-Проект не навязывает стек. Эффекты — это обычные CSS-классы, поэтому их можно применять почти в любом frontend-окружении.
+Эффекты состоят из CSS-классов и небольшого опционального Vanilla JS runtime для состояний, которые невозможно выразить только CSS.
 
 ## Что внутри
 
@@ -35,7 +29,7 @@
 ```text
 core      — базовые эффекты для частого использования
 extended  — дополнительные эффекты для более специфичных UI-сценариев
-````
+```
 
 В каталоге есть эффекты для:
 
@@ -75,6 +69,15 @@ extended  — дополнительные эффекты для более сп
 ```
 
 Готово. Кнопка получает мягкий press-эффект без дополнительного JavaScript.
+
+Если в каталоге для эффекта указано `Requires JS: yes`, после Bootstrap Bundle подключите runtime:
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/bootstrap5-transitions.js"></script>
+```
+
+Runtime обслуживает только необходимые состояния: показ toast, loading/success кнопок, изменение строк и счётчиков, drag-состояние файла и scroll reveal. `assets/js/demo.js` нужен только странице каталога и не должен подключаться в приложении.
 
 ## Пример: модальное окно
 
@@ -166,49 +169,19 @@ bsx-skeleton-shimmer
 
 ## Совместимость
 
-Проект можно использовать в любом проекте, где можно добавить CSS-класс к HTML-элементу.
+Проект рассчитан на Bootstrap 5.3 и обычную Bootstrap-разметку.
 
 Поддерживаются:
 
 * Bootstrap 5.3;
 * обычная HTML-разметка;
 * PHP-шаблоны;
-* Twig / Blade;
-* JSX;
-* Vue templates;
-* Svelte markup;
-* Angular templates;
-* jQuery-проекты.
-
-В React пример будет выглядеть так:
-
-```jsx
-<button className="btn btn-primary bsx-button-press">
-  Save
-</button>
-```
-
-В Vue:
-
-```vue
-<button class="btn btn-primary bsx-button-press">
-  Save
-</button>
-```
-
-В jQuery-проекте класс можно добавить динамически:
-
-```js
-$('.btn-save').addClass('bsx-button-press');
-```
+* Twig и Blade;
+* Vanilla JS для эффектов, которым требуется изменение состояния.
 
 ## Важное отличие
 
-Этот репозиторий не поставляет отдельные компоненты для React, Vue, Svelte, Angular или jQuery.
-
-Он поставляет универсальные CSS-классы и HTML-сниппеты для Bootstrap 5.
-
-То есть проект не требует конкретный JavaScript-фреймворк, но может использоваться внутри любого из них.
+Репозиторий не поставляет отдельные UI-компоненты и не заменяет Bootstrap API. Он добавляет CSS-классы, HTML-сниппеты и небольшой runtime для явно отмеченных интерактивных примеров.
 
 ## Codex Agent Skill
 
@@ -241,8 +214,9 @@ bsx-modal-scale
 1. Найдите подходящий эффект в каталоге.
 2. Подключите `assets/css/bootstrap5-transitions.css`.
 3. Добавьте нужный `bsx-*` класс к Bootstrap-компоненту.
-4. Проверьте результат в браузере.
-5. При необходимости настройте CSS-переменные длительности и easing.
+4. Для эффекта с `Requires JS: yes` подключите `assets/js/bootstrap5-transitions.js`.
+5. Проверьте поведение, клавиатуру, ARIA и reduced motion.
+6. При необходимости настройте CSS-переменные длительности и easing.
 
 ## CSS-переменные
 
@@ -288,7 +262,9 @@ assets/
     core.css
     extended.css
   js/
+    bootstrap5-transitions.js
     demo.js
+    effects-data.js
 
 snippets/
   core/

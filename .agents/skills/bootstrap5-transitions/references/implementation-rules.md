@@ -17,6 +17,9 @@
 - Use event delegation for repeated demo controls.
 - Do not use inline event handlers.
 - Keep CSS classes responsible for presentation and JS responsible for state.
+- When the catalog says `Requires JS: yes`, include or adapt `assets/js/bootstrap5-transitions.js`.
+- Treat `assets/js/demo.js` as catalog UI code only; never copy it into an application.
+- For application-owned state, reuse the documented `bsx-is-*` classes instead of coupling business logic to demo markup.
 
 ## Accessibility
 

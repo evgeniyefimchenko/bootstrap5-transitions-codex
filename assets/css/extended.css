@@ -478,15 +478,16 @@
 }
 
 .bsx-sidebar-mini-expand {
-  max-width: 5rem;
+  clip-path: inset(0 calc(100% - 5rem) 0 0 round var(--bs-border-radius));
+  inline-size: 16rem;
   overflow: hidden;
-  transition: max-width var(--bsx-duration-lg) var(--bsx-ease-out);
+  transition: clip-path var(--bsx-duration-lg) var(--bsx-ease-out);
   white-space: nowrap;
 }
 
 .bsx-sidebar-mini-expand:hover,
 .bsx-sidebar-mini-expand:focus-within {
-  max-width: 16rem;
+  clip-path: inset(0 round var(--bs-border-radius));
 }
 
 .bsx-sidebar-overlay-blur {
@@ -604,6 +605,7 @@
   animation: bsx-dots 1s ease-in-out infinite;
   background: currentColor;
   border-radius: 50%;
+  display: inline-block;
   height: .5rem;
   width: .5rem;
 }
@@ -749,7 +751,15 @@
 }
 
 .bsx-popover-content-stagger.popover .popover-body { animation-delay: 50ms; }
-.bsx-popover-dismiss-fade.popover { animation: bsx-fade-in var(--bsx-duration-md) ease both; }
+.bsx-popover-dismiss-fade.popover.fade {
+  animation: none;
+  opacity: 0;
+  transition: opacity var(--bsx-duration-md) ease;
+}
+
+.bsx-popover-dismiss-fade.popover.fade.show {
+  opacity: 1;
+}
 
 /* Progress and stepper */
 .bsx-progress-fill-soft .progress-bar {

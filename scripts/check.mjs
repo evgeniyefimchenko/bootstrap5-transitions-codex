@@ -47,6 +47,7 @@ const requiredFiles = [
   "assets/css/bootstrap5-transitions.css",
   "assets/css/core.css",
   "assets/css/extended.css",
+  "assets/js/bootstrap5-transitions.js",
   "assets/js/demo.js",
   "assets/js/effects-data.js",
   "references/catalog.md",
@@ -71,6 +72,8 @@ const catalog = await read("references/catalog.md");
 const skillCatalog = await read(".agents/skills/bootstrap5-transitions/references/catalog.md");
 const skill = await read(".agents/skills/bootstrap5-transitions/SKILL.md");
 const index = await read("index.html");
+const readme = await read("README.md");
+const runtimeJs = await read("assets/js/bootstrap5-transitions.js");
 const packageJson = JSON.parse(await read("package.json"));
 
 assert(coreEffects.length === 82, `Expected 82 core effects, found ${coreEffects.length}`);
@@ -81,8 +84,20 @@ assert(aggregateCss.includes('@import "./extended.css";'), "Aggregate CSS does n
 assert(packageJson.license === "MIT", "package.json license must be MIT");
 assert(!packageJson.dependencies, "Production dependencies are not allowed");
 assert(index.includes("bootstrap@5.3.8"), "Demo must use the pinned Bootstrap 5.3 CDN");
+assert(index.includes("assets/js/bootstrap5-transitions.js"), "Demo does not load the reusable runtime");
 assert(index.includes("assets/js/demo.js"), "Demo does not load assets/js/demo.js");
 assert(index.includes("assets/css/bootstrap5-transitions.css"), "Demo does not load aggregate CSS");
+assert(
+  index.indexOf("bootstrap.bundle.min.js") < index.indexOf("assets/js/bootstrap5-transitions.js")
+    && index.indexOf("assets/js/bootstrap5-transitions.js") < index.indexOf("assets/js/demo.js"),
+  "Demo scripts must load Bootstrap, reusable runtime, then demo.js",
+);
+assert(!readme.startsWith("```"), "README must not be wrapped in an outer code fence");
+assert(!readme.includes("\uFFFD"), "README contains invalid replacement characters");
+assert((readme.match(/^## Когда не подходит$/gm) ?? []).length === 1, "README contains duplicated tail sections");
+assert(!/```(?:jsx|vue|svelte|angular)|\$\([^)]*\)\.(?:addClass|removeClass|toggleClass)/i.test(readme), "README contains a forbidden framework example");
+assert(readme.includes("assets/js/bootstrap5-transitions.js"), "README does not explain the reusable runtime");
+assert(readme.includes("assets/js/demo.js"), "README does not distinguish demo-only JavaScript");
 
 const frontmatterMatch = skill.match(/^---\r?\n([\s\S]*?)\r?\n---/);
 assert(frontmatterMatch, "Skill frontmatter format is invalid");
@@ -108,15 +123,31 @@ for (const effect of effects) {
     assert(snippet.includes(effect.className), `Snippet does not use ${effect.className}: ${effect.snippetPath}`);
     assert(!/\bonclick\s*=|\bonchange\s*=|\boninput\s*=/i.test(snippet), `Inline handler found: ${effect.snippetPath}`);
     assert(!/\bdata-toggle\s*=|\bdata-target\s*=/i.test(snippet), `Bootstrap 4 data API found: ${effect.snippetPath}`);
+    assert(
+      snippet.includes("assets/js/bootstrap5-transitions.js") === effect.requiresJs,
+      `Runtime dependency marker mismatch: ${effect.snippetPath}`,
+    );
+    assert(
+      !snippet.includes("data-bsx-action") || effect.requiresJs,
+      `Snippet uses data-bsx-action but is marked CSS-only: ${effect.snippetPath}`,
+    );
   }
   assert(catalog.includes(`## ${effect.name}`), `Main catalog missing ${effect.name}`);
   assert(skillCatalog.includes(`## ${effect.name}`), `Skill catalog missing ${effect.name}`);
+  assert(
+    catalog.includes(`Runtime behavior: ${effect.runtimeBehavior ?? "none"}`),
+    `Main catalog runtime behavior mismatch for ${effect.name}`,
+  );
 }
 
 for (const [name, css] of [["core.css", coreCss], ["extended.css", extendedCss]]) {
   assert(css.includes("@media (prefers-reduced-motion: reduce)"), `${name} lacks reduced-motion fallback`);
   assert(css.includes('[class*="bsx-"] *::after'), `${name} reduced-motion fallback does not cover nested pseudo-elements`);
   assert(!/^\s*\.(btn|modal|card|dropdown-menu|toast|alert|offcanvas)\s*[{,]/m.test(css), `${name} contains an unscoped Bootstrap override`);
+  assert(
+    !/transition\s*:[^;]*(?:max-)?(?:width|height)|transition\s*:[^;]*(?:top|right|bottom|left|margin|padding)/i.test(css),
+    `${name} animates a layout-changing property`,
+  );
   const importantLines = css.split(/\r?\n/).filter((line) => line.includes("!important"));
   assert(
     importantLines.every((line) => /(animation-duration|animation-iteration-count|transition-duration|scroll-behavior)/.test(line)),
@@ -131,13 +162,30 @@ assert(coreCss.includes(".bsx-toast-progress-line.show::after"), "Toast progress
 assert(extendedCss.includes(".bsx-toast-auto-hide-bar.show::after"), "Toast auto-hide bar must start when the toast is shown");
 assert(extendedCss.includes("@keyframes bsx-progress-fill"), "Progress fill animation is missing");
 assert(extendedCss.includes("@keyframes bsx-progress-stripes"), "Striped progress animation is missing");
+assert(
+  /\.bsx-spinner-fade \.bsx-loader-dot\s*\{[^}]*display:\s*inline-block/s.test(extendedCss),
+  "Spinner fade dots must have a rendered box",
+);
+assert(
+  /\.bsx-popover-dismiss-fade\.popover\.fade\s*\{[^}]*transition:\s*opacity/s.test(extendedCss)
+    && /\.bsx-popover-dismiss-fade\.popover\.fade\.show/.test(extendedCss),
+  "Popover dismiss fade must transition both hidden and shown states",
+);
+assert(!/\.bsx-sidebar-mini-expand\s*\{[^}]*(?:max-)?width[^}]*transition/s.test(extendedCss), "Sidebar mini expand must not animate width");
 
 const fullscreenSnippet = await read("snippets/extended/modal/modal-fullscreen-soft.html");
 const disabledSnippet = await read("snippets/extended/button/button-disabled-soft.html");
 const pressSnippet = await read("snippets/core/button/button-press.html");
+const stackToastSnippet = await read("snippets/core/toast/toast-stack-pop.html");
 assert(fullscreenSnippet.includes("modal-fullscreen"), "Fullscreen modal snippet lacks .modal-fullscreen");
 assert(/\bdisabled\b/.test(disabledSnippet), "Disabled button snippet lacks the disabled state");
 assert(!pressSnippet.includes("data-bsx-action"), "CSS-only button snippet should not require demo JavaScript");
+assert((stackToastSnippet.match(/\bclass="toast(?:\s|")/g) ?? []).length >= 2, "Toast stack snippet must contain at least two toasts");
+
+const runtimeActions = new Set(
+  [...runtimeJs.matchAll(/case\s+"([^"]+)"/g)].map((match) => match[1]),
+);
+const snippetActions = new Set();
 
 const sourceFiles = [
   ...(await walk("assets")).filter((file) => /\.(css|js)$/i.test(file)),
@@ -151,6 +199,15 @@ for (const file of sourceFiles) {
   assert(!/<script[^>]+jquery|from\s+["'](?:react|vue|svelte|angular|gsap)|animate\.css|framer-motion/i.test(source), `Forbidden dependency reference in ${file}`);
   assert(!/\bdata-toggle\s*=|\bdata-target\s*=/i.test(source), `Bootstrap 4 data API in ${file}`);
   assert(!/\b(?:TODO|FIXME|PLACEHOLDER)\b/.test(source), `Temporary marker in ${file}`);
+  if (file.endsWith(".html")) {
+    for (const match of source.matchAll(/data-bsx-action="([^"]+)"/g)) {
+      snippetActions.add(match[1]);
+    }
+  }
+}
+
+for (const action of snippetActions) {
+  assert(runtimeActions.has(action), `Reusable runtime does not implement data-bsx-action="${action}"`);
 }
 
 const snippetFiles = (await walk("snippets")).filter((file) => file.endsWith(".html"));

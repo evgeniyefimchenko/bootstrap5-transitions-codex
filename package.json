@@ -7,7 +7,9 @@
   "scripts": {
     "dev": "npx serve .",
     "generate": "node scripts/generate.mjs",
-    "check": "node scripts/check.mjs"
+    "check": "node scripts/check.mjs",
+    "check:generated": "node scripts/generate.mjs --check",
+    "test": "npm run check && npm run check:generated"
   },
   "keywords": [
     "bootstrap",

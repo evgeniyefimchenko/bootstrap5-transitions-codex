@@ -27,9 +27,10 @@ Apply ready-made Bootstrap 5 transition patterns from this repository.
 4. Read [references/implementation-rules.md](references/implementation-rules.md) for the component.
 5. Add the smallest required CSS class and preserve existing markup.
 6. Copy or adapt the matching snippet only when creating a component.
-7. Add Vanilla JS only for dynamic demo or application state.
-8. Verify keyboard behavior, ARIA state, and reduced-motion behavior.
-9. Summarize the selected effect and changed files.
+7. Check `Requires JS` in the catalog. When it is `yes`, include or adapt `assets/js/bootstrap5-transitions.js`; never depend on `assets/js/demo.js`.
+8. Add custom Vanilla JS only when the runtime behavior does not match the application's state model.
+9. Verify keyboard behavior, ARIA state, Bootstrap lifecycle, and reduced-motion behavior.
+10. Summarize the selected effect, runtime requirement, and changed files.
 
 ## Decision Table
 
@@ -64,3 +65,5 @@ Read [references/decision-table.md](references/decision-table.md) when the core 
 - Do not use unscoped selectors such as `.modal`, `.btn`, or `.card`.
 - Do not remove Bootstrap classes or ARIA attributes.
 - Do not duplicate an existing effect under a new name.
+- Do not copy a `data-bsx-action` snippet without its documented runtime dependency.
+- Do not use demo-only catalog code as an application dependency.

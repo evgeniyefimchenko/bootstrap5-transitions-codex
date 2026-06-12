@@ -11,7 +11,9 @@ This repository provides Bootstrap 5 transition snippets and a Codex Agent Skill
 - No React, Vue, Svelte, Angular.
 - No animation libraries.
 - CSS-first.
-- Vanilla JS only for demo interactions.
+- Vanilla JS only where Bootstrap or application state changes require it.
+- Keep reusable runtime behavior in `assets/js/bootstrap5-transitions.js`.
+- Keep catalog-only behavior in `assets/js/demo.js`.
 - All custom classes must use `bsx-` prefix.
 - Do not override Bootstrap globally unless required.
 - Do not break Bootstrap `data-bs-*` API.
@@ -44,3 +46,4 @@ Check:
 6. Demo page works by opening `index.html`.
 7. README explains usage.
 8. SKILL.md explains how Codex should apply effects.
+9. JS-dependent snippets declare and document the runtime dependency.

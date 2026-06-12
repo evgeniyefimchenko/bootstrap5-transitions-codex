@@ -277,31 +277,35 @@ const extendedGroups = {
   ],
 };
 
-const customJsEffects = new Set([
-  "toast-stack-pop",
-  "toast-progress-line",
-  "toast-auto-hide-bar",
-  "alert-dismissible-exit",
-  "button-loading-spinner",
-  "button-loading-dots",
-  "button-success-pop",
-  "button-success-check",
-  "button-ripple-lite",
-  "form-invalid-shake",
-  "form-input-clear-pop",
-  "counter-bump",
-  "metric-card-update",
-  "counter-change-up",
-  "counter-change-down",
-  "price-change-flash",
-  "table-row-insert",
-  "table-row-remove",
-  "table-row-update-flash",
-  "table-row-selected",
-  "table-sort-icon-rotate",
-  "list-item-remove",
-  "scroll-reveal-lite",
+const runtimeBehaviors = new Map([
+  ["alert-dismissible-exit", "delayed alert dismissal"],
+  ["button-loading-spinner", "button loading and success state"],
+  ["button-loading-dots", "button loading and success state"],
+  ["button-success-pop", "button loading and success state"],
+  ["button-success-check", "button loading and success state"],
+  ["button-ripple-lite", "pointer ripple"],
+  ["form-file-drop-highlight", "file drag state"],
+  ["form-input-clear-pop", "input clearing"],
+  ["counter-bump", "counter update"],
+  ["metric-card-update", "counter update"],
+  ["counter-change-up", "counter update"],
+  ["counter-change-down", "counter update"],
+  ["price-change-flash", "counter update"],
+  ["table-row-insert", "table row mutation"],
+  ["table-row-remove", "table row mutation"],
+  ["table-row-update-flash", "table row mutation"],
+  ["table-row-selected", "table row selection"],
+  ["table-sort-icon-rotate", "table sort state"],
+  ["list-item-remove", "list item removal"],
+  ["scroll-reveal-lite", "intersection observer"],
 ]);
+
+function getRuntimeBehavior(name) {
+  if (name.startsWith("toast-")) {
+    return "toast trigger";
+  }
+  return runtimeBehaviors.get(name) ?? null;
+}
 
 const directoryRules = [
   [/^modal-/, "modal"],
@@ -374,6 +378,7 @@ function makeEffects(groups, level) {
     names.map((name) => {
       const directory = getDirectory(name);
       const [bestFor, avoidFor] = descriptions[category];
+      const runtimeBehavior = getRuntimeBehavior(name);
       return {
         name,
         level,
@@ -381,7 +386,8 @@ function makeEffects(groups, level) {
         directory,
         className: `bsx-${name}`,
         component: directory === "loading" ? "loading state" : directory,
-        requiresJs: customJsEffects.has(name),
+        requiresJs: Boolean(runtimeBehavior),
+        runtimeBehavior,
         motion: getMotion(name),
         bestFor,
         avoidFor,

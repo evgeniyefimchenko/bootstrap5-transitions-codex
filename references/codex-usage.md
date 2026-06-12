@@ -8,7 +8,7 @@ Ask Codex to use the skill explicitly:
 Use $bootstrap5-transitions to animate this Bootstrap 5 dropdown without adding dependencies.
 ```
 
-Codex should inspect the existing component, select the closest catalog entry, prefer a core effect, add only the required `bsx-` class and CSS, and preserve Bootstrap markup and accessibility.
+Codex should inspect the existing component, select the closest catalog entry, prefer a core effect, add only the required `bsx-` class and CSS, and preserve Bootstrap markup and accessibility. When `Requires JS` is `yes`, Codex must include or adapt `assets/js/bootstrap5-transitions.js` and must not depend on `assets/js/demo.js`.
 
 Useful requests:
 

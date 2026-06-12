@@ -6,6 +6,15 @@ Include the aggregate stylesheet before using a snippet:
 <link rel="stylesheet" href="assets/css/bootstrap5-transitions.css">
 ```
 
+For catalog entries marked `Requires JS: yes`, load the runtime after Bootstrap Bundle:
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/bootstrap5-transitions.js"></script>
+```
+
+Do not load `assets/js/demo.js` in an application. It only renders and filters the repository demo.
+
 ## Modal
 
 ```html
@@ -32,7 +41,10 @@ Include the aggregate stylesheet before using a snippet:
 ## Toast
 
 ```html
-<div class="toast bsx-toast-slide-right" role="status" aria-live="polite" aria-atomic="true">
+<button type="button" class="btn btn-primary" data-bsx-action="show-toast" data-bsx-target="#savedToast">
+  Show status
+</button>
+<div class="toast bsx-toast-slide-right" id="savedToast" role="status" aria-live="polite" aria-atomic="true">
   <div class="toast-body">Saved.</div>
 </div>
 ```

@@ -1,8 +1,10 @@
-import { mkdir, writeFile } from "node:fs/promises";
+import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import { coreEffects, effects, extendedEffects } from "./effects.mjs";
 
 const root = resolve(import.meta.dirname, "..");
+const checkOnly = process.argv.includes("--check");
+const changedFiles = [];
 
 function escapeHtml(value) {
   return value
@@ -27,7 +29,7 @@ function iconMarkup() {
   return '<span class="bsx-icon" aria-hidden="true">→</span>';
 }
 
-function snippetFor(effect) {
+function snippetMarkupFor(effect) {
   const { name, className, directory, requiresJs } = effect;
   const id = idFor(name);
   const label = title(name);
@@ -83,7 +85,13 @@ function snippetFor(effect) {
     </nav>
   </div>
 </div>`;
-    case "toast":
+    case "toast": {
+      const stackMarkup = name === "toast-stack-pop"
+        ? `
+  <div class="toast show mt-2" role="status" aria-live="polite" aria-atomic="true">
+    <div class="toast-body">Earlier notification in the stack.</div>
+  </div>`
+        : "";
       return `<button type="button" class="btn btn-primary" data-bsx-action="show-toast" data-bsx-target="#${id}">
   Show toast
 </button>
@@ -95,8 +103,9 @@ function snippetFor(effect) {
       <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
     </div>
     <div class="toast-body">The operation completed successfully.</div>
-  </div>
+  </div>${stackMarkup}
 </div>`;
+    }
     case "alert":
       return `<div class="alert alert-primary ${name.includes("dismissible") ? "alert-dismissible fade show" : ""} ${className}" role="alert">
   <strong>${label}.</strong> Review this contextual message.
@@ -319,30 +328,58 @@ function snippetFor(effect) {
   }
 }
 
+function snippetFor(effect) {
+  const markup = snippetMarkupFor(effect);
+  if (!effect.requiresJs) {
+    return markup;
+  }
+
+  return `<!-- Requires Bootstrap bundle and assets/js/bootstrap5-transitions.js. -->
+${markup}`;
+}
+
 async function write(relativePath, content) {
   const path = resolve(root, relativePath);
+  const normalizedContent = `${content.trim()}\n`;
+
+  if (checkOnly) {
+    let currentContent = "";
+    try {
+      currentContent = await readFile(path, "utf8");
+    } catch {
+      changedFiles.push(relativePath);
+      return;
+    }
+
+    if (currentContent !== normalizedContent) {
+      changedFiles.push(relativePath);
+    }
+    return;
+  }
+
   await mkdir(dirname(path), { recursive: true });
-  await writeFile(path, `${content.trim()}\n`, "utf8");
+  await writeFile(path, normalizedContent, "utf8");
 }
 
 function catalogFor(items, heading) {
   const blocks = items.map(
     (effect) => `## ${effect.name}
 
-Category: ${effect.category}  
-Class: \`${effect.className}\`  
-Level: ${effect.level}  
-Bootstrap component: ${effect.component}  
-Requires JS: ${effect.requiresJs ? "yes" : "no"}  
-Motion: ${effect.motion}  
-Best for: ${effect.bestFor}  
-Avoid for: ${effect.avoidFor}  
-Reduced motion: ${effect.reducedMotion}  
-Snippet: \`${effect.snippetPath}\``,
+- Category: ${effect.category}
+- Class: \`${effect.className}\`
+- Level: ${effect.level}
+- Bootstrap component: ${effect.component}
+- Requires JS: ${effect.requiresJs ? "yes" : "no"}
+- Runtime behavior: ${effect.runtimeBehavior ?? "none"}
+- Motion: ${effect.motion}
+- Best for: ${effect.bestFor}
+- Avoid for: ${effect.avoidFor}
+- Reduced motion: ${effect.reducedMotion}
+- Snippet: \`${effect.snippetPath}\``,
   );
   return `# ${heading}
 
-Generated from \`scripts/effects.mjs\`. Every entry maps one CSS class to one copy-paste snippet.
+Generated from \`scripts/effects.mjs\`. Every entry maps one CSS class to one copy-paste snippet. Entries marked \`Requires JS: yes\` also require \`assets/js/bootstrap5-transitions.js\` after the Bootstrap bundle.
 
 ${blocks.join("\n\n")}`;
 }
@@ -371,6 +408,14 @@ await write(
   `window.bsxEffects = ${JSON.stringify(clientEffects, null, 2)};`,
 );
 
-console.log(
-  `Generated ${coreEffects.length} core and ${extendedEffects.length} extended effects (${effects.length} total).`,
-);
+if (checkOnly && changedFiles.length) {
+  console.error("Generated files are out of date:");
+  changedFiles.forEach((file) => console.error(`- ${file}`));
+  process.exitCode = 1;
+} else if (checkOnly) {
+  console.log(`Generated files are current for ${effects.length} effects.`);
+} else {
+  console.log(
+    `Generated ${coreEffects.length} core and ${extendedEffects.length} extended effects (${effects.length} total).`,
+  );
+}
