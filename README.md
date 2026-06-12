@@ -1,70 +1,70 @@
 ````markdown
 # Bootstrap 5 Transitions Codex
 
-Готовый каталог CSS-переходов, UI-анимаций и микровзаимодействий для Bootstrap 5 с поддержкой Codex Agent Skill.
+Каталог готовых анимаций и микровзаимодействий для интерфейсов на Bootstrap 5.
 
-Проект предназначен для быстрой доработки интерфейсов на Bootstrap 5 без тяжёлых frontend-фреймворков, jQuery и сторонних animation-библиотек. Все эффекты оформлены как copy-paste friendly HTML/CSS-сниппеты и могут применяться вручную или автоматически через Codex.
+Проект помогает быстро добавить аккуратные transition-эффекты к обычным Bootstrap-компонентам: кнопкам, модальным окнам, dropdown-меню, toast-уведомлениям, формам, карточкам, таблицам, навигации, skeleton-загрузчикам и другим элементам интерфейса.
 
-## Назначение
+Главная идея простая: подключить CSS-файл, добавить один `bsx-*` класс к Bootstrap-разметке и получить готовый эффект без переписывания компонента.
 
-`Bootstrap 5 Transitions Codex` помогает быстро добавлять аккуратные transition-эффекты в типовые Bootstrap-компоненты:
+## Для кого этот проект
 
-- модальные окна;
-- dropdown-меню;
-- offcanvas-панели;
-- toast-уведомления;
-- alert-блоки;
-- кнопки;
-- формы и валидацию;
-- карточки;
-- табы и навигацию;
-- accordion/collapse;
-- navbar/sidebar;
-- badge/counter;
-- таблицы и списки;
-- skeleton/loading-состояния;
-- tooltip/popover;
-- progress/stepper;
-- page/layout transitions.
+Проект подходит разработчикам, которые уже используют Bootstrap 5 и хотят быстро улучшить визуальную отзывчивость интерфейса.
 
-## Для каких проектов подходит
+Можно использовать в:
 
-Проект рассчитан на практическую веб-разработку, где Bootstrap уже используется как основа интерфейса.
-
-Подходит для:
-
-- PHP-проектов;
-- Symfony / Laravel;
+- обычных HTML/PHP-проектах;
+- Symfony и Laravel;
 - Bitrix;
 - CS-Cart;
-- Bootstrap-админок;
-- статических HTML-прототипов;
-- legacy-проектов без React/Vue/Svelte;
-- внутренних CRM/ERP-панелей;
-- быстрых UI-доработок через Codex.
+- Bootstrap-админках;
+- CRM/ERP-панелях;
+- legacy-проектах;
+- React;
+- Vue;
+- Svelte;
+- Angular;
+- проектах, где уже используется jQuery.
 
-## Основные принципы
+Проект не навязывает стек. Эффекты — это обычные CSS-классы, поэтому их можно применять почти в любом frontend-окружении.
 
-- Bootstrap 5.3 compatible.
-- Без jQuery.
-- Без React, Vue, Svelte, Angular.
-- Без GSAP, Animate.css, Framer Motion и других animation libraries.
-- CSS-first подход.
-- Vanilla JS только для demo-интерактивности.
-- Все кастомные классы имеют префикс `bsx-`.
-- Эффекты не ломают стандартное поведение Bootstrap-компонентов.
-- Поддерживается `prefers-reduced-motion`.
-- Используются преимущественно `transform` и `opacity`.
-- Разметка остаётся доступной и Bootstrap-compatible.
-- Сниппеты можно копировать напрямую в проект.
+## Что внутри
+
+Каталог разделён на две части:
+
+```text
+core      — базовые эффекты для частого использования
+extended  — дополнительные эффекты для более специфичных UI-сценариев
+````
+
+В каталоге есть эффекты для:
+
+* Modal / Dialog;
+* Dropdown / Menu;
+* Offcanvas / Drawer;
+* Toast / Notification;
+* Alert / Feedback;
+* Button;
+* Forms / Validation;
+* Cards;
+* Tabs / Navs / Pills;
+* Accordion / Collapse;
+* Navbar / Sidebar;
+* Badge / Counter;
+* Tables / Lists;
+* Skeleton / Loading;
+* Images / Media;
+* Tooltips / Popovers;
+* Progress / Steps;
+* Page / Layout.
 
 ## Быстрое подключение
 
-Подключите CSS-файл:
+Подключите CSS:
 
 ```html
 <link rel="stylesheet" href="assets/css/bootstrap5-transitions.css">
-````
+```
 
 Добавьте нужный класс к Bootstrap-компоненту:
 
@@ -74,9 +74,20 @@
 </button>
 ```
 
-Пример модального окна:
+Готово. Кнопка получает мягкий press-эффект без дополнительного JavaScript.
+
+## Пример: модальное окно
 
 ```html
+<button
+  type="button"
+  class="btn btn-primary bsx-button-press"
+  data-bs-toggle="modal"
+  data-bs-target="#exampleModal"
+>
+  Открыть окно
+</button>
+
 <div
   class="modal fade bsx-modal-scale"
   id="exampleModal"
@@ -90,6 +101,7 @@
         <h5 class="modal-title" id="exampleModalLabel">
           Пример окна
         </h5>
+
         <button
           type="button"
           class="btn-close"
@@ -106,66 +118,158 @@
 </div>
 ```
 
+## Пример: карточка
+
+```html
+<div class="card bsx-card-hover-lift">
+  <div class="card-body">
+    <h5 class="card-title">Карточка</h5>
+    <p class="card-text">
+      При наведении карточка слегка приподнимается.
+    </p>
+  </div>
+</div>
+```
+
+## Пример: ошибка формы
+
+```html
+<div class="mb-3 bsx-form-invalid-shake">
+  <label for="email" class="form-label">Email</label>
+  <input
+    type="email"
+    class="form-control is-invalid"
+    id="email"
+    value="wrong-email"
+  >
+  <div class="invalid-feedback">
+    Укажите корректный email.
+  </div>
+</div>
+```
+
+## Именование классов
+
+Все классы проекта используют префикс `bsx-`.
+
+Примеры:
+
+```text
+bsx-modal-scale
+bsx-button-press
+bsx-card-hover-lift
+bsx-form-invalid-shake
+bsx-skeleton-shimmer
+```
+
+Префикс нужен, чтобы эффекты не конфликтовали с Bootstrap, темой сайта или классами вашего проекта.
+
+## Совместимость
+
+Проект можно использовать в любом проекте, где можно добавить CSS-класс к HTML-элементу.
+
+Поддерживаются:
+
+* Bootstrap 5.3;
+* обычная HTML-разметка;
+* PHP-шаблоны;
+* Twig / Blade;
+* JSX;
+* Vue templates;
+* Svelte markup;
+* Angular templates;
+* jQuery-проекты.
+
+В React пример будет выглядеть так:
+
+```jsx
+<button className="btn btn-primary bsx-button-press">
+  Save
+</button>
+```
+
+В Vue:
+
+```vue
+<button class="btn btn-primary bsx-button-press">
+  Save
+</button>
+```
+
+В jQuery-проекте класс можно добавить динамически:
+
+```js
+$('.btn-save').addClass('bsx-button-press');
+```
+
+## Важное отличие
+
+Этот репозиторий не поставляет отдельные компоненты для React, Vue, Svelte, Angular или jQuery.
+
+Он поставляет универсальные CSS-классы и HTML-сниппеты для Bootstrap 5.
+
+То есть проект не требует конкретный JavaScript-фреймворк, но может использоваться внутри любого из них.
+
 ## Codex Agent Skill
 
-В проект встроен Codex Agent Skill:
+В репозитории есть Codex Agent Skill:
 
 ```text
 .agents/skills/bootstrap5-transitions/SKILL.md
 ```
 
-Codex может использовать этот skill, чтобы автоматически подбирать и применять подходящие Bootstrap 5 transition-паттерны при задачах вроде:
+Он нужен для того, чтобы Codex мог сам выбирать подходящие Bootstrap 5 transition-паттерны при работе с проектом.
 
-* улучшить анимацию модального окна;
-* добавить feedback на кнопки;
-* анимировать ошибки валидации формы;
-* улучшить dropdown/offcanvas;
-* добавить skeleton loader;
-* оживить карточки, таблицы, табы и навигацию;
-* привести UI-анимации к единому стилю.
-
-## Структура эффектов
-
-Каталог разделён на две части:
+Пример задачи для Codex:
 
 ```text
-core      — базовые production-ready эффекты
-extended  — дополнительные специализированные эффекты
+Добавь мягкую анимацию открытия для Bootstrap 5 modal.
+Используй bootstrap5-transitions.
+Не ломай текущую разметку и data-bs-* атрибуты.
 ```
 
-Каждый эффект содержит:
-
-* CSS-класс;
-* HTML-сниппет;
-* категорию;
-* описание;
-* рекомендации по применению;
-* reduced-motion fallback;
-* информацию для Codex Agent Skill.
-
-## Пример использования с Codex
-
-Можно дать Codex задачу:
+Codex должен подобрать подходящий класс, например:
 
 ```text
-Добавь Bootstrap 5 transition для модального окна подтверждения удаления.
-Используй skill bootstrap5-transitions.
-Не добавляй jQuery и сторонние animation-библиотеки.
+bsx-modal-scale
 ```
 
-Codex должен выбрать подходящий эффект, например:
+и применить его к существующей Bootstrap-разметке.
 
-```text
-bsx-modal-danger-confirm
+## Как использовать вручную
+
+1. Найдите подходящий эффект в каталоге.
+2. Подключите `assets/css/bootstrap5-transitions.css`.
+3. Добавьте нужный `bsx-*` класс к Bootstrap-компоненту.
+4. Проверьте результат в браузере.
+5. При необходимости настройте CSS-переменные длительности и easing.
+
+## CSS-переменные
+
+Проект использует CSS-переменные для единых скоростей и easing:
+
+```css
+:root {
+  --bsx-duration-sm: 140ms;
+  --bsx-duration-md: 220ms;
+  --bsx-duration-lg: 360ms;
+
+  --bsx-ease-out: cubic-bezier(.16, 1, .3, 1);
+  --bsx-ease-in-out: cubic-bezier(.65, 0, .35, 1);
+}
 ```
 
-и применить его к существующей Bootstrap-разметке без нарушения `data-bs-*` API.
+Их можно переопределить в своём проекте:
+
+```css
+:root {
+  --bsx-duration-md: 180ms;
+}
+```
 
 ## Reduced motion
 
-Проект учитывает пользователей, у которых включено ограничение анимаций в системе.
-
-Все эффекты должны иметь fallback через:
+Проект учитывает системную настройку уменьшения анимаций:
 
 ```css
 @media (prefers-reduced-motion: reduce) {
@@ -173,24 +277,50 @@ bsx-modal-danger-confirm
 }
 ```
 
-Цель fallback — не сломать интерфейс, а уменьшить или почти убрать движение.
+Если пользователь включил reduced motion, эффекты становятся минимальными и не мешают работе интерфейса.
 
-## Ограничения
+## Структура проекта
 
-В проекте запрещено:
+```text
+assets/
+  css/
+    bootstrap5-transitions.css
+    core.css
+    extended.css
+  js/
+    demo.js
 
-* использовать jQuery;
-* добавлять React/Vue/Svelte/Angular;
-* подключать animation libraries;
-* переопределять Bootstrap глобально без `bsx-` scope;
-* удалять Bootstrap-классы;
-* ломать `data-bs-*`;
-* убирать accessibility-атрибуты;
-* использовать конфликтующие классы вроде `.shake`, `.fade-soft`, `.modal-scale`.
+snippets/
+  core/
+  extended/
 
-## Лицензия
+references/
+  catalog.md
+  bootstrap5-rules.md
+  usage-examples.md
+  reduced-motion.md
+  codex-usage.md
 
-MIT
-
+.agents/
+  skills/
+    bootstrap5-transitions/
+      SKILL.md
 ```
-```
+
+## Когда использовать
+
+Используйте этот проект, если нужно:
+
+* быстро оживить Bootstrap-интерфейс;
+* добавить feedback на действия пользователя;
+* улучшить формы и валидацию;
+* сделать аккуратные hover/focus/active-состояния;
+* добавить skeleton/loading-состояния;
+* привести UI-анимации к единому стилю;
+* дать Codex готовый каталог transition-паттернов.
+
+## Когда не подходит
+
+Проект не заменяет полноценные animation-фреймворки.
+
+Если нужна сложная timeline-анимация, canvas/WebGL, motion design уровня промо-сайта или сложная choreography-анимация между страницами, лучше использовать специализированные инструменты.
