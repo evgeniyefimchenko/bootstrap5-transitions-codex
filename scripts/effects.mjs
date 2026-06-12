@@ -1,0 +1,403 @@
+const coreGroups = {
+  modal: [
+    "modal-scale",
+    "modal-slide-up",
+    "modal-blur-backdrop",
+    "modal-danger-confirm",
+    "modal-success-confirm",
+    "modal-sheet-mobile",
+  ],
+  dropdown: [
+    "dropdown-soft",
+    "dropdown-slide-down",
+    "dropdown-scale",
+    "dropdown-menu-stagger",
+    "dropdown-item-hover-slide",
+    "dropdown-mega-menu-soft",
+  ],
+  offcanvas: [
+    "offcanvas-soft",
+    "offcanvas-blur-backdrop",
+    "offcanvas-mobile-sheet",
+    "offcanvas-menu-stagger",
+  ],
+  toast: [
+    "toast-slide-right",
+    "toast-pop",
+    "toast-stack-pop",
+    "toast-success-pop",
+    "toast-error-shake",
+    "toast-progress-line",
+  ],
+  alert: [
+    "alert-reveal",
+    "alert-slide-down",
+    "alert-shake",
+    "alert-pulse-border",
+    "alert-success-glow",
+    "alert-dismissible-exit",
+  ],
+  button: [
+    "button-press",
+    "button-hover-lift",
+    "button-hover-glow",
+    "button-loading-spinner",
+    "button-loading-dots",
+    "button-success-pop",
+    "button-icon-slide",
+    "button-ripple-lite",
+  ],
+  form: [
+    "form-focus-ring",
+    "form-invalid-shake",
+    "form-valid-check",
+    "form-help-text-reveal",
+    "form-error-text-slide",
+    "form-switch-toggle-soft",
+    "form-checkbox-pop",
+    "form-file-drop-highlight",
+  ],
+  card: [
+    "card-hover-lift",
+    "card-hover-scale",
+    "card-hover-shadow",
+    "card-image-zoom",
+    "card-image-fade-overlay",
+    "card-stagger-list",
+  ],
+  "tabs/nav": [
+    "tabs-fade",
+    "tabs-underline-slide",
+    "tabs-pill-active-pop",
+    "nav-link-hover-underline",
+    "nav-sidebar-active-marker",
+  ],
+  "accordion/collapse": [
+    "accordion-icon-rotate",
+    "accordion-icon-plus-minus",
+    "accordion-body-fade",
+    "collapse-soft",
+    "collapse-height-smooth",
+  ],
+  "navbar/sidebar": [
+    "navbar-link-hover-line",
+    "navbar-mobile-collapse-soft",
+    "navbar-toggler-morph",
+    "sidebar-slide-in",
+    "sidebar-item-active-marker",
+  ],
+  "badge/counter": [
+    "badge-pop",
+    "badge-notification-ping",
+    "badge-status-pulse",
+    "counter-bump",
+    "metric-card-update",
+  ],
+  "table/list": [
+    "table-row-hover",
+    "table-row-insert",
+    "table-row-remove",
+    "table-row-update-flash",
+    "list-item-stagger",
+    "list-group-active-marker",
+  ],
+  "skeleton/loading": [
+    "skeleton-shimmer",
+    "skeleton-pulse",
+    "skeleton-card",
+    "skeleton-table",
+    "loader-dots",
+    "page-loading-fade",
+  ],
+};
+
+const extendedGroups = {
+  modal: [
+    "modal-scale-sm",
+    "modal-scale-lg",
+    "modal-slide-down",
+    "modal-slide-left",
+    "modal-slide-right",
+    "modal-fade-soft",
+    "modal-zoom-blur",
+    "modal-fullscreen-soft",
+    "modal-stack-pop",
+    "modal-content-stagger",
+  ],
+  dropdown: [
+    "dropdown-slide-up",
+    "dropdown-fade",
+    "dropdown-origin-top",
+    "dropdown-origin-bottom",
+    "dropdown-blur",
+    "dropdown-item-hover-bg",
+    "dropdown-item-active-pop",
+    "dropdown-user-menu",
+  ],
+  offcanvas: [
+    "offcanvas-slide-fast",
+    "offcanvas-slide-slow",
+    "offcanvas-left-soft",
+    "offcanvas-right-soft",
+    "offcanvas-bottom-sheet",
+    "offcanvas-header-reveal",
+  ],
+  toast: [
+    "toast-slide-left",
+    "toast-slide-top",
+    "toast-slide-bottom",
+    "toast-warning-pulse",
+    "toast-auto-hide-bar",
+    "toast-icon-bounce",
+  ],
+  alert: [
+    "alert-slide-up",
+    "alert-fade-soft",
+    "alert-danger-flash",
+    "alert-warning-attention",
+  ],
+  button: [
+    "button-hover-slide-bg",
+    "button-success-check",
+    "button-danger-pulse",
+    "button-icon-bounce",
+    "button-group-active-slide",
+    "button-disabled-soft",
+  ],
+  form: [
+    "form-focus-glow",
+    "form-invalid-pulse",
+    "form-label-float-soft",
+    "form-input-clear-pop",
+    "form-select-open-soft",
+    "form-radio-pop",
+  ],
+  card: [
+    "card-hover-border",
+    "card-hover-glow",
+    "card-click-press",
+    "card-reveal",
+    "card-footer-reveal",
+    "card-action-slide",
+  ],
+  "tabs/nav": [
+    "tabs-slide-left",
+    "tabs-slide-right",
+    "tabs-content-reveal",
+    "tabs-content-blur",
+    "nav-link-hover-slide",
+    "nav-sidebar-collapse-soft",
+  ],
+  "accordion/collapse": [
+    "accordion-body-slide",
+    "accordion-header-hover",
+    "accordion-active-glow",
+    "collapse-fade",
+    "collapse-card-reveal",
+  ],
+  "navbar/sidebar": [
+    "navbar-brand-pop",
+    "navbar-link-hover-bg",
+    "navbar-toggler-spin",
+    "sidebar-item-hover-slide",
+    "sidebar-submenu-reveal",
+    "sidebar-mini-expand",
+    "sidebar-overlay-blur",
+  ],
+  "badge/counter": [
+    "badge-pulse",
+    "badge-count-bump",
+    "badge-status-dot",
+    "counter-change-up",
+    "counter-change-down",
+    "price-change-flash",
+  ],
+  "table/list": [
+    "table-row-selected",
+    "table-sort-icon-rotate",
+    "table-filter-reveal",
+    "list-item-reveal",
+    "list-item-remove",
+    "list-group-hover-slide",
+  ],
+  "skeleton/loading": [
+    "skeleton-wave",
+    "skeleton-avatar",
+    "skeleton-button",
+    "spinner-fade",
+    "spinner-scale",
+    "loader-bar",
+  ],
+  "image/media": [
+    "image-hover-zoom",
+    "image-hover-fade",
+    "image-hover-overlay",
+    "image-hover-caption-slide",
+    "image-lazy-reveal",
+    "avatar-pop",
+    "avatar-status-pulse",
+    "gallery-item-reveal",
+    "carousel-caption-slide",
+    "carousel-control-hover",
+  ],
+  "tooltip/popover": [
+    "tooltip-fade-soft",
+    "tooltip-slide-up",
+    "tooltip-slide-down",
+    "tooltip-scale",
+    "tooltip-pop",
+    "popover-soft",
+    "popover-slide",
+    "popover-blur",
+    "popover-content-stagger",
+    "popover-dismiss-fade",
+  ],
+  "progress/stepper": [
+    "progress-fill-soft",
+    "progress-striped-motion",
+    "progress-success-pop",
+    "progress-danger-pulse",
+    "stepper-active-pop",
+    "stepper-complete-check",
+    "stepper-line-fill",
+    "wizard-page-slide",
+    "wizard-page-fade",
+  ],
+  "page/layout": [
+    "page-fade-in",
+    "page-slide-up",
+    "page-section-reveal",
+    "page-section-stagger",
+    "page-empty-state-pop",
+    "page-error-shake",
+    "page-success-check",
+    "content-fade-swap",
+    "content-blur-swap",
+    "scroll-reveal-lite",
+  ],
+};
+
+const customJsEffects = new Set([
+  "toast-stack-pop",
+  "toast-progress-line",
+  "toast-auto-hide-bar",
+  "alert-dismissible-exit",
+  "button-loading-spinner",
+  "button-loading-dots",
+  "button-success-pop",
+  "button-success-check",
+  "button-ripple-lite",
+  "form-invalid-shake",
+  "form-input-clear-pop",
+  "counter-bump",
+  "metric-card-update",
+  "counter-change-up",
+  "counter-change-down",
+  "price-change-flash",
+  "table-row-insert",
+  "table-row-remove",
+  "table-row-update-flash",
+  "table-row-selected",
+  "table-sort-icon-rotate",
+  "list-item-remove",
+  "scroll-reveal-lite",
+]);
+
+const directoryRules = [
+  [/^modal-/, "modal"],
+  [/^dropdown-/, "dropdown"],
+  [/^offcanvas-/, "offcanvas"],
+  [/^toast-/, "toast"],
+  [/^alert-/, "alert"],
+  [/^button-/, "button"],
+  [/^form-/, "form"],
+  [/^card-/, "card"],
+  [/^tabs-/, "tabs"],
+  [/^nav-sidebar-/, "sidebar"],
+  [/^nav-/, "navbar"],
+  [/^(accordion|collapse)-/, "accordion"],
+  [/^navbar-/, "navbar"],
+  [/^sidebar-/, "sidebar"],
+  [/^badge-/, "badge"],
+  [/^(counter|metric|price)-/, "counter"],
+  [/^table-/, "table"],
+  [/^list-/, "list"],
+  [/^skeleton-/, "skeleton"],
+  [/^(loader|spinner|page-loading)-/, "loading"],
+  [/^(image|avatar|gallery)-/, "image"],
+  [/^carousel-/, "media"],
+  [/^tooltip-/, "tooltip"],
+  [/^popover-/, "popover"],
+  [/^progress-/, "progress"],
+  [/^(stepper|wizard)-/, "stepper"],
+  [/^(page|content|scroll)-/, "page"],
+];
+
+const descriptions = {
+  modal: ["dialogs and confirmations", "dense repeated workflows"],
+  dropdown: ["menus with clear visual hierarchy", "menus requiring instant state changes"],
+  offcanvas: ["navigation and mobile panels", "permanent desktop navigation"],
+  toast: ["brief asynchronous feedback", "critical information requiring confirmation"],
+  alert: ["inline feedback and validation summaries", "decorative content"],
+  button: ["direct interaction feedback", "large continuously animated areas"],
+  form: ["focus and validation feedback", "replacing native validation semantics"],
+  card: ["interactive content collections", "non-interactive dense tables"],
+  "tabs/nav": ["section navigation and tab state", "rapidly auto-rotating content"],
+  "accordion/collapse": ["disclosure controls", "content that must remain continuously visible"],
+  "navbar/sidebar": ["application navigation", "small inline controls"],
+  "badge/counter": ["status and metric updates", "long text content"],
+  "table/list": ["row state and collection changes", "large simultaneous batches"],
+  "skeleton/loading": ["short loading states", "unknown or very long waits without status"],
+  "image/media": ["media previews and galleries", "essential images that must remain static"],
+  "tooltip/popover": ["contextual supporting information", "primary task content"],
+  "progress/stepper": ["progress and multi-step flows", "indeterminate tasks without a status model"],
+  "page/layout": ["page and section state changes", "continuous scroll-driven motion"],
+};
+
+function getDirectory(name) {
+  return directoryRules.find(([pattern]) => pattern.test(name))?.[1] ?? "page";
+}
+
+function getMotion(name) {
+  const motions = [];
+  if (/slide|lift|reveal|stagger|sheet|marker|underline|line|fill|insert|remove/.test(name)) motions.push("translate");
+  if (/scale|pop|press|bump|zoom|bounce|pulse|ping/.test(name)) motions.push("scale");
+  if (/fade|soft|blur|glow|flash|loading|skeleton|shimmer|wave/.test(name)) motions.push("opacity");
+  if (/rotate|morph|spin|plus-minus/.test(name)) motions.push("rotate");
+  if (/shake|attention/.test(name)) motions.push("shake");
+  if (motions.length === 0) motions.push("color", "opacity");
+  return [...new Set(motions)].join(" + ");
+}
+
+function makeEffects(groups, level) {
+  return Object.entries(groups).flatMap(([category, names]) =>
+    names.map((name) => {
+      const directory = getDirectory(name);
+      const [bestFor, avoidFor] = descriptions[category];
+      return {
+        name,
+        level,
+        category,
+        directory,
+        className: `bsx-${name}`,
+        component: directory === "loading" ? "loading state" : directory,
+        requiresJs: customJsEffects.has(name),
+        motion: getMotion(name),
+        bestFor,
+        avoidFor,
+        reducedMotion: /fade|blur|glow|color|shadow/.test(name)
+          ? "near-instant opacity or color state"
+          : "opacity-only near-instant state",
+        snippetPath: `snippets/${level}/${directory}/${name}.html`,
+      };
+    }),
+  );
+}
+
+export const effects = [
+  ...makeEffects(coreGroups, "core"),
+  ...makeEffects(extendedGroups, "extended"),
+];
+
+export const coreEffects = effects.filter((effect) => effect.level === "core");
+export const extendedEffects = effects.filter((effect) => effect.level === "extended");

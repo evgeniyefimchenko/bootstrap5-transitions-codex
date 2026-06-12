@@ -1,0 +1,4 @@
+interface:
+  display_name: "Bootstrap 5 Transitions"
+  short_description: "Apply accessible Bootstrap 5 UI motion"
+  default_prompt: "Use $bootstrap5-transitions to add an accessible Bootstrap 5 transition to this interface."

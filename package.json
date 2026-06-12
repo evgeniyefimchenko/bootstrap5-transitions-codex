@@ -1,0 +1,23 @@
+{
+  "name": "bootstrap5-transitions-codex",
+  "version": "0.1.0",
+  "description": "Bootstrap 5 transition snippets and Codex Agent Skill",
+  "private": false,
+  "type": "module",
+  "scripts": {
+    "dev": "npx serve .",
+    "generate": "node scripts/generate.mjs",
+    "check": "node scripts/check.mjs"
+  },
+  "keywords": [
+    "bootstrap",
+    "bootstrap-5",
+    "transitions",
+    "animations",
+    "microinteractions",
+    "codex",
+    "agent-skills",
+    "css"
+  ],
+  "license": "MIT"
+}
