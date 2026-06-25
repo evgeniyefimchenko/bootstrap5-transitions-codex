@@ -1,18 +1,26 @@
-# Extended Decision Table
+# Decision Table
 
-| Need | Preferred effects |
+| User asks for | Prefer |
 |---|---|
-| subtle entry | `bsx-page-fade-in`, `bsx-card-reveal`, `bsx-alert-fade-soft` |
-| directional entry | `bsx-page-slide-up`, `bsx-modal-slide-left`, `bsx-toast-slide-bottom` |
-| compact emphasis | `bsx-badge-pop`, `bsx-button-icon-bounce`, `bsx-counter-bump` |
-| destructive feedback | `bsx-modal-danger-confirm`, `bsx-alert-danger-flash`, `bsx-button-danger-pulse` |
-| successful completion | `bsx-modal-success-confirm`, `bsx-button-success-check`, `bsx-progress-success-pop` |
-| mobile navigation | `bsx-offcanvas-mobile-sheet`, `bsx-sidebar-slide-in`, `bsx-navbar-mobile-collapse-soft` |
-| validation | `bsx-form-invalid-shake`, `bsx-form-invalid-pulse`, `bsx-form-valid-check` |
-| loading placeholder | `bsx-skeleton-shimmer`, `bsx-skeleton-pulse`, `bsx-skeleton-wave` |
-| contextual help | `bsx-tooltip-fade-soft`, `bsx-popover-soft`, `bsx-popover-content-stagger` |
-| multi-step flow | `bsx-stepper-active-pop`, `bsx-stepper-line-fill`, `bsx-wizard-page-fade` |
-| content replacement | `bsx-content-fade-swap`, `bsx-content-blur-swap` |
-| collection mutation | `bsx-table-row-insert`, `bsx-table-row-remove`, `bsx-list-item-remove` |
+| modal animation | `bsx-modal-scale`, `bsx-modal-slide-up`, `bsx-modal-blur-backdrop` |
+| confirmation modal | `bsx-modal-danger-confirm`, `bsx-modal-success-confirm` |
+| mobile modal sheet | `bsx-modal-sheet-mobile` |
+| dropdown animation | `bsx-dropdown-soft`, `bsx-dropdown-slide-down`, `bsx-dropdown-scale` |
+| animated menu items | `bsx-dropdown-menu-stagger` |
+| offcanvas animation | `bsx-offcanvas-soft`, `bsx-offcanvas-mobile-sheet` |
+| toast animation | `bsx-toast-slide-right`, `bsx-toast-pop`, `bsx-toast-stack-pop` |
+| success or error toast | `bsx-toast-success-pop`, `bsx-toast-error-shake` |
+| alert animation | `bsx-alert-reveal`, `bsx-alert-slide-down`, `bsx-alert-shake` |
+| button feedback | `bsx-button-press`, `bsx-button-hover-lift`, `bsx-button-success-pop` |
+| loading button | `bsx-button-loading-spinner`, `bsx-button-loading-dots` |
+| form validation | `bsx-form-invalid-shake`, `bsx-form-valid-check` |
+| card hover | `bsx-card-hover-lift`, `bsx-card-hover-scale`, `bsx-card-hover-shadow` |
+| tabs | `bsx-tabs-fade`, `bsx-tabs-underline-slide` |
+| accordion | `bsx-accordion-icon-rotate`, `bsx-accordion-body-fade` |
+| navbar or sidebar | `bsx-navbar-link-hover-line`, `bsx-sidebar-item-active-marker` |
+| badge or counter | `bsx-badge-pop`, `bsx-counter-bump`, `bsx-metric-card-update` |
+| table row feedback | `bsx-table-row-hover`, `bsx-table-row-update-flash` |
+| skeleton loader | `bsx-skeleton-shimmer`, `bsx-skeleton-pulse` |
+| page loading | `bsx-page-loading-fade` |
 
-Prefer the lowest-motion option that still communicates state. Use a stronger effect only for errors, confirmations, or explicit user feedback.
+Prefer the lowest-motion option that still communicates state. Use a stronger effect only for errors, confirmations, destructive actions, or explicit success feedback.

@@ -517,6 +517,12 @@
   width: .45rem;
 }
 
+.bsx-counter-change-up [data-bsx-counter-value],
+.bsx-counter-change-down [data-bsx-counter-value],
+.bsx-price-change-flash [data-bsx-counter-value] {
+  font-variant-numeric: tabular-nums;
+}
+
 .bsx-counter-change-up.bsx-is-updated [data-bsx-counter-value] {
   animation: bsx-counter-up var(--bsx-duration-lg) var(--bsx-ease-out) both;
   color: var(--bs-success);

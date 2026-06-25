@@ -362,6 +362,18 @@ async function write(relativePath, content) {
 }
 
 function catalogFor(items, heading) {
+  const tableRows = items.map((effect) => [
+    `\`${effect.className}\``,
+    effect.level,
+    effect.component,
+    effect.requiresJs ? "yes" : "no",
+    effect.motion,
+    effect.bestFor,
+    effect.avoidFor,
+    effect.reducedMotion,
+    `\`${effect.snippetPath}\``,
+  ].join(" | "));
+
   const blocks = items.map(
     (effect) => `## ${effect.name}
 
@@ -380,6 +392,12 @@ function catalogFor(items, heading) {
   return `# ${heading}
 
 Generated from \`scripts/effects.mjs\`. Every entry maps one CSS class to one copy-paste snippet. Entries marked \`Requires JS: yes\` also require \`assets/js/bootstrap5-transitions.js\` after the Bootstrap bundle.
+
+## Summary
+
+| Class | Level | Component | Requires JS | Motion | Best for | Avoid for | Reduced motion | Snippet |
+|---|---|---|---|---|---|---|---|---|
+${tableRows.map((row) => `| ${row} |`).join("\n")}
 
 ${blocks.join("\n\n")}`;
 }

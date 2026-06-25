@@ -56,9 +56,14 @@ const requiredFiles = [
   "references/reduced-motion.md",
   "references/codex-usage.md",
   ".agents/skills/bootstrap5-transitions/SKILL.md",
+  ".agents/skills/bootstrap5-transitions/agents/openai.yaml",
   ".agents/skills/bootstrap5-transitions/references/catalog.md",
   ".agents/skills/bootstrap5-transitions/references/decision-table.md",
   ".agents/skills/bootstrap5-transitions/references/implementation-rules.md",
+  ".agents/skills/bootstrap5-transitions/references/motion-quality.md",
+  ".agents/skills/bootstrap5-transitions/references/visual-polish.md",
+  ".agents/skills/bootstrap5-transitions/references/color-contrast.md",
+  ".agents/skills/bootstrap5-transitions/references/review-format.md",
 ];
 
 for (const file of requiredFiles) {
@@ -71,6 +76,7 @@ const aggregateCss = await read("assets/css/bootstrap5-transitions.css");
 const catalog = await read("references/catalog.md");
 const skillCatalog = await read(".agents/skills/bootstrap5-transitions/references/catalog.md");
 const skill = await read(".agents/skills/bootstrap5-transitions/SKILL.md");
+const openaiYaml = await read(".agents/skills/bootstrap5-transitions/agents/openai.yaml");
 const index = await read("index.html");
 const readme = await read("README.md");
 const runtimeJs = await read("assets/js/bootstrap5-transitions.js");
@@ -98,6 +104,16 @@ assert((readme.match(/^## Когда не подходит$/gm) ?? []).length ==
 assert(!/```(?:jsx|vue|svelte|angular)|\$\([^)]*\)\.(?:addClass|removeClass|toggleClass)/i.test(readme), "README contains a forbidden framework example");
 assert(readme.includes("assets/js/bootstrap5-transitions.js"), "README does not explain the reusable runtime");
 assert(readme.includes("assets/js/demo.js"), "README does not distinguish demo-only JavaScript");
+assert(readme.includes("Agent Skill quality rules"), "README must include Agent Skill quality rules");
+assert(catalog.includes("| Class | Level | Component | Requires JS |"), "Main catalog must include summary table");
+assert(skillCatalog.includes("| Class | Level | Component | Requires JS |"), "Skill catalog must include summary table");
+assert((catalog.match(/^## /gm) ?? []).length >= effects.length, "Main catalog must contain one heading per effect");
+assert((skillCatalog.match(/^## /gm) ?? []).length >= effects.length, "Skill catalog must contain one heading per effect");
+
+assert(openaiYaml.split(/\r?\n/).length >= 4, "openai.yaml must be multi-line YAML");
+assert(openaiYaml.includes("interface:"), "openai.yaml missing interface key");
+assert(openaiYaml.includes('display_name: "Bootstrap 5 Transitions"'), "openai.yaml display_name mismatch");
+assert(openaiYaml.includes("data-bs-* attributes"), "openai.yaml default_prompt must mention data-bs-* preservation");
 
 const frontmatterMatch = skill.match(/^---\r?\n([\s\S]*?)\r?\n---/);
 assert(frontmatterMatch, "Skill frontmatter format is invalid");
@@ -144,6 +160,7 @@ for (const [name, css] of [["core.css", coreCss], ["extended.css", extendedCss]]
   assert(css.includes("@media (prefers-reduced-motion: reduce)"), `${name} lacks reduced-motion fallback`);
   assert(css.includes('[class*="bsx-"] *::after'), `${name} reduced-motion fallback does not cover nested pseudo-elements`);
   assert(!/^\s*\.(btn|modal|card|dropdown-menu|toast|alert|offcanvas)\s*[{,]/m.test(css), `${name} contains an unscoped Bootstrap override`);
+  assert(!/transition\s*:\s*all\b/i.test(css), `${name} uses transition: all`);
   assert(
     !/transition\s*:[^;]*(?:max-)?(?:width|height)|transition\s*:[^;]*(?:top|right|bottom|left|margin|padding)/i.test(css),
     `${name} animates a layout-changing property`,

@@ -682,6 +682,11 @@ body:has(.bsx-offcanvas-blur-backdrop.show) .offcanvas-backdrop.show {
   animation: bsx-pulse 1.8s ease-in-out infinite;
 }
 
+.bsx-counter-bump [data-bsx-counter-value],
+.bsx-metric-card-update [data-bsx-counter-value] {
+  font-variant-numeric: tabular-nums;
+}
+
 .bsx-counter-bump.bsx-is-updated [data-bsx-counter-value] {
   animation: bsx-pop var(--bsx-duration-md) var(--bsx-ease-spring-lite) both;
 }

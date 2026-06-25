@@ -209,6 +209,20 @@ bsx-modal-scale
 
 и применить его к существующей Bootstrap-разметке.
 
+## Agent Skill quality rules
+
+Полные правила находятся в `.agents/skills/bootstrap5-transitions/SKILL.md`.
+
+Коротко:
+
+* сохранять Bootstrap 5 разметку, lifecycle, `data-bs-*`, ARIA, labels и live regions;
+* не добавлять jQuery, frontend frameworks, animation libraries, build tooling или production dependencies;
+* использовать CSS-first подход и `bsx-*` классы;
+* подключать `assets/js/bootstrap5-transitions.js` только для эффектов с `Requires JS: yes`;
+* не использовать `assets/js/demo.js` в production snippets;
+* не использовать `transition: all` и не анимировать layout-свойства;
+* проверять reduced motion, keyboard accessibility, focus visibility и контраст.
+
 ## Как использовать вручную
 
 1. Найдите подходящий эффект в каталоге.
