@@ -872,6 +872,364 @@
   transform: none;
 }
 
+/* Applied admin UX scenarios */
+.bsx-breadcrumb-current-marker .breadcrumb-item.active,
+.bsx-breadcrumb-step-complete .breadcrumb-item.active {
+  color: var(--bs-primary);
+  position: relative;
+}
+
+.bsx-breadcrumb-current-marker .breadcrumb-item.active::after {
+  background: currentColor;
+  border-radius: 999px;
+  content: "";
+  display: block;
+  height: 2px;
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.bsx-breadcrumb-parent-hover .breadcrumb-item a,
+.bsx-breadcrumb-context-return .breadcrumb-item a {
+  transition: color var(--bsx-duration-sm) ease, transform var(--bsx-duration-sm) var(--bsx-ease-out);
+}
+
+.bsx-breadcrumb-parent-hover .breadcrumb-item a:hover,
+.bsx-breadcrumb-parent-hover .breadcrumb-item a:focus-visible,
+.bsx-breadcrumb-context-return .breadcrumb-item a:hover,
+.bsx-breadcrumb-context-return .breadcrumb-item a:focus-visible {
+  color: var(--bs-primary);
+  display: inline-block;
+  transform: translateX(-2px);
+}
+
+.bsx-breadcrumb-path-update .breadcrumb-item,
+.bsx-breadcrumb-overflow-menu .breadcrumb-item {
+  animation: bsx-fade-in var(--bsx-duration-md) ease both;
+}
+
+.bsx-breadcrumb-step-complete .breadcrumb-item:not(.active)::before {
+  color: var(--bs-success);
+}
+
+.bsx-pagination-active-marker .page-item.active .page-link,
+.bsx-pagination-count-update .page-item.active .page-link {
+  box-shadow: 0 0 0 .2rem rgba(var(--bs-primary-rgb), .14);
+  transition: box-shadow var(--bsx-duration-md) ease, transform var(--bsx-duration-sm) var(--bsx-ease-out);
+  transform: translateY(-1px);
+}
+
+.bsx-pagination-page-jump .page-link,
+.bsx-pagination-compact-hover .page-link {
+  transition: background-color var(--bsx-duration-sm) ease, transform var(--bsx-duration-sm) var(--bsx-ease-out);
+}
+
+.bsx-pagination-page-jump .page-link:hover,
+.bsx-pagination-page-jump .page-link:focus-visible,
+.bsx-pagination-compact-hover .page-link:hover,
+.bsx-pagination-compact-hover .page-link:focus-visible {
+  transform: translateY(-2px);
+}
+
+.bsx-pagination-loading-page[aria-busy="true"] .page-link,
+.bsx-pagination-disabled-soft .page-item.disabled .page-link {
+  opacity: .58;
+  transition: opacity var(--bsx-duration-md) ease;
+}
+
+.bsx-pagination-loading-page[aria-busy="true"] .page-item.active .page-link {
+  animation: bsx-pulse 1.2s ease-in-out infinite;
+}
+
+.bsx-button-group-active-marker .btn.active,
+.bsx-button-group-bulk-ready .btn.active,
+.bsx-button-group-filter-active .btn.active {
+  box-shadow: inset 0 -3px 0 currentColor;
+  transition: box-shadow var(--bsx-duration-md) ease, transform var(--bsx-duration-sm) var(--bsx-ease-out);
+  transform: translateY(-1px);
+}
+
+.bsx-button-group-segment-press .btn,
+.bsx-button-group-toggle-sync .btn,
+.bsx-button-group-density-switch .btn {
+  transition: background-color var(--bsx-duration-sm) ease, transform var(--bsx-duration-sm) var(--bsx-ease-out);
+}
+
+.bsx-button-group-segment-press .btn:active,
+.bsx-button-group-toggle-sync .btn[aria-pressed="true"],
+.bsx-button-group-density-switch .btn.active {
+  transform: scale(.97);
+}
+
+.bsx-input-group-focus-ring .input-group,
+.bsx-input-group-addon-highlight .input-group,
+.bsx-input-group-search-pending .input-group,
+.bsx-input-group-validation-sync .input-group {
+  transition: box-shadow var(--bsx-duration-md) ease, transform var(--bsx-duration-sm) var(--bsx-ease-out);
+}
+
+.bsx-input-group-focus-ring:focus-within .input-group,
+.bsx-search-input-focus:focus-within .input-group {
+  box-shadow: 0 0 0 .25rem rgba(var(--bs-primary-rgb), .14);
+}
+
+.bsx-input-group-addon-highlight:focus-within .input-group-text {
+  background-color: rgba(var(--bs-primary-rgb), .12);
+  color: var(--bs-primary);
+}
+
+.bsx-input-group-copy-confirm .btn:focus-visible,
+.bsx-input-group-password-toggle .btn[aria-pressed="true"] {
+  animation: bsx-pop var(--bsx-duration-md) var(--bsx-ease-spring-lite) both;
+}
+
+.bsx-input-group-search-pending .input-group[aria-busy="true"] {
+  opacity: .72;
+}
+
+.bsx-input-group-validation-sync .form-control.is-invalid {
+  animation: bsx-shake var(--bsx-duration-lg) ease both;
+}
+
+.bsx-close-button-hover-ring .btn-close,
+.bsx-close-button-clear-filter .btn-close {
+  transition: box-shadow var(--bsx-duration-sm) ease, transform var(--bsx-duration-sm) var(--bsx-ease-out);
+}
+
+.bsx-close-button-hover-ring .btn-close:hover,
+.bsx-close-button-hover-ring .btn-close:focus-visible,
+.bsx-close-button-clear-filter .btn-close:hover,
+.bsx-close-button-clear-filter .btn-close:focus-visible {
+  box-shadow: 0 0 0 .25rem rgba(var(--bs-primary-rgb), .14);
+  transform: scale(.92);
+}
+
+.bsx-close-button-confirm-pending,
+.bsx-close-button-toast-dismiss,
+.bsx-close-button-panel-dismiss {
+  transition: opacity var(--bsx-duration-md) ease, transform var(--bsx-duration-md) var(--bsx-ease-out);
+}
+
+.bsx-close-button-confirm-pending:focus-within,
+.bsx-close-button-toast-dismiss:focus-within,
+.bsx-close-button-panel-dismiss:focus-within {
+  opacity: .82;
+  transform: translateX(var(--bsx-slide-sm));
+}
+
+.bsx-crud-row-create tbody tr,
+.bsx-crud-bulk-toolbar-reveal > .d-flex,
+.bsx-crud-inline-edit-focus tbody tr:focus-within {
+  animation: bsx-slide-up var(--bsx-duration-md) var(--bsx-ease-out) both;
+}
+
+.bsx-crud-row-save-pending tr.bsx-is-loading,
+.bsx-crud-delete-confirm-row tr.bsx-is-error {
+  animation: bsx-pulse 1.2s ease-in-out infinite;
+}
+
+.bsx-crud-row-save-success tr.bsx-is-success {
+  animation: bsx-row-flash .9s ease both;
+  box-shadow: inset 4px 0 var(--bs-success);
+}
+
+.bsx-crud-row-save-error tr.bsx-is-error,
+.bsx-crud-delete-confirm-row tr.bsx-is-error {
+  box-shadow: inset 4px 0 var(--bs-danger);
+}
+
+.bsx-crud-inline-edit-dirty tr.bsx-is-dirty,
+.bsx-state-unsaved-changes {
+  box-shadow: inset 4px 0 var(--bs-warning);
+}
+
+.bsx-crud-permission-disabled {
+  filter: grayscale(.25);
+  opacity: .62;
+}
+
+.bsx-filter-chip-active .bsx-filter-chip,
+.bsx-button-group-filter-active .btn.active {
+  animation: bsx-pop var(--bsx-duration-md) var(--bsx-ease-spring-lite) both;
+}
+
+.bsx-filter-chip-remove .bsx-filter-chip:last-child {
+  animation: bsx-row-remove var(--bsx-duration-md) ease both;
+}
+
+.bsx-filter-panel-reveal {
+  animation: bsx-slide-down var(--bsx-duration-md) var(--bsx-ease-out) both;
+}
+
+.bsx-filter-reset-flash {
+  animation: bsx-price-flash .8s ease both;
+}
+
+.bsx-search-results-update .card-body,
+.bsx-search-no-results-state .card-body {
+  animation: bsx-fade-in var(--bsx-duration-md) ease both;
+}
+
+.bsx-search-no-results-state {
+  border-style: dashed;
+}
+
+.bsx-form-wizard-step-current .bsx-is-active .bsx-step-marker,
+.bsx-form-wizard-step-complete .bsx-is-complete .bsx-step-marker,
+.bsx-form-wizard-submit-ready .btn-primary {
+  animation: bsx-pop var(--bsx-duration-md) var(--bsx-ease-spring-lite) both;
+}
+
+.bsx-form-wizard-step-current .bsx-is-active .bsx-step-marker {
+  background: var(--bs-primary);
+  color: #fff;
+}
+
+.bsx-form-wizard-step-complete .bsx-is-complete .bsx-step-marker {
+  background: var(--bs-success);
+  color: #fff;
+}
+
+.bsx-form-wizard-step-error .bsx-is-error .bsx-step-marker,
+.bsx-form-wizard-section-exit .card {
+  animation: bsx-shake var(--bsx-duration-lg) ease both;
+}
+
+.bsx-form-wizard-progress-sync .bsx-is-complete::after {
+  background: var(--bs-success);
+  transform: scaleX(1);
+}
+
+.bsx-form-wizard-section-enter .card,
+.bsx-form-wizard-review-dirty .card {
+  animation: bsx-slide-up var(--bsx-duration-md) var(--bsx-ease-out) both;
+}
+
+.bsx-form-wizard-review-dirty .card {
+  box-shadow: inset 4px 0 var(--bs-warning);
+}
+
+.bsx-state-empty-reveal,
+.bsx-notification-empty-state {
+  animation: bsx-pop var(--bsx-duration-lg) var(--bsx-ease-spring-lite) both;
+  border-style: dashed;
+}
+
+.bsx-state-error-inline {
+  border-color: var(--bs-danger);
+  box-shadow: inset 4px 0 var(--bs-danger);
+}
+
+.bsx-state-success-inline {
+  border-color: var(--bs-success);
+  box-shadow: inset 4px 0 var(--bs-success);
+}
+
+.bsx-state-warning-inline,
+.bsx-state-offline-banner {
+  border-color: var(--bs-warning);
+  box-shadow: inset 4px 0 var(--bs-warning);
+}
+
+.bsx-state-locked-record {
+  opacity: .68;
+  position: relative;
+}
+
+.bsx-state-locked-record::after {
+  color: var(--bs-secondary-color);
+  content: "Locked";
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+
+.bsx-data-loading-table-overlay,
+.bsx-data-loading-card-overlay,
+.bsx-data-loading-filter-pending,
+.bsx-data-loading-metric-refresh {
+  overflow: hidden;
+  position: relative;
+}
+
+.bsx-data-loading-table-overlay[aria-busy="true"]::after,
+.bsx-data-loading-card-overlay[aria-busy="true"]::after,
+.bsx-data-loading-filter-pending[aria-busy="true"]::after,
+.bsx-data-loading-metric-refresh[aria-busy="true"]::after {
+  animation: bsx-loader-bar 1.2s var(--bsx-ease-in-out) infinite;
+  background: linear-gradient(90deg, transparent, rgba(var(--bs-primary-rgb), .18), transparent);
+  content: "";
+  inset: 0;
+  position: absolute;
+  transform: translateX(-100%);
+}
+
+.bsx-data-loading-row-skeleton .bsx-skeleton-line,
+.bsx-data-loading-save-button .btn,
+.bsx-data-loading-inline-spinner .spinner-border {
+  animation: bsx-pulse 1.1s ease-in-out infinite;
+}
+
+.bsx-notification-center-panel {
+  animation: bsx-slide-left var(--bsx-duration-md) var(--bsx-ease-out) both;
+}
+
+.bsx-notification-item-unread .bsx-is-unread {
+  box-shadow: inset 4px 0 var(--bs-primary);
+  font-weight: 600;
+}
+
+.bsx-notification-item-read .list-group-item:not(.bsx-is-unread) {
+  opacity: .68;
+}
+
+.bsx-notification-item-priority .bsx-is-unread {
+  animation: bsx-warning-pulse 1.2s ease-in-out 2;
+  box-shadow: inset 4px 0 var(--bs-danger);
+}
+
+.bsx-notification-batch-arrive .list-group-item {
+  animation: bsx-slide-up var(--bsx-duration-md) var(--bsx-ease-out) both;
+}
+
+.bsx-notification-batch-arrive .list-group-item:nth-child(2) {
+  animation-delay: 70ms;
+}
+
+.bsx-mobile-sticky-save-bar,
+.bsx-mobile-bulk-action-bar {
+  bottom: 1rem;
+  position: sticky;
+  z-index: 2;
+}
+
+.bsx-mobile-sticky-save-bar,
+.bsx-mobile-filter-sheet,
+.bsx-mobile-bulk-action-bar,
+.bsx-mobile-inline-error,
+.bsx-mobile-bottom-nav-active .nav-link {
+  transition: box-shadow var(--bsx-duration-md) ease, opacity var(--bsx-duration-md) ease, transform var(--bsx-duration-md) var(--bsx-ease-out);
+}
+
+.bsx-mobile-sticky-save-bar:focus-within,
+.bsx-mobile-bulk-action-bar:focus-within {
+  box-shadow: 0 .75rem 2rem rgba(0, 0, 0, .18);
+  transform: translateY(calc(-1 * var(--bsx-slide-sm)));
+}
+
+.bsx-mobile-filter-sheet {
+  border-radius: var(--bs-border-radius-xl) var(--bs-border-radius-xl) var(--bs-border-radius) var(--bs-border-radius);
+}
+
+.bsx-mobile-inline-error {
+  border-color: var(--bs-danger);
+}
+
+.bsx-mobile-bottom-nav-active .nav-link.active {
+  box-shadow: inset 0 -3px 0 currentColor;
+  transform: translateY(-1px);
+}
+
 @media (prefers-reduced-motion: reduce) {
   .bsx-animated,
   .bsx-animated::before,

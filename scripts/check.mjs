@@ -99,9 +99,53 @@ const readme = await read("README.md");
 const runtimeJs = await read("assets/js/bootstrap5-transitions.js");
 const packageJson = JSON.parse(await read("package.json"));
 
+const appliedUxCategories = [
+  "breadcrumb",
+  "pagination",
+  "button-group",
+  "input-group",
+  "close-button",
+  "admin/crud",
+  "filter/search",
+  "form-wizard",
+  "state",
+  "data-loading",
+  "notification-center",
+  "mobile",
+];
+const allowedKinds = new Set([
+  "component-state",
+  "feedback-state",
+  "form-state",
+  "loading-state",
+  "navigation-state",
+  "workflow-state",
+]);
+const allowedDensities = new Set(["low", "medium", "high"]);
+const allowedRisks = new Set(["low", "medium", "high"]);
+const allowedCssProperties = new Set([
+  "background-color",
+  "background-position",
+  "border-color",
+  "box-shadow",
+  "clip-path",
+  "color",
+  "filter",
+  "opacity",
+  "transform",
+]);
+const appliedUxEffects = effects.filter((effect) => appliedUxCategories.includes(effect.category));
+
 assert(coreEffects.length === 82, `Expected 82 core effects, found ${coreEffects.length}`);
-assert(extendedEffects.length === 127, `Expected 127 extended effects, found ${extendedEffects.length}`);
-assert(effects.length === 209, `Expected 209 total effects, found ${effects.length}`);
+assert(appliedUxEffects.length === 78, `Expected 78 applied UX effects, found ${appliedUxEffects.length}`);
+for (const category of appliedUxCategories) {
+  assert(
+    appliedUxEffects.some((effect) => effect.category === category),
+    `Missing applied UX category: ${category}`,
+  );
+}
+assert(extendedEffects.length === 205, `Expected 205 extended effects, found ${extendedEffects.length}`);
+assert(effects.length === 287, `Expected 287 total effects, found ${effects.length}`);
 assert(aggregateCss.includes('@import "./core.css";'), "Aggregate CSS does not import core.css");
 assert(aggregateCss.includes('@import "./extended.css";'), "Aggregate CSS does not import extended.css");
 assert(packageJson.license === "MIT", "package.json license must be MIT");
@@ -154,6 +198,16 @@ if (frontmatterMatch) {
 
 for (const effect of effects) {
   const css = effect.level === "core" ? coreCss : extendedCss;
+  assert(allowedKinds.has(effect.kind), `Invalid kind metadata for ${effect.name}`);
+  assert(allowedDensities.has(effect.density), `Invalid density metadata for ${effect.name}`);
+  assert(allowedRisks.has(effect.risk), `Invalid risk metadata for ${effect.name}`);
+  assert(Array.isArray(effect.cssProperties) && effect.cssProperties.length > 0, `Missing cssProperties metadata for ${effect.name}`);
+  assert(
+    effect.cssProperties.every((property) => allowedCssProperties.has(property)),
+    `Invalid cssProperties metadata for ${effect.name}: ${effect.cssProperties.join(", ")}`,
+  );
+  assert(Array.isArray(effect.bootstrapStates) && effect.bootstrapStates.length > 0, `Missing bootstrapStates metadata for ${effect.name}`);
+  assert(effect.bootstrapStates.every((state) => typeof state === "string" && state.length > 0), `Invalid bootstrapStates metadata for ${effect.name}`);
   assert(new RegExp(`\\.${effect.className}(?![a-z0-9-])`).test(css), `Missing CSS selector: .${effect.className}`);
   assert(await exists(effect.snippetPath), `Missing snippet: ${effect.snippetPath}`);
   if (await exists(effect.snippetPath)) {
@@ -176,6 +230,11 @@ for (const effect of effects) {
     catalog.includes(`Runtime behavior: ${effect.runtimeBehavior ?? "none"}`),
     `Main catalog runtime behavior mismatch for ${effect.name}`,
   );
+  assert(catalog.includes(`Kind: ${effect.kind}`), `Main catalog kind metadata mismatch for ${effect.name}`);
+  assert(catalog.includes(`Density: ${effect.density}`), `Main catalog density metadata mismatch for ${effect.name}`);
+  assert(catalog.includes(`Risk: ${effect.risk}`), `Main catalog risk metadata mismatch for ${effect.name}`);
+  assert(catalog.includes("CSS properties:"), `Main catalog cssProperties metadata missing for ${effect.name}`);
+  assert(catalog.includes("Bootstrap states:"), `Main catalog bootstrapStates metadata missing for ${effect.name}`);
 }
 
 for (const [name, css] of [["core.css", coreCss], ["extended.css", extendedCss]]) {

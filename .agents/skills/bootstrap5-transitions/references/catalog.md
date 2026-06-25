@@ -4,217 +4,295 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 
 ## Summary
 
-| Class | Level | Component | Requires JS | Motion | Best for | Avoid for | Reduced motion | Snippet |
-|---|---|---|---|---|---|---|---|---|
-| `bsx-modal-scale` | core | modal | no | scale | dialogs and confirmations | dense repeated workflows | opacity-only near-instant state | `snippets/core/modal/modal-scale.html` |
-| `bsx-modal-slide-up` | core | modal | no | translate | dialogs and confirmations | dense repeated workflows | opacity-only near-instant state | `snippets/core/modal/modal-slide-up.html` |
-| `bsx-modal-blur-backdrop` | core | modal | no | opacity | dialogs and confirmations | dense repeated workflows | near-instant opacity or color state | `snippets/core/modal/modal-blur-backdrop.html` |
-| `bsx-modal-danger-confirm` | core | modal | no | color + opacity | dialogs and confirmations | dense repeated workflows | opacity-only near-instant state | `snippets/core/modal/modal-danger-confirm.html` |
-| `bsx-modal-success-confirm` | core | modal | no | color + opacity | dialogs and confirmations | dense repeated workflows | opacity-only near-instant state | `snippets/core/modal/modal-success-confirm.html` |
-| `bsx-modal-sheet-mobile` | core | modal | no | translate | dialogs and confirmations | dense repeated workflows | opacity-only near-instant state | `snippets/core/modal/modal-sheet-mobile.html` |
-| `bsx-dropdown-soft` | core | dropdown | no | opacity | menus with clear visual hierarchy | menus requiring instant state changes | opacity-only near-instant state | `snippets/core/dropdown/dropdown-soft.html` |
-| `bsx-dropdown-slide-down` | core | dropdown | no | translate | menus with clear visual hierarchy | menus requiring instant state changes | opacity-only near-instant state | `snippets/core/dropdown/dropdown-slide-down.html` |
-| `bsx-dropdown-scale` | core | dropdown | no | scale | menus with clear visual hierarchy | menus requiring instant state changes | opacity-only near-instant state | `snippets/core/dropdown/dropdown-scale.html` |
-| `bsx-dropdown-menu-stagger` | core | dropdown | no | translate | menus with clear visual hierarchy | menus requiring instant state changes | opacity-only near-instant state | `snippets/core/dropdown/dropdown-menu-stagger.html` |
-| `bsx-dropdown-item-hover-slide` | core | dropdown | no | translate | menus with clear visual hierarchy | menus requiring instant state changes | opacity-only near-instant state | `snippets/core/dropdown/dropdown-item-hover-slide.html` |
-| `bsx-dropdown-mega-menu-soft` | core | dropdown | no | opacity | menus with clear visual hierarchy | menus requiring instant state changes | opacity-only near-instant state | `snippets/core/dropdown/dropdown-mega-menu-soft.html` |
-| `bsx-offcanvas-soft` | core | offcanvas | no | opacity | navigation and mobile panels | permanent desktop navigation | opacity-only near-instant state | `snippets/core/offcanvas/offcanvas-soft.html` |
-| `bsx-offcanvas-blur-backdrop` | core | offcanvas | no | opacity | navigation and mobile panels | permanent desktop navigation | near-instant opacity or color state | `snippets/core/offcanvas/offcanvas-blur-backdrop.html` |
-| `bsx-offcanvas-mobile-sheet` | core | offcanvas | no | translate | navigation and mobile panels | permanent desktop navigation | opacity-only near-instant state | `snippets/core/offcanvas/offcanvas-mobile-sheet.html` |
-| `bsx-offcanvas-menu-stagger` | core | offcanvas | no | translate | navigation and mobile panels | permanent desktop navigation | opacity-only near-instant state | `snippets/core/offcanvas/offcanvas-menu-stagger.html` |
-| `bsx-toast-slide-right` | core | toast | yes | translate | brief asynchronous feedback | critical information requiring confirmation | opacity-only near-instant state | `snippets/core/toast/toast-slide-right.html` |
-| `bsx-toast-pop` | core | toast | yes | scale | brief asynchronous feedback | critical information requiring confirmation | opacity-only near-instant state | `snippets/core/toast/toast-pop.html` |
-| `bsx-toast-stack-pop` | core | toast | yes | scale | brief asynchronous feedback | critical information requiring confirmation | opacity-only near-instant state | `snippets/core/toast/toast-stack-pop.html` |
-| `bsx-toast-success-pop` | core | toast | yes | scale | brief asynchronous feedback | critical information requiring confirmation | opacity-only near-instant state | `snippets/core/toast/toast-success-pop.html` |
-| `bsx-toast-error-shake` | core | toast | yes | shake | brief asynchronous feedback | critical information requiring confirmation | opacity-only near-instant state | `snippets/core/toast/toast-error-shake.html` |
-| `bsx-toast-progress-line` | core | toast | yes | translate | brief asynchronous feedback | critical information requiring confirmation | opacity-only near-instant state | `snippets/core/toast/toast-progress-line.html` |
-| `bsx-alert-reveal` | core | alert | no | translate | inline feedback and validation summaries | decorative content | opacity-only near-instant state | `snippets/core/alert/alert-reveal.html` |
-| `bsx-alert-slide-down` | core | alert | no | translate | inline feedback and validation summaries | decorative content | opacity-only near-instant state | `snippets/core/alert/alert-slide-down.html` |
-| `bsx-alert-shake` | core | alert | no | shake | inline feedback and validation summaries | decorative content | opacity-only near-instant state | `snippets/core/alert/alert-shake.html` |
-| `bsx-alert-pulse-border` | core | alert | no | scale | inline feedback and validation summaries | decorative content | opacity-only near-instant state | `snippets/core/alert/alert-pulse-border.html` |
-| `bsx-alert-success-glow` | core | alert | no | opacity | inline feedback and validation summaries | decorative content | near-instant opacity or color state | `snippets/core/alert/alert-success-glow.html` |
-| `bsx-alert-dismissible-exit` | core | alert | yes | color + opacity | inline feedback and validation summaries | decorative content | opacity-only near-instant state | `snippets/core/alert/alert-dismissible-exit.html` |
-| `bsx-button-press` | core | button | no | scale | direct interaction feedback | large continuously animated areas | opacity-only near-instant state | `snippets/core/button/button-press.html` |
-| `bsx-button-hover-lift` | core | button | no | translate | direct interaction feedback | large continuously animated areas | opacity-only near-instant state | `snippets/core/button/button-hover-lift.html` |
-| `bsx-button-hover-glow` | core | button | no | opacity | direct interaction feedback | large continuously animated areas | near-instant opacity or color state | `snippets/core/button/button-hover-glow.html` |
-| `bsx-button-loading-spinner` | core | button | yes | opacity + rotate | direct interaction feedback | large continuously animated areas | opacity-only near-instant state | `snippets/core/button/button-loading-spinner.html` |
-| `bsx-button-loading-dots` | core | button | yes | opacity | direct interaction feedback | large continuously animated areas | opacity-only near-instant state | `snippets/core/button/button-loading-dots.html` |
-| `bsx-button-success-pop` | core | button | yes | scale | direct interaction feedback | large continuously animated areas | opacity-only near-instant state | `snippets/core/button/button-success-pop.html` |
-| `bsx-button-icon-slide` | core | button | no | translate | direct interaction feedback | large continuously animated areas | opacity-only near-instant state | `snippets/core/button/button-icon-slide.html` |
-| `bsx-button-ripple-lite` | core | button | yes | color + opacity | direct interaction feedback | large continuously animated areas | opacity-only near-instant state | `snippets/core/button/button-ripple-lite.html` |
-| `bsx-form-focus-ring` | core | form | no | color + opacity | focus and validation feedback | replacing native validation semantics | opacity-only near-instant state | `snippets/core/form/form-focus-ring.html` |
-| `bsx-form-invalid-shake` | core | form | no | shake | focus and validation feedback | replacing native validation semantics | opacity-only near-instant state | `snippets/core/form/form-invalid-shake.html` |
-| `bsx-form-valid-check` | core | form | no | color + opacity | focus and validation feedback | replacing native validation semantics | opacity-only near-instant state | `snippets/core/form/form-valid-check.html` |
-| `bsx-form-help-text-reveal` | core | form | no | translate | focus and validation feedback | replacing native validation semantics | opacity-only near-instant state | `snippets/core/form/form-help-text-reveal.html` |
-| `bsx-form-error-text-slide` | core | form | no | translate | focus and validation feedback | replacing native validation semantics | opacity-only near-instant state | `snippets/core/form/form-error-text-slide.html` |
-| `bsx-form-switch-toggle-soft` | core | form | no | opacity | focus and validation feedback | replacing native validation semantics | opacity-only near-instant state | `snippets/core/form/form-switch-toggle-soft.html` |
-| `bsx-form-checkbox-pop` | core | form | no | scale | focus and validation feedback | replacing native validation semantics | opacity-only near-instant state | `snippets/core/form/form-checkbox-pop.html` |
-| `bsx-form-file-drop-highlight` | core | form | yes | color + opacity | focus and validation feedback | replacing native validation semantics | opacity-only near-instant state | `snippets/core/form/form-file-drop-highlight.html` |
-| `bsx-card-hover-lift` | core | card | no | translate | interactive content collections | non-interactive dense tables | opacity-only near-instant state | `snippets/core/card/card-hover-lift.html` |
-| `bsx-card-hover-scale` | core | card | no | scale | interactive content collections | non-interactive dense tables | opacity-only near-instant state | `snippets/core/card/card-hover-scale.html` |
-| `bsx-card-hover-shadow` | core | card | no | color + opacity | interactive content collections | non-interactive dense tables | near-instant opacity or color state | `snippets/core/card/card-hover-shadow.html` |
-| `bsx-card-image-zoom` | core | card | no | scale | interactive content collections | non-interactive dense tables | opacity-only near-instant state | `snippets/core/card/card-image-zoom.html` |
-| `bsx-card-image-fade-overlay` | core | card | no | opacity | interactive content collections | non-interactive dense tables | near-instant opacity or color state | `snippets/core/card/card-image-fade-overlay.html` |
-| `bsx-card-stagger-list` | core | card | no | translate | interactive content collections | non-interactive dense tables | opacity-only near-instant state | `snippets/core/card/card-stagger-list.html` |
-| `bsx-tabs-fade` | core | tabs | no | opacity | section navigation and tab state | rapidly auto-rotating content | near-instant opacity or color state | `snippets/core/tabs/tabs-fade.html` |
-| `bsx-tabs-underline-slide` | core | tabs | no | translate | section navigation and tab state | rapidly auto-rotating content | opacity-only near-instant state | `snippets/core/tabs/tabs-underline-slide.html` |
-| `bsx-tabs-pill-active-pop` | core | tabs | no | scale | section navigation and tab state | rapidly auto-rotating content | opacity-only near-instant state | `snippets/core/tabs/tabs-pill-active-pop.html` |
-| `bsx-nav-link-hover-underline` | core | navbar | no | translate | section navigation and tab state | rapidly auto-rotating content | opacity-only near-instant state | `snippets/core/navbar/nav-link-hover-underline.html` |
-| `bsx-nav-sidebar-active-marker` | core | sidebar | no | translate | section navigation and tab state | rapidly auto-rotating content | opacity-only near-instant state | `snippets/core/sidebar/nav-sidebar-active-marker.html` |
-| `bsx-accordion-icon-rotate` | core | accordion | no | rotate | disclosure controls | content that must remain continuously visible | opacity-only near-instant state | `snippets/core/accordion/accordion-icon-rotate.html` |
-| `bsx-accordion-icon-plus-minus` | core | accordion | no | rotate | disclosure controls | content that must remain continuously visible | opacity-only near-instant state | `snippets/core/accordion/accordion-icon-plus-minus.html` |
-| `bsx-accordion-body-fade` | core | accordion | no | opacity | disclosure controls | content that must remain continuously visible | near-instant opacity or color state | `snippets/core/accordion/accordion-body-fade.html` |
-| `bsx-collapse-soft` | core | accordion | no | opacity | disclosure controls | content that must remain continuously visible | opacity-only near-instant state | `snippets/core/accordion/collapse-soft.html` |
-| `bsx-collapse-height-smooth` | core | accordion | no | color + opacity | disclosure controls | content that must remain continuously visible | opacity-only near-instant state | `snippets/core/accordion/collapse-height-smooth.html` |
-| `bsx-navbar-link-hover-line` | core | navbar | no | translate | application navigation | small inline controls | opacity-only near-instant state | `snippets/core/navbar/navbar-link-hover-line.html` |
-| `bsx-navbar-mobile-collapse-soft` | core | navbar | no | opacity | application navigation | small inline controls | opacity-only near-instant state | `snippets/core/navbar/navbar-mobile-collapse-soft.html` |
-| `bsx-navbar-toggler-morph` | core | navbar | no | rotate | application navigation | small inline controls | opacity-only near-instant state | `snippets/core/navbar/navbar-toggler-morph.html` |
-| `bsx-sidebar-slide-in` | core | sidebar | no | translate | application navigation | small inline controls | opacity-only near-instant state | `snippets/core/sidebar/sidebar-slide-in.html` |
-| `bsx-sidebar-item-active-marker` | core | sidebar | no | translate | application navigation | small inline controls | opacity-only near-instant state | `snippets/core/sidebar/sidebar-item-active-marker.html` |
-| `bsx-badge-pop` | core | badge | no | scale | status and metric updates | long text content | opacity-only near-instant state | `snippets/core/badge/badge-pop.html` |
-| `bsx-badge-notification-ping` | core | badge | no | scale | status and metric updates | long text content | opacity-only near-instant state | `snippets/core/badge/badge-notification-ping.html` |
-| `bsx-badge-status-pulse` | core | badge | no | scale | status and metric updates | long text content | opacity-only near-instant state | `snippets/core/badge/badge-status-pulse.html` |
-| `bsx-counter-bump` | core | counter | yes | scale | status and metric updates | long text content | opacity-only near-instant state | `snippets/core/counter/counter-bump.html` |
-| `bsx-metric-card-update` | core | counter | yes | color + opacity | status and metric updates | long text content | opacity-only near-instant state | `snippets/core/counter/metric-card-update.html` |
-| `bsx-table-row-hover` | core | table | no | color + opacity | row state and collection changes | large simultaneous batches | opacity-only near-instant state | `snippets/core/table/table-row-hover.html` |
-| `bsx-table-row-insert` | core | table | yes | translate | row state and collection changes | large simultaneous batches | opacity-only near-instant state | `snippets/core/table/table-row-insert.html` |
-| `bsx-table-row-remove` | core | table | yes | translate | row state and collection changes | large simultaneous batches | opacity-only near-instant state | `snippets/core/table/table-row-remove.html` |
-| `bsx-table-row-update-flash` | core | table | yes | opacity | row state and collection changes | large simultaneous batches | opacity-only near-instant state | `snippets/core/table/table-row-update-flash.html` |
-| `bsx-list-item-stagger` | core | list | no | translate | row state and collection changes | large simultaneous batches | opacity-only near-instant state | `snippets/core/list/list-item-stagger.html` |
-| `bsx-list-group-active-marker` | core | list | no | translate | row state and collection changes | large simultaneous batches | opacity-only near-instant state | `snippets/core/list/list-group-active-marker.html` |
-| `bsx-skeleton-shimmer` | core | skeleton | no | opacity | short loading states | unknown or very long waits without status | opacity-only near-instant state | `snippets/core/skeleton/skeleton-shimmer.html` |
-| `bsx-skeleton-pulse` | core | skeleton | no | scale + opacity | short loading states | unknown or very long waits without status | opacity-only near-instant state | `snippets/core/skeleton/skeleton-pulse.html` |
-| `bsx-skeleton-card` | core | skeleton | no | opacity | short loading states | unknown or very long waits without status | opacity-only near-instant state | `snippets/core/skeleton/skeleton-card.html` |
-| `bsx-skeleton-table` | core | skeleton | no | opacity | short loading states | unknown or very long waits without status | opacity-only near-instant state | `snippets/core/skeleton/skeleton-table.html` |
-| `bsx-loader-dots` | core | loading state | no | color + opacity | short loading states | unknown or very long waits without status | opacity-only near-instant state | `snippets/core/loading/loader-dots.html` |
-| `bsx-page-loading-fade` | core | loading state | no | opacity | short loading states | unknown or very long waits without status | near-instant opacity or color state | `snippets/core/loading/page-loading-fade.html` |
-| `bsx-modal-scale-sm` | extended | modal | no | scale | dialogs and confirmations | dense repeated workflows | opacity-only near-instant state | `snippets/extended/modal/modal-scale-sm.html` |
-| `bsx-modal-scale-lg` | extended | modal | no | scale | dialogs and confirmations | dense repeated workflows | opacity-only near-instant state | `snippets/extended/modal/modal-scale-lg.html` |
-| `bsx-modal-slide-down` | extended | modal | no | translate | dialogs and confirmations | dense repeated workflows | opacity-only near-instant state | `snippets/extended/modal/modal-slide-down.html` |
-| `bsx-modal-slide-left` | extended | modal | no | translate | dialogs and confirmations | dense repeated workflows | opacity-only near-instant state | `snippets/extended/modal/modal-slide-left.html` |
-| `bsx-modal-slide-right` | extended | modal | no | translate | dialogs and confirmations | dense repeated workflows | opacity-only near-instant state | `snippets/extended/modal/modal-slide-right.html` |
-| `bsx-modal-fade-soft` | extended | modal | no | opacity | dialogs and confirmations | dense repeated workflows | near-instant opacity or color state | `snippets/extended/modal/modal-fade-soft.html` |
-| `bsx-modal-zoom-blur` | extended | modal | no | scale + opacity | dialogs and confirmations | dense repeated workflows | near-instant opacity or color state | `snippets/extended/modal/modal-zoom-blur.html` |
-| `bsx-modal-fullscreen-soft` | extended | modal | no | opacity | dialogs and confirmations | dense repeated workflows | opacity-only near-instant state | `snippets/extended/modal/modal-fullscreen-soft.html` |
-| `bsx-modal-stack-pop` | extended | modal | no | scale | dialogs and confirmations | dense repeated workflows | opacity-only near-instant state | `snippets/extended/modal/modal-stack-pop.html` |
-| `bsx-modal-content-stagger` | extended | modal | no | translate | dialogs and confirmations | dense repeated workflows | opacity-only near-instant state | `snippets/extended/modal/modal-content-stagger.html` |
-| `bsx-dropdown-slide-up` | extended | dropdown | no | translate | menus with clear visual hierarchy | menus requiring instant state changes | opacity-only near-instant state | `snippets/extended/dropdown/dropdown-slide-up.html` |
-| `bsx-dropdown-fade` | extended | dropdown | no | opacity | menus with clear visual hierarchy | menus requiring instant state changes | near-instant opacity or color state | `snippets/extended/dropdown/dropdown-fade.html` |
-| `bsx-dropdown-origin-top` | extended | dropdown | no | color + opacity | menus with clear visual hierarchy | menus requiring instant state changes | opacity-only near-instant state | `snippets/extended/dropdown/dropdown-origin-top.html` |
-| `bsx-dropdown-origin-bottom` | extended | dropdown | no | color + opacity | menus with clear visual hierarchy | menus requiring instant state changes | opacity-only near-instant state | `snippets/extended/dropdown/dropdown-origin-bottom.html` |
-| `bsx-dropdown-blur` | extended | dropdown | no | opacity | menus with clear visual hierarchy | menus requiring instant state changes | near-instant opacity or color state | `snippets/extended/dropdown/dropdown-blur.html` |
-| `bsx-dropdown-item-hover-bg` | extended | dropdown | no | color + opacity | menus with clear visual hierarchy | menus requiring instant state changes | opacity-only near-instant state | `snippets/extended/dropdown/dropdown-item-hover-bg.html` |
-| `bsx-dropdown-item-active-pop` | extended | dropdown | no | scale | menus with clear visual hierarchy | menus requiring instant state changes | opacity-only near-instant state | `snippets/extended/dropdown/dropdown-item-active-pop.html` |
-| `bsx-dropdown-user-menu` | extended | dropdown | no | color + opacity | menus with clear visual hierarchy | menus requiring instant state changes | opacity-only near-instant state | `snippets/extended/dropdown/dropdown-user-menu.html` |
-| `bsx-offcanvas-slide-fast` | extended | offcanvas | no | translate | navigation and mobile panels | permanent desktop navigation | opacity-only near-instant state | `snippets/extended/offcanvas/offcanvas-slide-fast.html` |
-| `bsx-offcanvas-slide-slow` | extended | offcanvas | no | translate | navigation and mobile panels | permanent desktop navigation | opacity-only near-instant state | `snippets/extended/offcanvas/offcanvas-slide-slow.html` |
-| `bsx-offcanvas-left-soft` | extended | offcanvas | no | opacity | navigation and mobile panels | permanent desktop navigation | opacity-only near-instant state | `snippets/extended/offcanvas/offcanvas-left-soft.html` |
-| `bsx-offcanvas-right-soft` | extended | offcanvas | no | opacity | navigation and mobile panels | permanent desktop navigation | opacity-only near-instant state | `snippets/extended/offcanvas/offcanvas-right-soft.html` |
-| `bsx-offcanvas-bottom-sheet` | extended | offcanvas | no | translate | navigation and mobile panels | permanent desktop navigation | opacity-only near-instant state | `snippets/extended/offcanvas/offcanvas-bottom-sheet.html` |
-| `bsx-offcanvas-header-reveal` | extended | offcanvas | no | translate | navigation and mobile panels | permanent desktop navigation | opacity-only near-instant state | `snippets/extended/offcanvas/offcanvas-header-reveal.html` |
-| `bsx-toast-slide-left` | extended | toast | yes | translate | brief asynchronous feedback | critical information requiring confirmation | opacity-only near-instant state | `snippets/extended/toast/toast-slide-left.html` |
-| `bsx-toast-slide-top` | extended | toast | yes | translate | brief asynchronous feedback | critical information requiring confirmation | opacity-only near-instant state | `snippets/extended/toast/toast-slide-top.html` |
-| `bsx-toast-slide-bottom` | extended | toast | yes | translate | brief asynchronous feedback | critical information requiring confirmation | opacity-only near-instant state | `snippets/extended/toast/toast-slide-bottom.html` |
-| `bsx-toast-warning-pulse` | extended | toast | yes | scale | brief asynchronous feedback | critical information requiring confirmation | opacity-only near-instant state | `snippets/extended/toast/toast-warning-pulse.html` |
-| `bsx-toast-auto-hide-bar` | extended | toast | yes | color + opacity | brief asynchronous feedback | critical information requiring confirmation | opacity-only near-instant state | `snippets/extended/toast/toast-auto-hide-bar.html` |
-| `bsx-toast-icon-bounce` | extended | toast | yes | scale | brief asynchronous feedback | critical information requiring confirmation | opacity-only near-instant state | `snippets/extended/toast/toast-icon-bounce.html` |
-| `bsx-alert-slide-up` | extended | alert | no | translate | inline feedback and validation summaries | decorative content | opacity-only near-instant state | `snippets/extended/alert/alert-slide-up.html` |
-| `bsx-alert-fade-soft` | extended | alert | no | opacity | inline feedback and validation summaries | decorative content | near-instant opacity or color state | `snippets/extended/alert/alert-fade-soft.html` |
-| `bsx-alert-danger-flash` | extended | alert | no | opacity | inline feedback and validation summaries | decorative content | opacity-only near-instant state | `snippets/extended/alert/alert-danger-flash.html` |
-| `bsx-alert-warning-attention` | extended | alert | no | shake | inline feedback and validation summaries | decorative content | opacity-only near-instant state | `snippets/extended/alert/alert-warning-attention.html` |
-| `bsx-button-hover-slide-bg` | extended | button | no | translate | direct interaction feedback | large continuously animated areas | opacity-only near-instant state | `snippets/extended/button/button-hover-slide-bg.html` |
-| `bsx-button-success-check` | extended | button | yes | color + opacity | direct interaction feedback | large continuously animated areas | opacity-only near-instant state | `snippets/extended/button/button-success-check.html` |
-| `bsx-button-danger-pulse` | extended | button | no | scale | direct interaction feedback | large continuously animated areas | opacity-only near-instant state | `snippets/extended/button/button-danger-pulse.html` |
-| `bsx-button-icon-bounce` | extended | button | no | scale | direct interaction feedback | large continuously animated areas | opacity-only near-instant state | `snippets/extended/button/button-icon-bounce.html` |
-| `bsx-button-group-active-slide` | extended | button | no | translate | direct interaction feedback | large continuously animated areas | opacity-only near-instant state | `snippets/extended/button/button-group-active-slide.html` |
-| `bsx-button-disabled-soft` | extended | button | no | opacity | direct interaction feedback | large continuously animated areas | opacity-only near-instant state | `snippets/extended/button/button-disabled-soft.html` |
-| `bsx-form-focus-glow` | extended | form | no | opacity | focus and validation feedback | replacing native validation semantics | near-instant opacity or color state | `snippets/extended/form/form-focus-glow.html` |
-| `bsx-form-invalid-pulse` | extended | form | no | scale | focus and validation feedback | replacing native validation semantics | opacity-only near-instant state | `snippets/extended/form/form-invalid-pulse.html` |
-| `bsx-form-label-float-soft` | extended | form | no | opacity | focus and validation feedback | replacing native validation semantics | opacity-only near-instant state | `snippets/extended/form/form-label-float-soft.html` |
-| `bsx-form-input-clear-pop` | extended | form | yes | scale | focus and validation feedback | replacing native validation semantics | opacity-only near-instant state | `snippets/extended/form/form-input-clear-pop.html` |
-| `bsx-form-select-open-soft` | extended | form | no | opacity | focus and validation feedback | replacing native validation semantics | opacity-only near-instant state | `snippets/extended/form/form-select-open-soft.html` |
-| `bsx-form-radio-pop` | extended | form | no | scale | focus and validation feedback | replacing native validation semantics | opacity-only near-instant state | `snippets/extended/form/form-radio-pop.html` |
-| `bsx-card-hover-border` | extended | card | no | color + opacity | interactive content collections | non-interactive dense tables | opacity-only near-instant state | `snippets/extended/card/card-hover-border.html` |
-| `bsx-card-hover-glow` | extended | card | no | opacity | interactive content collections | non-interactive dense tables | near-instant opacity or color state | `snippets/extended/card/card-hover-glow.html` |
-| `bsx-card-click-press` | extended | card | no | scale | interactive content collections | non-interactive dense tables | opacity-only near-instant state | `snippets/extended/card/card-click-press.html` |
-| `bsx-card-reveal` | extended | card | no | translate | interactive content collections | non-interactive dense tables | opacity-only near-instant state | `snippets/extended/card/card-reveal.html` |
-| `bsx-card-footer-reveal` | extended | card | no | translate | interactive content collections | non-interactive dense tables | opacity-only near-instant state | `snippets/extended/card/card-footer-reveal.html` |
-| `bsx-card-action-slide` | extended | card | no | translate | interactive content collections | non-interactive dense tables | opacity-only near-instant state | `snippets/extended/card/card-action-slide.html` |
-| `bsx-tabs-slide-left` | extended | tabs | no | translate | section navigation and tab state | rapidly auto-rotating content | opacity-only near-instant state | `snippets/extended/tabs/tabs-slide-left.html` |
-| `bsx-tabs-slide-right` | extended | tabs | no | translate | section navigation and tab state | rapidly auto-rotating content | opacity-only near-instant state | `snippets/extended/tabs/tabs-slide-right.html` |
-| `bsx-tabs-content-reveal` | extended | tabs | no | translate | section navigation and tab state | rapidly auto-rotating content | opacity-only near-instant state | `snippets/extended/tabs/tabs-content-reveal.html` |
-| `bsx-tabs-content-blur` | extended | tabs | no | opacity | section navigation and tab state | rapidly auto-rotating content | near-instant opacity or color state | `snippets/extended/tabs/tabs-content-blur.html` |
-| `bsx-nav-link-hover-slide` | extended | navbar | no | translate | section navigation and tab state | rapidly auto-rotating content | opacity-only near-instant state | `snippets/extended/navbar/nav-link-hover-slide.html` |
-| `bsx-nav-sidebar-collapse-soft` | extended | sidebar | no | opacity | section navigation and tab state | rapidly auto-rotating content | opacity-only near-instant state | `snippets/extended/sidebar/nav-sidebar-collapse-soft.html` |
-| `bsx-accordion-body-slide` | extended | accordion | no | translate | disclosure controls | content that must remain continuously visible | opacity-only near-instant state | `snippets/extended/accordion/accordion-body-slide.html` |
-| `bsx-accordion-header-hover` | extended | accordion | no | color + opacity | disclosure controls | content that must remain continuously visible | opacity-only near-instant state | `snippets/extended/accordion/accordion-header-hover.html` |
-| `bsx-accordion-active-glow` | extended | accordion | no | opacity | disclosure controls | content that must remain continuously visible | near-instant opacity or color state | `snippets/extended/accordion/accordion-active-glow.html` |
-| `bsx-collapse-fade` | extended | accordion | no | opacity | disclosure controls | content that must remain continuously visible | near-instant opacity or color state | `snippets/extended/accordion/collapse-fade.html` |
-| `bsx-collapse-card-reveal` | extended | accordion | no | translate | disclosure controls | content that must remain continuously visible | opacity-only near-instant state | `snippets/extended/accordion/collapse-card-reveal.html` |
-| `bsx-navbar-brand-pop` | extended | navbar | no | scale | application navigation | small inline controls | opacity-only near-instant state | `snippets/extended/navbar/navbar-brand-pop.html` |
-| `bsx-navbar-link-hover-bg` | extended | navbar | no | color + opacity | application navigation | small inline controls | opacity-only near-instant state | `snippets/extended/navbar/navbar-link-hover-bg.html` |
-| `bsx-navbar-toggler-spin` | extended | navbar | no | rotate | application navigation | small inline controls | opacity-only near-instant state | `snippets/extended/navbar/navbar-toggler-spin.html` |
-| `bsx-sidebar-item-hover-slide` | extended | sidebar | no | translate | application navigation | small inline controls | opacity-only near-instant state | `snippets/extended/sidebar/sidebar-item-hover-slide.html` |
-| `bsx-sidebar-submenu-reveal` | extended | sidebar | no | translate | application navigation | small inline controls | opacity-only near-instant state | `snippets/extended/sidebar/sidebar-submenu-reveal.html` |
-| `bsx-sidebar-mini-expand` | extended | sidebar | no | color + opacity | application navigation | small inline controls | opacity-only near-instant state | `snippets/extended/sidebar/sidebar-mini-expand.html` |
-| `bsx-sidebar-overlay-blur` | extended | sidebar | no | opacity | application navigation | small inline controls | near-instant opacity or color state | `snippets/extended/sidebar/sidebar-overlay-blur.html` |
-| `bsx-badge-pulse` | extended | badge | no | scale | status and metric updates | long text content | opacity-only near-instant state | `snippets/extended/badge/badge-pulse.html` |
-| `bsx-badge-count-bump` | extended | badge | no | scale | status and metric updates | long text content | opacity-only near-instant state | `snippets/extended/badge/badge-count-bump.html` |
-| `bsx-badge-status-dot` | extended | badge | no | color + opacity | status and metric updates | long text content | opacity-only near-instant state | `snippets/extended/badge/badge-status-dot.html` |
-| `bsx-counter-change-up` | extended | counter | yes | color + opacity | status and metric updates | long text content | opacity-only near-instant state | `snippets/extended/counter/counter-change-up.html` |
-| `bsx-counter-change-down` | extended | counter | yes | color + opacity | status and metric updates | long text content | opacity-only near-instant state | `snippets/extended/counter/counter-change-down.html` |
-| `bsx-price-change-flash` | extended | counter | yes | opacity | status and metric updates | long text content | opacity-only near-instant state | `snippets/extended/counter/price-change-flash.html` |
-| `bsx-table-row-selected` | extended | table | yes | color + opacity | row state and collection changes | large simultaneous batches | opacity-only near-instant state | `snippets/extended/table/table-row-selected.html` |
-| `bsx-table-sort-icon-rotate` | extended | table | yes | rotate | row state and collection changes | large simultaneous batches | opacity-only near-instant state | `snippets/extended/table/table-sort-icon-rotate.html` |
-| `bsx-table-filter-reveal` | extended | table | no | translate | row state and collection changes | large simultaneous batches | opacity-only near-instant state | `snippets/extended/table/table-filter-reveal.html` |
-| `bsx-list-item-reveal` | extended | list | no | translate | row state and collection changes | large simultaneous batches | opacity-only near-instant state | `snippets/extended/list/list-item-reveal.html` |
-| `bsx-list-item-remove` | extended | list | yes | translate | row state and collection changes | large simultaneous batches | opacity-only near-instant state | `snippets/extended/list/list-item-remove.html` |
-| `bsx-list-group-hover-slide` | extended | list | no | translate | row state and collection changes | large simultaneous batches | opacity-only near-instant state | `snippets/extended/list/list-group-hover-slide.html` |
-| `bsx-skeleton-wave` | extended | skeleton | no | opacity | short loading states | unknown or very long waits without status | opacity-only near-instant state | `snippets/extended/skeleton/skeleton-wave.html` |
-| `bsx-skeleton-avatar` | extended | skeleton | no | opacity | short loading states | unknown or very long waits without status | opacity-only near-instant state | `snippets/extended/skeleton/skeleton-avatar.html` |
-| `bsx-skeleton-button` | extended | skeleton | no | opacity | short loading states | unknown or very long waits without status | opacity-only near-instant state | `snippets/extended/skeleton/skeleton-button.html` |
-| `bsx-spinner-fade` | extended | loading state | no | opacity + rotate | short loading states | unknown or very long waits without status | near-instant opacity or color state | `snippets/extended/loading/spinner-fade.html` |
-| `bsx-spinner-scale` | extended | loading state | no | scale + rotate | short loading states | unknown or very long waits without status | opacity-only near-instant state | `snippets/extended/loading/spinner-scale.html` |
-| `bsx-loader-bar` | extended | loading state | no | color + opacity | short loading states | unknown or very long waits without status | opacity-only near-instant state | `snippets/extended/loading/loader-bar.html` |
-| `bsx-image-hover-zoom` | extended | image | no | scale | media previews and galleries | essential images that must remain static | opacity-only near-instant state | `snippets/extended/image/image-hover-zoom.html` |
-| `bsx-image-hover-fade` | extended | image | no | opacity | media previews and galleries | essential images that must remain static | near-instant opacity or color state | `snippets/extended/image/image-hover-fade.html` |
-| `bsx-image-hover-overlay` | extended | image | no | color + opacity | media previews and galleries | essential images that must remain static | opacity-only near-instant state | `snippets/extended/image/image-hover-overlay.html` |
-| `bsx-image-hover-caption-slide` | extended | image | no | translate | media previews and galleries | essential images that must remain static | opacity-only near-instant state | `snippets/extended/image/image-hover-caption-slide.html` |
-| `bsx-image-lazy-reveal` | extended | image | no | translate | media previews and galleries | essential images that must remain static | opacity-only near-instant state | `snippets/extended/image/image-lazy-reveal.html` |
-| `bsx-avatar-pop` | extended | image | no | scale | media previews and galleries | essential images that must remain static | opacity-only near-instant state | `snippets/extended/image/avatar-pop.html` |
-| `bsx-avatar-status-pulse` | extended | image | no | scale | media previews and galleries | essential images that must remain static | opacity-only near-instant state | `snippets/extended/image/avatar-status-pulse.html` |
-| `bsx-gallery-item-reveal` | extended | image | no | translate | media previews and galleries | essential images that must remain static | opacity-only near-instant state | `snippets/extended/image/gallery-item-reveal.html` |
-| `bsx-carousel-caption-slide` | extended | media | no | translate | media previews and galleries | essential images that must remain static | opacity-only near-instant state | `snippets/extended/media/carousel-caption-slide.html` |
-| `bsx-carousel-control-hover` | extended | media | no | color + opacity | media previews and galleries | essential images that must remain static | opacity-only near-instant state | `snippets/extended/media/carousel-control-hover.html` |
-| `bsx-tooltip-fade-soft` | extended | tooltip | no | opacity | contextual supporting information | primary task content | near-instant opacity or color state | `snippets/extended/tooltip/tooltip-fade-soft.html` |
-| `bsx-tooltip-slide-up` | extended | tooltip | no | translate | contextual supporting information | primary task content | opacity-only near-instant state | `snippets/extended/tooltip/tooltip-slide-up.html` |
-| `bsx-tooltip-slide-down` | extended | tooltip | no | translate | contextual supporting information | primary task content | opacity-only near-instant state | `snippets/extended/tooltip/tooltip-slide-down.html` |
-| `bsx-tooltip-scale` | extended | tooltip | no | scale | contextual supporting information | primary task content | opacity-only near-instant state | `snippets/extended/tooltip/tooltip-scale.html` |
-| `bsx-tooltip-pop` | extended | tooltip | no | scale | contextual supporting information | primary task content | opacity-only near-instant state | `snippets/extended/tooltip/tooltip-pop.html` |
-| `bsx-popover-soft` | extended | popover | no | scale + opacity | contextual supporting information | primary task content | opacity-only near-instant state | `snippets/extended/popover/popover-soft.html` |
-| `bsx-popover-slide` | extended | popover | no | translate + scale | contextual supporting information | primary task content | opacity-only near-instant state | `snippets/extended/popover/popover-slide.html` |
-| `bsx-popover-blur` | extended | popover | no | scale + opacity | contextual supporting information | primary task content | near-instant opacity or color state | `snippets/extended/popover/popover-blur.html` |
-| `bsx-popover-content-stagger` | extended | popover | no | translate + scale | contextual supporting information | primary task content | opacity-only near-instant state | `snippets/extended/popover/popover-content-stagger.html` |
-| `bsx-popover-dismiss-fade` | extended | popover | no | scale + opacity | contextual supporting information | primary task content | near-instant opacity or color state | `snippets/extended/popover/popover-dismiss-fade.html` |
-| `bsx-progress-fill-soft` | extended | progress | no | translate + opacity | progress and multi-step flows | indeterminate tasks without a status model | opacity-only near-instant state | `snippets/extended/progress/progress-fill-soft.html` |
-| `bsx-progress-striped-motion` | extended | progress | no | color + opacity | progress and multi-step flows | indeterminate tasks without a status model | opacity-only near-instant state | `snippets/extended/progress/progress-striped-motion.html` |
-| `bsx-progress-success-pop` | extended | progress | no | scale | progress and multi-step flows | indeterminate tasks without a status model | opacity-only near-instant state | `snippets/extended/progress/progress-success-pop.html` |
-| `bsx-progress-danger-pulse` | extended | progress | no | scale | progress and multi-step flows | indeterminate tasks without a status model | opacity-only near-instant state | `snippets/extended/progress/progress-danger-pulse.html` |
-| `bsx-stepper-active-pop` | extended | stepper | no | scale | progress and multi-step flows | indeterminate tasks without a status model | opacity-only near-instant state | `snippets/extended/stepper/stepper-active-pop.html` |
-| `bsx-stepper-complete-check` | extended | stepper | no | color + opacity | progress and multi-step flows | indeterminate tasks without a status model | opacity-only near-instant state | `snippets/extended/stepper/stepper-complete-check.html` |
-| `bsx-stepper-line-fill` | extended | stepper | no | translate | progress and multi-step flows | indeterminate tasks without a status model | opacity-only near-instant state | `snippets/extended/stepper/stepper-line-fill.html` |
-| `bsx-wizard-page-slide` | extended | stepper | no | translate | progress and multi-step flows | indeterminate tasks without a status model | opacity-only near-instant state | `snippets/extended/stepper/wizard-page-slide.html` |
-| `bsx-wizard-page-fade` | extended | stepper | no | opacity | progress and multi-step flows | indeterminate tasks without a status model | near-instant opacity or color state | `snippets/extended/stepper/wizard-page-fade.html` |
-| `bsx-page-fade-in` | extended | page | no | opacity | page and section state changes | continuous scroll-driven motion | near-instant opacity or color state | `snippets/extended/page/page-fade-in.html` |
-| `bsx-page-slide-up` | extended | page | no | translate | page and section state changes | continuous scroll-driven motion | opacity-only near-instant state | `snippets/extended/page/page-slide-up.html` |
-| `bsx-page-section-reveal` | extended | page | no | translate | page and section state changes | continuous scroll-driven motion | opacity-only near-instant state | `snippets/extended/page/page-section-reveal.html` |
-| `bsx-page-section-stagger` | extended | page | no | translate | page and section state changes | continuous scroll-driven motion | opacity-only near-instant state | `snippets/extended/page/page-section-stagger.html` |
-| `bsx-page-empty-state-pop` | extended | page | no | scale | page and section state changes | continuous scroll-driven motion | opacity-only near-instant state | `snippets/extended/page/page-empty-state-pop.html` |
-| `bsx-page-error-shake` | extended | page | no | shake | page and section state changes | continuous scroll-driven motion | opacity-only near-instant state | `snippets/extended/page/page-error-shake.html` |
-| `bsx-page-success-check` | extended | page | no | color + opacity | page and section state changes | continuous scroll-driven motion | opacity-only near-instant state | `snippets/extended/page/page-success-check.html` |
-| `bsx-content-fade-swap` | extended | page | no | opacity | page and section state changes | continuous scroll-driven motion | near-instant opacity or color state | `snippets/extended/page/content-fade-swap.html` |
-| `bsx-content-blur-swap` | extended | page | no | opacity | page and section state changes | continuous scroll-driven motion | near-instant opacity or color state | `snippets/extended/page/content-blur-swap.html` |
-| `bsx-scroll-reveal-lite` | extended | page | yes | translate | page and section state changes | continuous scroll-driven motion | opacity-only near-instant state | `snippets/extended/page/scroll-reveal-lite.html` |
+| Class | Level | Component | Requires JS | Kind | Density | Risk | Motion | Best for | Avoid for | Reduced motion | Snippet |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| `bsx-modal-scale` | core | modal | no | component-state | low | low | scale | dialogs and confirmations | dense repeated workflows | opacity-only near-instant state | `snippets/core/modal/modal-scale.html` |
+| `bsx-modal-slide-up` | core | modal | no | component-state | low | low | translate | dialogs and confirmations | dense repeated workflows | opacity-only near-instant state | `snippets/core/modal/modal-slide-up.html` |
+| `bsx-modal-blur-backdrop` | core | modal | no | component-state | low | low | opacity | dialogs and confirmations | dense repeated workflows | near-instant opacity or color state | `snippets/core/modal/modal-blur-backdrop.html` |
+| `bsx-modal-danger-confirm` | core | modal | no | component-state | low | medium | color + opacity | dialogs and confirmations | dense repeated workflows | opacity-only near-instant state | `snippets/core/modal/modal-danger-confirm.html` |
+| `bsx-modal-success-confirm` | core | modal | no | component-state | low | low | color + opacity | dialogs and confirmations | dense repeated workflows | opacity-only near-instant state | `snippets/core/modal/modal-success-confirm.html` |
+| `bsx-modal-sheet-mobile` | core | modal | no | component-state | low | low | translate | dialogs and confirmations | dense repeated workflows | opacity-only near-instant state | `snippets/core/modal/modal-sheet-mobile.html` |
+| `bsx-dropdown-soft` | core | dropdown | no | component-state | medium | low | opacity | menus with clear visual hierarchy | menus requiring instant state changes | opacity-only near-instant state | `snippets/core/dropdown/dropdown-soft.html` |
+| `bsx-dropdown-slide-down` | core | dropdown | no | component-state | medium | low | translate | menus with clear visual hierarchy | menus requiring instant state changes | opacity-only near-instant state | `snippets/core/dropdown/dropdown-slide-down.html` |
+| `bsx-dropdown-scale` | core | dropdown | no | component-state | medium | low | scale | menus with clear visual hierarchy | menus requiring instant state changes | opacity-only near-instant state | `snippets/core/dropdown/dropdown-scale.html` |
+| `bsx-dropdown-menu-stagger` | core | dropdown | no | component-state | medium | low | translate | menus with clear visual hierarchy | menus requiring instant state changes | opacity-only near-instant state | `snippets/core/dropdown/dropdown-menu-stagger.html` |
+| `bsx-dropdown-item-hover-slide` | core | dropdown | no | component-state | medium | low | translate | menus with clear visual hierarchy | menus requiring instant state changes | opacity-only near-instant state | `snippets/core/dropdown/dropdown-item-hover-slide.html` |
+| `bsx-dropdown-mega-menu-soft` | core | dropdown | no | component-state | medium | low | opacity | menus with clear visual hierarchy | menus requiring instant state changes | opacity-only near-instant state | `snippets/core/dropdown/dropdown-mega-menu-soft.html` |
+| `bsx-offcanvas-soft` | core | offcanvas | no | component-state | low | low | opacity | navigation and mobile panels | permanent desktop navigation | opacity-only near-instant state | `snippets/core/offcanvas/offcanvas-soft.html` |
+| `bsx-offcanvas-blur-backdrop` | core | offcanvas | no | component-state | low | low | opacity | navigation and mobile panels | permanent desktop navigation | near-instant opacity or color state | `snippets/core/offcanvas/offcanvas-blur-backdrop.html` |
+| `bsx-offcanvas-mobile-sheet` | core | offcanvas | no | component-state | low | low | translate | navigation and mobile panels | permanent desktop navigation | opacity-only near-instant state | `snippets/core/offcanvas/offcanvas-mobile-sheet.html` |
+| `bsx-offcanvas-menu-stagger` | core | offcanvas | no | component-state | low | low | translate | navigation and mobile panels | permanent desktop navigation | opacity-only near-instant state | `snippets/core/offcanvas/offcanvas-menu-stagger.html` |
+| `bsx-toast-slide-right` | core | toast | yes | feedback-state | medium | low | translate | brief asynchronous feedback | critical information requiring confirmation | opacity-only near-instant state | `snippets/core/toast/toast-slide-right.html` |
+| `bsx-toast-pop` | core | toast | yes | feedback-state | medium | low | scale | brief asynchronous feedback | critical information requiring confirmation | opacity-only near-instant state | `snippets/core/toast/toast-pop.html` |
+| `bsx-toast-stack-pop` | core | toast | yes | feedback-state | medium | low | scale | brief asynchronous feedback | critical information requiring confirmation | opacity-only near-instant state | `snippets/core/toast/toast-stack-pop.html` |
+| `bsx-toast-success-pop` | core | toast | yes | feedback-state | medium | low | scale | brief asynchronous feedback | critical information requiring confirmation | opacity-only near-instant state | `snippets/core/toast/toast-success-pop.html` |
+| `bsx-toast-error-shake` | core | toast | yes | feedback-state | medium | medium | shake | brief asynchronous feedback | critical information requiring confirmation | opacity-only near-instant state | `snippets/core/toast/toast-error-shake.html` |
+| `bsx-toast-progress-line` | core | toast | yes | feedback-state | medium | low | translate | brief asynchronous feedback | critical information requiring confirmation | opacity-only near-instant state | `snippets/core/toast/toast-progress-line.html` |
+| `bsx-alert-reveal` | core | alert | no | feedback-state | medium | low | translate | inline feedback and validation summaries | decorative content | opacity-only near-instant state | `snippets/core/alert/alert-reveal.html` |
+| `bsx-alert-slide-down` | core | alert | no | feedback-state | medium | low | translate | inline feedback and validation summaries | decorative content | opacity-only near-instant state | `snippets/core/alert/alert-slide-down.html` |
+| `bsx-alert-shake` | core | alert | no | feedback-state | medium | low | shake | inline feedback and validation summaries | decorative content | opacity-only near-instant state | `snippets/core/alert/alert-shake.html` |
+| `bsx-alert-pulse-border` | core | alert | no | feedback-state | medium | low | scale | inline feedback and validation summaries | decorative content | opacity-only near-instant state | `snippets/core/alert/alert-pulse-border.html` |
+| `bsx-alert-success-glow` | core | alert | no | feedback-state | medium | low | opacity | inline feedback and validation summaries | decorative content | near-instant opacity or color state | `snippets/core/alert/alert-success-glow.html` |
+| `bsx-alert-dismissible-exit` | core | alert | yes | feedback-state | medium | medium | color + opacity | inline feedback and validation summaries | decorative content | opacity-only near-instant state | `snippets/core/alert/alert-dismissible-exit.html` |
+| `bsx-button-press` | core | button | no | component-state | medium | low | scale | direct interaction feedback | large continuously animated areas | opacity-only near-instant state | `snippets/core/button/button-press.html` |
+| `bsx-button-hover-lift` | core | button | no | component-state | medium | low | translate | direct interaction feedback | large continuously animated areas | opacity-only near-instant state | `snippets/core/button/button-hover-lift.html` |
+| `bsx-button-hover-glow` | core | button | no | component-state | medium | low | opacity | direct interaction feedback | large continuously animated areas | near-instant opacity or color state | `snippets/core/button/button-hover-glow.html` |
+| `bsx-button-loading-spinner` | core | button | yes | component-state | medium | low | opacity + rotate | direct interaction feedback | large continuously animated areas | opacity-only near-instant state | `snippets/core/button/button-loading-spinner.html` |
+| `bsx-button-loading-dots` | core | button | yes | component-state | medium | low | opacity | direct interaction feedback | large continuously animated areas | opacity-only near-instant state | `snippets/core/button/button-loading-dots.html` |
+| `bsx-button-success-pop` | core | button | yes | component-state | medium | low | scale | direct interaction feedback | large continuously animated areas | opacity-only near-instant state | `snippets/core/button/button-success-pop.html` |
+| `bsx-button-icon-slide` | core | button | no | component-state | medium | low | translate | direct interaction feedback | large continuously animated areas | opacity-only near-instant state | `snippets/core/button/button-icon-slide.html` |
+| `bsx-button-ripple-lite` | core | button | yes | component-state | medium | low | color + opacity | direct interaction feedback | large continuously animated areas | opacity-only near-instant state | `snippets/core/button/button-ripple-lite.html` |
+| `bsx-form-focus-ring` | core | form | no | form-state | medium | low | color + opacity | focus and validation feedback | replacing native validation semantics | opacity-only near-instant state | `snippets/core/form/form-focus-ring.html` |
+| `bsx-form-invalid-shake` | core | form | no | form-state | medium | medium | shake | focus and validation feedback | replacing native validation semantics | opacity-only near-instant state | `snippets/core/form/form-invalid-shake.html` |
+| `bsx-form-valid-check` | core | form | no | form-state | medium | low | color + opacity | focus and validation feedback | replacing native validation semantics | opacity-only near-instant state | `snippets/core/form/form-valid-check.html` |
+| `bsx-form-help-text-reveal` | core | form | no | form-state | medium | low | translate | focus and validation feedback | replacing native validation semantics | opacity-only near-instant state | `snippets/core/form/form-help-text-reveal.html` |
+| `bsx-form-error-text-slide` | core | form | no | form-state | medium | medium | translate | focus and validation feedback | replacing native validation semantics | opacity-only near-instant state | `snippets/core/form/form-error-text-slide.html` |
+| `bsx-form-switch-toggle-soft` | core | form | no | form-state | medium | low | opacity | focus and validation feedback | replacing native validation semantics | opacity-only near-instant state | `snippets/core/form/form-switch-toggle-soft.html` |
+| `bsx-form-checkbox-pop` | core | form | no | form-state | medium | low | scale | focus and validation feedback | replacing native validation semantics | opacity-only near-instant state | `snippets/core/form/form-checkbox-pop.html` |
+| `bsx-form-file-drop-highlight` | core | form | yes | form-state | medium | low | color + opacity | focus and validation feedback | replacing native validation semantics | opacity-only near-instant state | `snippets/core/form/form-file-drop-highlight.html` |
+| `bsx-card-hover-lift` | core | card | no | component-state | medium | low | translate | interactive content collections | non-interactive dense tables | opacity-only near-instant state | `snippets/core/card/card-hover-lift.html` |
+| `bsx-card-hover-scale` | core | card | no | component-state | medium | low | scale | interactive content collections | non-interactive dense tables | opacity-only near-instant state | `snippets/core/card/card-hover-scale.html` |
+| `bsx-card-hover-shadow` | core | card | no | component-state | medium | low | color + opacity | interactive content collections | non-interactive dense tables | near-instant opacity or color state | `snippets/core/card/card-hover-shadow.html` |
+| `bsx-card-image-zoom` | core | card | no | component-state | medium | low | scale | interactive content collections | non-interactive dense tables | opacity-only near-instant state | `snippets/core/card/card-image-zoom.html` |
+| `bsx-card-image-fade-overlay` | core | card | no | component-state | medium | low | opacity | interactive content collections | non-interactive dense tables | near-instant opacity or color state | `snippets/core/card/card-image-fade-overlay.html` |
+| `bsx-card-stagger-list` | core | card | no | component-state | medium | low | translate | interactive content collections | non-interactive dense tables | opacity-only near-instant state | `snippets/core/card/card-stagger-list.html` |
+| `bsx-tabs-fade` | core | tabs | no | component-state | medium | low | opacity | section navigation and tab state | rapidly auto-rotating content | near-instant opacity or color state | `snippets/core/tabs/tabs-fade.html` |
+| `bsx-tabs-underline-slide` | core | tabs | no | component-state | medium | low | translate | section navigation and tab state | rapidly auto-rotating content | opacity-only near-instant state | `snippets/core/tabs/tabs-underline-slide.html` |
+| `bsx-tabs-pill-active-pop` | core | tabs | no | component-state | medium | low | scale | section navigation and tab state | rapidly auto-rotating content | opacity-only near-instant state | `snippets/core/tabs/tabs-pill-active-pop.html` |
+| `bsx-nav-link-hover-underline` | core | navbar | no | component-state | medium | low | translate | section navigation and tab state | rapidly auto-rotating content | opacity-only near-instant state | `snippets/core/navbar/nav-link-hover-underline.html` |
+| `bsx-nav-sidebar-active-marker` | core | sidebar | no | component-state | high | low | translate | section navigation and tab state | rapidly auto-rotating content | opacity-only near-instant state | `snippets/core/sidebar/nav-sidebar-active-marker.html` |
+| `bsx-accordion-icon-rotate` | core | accordion | no | component-state | medium | low | rotate | disclosure controls | content that must remain continuously visible | opacity-only near-instant state | `snippets/core/accordion/accordion-icon-rotate.html` |
+| `bsx-accordion-icon-plus-minus` | core | accordion | no | component-state | medium | low | rotate | disclosure controls | content that must remain continuously visible | opacity-only near-instant state | `snippets/core/accordion/accordion-icon-plus-minus.html` |
+| `bsx-accordion-body-fade` | core | accordion | no | component-state | medium | low | opacity | disclosure controls | content that must remain continuously visible | near-instant opacity or color state | `snippets/core/accordion/accordion-body-fade.html` |
+| `bsx-collapse-soft` | core | accordion | no | component-state | medium | low | opacity | disclosure controls | content that must remain continuously visible | opacity-only near-instant state | `snippets/core/accordion/collapse-soft.html` |
+| `bsx-collapse-height-smooth` | core | accordion | no | component-state | medium | low | color + opacity | disclosure controls | content that must remain continuously visible | opacity-only near-instant state | `snippets/core/accordion/collapse-height-smooth.html` |
+| `bsx-navbar-link-hover-line` | core | navbar | no | component-state | medium | low | translate | application navigation | small inline controls | opacity-only near-instant state | `snippets/core/navbar/navbar-link-hover-line.html` |
+| `bsx-navbar-mobile-collapse-soft` | core | navbar | no | component-state | medium | low | opacity | application navigation | small inline controls | opacity-only near-instant state | `snippets/core/navbar/navbar-mobile-collapse-soft.html` |
+| `bsx-navbar-toggler-morph` | core | navbar | no | component-state | medium | low | rotate | application navigation | small inline controls | opacity-only near-instant state | `snippets/core/navbar/navbar-toggler-morph.html` |
+| `bsx-sidebar-slide-in` | core | sidebar | no | component-state | high | low | translate | application navigation | small inline controls | opacity-only near-instant state | `snippets/core/sidebar/sidebar-slide-in.html` |
+| `bsx-sidebar-item-active-marker` | core | sidebar | no | component-state | high | low | translate | application navigation | small inline controls | opacity-only near-instant state | `snippets/core/sidebar/sidebar-item-active-marker.html` |
+| `bsx-badge-pop` | core | badge | no | feedback-state | medium | low | scale | status and metric updates | long text content | opacity-only near-instant state | `snippets/core/badge/badge-pop.html` |
+| `bsx-badge-notification-ping` | core | badge | no | feedback-state | medium | low | scale | status and metric updates | long text content | opacity-only near-instant state | `snippets/core/badge/badge-notification-ping.html` |
+| `bsx-badge-status-pulse` | core | badge | no | feedback-state | medium | low | scale | status and metric updates | long text content | opacity-only near-instant state | `snippets/core/badge/badge-status-pulse.html` |
+| `bsx-counter-bump` | core | counter | yes | feedback-state | high | low | scale | status and metric updates | long text content | opacity-only near-instant state | `snippets/core/counter/counter-bump.html` |
+| `bsx-metric-card-update` | core | counter | yes | feedback-state | high | low | color + opacity | status and metric updates | long text content | opacity-only near-instant state | `snippets/core/counter/metric-card-update.html` |
+| `bsx-table-row-hover` | core | table | no | component-state | high | low | color + opacity | row state and collection changes | large simultaneous batches | opacity-only near-instant state | `snippets/core/table/table-row-hover.html` |
+| `bsx-table-row-insert` | core | table | yes | component-state | high | low | translate | row state and collection changes | large simultaneous batches | opacity-only near-instant state | `snippets/core/table/table-row-insert.html` |
+| `bsx-table-row-remove` | core | table | yes | component-state | high | low | translate | row state and collection changes | large simultaneous batches | opacity-only near-instant state | `snippets/core/table/table-row-remove.html` |
+| `bsx-table-row-update-flash` | core | table | yes | component-state | high | low | opacity | row state and collection changes | large simultaneous batches | opacity-only near-instant state | `snippets/core/table/table-row-update-flash.html` |
+| `bsx-list-item-stagger` | core | list | no | component-state | high | low | translate | row state and collection changes | large simultaneous batches | opacity-only near-instant state | `snippets/core/list/list-item-stagger.html` |
+| `bsx-list-group-active-marker` | core | list | no | component-state | high | low | translate | row state and collection changes | large simultaneous batches | opacity-only near-instant state | `snippets/core/list/list-group-active-marker.html` |
+| `bsx-skeleton-shimmer` | core | skeleton | no | loading-state | medium | low | opacity | short loading states | unknown or very long waits without status | opacity-only near-instant state | `snippets/core/skeleton/skeleton-shimmer.html` |
+| `bsx-skeleton-pulse` | core | skeleton | no | loading-state | medium | low | scale + opacity | short loading states | unknown or very long waits without status | opacity-only near-instant state | `snippets/core/skeleton/skeleton-pulse.html` |
+| `bsx-skeleton-card` | core | skeleton | no | loading-state | medium | low | opacity | short loading states | unknown or very long waits without status | opacity-only near-instant state | `snippets/core/skeleton/skeleton-card.html` |
+| `bsx-skeleton-table` | core | skeleton | no | loading-state | medium | low | opacity | short loading states | unknown or very long waits without status | opacity-only near-instant state | `snippets/core/skeleton/skeleton-table.html` |
+| `bsx-loader-dots` | core | loading state | no | loading-state | medium | low | color + opacity | short loading states | unknown or very long waits without status | opacity-only near-instant state | `snippets/core/loading/loader-dots.html` |
+| `bsx-page-loading-fade` | core | loading state | no | loading-state | medium | low | opacity | short loading states | unknown or very long waits without status | near-instant opacity or color state | `snippets/core/loading/page-loading-fade.html` |
+| `bsx-modal-scale-sm` | extended | modal | no | component-state | low | low | scale | dialogs and confirmations | dense repeated workflows | opacity-only near-instant state | `snippets/extended/modal/modal-scale-sm.html` |
+| `bsx-modal-scale-lg` | extended | modal | no | component-state | low | low | scale | dialogs and confirmations | dense repeated workflows | opacity-only near-instant state | `snippets/extended/modal/modal-scale-lg.html` |
+| `bsx-modal-slide-down` | extended | modal | no | component-state | low | low | translate | dialogs and confirmations | dense repeated workflows | opacity-only near-instant state | `snippets/extended/modal/modal-slide-down.html` |
+| `bsx-modal-slide-left` | extended | modal | no | component-state | low | low | translate | dialogs and confirmations | dense repeated workflows | opacity-only near-instant state | `snippets/extended/modal/modal-slide-left.html` |
+| `bsx-modal-slide-right` | extended | modal | no | component-state | low | low | translate | dialogs and confirmations | dense repeated workflows | opacity-only near-instant state | `snippets/extended/modal/modal-slide-right.html` |
+| `bsx-modal-fade-soft` | extended | modal | no | component-state | low | low | opacity | dialogs and confirmations | dense repeated workflows | near-instant opacity or color state | `snippets/extended/modal/modal-fade-soft.html` |
+| `bsx-modal-zoom-blur` | extended | modal | no | component-state | low | low | scale + opacity | dialogs and confirmations | dense repeated workflows | near-instant opacity or color state | `snippets/extended/modal/modal-zoom-blur.html` |
+| `bsx-modal-fullscreen-soft` | extended | modal | no | component-state | low | low | opacity | dialogs and confirmations | dense repeated workflows | opacity-only near-instant state | `snippets/extended/modal/modal-fullscreen-soft.html` |
+| `bsx-modal-stack-pop` | extended | modal | no | component-state | low | low | scale | dialogs and confirmations | dense repeated workflows | opacity-only near-instant state | `snippets/extended/modal/modal-stack-pop.html` |
+| `bsx-modal-content-stagger` | extended | modal | no | component-state | low | low | translate | dialogs and confirmations | dense repeated workflows | opacity-only near-instant state | `snippets/extended/modal/modal-content-stagger.html` |
+| `bsx-dropdown-slide-up` | extended | dropdown | no | component-state | medium | low | translate | menus with clear visual hierarchy | menus requiring instant state changes | opacity-only near-instant state | `snippets/extended/dropdown/dropdown-slide-up.html` |
+| `bsx-dropdown-fade` | extended | dropdown | no | component-state | medium | low | opacity | menus with clear visual hierarchy | menus requiring instant state changes | near-instant opacity or color state | `snippets/extended/dropdown/dropdown-fade.html` |
+| `bsx-dropdown-origin-top` | extended | dropdown | no | component-state | medium | low | color + opacity | menus with clear visual hierarchy | menus requiring instant state changes | opacity-only near-instant state | `snippets/extended/dropdown/dropdown-origin-top.html` |
+| `bsx-dropdown-origin-bottom` | extended | dropdown | no | component-state | medium | low | color + opacity | menus with clear visual hierarchy | menus requiring instant state changes | opacity-only near-instant state | `snippets/extended/dropdown/dropdown-origin-bottom.html` |
+| `bsx-dropdown-blur` | extended | dropdown | no | component-state | medium | low | opacity | menus with clear visual hierarchy | menus requiring instant state changes | near-instant opacity or color state | `snippets/extended/dropdown/dropdown-blur.html` |
+| `bsx-dropdown-item-hover-bg` | extended | dropdown | no | component-state | medium | low | color + opacity | menus with clear visual hierarchy | menus requiring instant state changes | opacity-only near-instant state | `snippets/extended/dropdown/dropdown-item-hover-bg.html` |
+| `bsx-dropdown-item-active-pop` | extended | dropdown | no | component-state | medium | low | scale | menus with clear visual hierarchy | menus requiring instant state changes | opacity-only near-instant state | `snippets/extended/dropdown/dropdown-item-active-pop.html` |
+| `bsx-dropdown-user-menu` | extended | dropdown | no | component-state | medium | low | color + opacity | menus with clear visual hierarchy | menus requiring instant state changes | opacity-only near-instant state | `snippets/extended/dropdown/dropdown-user-menu.html` |
+| `bsx-offcanvas-slide-fast` | extended | offcanvas | no | component-state | low | low | translate | navigation and mobile panels | permanent desktop navigation | opacity-only near-instant state | `snippets/extended/offcanvas/offcanvas-slide-fast.html` |
+| `bsx-offcanvas-slide-slow` | extended | offcanvas | no | component-state | low | low | translate | navigation and mobile panels | permanent desktop navigation | opacity-only near-instant state | `snippets/extended/offcanvas/offcanvas-slide-slow.html` |
+| `bsx-offcanvas-left-soft` | extended | offcanvas | no | component-state | low | low | opacity | navigation and mobile panels | permanent desktop navigation | opacity-only near-instant state | `snippets/extended/offcanvas/offcanvas-left-soft.html` |
+| `bsx-offcanvas-right-soft` | extended | offcanvas | no | component-state | low | low | opacity | navigation and mobile panels | permanent desktop navigation | opacity-only near-instant state | `snippets/extended/offcanvas/offcanvas-right-soft.html` |
+| `bsx-offcanvas-bottom-sheet` | extended | offcanvas | no | component-state | low | low | translate | navigation and mobile panels | permanent desktop navigation | opacity-only near-instant state | `snippets/extended/offcanvas/offcanvas-bottom-sheet.html` |
+| `bsx-offcanvas-header-reveal` | extended | offcanvas | no | component-state | low | low | translate | navigation and mobile panels | permanent desktop navigation | opacity-only near-instant state | `snippets/extended/offcanvas/offcanvas-header-reveal.html` |
+| `bsx-toast-slide-left` | extended | toast | yes | feedback-state | medium | low | translate | brief asynchronous feedback | critical information requiring confirmation | opacity-only near-instant state | `snippets/extended/toast/toast-slide-left.html` |
+| `bsx-toast-slide-top` | extended | toast | yes | feedback-state | medium | low | translate | brief asynchronous feedback | critical information requiring confirmation | opacity-only near-instant state | `snippets/extended/toast/toast-slide-top.html` |
+| `bsx-toast-slide-bottom` | extended | toast | yes | feedback-state | medium | low | translate | brief asynchronous feedback | critical information requiring confirmation | opacity-only near-instant state | `snippets/extended/toast/toast-slide-bottom.html` |
+| `bsx-toast-warning-pulse` | extended | toast | yes | feedback-state | medium | low | scale | brief asynchronous feedback | critical information requiring confirmation | opacity-only near-instant state | `snippets/extended/toast/toast-warning-pulse.html` |
+| `bsx-toast-auto-hide-bar` | extended | toast | yes | feedback-state | medium | low | color + opacity | brief asynchronous feedback | critical information requiring confirmation | opacity-only near-instant state | `snippets/extended/toast/toast-auto-hide-bar.html` |
+| `bsx-toast-icon-bounce` | extended | toast | yes | feedback-state | medium | low | scale | brief asynchronous feedback | critical information requiring confirmation | opacity-only near-instant state | `snippets/extended/toast/toast-icon-bounce.html` |
+| `bsx-alert-slide-up` | extended | alert | no | feedback-state | medium | low | translate | inline feedback and validation summaries | decorative content | opacity-only near-instant state | `snippets/extended/alert/alert-slide-up.html` |
+| `bsx-alert-fade-soft` | extended | alert | no | feedback-state | medium | low | opacity | inline feedback and validation summaries | decorative content | near-instant opacity or color state | `snippets/extended/alert/alert-fade-soft.html` |
+| `bsx-alert-danger-flash` | extended | alert | no | feedback-state | medium | medium | opacity | inline feedback and validation summaries | decorative content | opacity-only near-instant state | `snippets/extended/alert/alert-danger-flash.html` |
+| `bsx-alert-warning-attention` | extended | alert | no | feedback-state | medium | low | shake | inline feedback and validation summaries | decorative content | opacity-only near-instant state | `snippets/extended/alert/alert-warning-attention.html` |
+| `bsx-button-hover-slide-bg` | extended | button | no | component-state | medium | low | translate | direct interaction feedback | large continuously animated areas | opacity-only near-instant state | `snippets/extended/button/button-hover-slide-bg.html` |
+| `bsx-button-success-check` | extended | button | yes | component-state | medium | low | color + opacity | direct interaction feedback | large continuously animated areas | opacity-only near-instant state | `snippets/extended/button/button-success-check.html` |
+| `bsx-button-danger-pulse` | extended | button | no | component-state | medium | medium | scale | direct interaction feedback | large continuously animated areas | opacity-only near-instant state | `snippets/extended/button/button-danger-pulse.html` |
+| `bsx-button-icon-bounce` | extended | button | no | component-state | medium | low | scale | direct interaction feedback | large continuously animated areas | opacity-only near-instant state | `snippets/extended/button/button-icon-bounce.html` |
+| `bsx-button-group-active-slide` | extended | button-group | no | component-state | medium | low | translate | direct interaction feedback | large continuously animated areas | opacity-only near-instant state | `snippets/extended/button-group/button-group-active-slide.html` |
+| `bsx-button-disabled-soft` | extended | button | no | component-state | medium | low | opacity | direct interaction feedback | large continuously animated areas | opacity-only near-instant state | `snippets/extended/button/button-disabled-soft.html` |
+| `bsx-form-focus-glow` | extended | form | no | form-state | medium | low | opacity | focus and validation feedback | replacing native validation semantics | near-instant opacity or color state | `snippets/extended/form/form-focus-glow.html` |
+| `bsx-form-invalid-pulse` | extended | form | no | form-state | medium | medium | scale | focus and validation feedback | replacing native validation semantics | opacity-only near-instant state | `snippets/extended/form/form-invalid-pulse.html` |
+| `bsx-form-label-float-soft` | extended | form | no | form-state | medium | low | opacity | focus and validation feedback | replacing native validation semantics | opacity-only near-instant state | `snippets/extended/form/form-label-float-soft.html` |
+| `bsx-form-input-clear-pop` | extended | form | yes | form-state | medium | low | scale | focus and validation feedback | replacing native validation semantics | opacity-only near-instant state | `snippets/extended/form/form-input-clear-pop.html` |
+| `bsx-form-select-open-soft` | extended | form | no | form-state | medium | low | opacity | focus and validation feedback | replacing native validation semantics | opacity-only near-instant state | `snippets/extended/form/form-select-open-soft.html` |
+| `bsx-form-radio-pop` | extended | form | no | form-state | medium | low | scale | focus and validation feedback | replacing native validation semantics | opacity-only near-instant state | `snippets/extended/form/form-radio-pop.html` |
+| `bsx-card-hover-border` | extended | card | no | component-state | medium | low | color + opacity | interactive content collections | non-interactive dense tables | opacity-only near-instant state | `snippets/extended/card/card-hover-border.html` |
+| `bsx-card-hover-glow` | extended | card | no | component-state | medium | low | opacity | interactive content collections | non-interactive dense tables | near-instant opacity or color state | `snippets/extended/card/card-hover-glow.html` |
+| `bsx-card-click-press` | extended | card | no | component-state | medium | low | scale | interactive content collections | non-interactive dense tables | opacity-only near-instant state | `snippets/extended/card/card-click-press.html` |
+| `bsx-card-reveal` | extended | card | no | component-state | medium | low | translate | interactive content collections | non-interactive dense tables | opacity-only near-instant state | `snippets/extended/card/card-reveal.html` |
+| `bsx-card-footer-reveal` | extended | card | no | component-state | medium | low | translate | interactive content collections | non-interactive dense tables | opacity-only near-instant state | `snippets/extended/card/card-footer-reveal.html` |
+| `bsx-card-action-slide` | extended | card | no | component-state | medium | low | translate | interactive content collections | non-interactive dense tables | opacity-only near-instant state | `snippets/extended/card/card-action-slide.html` |
+| `bsx-tabs-slide-left` | extended | tabs | no | component-state | medium | low | translate | section navigation and tab state | rapidly auto-rotating content | opacity-only near-instant state | `snippets/extended/tabs/tabs-slide-left.html` |
+| `bsx-tabs-slide-right` | extended | tabs | no | component-state | medium | low | translate | section navigation and tab state | rapidly auto-rotating content | opacity-only near-instant state | `snippets/extended/tabs/tabs-slide-right.html` |
+| `bsx-tabs-content-reveal` | extended | tabs | no | component-state | medium | low | translate | section navigation and tab state | rapidly auto-rotating content | opacity-only near-instant state | `snippets/extended/tabs/tabs-content-reveal.html` |
+| `bsx-tabs-content-blur` | extended | tabs | no | component-state | medium | low | opacity | section navigation and tab state | rapidly auto-rotating content | near-instant opacity or color state | `snippets/extended/tabs/tabs-content-blur.html` |
+| `bsx-nav-link-hover-slide` | extended | navbar | no | component-state | medium | low | translate | section navigation and tab state | rapidly auto-rotating content | opacity-only near-instant state | `snippets/extended/navbar/nav-link-hover-slide.html` |
+| `bsx-nav-sidebar-collapse-soft` | extended | sidebar | no | component-state | high | low | opacity | section navigation and tab state | rapidly auto-rotating content | opacity-only near-instant state | `snippets/extended/sidebar/nav-sidebar-collapse-soft.html` |
+| `bsx-accordion-body-slide` | extended | accordion | no | component-state | medium | low | translate | disclosure controls | content that must remain continuously visible | opacity-only near-instant state | `snippets/extended/accordion/accordion-body-slide.html` |
+| `bsx-accordion-header-hover` | extended | accordion | no | component-state | medium | low | color + opacity | disclosure controls | content that must remain continuously visible | opacity-only near-instant state | `snippets/extended/accordion/accordion-header-hover.html` |
+| `bsx-accordion-active-glow` | extended | accordion | no | component-state | medium | low | opacity | disclosure controls | content that must remain continuously visible | near-instant opacity or color state | `snippets/extended/accordion/accordion-active-glow.html` |
+| `bsx-collapse-fade` | extended | accordion | no | component-state | medium | low | opacity | disclosure controls | content that must remain continuously visible | near-instant opacity or color state | `snippets/extended/accordion/collapse-fade.html` |
+| `bsx-collapse-card-reveal` | extended | accordion | no | component-state | medium | low | translate | disclosure controls | content that must remain continuously visible | opacity-only near-instant state | `snippets/extended/accordion/collapse-card-reveal.html` |
+| `bsx-navbar-brand-pop` | extended | navbar | no | component-state | medium | low | scale | application navigation | small inline controls | opacity-only near-instant state | `snippets/extended/navbar/navbar-brand-pop.html` |
+| `bsx-navbar-link-hover-bg` | extended | navbar | no | component-state | medium | low | color + opacity | application navigation | small inline controls | opacity-only near-instant state | `snippets/extended/navbar/navbar-link-hover-bg.html` |
+| `bsx-navbar-toggler-spin` | extended | navbar | no | component-state | medium | low | rotate | application navigation | small inline controls | opacity-only near-instant state | `snippets/extended/navbar/navbar-toggler-spin.html` |
+| `bsx-sidebar-item-hover-slide` | extended | sidebar | no | component-state | high | low | translate | application navigation | small inline controls | opacity-only near-instant state | `snippets/extended/sidebar/sidebar-item-hover-slide.html` |
+| `bsx-sidebar-submenu-reveal` | extended | sidebar | no | component-state | high | low | translate | application navigation | small inline controls | opacity-only near-instant state | `snippets/extended/sidebar/sidebar-submenu-reveal.html` |
+| `bsx-sidebar-mini-expand` | extended | sidebar | no | component-state | high | low | color + opacity | application navigation | small inline controls | opacity-only near-instant state | `snippets/extended/sidebar/sidebar-mini-expand.html` |
+| `bsx-sidebar-overlay-blur` | extended | sidebar | no | component-state | high | low | opacity | application navigation | small inline controls | near-instant opacity or color state | `snippets/extended/sidebar/sidebar-overlay-blur.html` |
+| `bsx-badge-pulse` | extended | badge | no | feedback-state | medium | low | scale | status and metric updates | long text content | opacity-only near-instant state | `snippets/extended/badge/badge-pulse.html` |
+| `bsx-badge-count-bump` | extended | badge | no | feedback-state | medium | low | scale | status and metric updates | long text content | opacity-only near-instant state | `snippets/extended/badge/badge-count-bump.html` |
+| `bsx-badge-status-dot` | extended | badge | no | feedback-state | medium | low | color + opacity | status and metric updates | long text content | opacity-only near-instant state | `snippets/extended/badge/badge-status-dot.html` |
+| `bsx-counter-change-up` | extended | counter | yes | feedback-state | high | low | color + opacity | status and metric updates | long text content | opacity-only near-instant state | `snippets/extended/counter/counter-change-up.html` |
+| `bsx-counter-change-down` | extended | counter | yes | feedback-state | high | low | color + opacity | status and metric updates | long text content | opacity-only near-instant state | `snippets/extended/counter/counter-change-down.html` |
+| `bsx-price-change-flash` | extended | counter | yes | feedback-state | high | low | opacity | status and metric updates | long text content | opacity-only near-instant state | `snippets/extended/counter/price-change-flash.html` |
+| `bsx-table-row-selected` | extended | table | yes | component-state | high | low | color + opacity | row state and collection changes | large simultaneous batches | opacity-only near-instant state | `snippets/extended/table/table-row-selected.html` |
+| `bsx-table-sort-icon-rotate` | extended | table | yes | component-state | high | low | rotate | row state and collection changes | large simultaneous batches | opacity-only near-instant state | `snippets/extended/table/table-sort-icon-rotate.html` |
+| `bsx-table-filter-reveal` | extended | table | no | component-state | high | low | translate | row state and collection changes | large simultaneous batches | opacity-only near-instant state | `snippets/extended/table/table-filter-reveal.html` |
+| `bsx-list-item-reveal` | extended | list | no | component-state | high | low | translate | row state and collection changes | large simultaneous batches | opacity-only near-instant state | `snippets/extended/list/list-item-reveal.html` |
+| `bsx-list-item-remove` | extended | list | yes | component-state | high | low | translate | row state and collection changes | large simultaneous batches | opacity-only near-instant state | `snippets/extended/list/list-item-remove.html` |
+| `bsx-list-group-hover-slide` | extended | list | no | component-state | high | low | translate | row state and collection changes | large simultaneous batches | opacity-only near-instant state | `snippets/extended/list/list-group-hover-slide.html` |
+| `bsx-skeleton-wave` | extended | skeleton | no | loading-state | medium | low | opacity | short loading states | unknown or very long waits without status | opacity-only near-instant state | `snippets/extended/skeleton/skeleton-wave.html` |
+| `bsx-skeleton-avatar` | extended | skeleton | no | loading-state | medium | low | opacity | short loading states | unknown or very long waits without status | opacity-only near-instant state | `snippets/extended/skeleton/skeleton-avatar.html` |
+| `bsx-skeleton-button` | extended | skeleton | no | loading-state | medium | low | opacity | short loading states | unknown or very long waits without status | opacity-only near-instant state | `snippets/extended/skeleton/skeleton-button.html` |
+| `bsx-spinner-fade` | extended | loading state | no | loading-state | medium | low | opacity + rotate | short loading states | unknown or very long waits without status | near-instant opacity or color state | `snippets/extended/loading/spinner-fade.html` |
+| `bsx-spinner-scale` | extended | loading state | no | loading-state | medium | low | scale + rotate | short loading states | unknown or very long waits without status | opacity-only near-instant state | `snippets/extended/loading/spinner-scale.html` |
+| `bsx-loader-bar` | extended | loading state | no | loading-state | medium | low | color + opacity | short loading states | unknown or very long waits without status | opacity-only near-instant state | `snippets/extended/loading/loader-bar.html` |
+| `bsx-image-hover-zoom` | extended | image | no | component-state | medium | low | scale | media previews and galleries | essential images that must remain static | opacity-only near-instant state | `snippets/extended/image/image-hover-zoom.html` |
+| `bsx-image-hover-fade` | extended | image | no | component-state | medium | low | opacity | media previews and galleries | essential images that must remain static | near-instant opacity or color state | `snippets/extended/image/image-hover-fade.html` |
+| `bsx-image-hover-overlay` | extended | image | no | component-state | medium | low | color + opacity | media previews and galleries | essential images that must remain static | opacity-only near-instant state | `snippets/extended/image/image-hover-overlay.html` |
+| `bsx-image-hover-caption-slide` | extended | image | no | component-state | medium | low | translate | media previews and galleries | essential images that must remain static | opacity-only near-instant state | `snippets/extended/image/image-hover-caption-slide.html` |
+| `bsx-image-lazy-reveal` | extended | image | no | component-state | medium | low | translate | media previews and galleries | essential images that must remain static | opacity-only near-instant state | `snippets/extended/image/image-lazy-reveal.html` |
+| `bsx-avatar-pop` | extended | image | no | component-state | medium | low | scale | media previews and galleries | essential images that must remain static | opacity-only near-instant state | `snippets/extended/image/avatar-pop.html` |
+| `bsx-avatar-status-pulse` | extended | image | no | component-state | medium | low | scale | media previews and galleries | essential images that must remain static | opacity-only near-instant state | `snippets/extended/image/avatar-status-pulse.html` |
+| `bsx-gallery-item-reveal` | extended | image | no | component-state | medium | low | translate | media previews and galleries | essential images that must remain static | opacity-only near-instant state | `snippets/extended/image/gallery-item-reveal.html` |
+| `bsx-carousel-caption-slide` | extended | media | no | component-state | medium | low | translate | media previews and galleries | essential images that must remain static | opacity-only near-instant state | `snippets/extended/media/carousel-caption-slide.html` |
+| `bsx-carousel-control-hover` | extended | media | no | component-state | medium | low | color + opacity | media previews and galleries | essential images that must remain static | opacity-only near-instant state | `snippets/extended/media/carousel-control-hover.html` |
+| `bsx-tooltip-fade-soft` | extended | tooltip | no | component-state | low | low | opacity | contextual supporting information | primary task content | near-instant opacity or color state | `snippets/extended/tooltip/tooltip-fade-soft.html` |
+| `bsx-tooltip-slide-up` | extended | tooltip | no | component-state | low | low | translate | contextual supporting information | primary task content | opacity-only near-instant state | `snippets/extended/tooltip/tooltip-slide-up.html` |
+| `bsx-tooltip-slide-down` | extended | tooltip | no | component-state | low | low | translate | contextual supporting information | primary task content | opacity-only near-instant state | `snippets/extended/tooltip/tooltip-slide-down.html` |
+| `bsx-tooltip-scale` | extended | tooltip | no | component-state | low | low | scale | contextual supporting information | primary task content | opacity-only near-instant state | `snippets/extended/tooltip/tooltip-scale.html` |
+| `bsx-tooltip-pop` | extended | tooltip | no | component-state | low | low | scale | contextual supporting information | primary task content | opacity-only near-instant state | `snippets/extended/tooltip/tooltip-pop.html` |
+| `bsx-popover-soft` | extended | popover | no | component-state | low | low | scale + opacity | contextual supporting information | primary task content | opacity-only near-instant state | `snippets/extended/popover/popover-soft.html` |
+| `bsx-popover-slide` | extended | popover | no | component-state | low | low | translate + scale | contextual supporting information | primary task content | opacity-only near-instant state | `snippets/extended/popover/popover-slide.html` |
+| `bsx-popover-blur` | extended | popover | no | component-state | low | low | scale + opacity | contextual supporting information | primary task content | near-instant opacity or color state | `snippets/extended/popover/popover-blur.html` |
+| `bsx-popover-content-stagger` | extended | popover | no | component-state | low | low | translate + scale | contextual supporting information | primary task content | opacity-only near-instant state | `snippets/extended/popover/popover-content-stagger.html` |
+| `bsx-popover-dismiss-fade` | extended | popover | no | component-state | low | medium | scale + opacity | contextual supporting information | primary task content | near-instant opacity or color state | `snippets/extended/popover/popover-dismiss-fade.html` |
+| `bsx-progress-fill-soft` | extended | progress | no | component-state | medium | low | translate + opacity | progress and multi-step flows | indeterminate tasks without a status model | opacity-only near-instant state | `snippets/extended/progress/progress-fill-soft.html` |
+| `bsx-progress-striped-motion` | extended | progress | no | component-state | medium | low | color + opacity | progress and multi-step flows | indeterminate tasks without a status model | opacity-only near-instant state | `snippets/extended/progress/progress-striped-motion.html` |
+| `bsx-progress-success-pop` | extended | progress | no | component-state | medium | low | scale | progress and multi-step flows | indeterminate tasks without a status model | opacity-only near-instant state | `snippets/extended/progress/progress-success-pop.html` |
+| `bsx-progress-danger-pulse` | extended | progress | no | component-state | medium | medium | scale | progress and multi-step flows | indeterminate tasks without a status model | opacity-only near-instant state | `snippets/extended/progress/progress-danger-pulse.html` |
+| `bsx-stepper-active-pop` | extended | stepper | no | component-state | medium | low | scale | progress and multi-step flows | indeterminate tasks without a status model | opacity-only near-instant state | `snippets/extended/stepper/stepper-active-pop.html` |
+| `bsx-stepper-complete-check` | extended | stepper | no | component-state | medium | low | color + opacity | progress and multi-step flows | indeterminate tasks without a status model | opacity-only near-instant state | `snippets/extended/stepper/stepper-complete-check.html` |
+| `bsx-stepper-line-fill` | extended | stepper | no | component-state | medium | low | translate | progress and multi-step flows | indeterminate tasks without a status model | opacity-only near-instant state | `snippets/extended/stepper/stepper-line-fill.html` |
+| `bsx-wizard-page-slide` | extended | stepper | no | component-state | medium | low | translate | progress and multi-step flows | indeterminate tasks without a status model | opacity-only near-instant state | `snippets/extended/stepper/wizard-page-slide.html` |
+| `bsx-wizard-page-fade` | extended | stepper | no | component-state | medium | low | opacity | progress and multi-step flows | indeterminate tasks without a status model | near-instant opacity or color state | `snippets/extended/stepper/wizard-page-fade.html` |
+| `bsx-page-fade-in` | extended | page | no | component-state | low | low | opacity | page and section state changes | continuous scroll-driven motion | near-instant opacity or color state | `snippets/extended/page/page-fade-in.html` |
+| `bsx-page-slide-up` | extended | page | no | component-state | low | low | translate | page and section state changes | continuous scroll-driven motion | opacity-only near-instant state | `snippets/extended/page/page-slide-up.html` |
+| `bsx-page-section-reveal` | extended | page | no | component-state | low | low | translate | page and section state changes | continuous scroll-driven motion | opacity-only near-instant state | `snippets/extended/page/page-section-reveal.html` |
+| `bsx-page-section-stagger` | extended | page | no | component-state | low | low | translate | page and section state changes | continuous scroll-driven motion | opacity-only near-instant state | `snippets/extended/page/page-section-stagger.html` |
+| `bsx-page-empty-state-pop` | extended | page | no | component-state | low | low | scale | page and section state changes | continuous scroll-driven motion | opacity-only near-instant state | `snippets/extended/page/page-empty-state-pop.html` |
+| `bsx-page-error-shake` | extended | page | no | component-state | low | medium | shake | page and section state changes | continuous scroll-driven motion | opacity-only near-instant state | `snippets/extended/page/page-error-shake.html` |
+| `bsx-page-success-check` | extended | page | no | component-state | low | low | color + opacity | page and section state changes | continuous scroll-driven motion | opacity-only near-instant state | `snippets/extended/page/page-success-check.html` |
+| `bsx-content-fade-swap` | extended | page | no | component-state | low | low | opacity | page and section state changes | continuous scroll-driven motion | near-instant opacity or color state | `snippets/extended/page/content-fade-swap.html` |
+| `bsx-content-blur-swap` | extended | page | no | component-state | low | low | opacity | page and section state changes | continuous scroll-driven motion | near-instant opacity or color state | `snippets/extended/page/content-blur-swap.html` |
+| `bsx-scroll-reveal-lite` | extended | page | yes | component-state | low | low | translate | page and section state changes | continuous scroll-driven motion | opacity-only near-instant state | `snippets/extended/page/scroll-reveal-lite.html` |
+| `bsx-breadcrumb-current-marker` | extended | breadcrumb | no | navigation-state | medium | low | translate | admin location and hierarchy changes | purely decorative page titles | opacity-only near-instant state | `snippets/extended/breadcrumb/breadcrumb-current-marker.html` |
+| `bsx-breadcrumb-parent-hover` | extended | breadcrumb | no | navigation-state | medium | low | color + opacity | admin location and hierarchy changes | purely decorative page titles | opacity-only near-instant state | `snippets/extended/breadcrumb/breadcrumb-parent-hover.html` |
+| `bsx-breadcrumb-path-update` | extended | breadcrumb | no | navigation-state | medium | low | color + opacity | admin location and hierarchy changes | purely decorative page titles | opacity-only near-instant state | `snippets/extended/breadcrumb/breadcrumb-path-update.html` |
+| `bsx-breadcrumb-step-complete` | extended | breadcrumb | no | navigation-state | medium | low | color + opacity | admin location and hierarchy changes | purely decorative page titles | opacity-only near-instant state | `snippets/extended/breadcrumb/breadcrumb-step-complete.html` |
+| `bsx-breadcrumb-overflow-menu` | extended | breadcrumb | no | navigation-state | medium | low | color + opacity | admin location and hierarchy changes | purely decorative page titles | opacity-only near-instant state | `snippets/extended/breadcrumb/breadcrumb-overflow-menu.html` |
+| `bsx-breadcrumb-context-return` | extended | breadcrumb | no | navigation-state | medium | low | color + opacity | admin location and hierarchy changes | purely decorative page titles | opacity-only near-instant state | `snippets/extended/breadcrumb/breadcrumb-context-return.html` |
+| `bsx-pagination-active-marker` | extended | pagination | no | navigation-state | high | low | translate | paged tables and search results | infinite scroll without page state | opacity-only near-instant state | `snippets/extended/pagination/pagination-active-marker.html` |
+| `bsx-pagination-page-jump` | extended | pagination | no | navigation-state | high | low | color + opacity | paged tables and search results | infinite scroll without page state | opacity-only near-instant state | `snippets/extended/pagination/pagination-page-jump.html` |
+| `bsx-pagination-loading-page` | extended | pagination | no | navigation-state | high | low | opacity | paged tables and search results | infinite scroll without page state | opacity-only near-instant state | `snippets/extended/pagination/pagination-loading-page.html` |
+| `bsx-pagination-disabled-soft` | extended | pagination | no | navigation-state | high | low | opacity | paged tables and search results | infinite scroll without page state | opacity-only near-instant state | `snippets/extended/pagination/pagination-disabled-soft.html` |
+| `bsx-pagination-compact-hover` | extended | pagination | no | navigation-state | high | low | color + opacity | paged tables and search results | infinite scroll without page state | opacity-only near-instant state | `snippets/extended/pagination/pagination-compact-hover.html` |
+| `bsx-pagination-count-update` | extended | pagination | no | navigation-state | high | low | color + opacity | paged tables and search results | infinite scroll without page state | opacity-only near-instant state | `snippets/extended/pagination/pagination-count-update.html` |
+| `bsx-button-group-active-marker` | extended | button-group | no | navigation-state | medium | low | translate | segmented controls, density toggles, and bulk modes | single primary actions | opacity-only near-instant state | `snippets/extended/button-group/button-group-active-marker.html` |
+| `bsx-button-group-segment-press` | extended | button-group | no | navigation-state | medium | low | scale | segmented controls, density toggles, and bulk modes | single primary actions | opacity-only near-instant state | `snippets/extended/button-group/button-group-segment-press.html` |
+| `bsx-button-group-bulk-ready` | extended | button-group | no | navigation-state | medium | low | color + opacity | segmented controls, density toggles, and bulk modes | single primary actions | opacity-only near-instant state | `snippets/extended/button-group/button-group-bulk-ready.html` |
+| `bsx-button-group-toggle-sync` | extended | button-group | no | navigation-state | medium | low | color + opacity | segmented controls, density toggles, and bulk modes | single primary actions | opacity-only near-instant state | `snippets/extended/button-group/button-group-toggle-sync.html` |
+| `bsx-button-group-density-switch` | extended | button-group | no | navigation-state | medium | low | color + opacity | segmented controls, density toggles, and bulk modes | single primary actions | opacity-only near-instant state | `snippets/extended/button-group/button-group-density-switch.html` |
+| `bsx-button-group-filter-active` | extended | button-group | no | navigation-state | medium | low | color + opacity | segmented controls, density toggles, and bulk modes | single primary actions | opacity-only near-instant state | `snippets/extended/button-group/button-group-filter-active.html` |
+| `bsx-input-group-focus-ring` | extended | input-group | no | form-state | medium | low | color + opacity | search, copy, validation, and compound form controls | standalone long-form fields | opacity-only near-instant state | `snippets/extended/input-group/input-group-focus-ring.html` |
+| `bsx-input-group-addon-highlight` | extended | input-group | no | form-state | medium | low | color + opacity | search, copy, validation, and compound form controls | standalone long-form fields | opacity-only near-instant state | `snippets/extended/input-group/input-group-addon-highlight.html` |
+| `bsx-input-group-copy-confirm` | extended | input-group | no | form-state | medium | low | color + opacity | search, copy, validation, and compound form controls | standalone long-form fields | opacity-only near-instant state | `snippets/extended/input-group/input-group-copy-confirm.html` |
+| `bsx-input-group-search-pending` | extended | input-group | no | form-state | medium | low | color + opacity | search, copy, validation, and compound form controls | standalone long-form fields | opacity-only near-instant state | `snippets/extended/input-group/input-group-search-pending.html` |
+| `bsx-input-group-validation-sync` | extended | input-group | no | form-state | medium | low | color + opacity | search, copy, validation, and compound form controls | standalone long-form fields | opacity-only near-instant state | `snippets/extended/input-group/input-group-validation-sync.html` |
+| `bsx-input-group-password-toggle` | extended | input-group | no | form-state | medium | low | color + opacity | search, copy, validation, and compound form controls | standalone long-form fields | opacity-only near-instant state | `snippets/extended/input-group/input-group-password-toggle.html` |
+| `bsx-close-button-hover-ring` | extended | close-button | no | component-state | medium | medium | color + opacity | dismiss, clear, and close affordances | destructive actions without confirmation | opacity-only near-instant state | `snippets/extended/close-button/close-button-hover-ring.html` |
+| `bsx-close-button-confirm-pending` | extended | close-button | no | component-state | medium | medium | color + opacity | dismiss, clear, and close affordances | destructive actions without confirmation | opacity-only near-instant state | `snippets/extended/close-button/close-button-confirm-pending.html` |
+| `bsx-close-button-toast-dismiss` | extended | close-button | no | component-state | medium | medium | color + opacity | dismiss, clear, and close affordances | destructive actions without confirmation | opacity-only near-instant state | `snippets/extended/close-button/close-button-toast-dismiss.html` |
+| `bsx-close-button-panel-dismiss` | extended | close-button | no | component-state | medium | medium | color + opacity | dismiss, clear, and close affordances | destructive actions without confirmation | opacity-only near-instant state | `snippets/extended/close-button/close-button-panel-dismiss.html` |
+| `bsx-close-button-clear-filter` | extended | close-button | no | component-state | medium | medium | color + opacity | dismiss, clear, and close affordances | destructive actions without confirmation | opacity-only near-instant state | `snippets/extended/close-button/close-button-clear-filter.html` |
+| `bsx-crud-row-create` | extended | admin/crud | no | workflow-state | high | medium | color + opacity | CRUD tables, inline edit, dirty state, save feedback, and bulk actions | marketing cards | opacity-only near-instant state | `snippets/extended/admin/crud/crud-row-create.html` |
+| `bsx-crud-row-save-pending` | extended | admin/crud | no | workflow-state | high | medium | color + opacity | CRUD tables, inline edit, dirty state, save feedback, and bulk actions | marketing cards | opacity-only near-instant state | `snippets/extended/admin/crud/crud-row-save-pending.html` |
+| `bsx-crud-row-save-success` | extended | admin/crud | no | workflow-state | high | medium | color + opacity | CRUD tables, inline edit, dirty state, save feedback, and bulk actions | marketing cards | opacity-only near-instant state | `snippets/extended/admin/crud/crud-row-save-success.html` |
+| `bsx-crud-row-save-error` | extended | admin/crud | no | workflow-state | high | medium | color + opacity | CRUD tables, inline edit, dirty state, save feedback, and bulk actions | marketing cards | opacity-only near-instant state | `snippets/extended/admin/crud/crud-row-save-error.html` |
+| `bsx-crud-inline-edit-focus` | extended | admin/crud | no | workflow-state | high | medium | translate | CRUD tables, inline edit, dirty state, save feedback, and bulk actions | marketing cards | opacity-only near-instant state | `snippets/extended/admin/crud/crud-inline-edit-focus.html` |
+| `bsx-crud-inline-edit-dirty` | extended | admin/crud | no | workflow-state | high | medium | translate | CRUD tables, inline edit, dirty state, save feedback, and bulk actions | marketing cards | opacity-only near-instant state | `snippets/extended/admin/crud/crud-inline-edit-dirty.html` |
+| `bsx-crud-bulk-toolbar-reveal` | extended | admin/crud | no | workflow-state | high | medium | translate | CRUD tables, inline edit, dirty state, save feedback, and bulk actions | marketing cards | opacity-only near-instant state | `snippets/extended/admin/crud/crud-bulk-toolbar-reveal.html` |
+| `bsx-crud-delete-confirm-row` | extended | admin/crud | no | workflow-state | high | medium | color + opacity | CRUD tables, inline edit, dirty state, save feedback, and bulk actions | marketing cards | opacity-only near-instant state | `snippets/extended/admin/crud/crud-delete-confirm-row.html` |
+| `bsx-crud-permission-disabled` | extended | admin/crud | no | workflow-state | high | medium | color + opacity | CRUD tables, inline edit, dirty state, save feedback, and bulk actions | marketing cards | opacity-only near-instant state | `snippets/extended/admin/crud/crud-permission-disabled.html` |
+| `bsx-filter-chip-active` | extended | filter/search | no | workflow-state | high | low | color + opacity | admin filters, search results, chip removal, and empty results | static navigation | opacity-only near-instant state | `snippets/extended/filter/search/filter-chip-active.html` |
+| `bsx-filter-chip-remove` | extended | filter/search | no | workflow-state | high | low | translate | admin filters, search results, chip removal, and empty results | static navigation | opacity-only near-instant state | `snippets/extended/filter/search/filter-chip-remove.html` |
+| `bsx-filter-panel-reveal` | extended | filter/search | no | workflow-state | high | low | translate | admin filters, search results, chip removal, and empty results | static navigation | opacity-only near-instant state | `snippets/extended/filter/search/filter-panel-reveal.html` |
+| `bsx-filter-reset-flash` | extended | filter/search | no | workflow-state | high | low | opacity | admin filters, search results, chip removal, and empty results | static navigation | opacity-only near-instant state | `snippets/extended/filter/search/filter-reset-flash.html` |
+| `bsx-search-input-focus` | extended | filter/search | no | workflow-state | high | low | color + opacity | admin filters, search results, chip removal, and empty results | static navigation | opacity-only near-instant state | `snippets/extended/filter/search/search-input-focus.html` |
+| `bsx-search-results-update` | extended | filter/search | no | workflow-state | high | low | color + opacity | admin filters, search results, chip removal, and empty results | static navigation | opacity-only near-instant state | `snippets/extended/filter/search/search-results-update.html` |
+| `bsx-search-no-results-state` | extended | filter/search | no | workflow-state | high | low | color + opacity | admin filters, search results, chip removal, and empty results | static navigation | opacity-only near-instant state | `snippets/extended/filter/search/search-no-results-state.html` |
+| `bsx-form-wizard-step-current` | extended | form-wizard | no | form-state | medium | medium | color + opacity | multi-step forms with validation and review states | single-page forms without steps | opacity-only near-instant state | `snippets/extended/form-wizard/form-wizard-step-current.html` |
+| `bsx-form-wizard-step-complete` | extended | form-wizard | no | form-state | medium | medium | color + opacity | multi-step forms with validation and review states | single-page forms without steps | opacity-only near-instant state | `snippets/extended/form-wizard/form-wizard-step-complete.html` |
+| `bsx-form-wizard-step-error` | extended | form-wizard | no | form-state | medium | medium | color + opacity | multi-step forms with validation and review states | single-page forms without steps | opacity-only near-instant state | `snippets/extended/form-wizard/form-wizard-step-error.html` |
+| `bsx-form-wizard-progress-sync` | extended | form-wizard | no | form-state | medium | medium | color + opacity | multi-step forms with validation and review states | single-page forms without steps | opacity-only near-instant state | `snippets/extended/form-wizard/form-wizard-progress-sync.html` |
+| `bsx-form-wizard-section-enter` | extended | form-wizard | no | form-state | medium | medium | color + opacity | multi-step forms with validation and review states | single-page forms without steps | opacity-only near-instant state | `snippets/extended/form-wizard/form-wizard-section-enter.html` |
+| `bsx-form-wizard-section-exit` | extended | form-wizard | no | form-state | medium | medium | color + opacity | multi-step forms with validation and review states | single-page forms without steps | opacity-only near-instant state | `snippets/extended/form-wizard/form-wizard-section-exit.html` |
+| `bsx-form-wizard-review-dirty` | extended | form-wizard | no | form-state | medium | medium | color + opacity | multi-step forms with validation and review states | single-page forms without steps | opacity-only near-instant state | `snippets/extended/form-wizard/form-wizard-review-dirty.html` |
+| `bsx-form-wizard-submit-ready` | extended | form-wizard | no | form-state | medium | medium | color + opacity | multi-step forms with validation and review states | single-page forms without steps | opacity-only near-instant state | `snippets/extended/form-wizard/form-wizard-submit-ready.html` |
+| `bsx-state-empty-reveal` | extended | state | no | feedback-state | medium | medium | translate | empty, error, success, warning, offline, lock, and unsaved states | decorative content blocks | opacity-only near-instant state | `snippets/extended/state/state-empty-reveal.html` |
+| `bsx-state-error-inline` | extended | state | no | feedback-state | medium | medium | translate | empty, error, success, warning, offline, lock, and unsaved states | decorative content blocks | opacity-only near-instant state | `snippets/extended/state/state-error-inline.html` |
+| `bsx-state-success-inline` | extended | state | no | feedback-state | medium | medium | translate | empty, error, success, warning, offline, lock, and unsaved states | decorative content blocks | opacity-only near-instant state | `snippets/extended/state/state-success-inline.html` |
+| `bsx-state-warning-inline` | extended | state | no | feedback-state | medium | medium | translate | empty, error, success, warning, offline, lock, and unsaved states | decorative content blocks | opacity-only near-instant state | `snippets/extended/state/state-warning-inline.html` |
+| `bsx-state-unsaved-changes` | extended | state | no | feedback-state | medium | medium | color + opacity | empty, error, success, warning, offline, lock, and unsaved states | decorative content blocks | opacity-only near-instant state | `snippets/extended/state/state-unsaved-changes.html` |
+| `bsx-state-offline-banner` | extended | state | no | feedback-state | medium | medium | translate | empty, error, success, warning, offline, lock, and unsaved states | decorative content blocks | opacity-only near-instant state | `snippets/extended/state/state-offline-banner.html` |
+| `bsx-state-locked-record` | extended | state | no | feedback-state | medium | medium | color + opacity | empty, error, success, warning, offline, lock, and unsaved states | decorative content blocks | opacity-only near-instant state | `snippets/extended/state/state-locked-record.html` |
+| `bsx-data-loading-table-overlay` | extended | data-loading | no | workflow-state | high | low | opacity | table, card, metric, filter, save, and inline loading states | unknown long-running jobs without copy | opacity-only near-instant state | `snippets/extended/data-loading/data-loading-table-overlay.html` |
+| `bsx-data-loading-card-overlay` | extended | data-loading | no | workflow-state | high | low | opacity | table, card, metric, filter, save, and inline loading states | unknown long-running jobs without copy | opacity-only near-instant state | `snippets/extended/data-loading/data-loading-card-overlay.html` |
+| `bsx-data-loading-row-skeleton` | extended | data-loading | no | workflow-state | high | low | opacity | table, card, metric, filter, save, and inline loading states | unknown long-running jobs without copy | opacity-only near-instant state | `snippets/extended/data-loading/data-loading-row-skeleton.html` |
+| `bsx-data-loading-filter-pending` | extended | data-loading | no | workflow-state | high | low | opacity | table, card, metric, filter, save, and inline loading states | unknown long-running jobs without copy | opacity-only near-instant state | `snippets/extended/data-loading/data-loading-filter-pending.html` |
+| `bsx-data-loading-save-button` | extended | data-loading | no | workflow-state | high | low | opacity | table, card, metric, filter, save, and inline loading states | unknown long-running jobs without copy | opacity-only near-instant state | `snippets/extended/data-loading/data-loading-save-button.html` |
+| `bsx-data-loading-metric-refresh` | extended | data-loading | no | workflow-state | high | low | opacity | table, card, metric, filter, save, and inline loading states | unknown long-running jobs without copy | opacity-only near-instant state | `snippets/extended/data-loading/data-loading-metric-refresh.html` |
+| `bsx-data-loading-inline-spinner` | extended | data-loading | no | workflow-state | high | low | translate + opacity + rotate | table, card, metric, filter, save, and inline loading states | unknown long-running jobs without copy | opacity-only near-instant state | `snippets/extended/data-loading/data-loading-inline-spinner.html` |
+| `bsx-notification-center-panel` | extended | notification-center | no | workflow-state | medium | low | color + opacity | notification inbox panels and unread/read transitions | critical alerts that require modal confirmation | opacity-only near-instant state | `snippets/extended/notification-center/notification-center-panel.html` |
+| `bsx-notification-item-unread` | extended | notification-center | no | workflow-state | medium | low | color + opacity | notification inbox panels and unread/read transitions | critical alerts that require modal confirmation | opacity-only near-instant state | `snippets/extended/notification-center/notification-item-unread.html` |
+| `bsx-notification-item-read` | extended | notification-center | no | workflow-state | medium | low | color + opacity | notification inbox panels and unread/read transitions | critical alerts that require modal confirmation | opacity-only near-instant state | `snippets/extended/notification-center/notification-item-read.html` |
+| `bsx-notification-item-priority` | extended | notification-center | no | workflow-state | medium | low | color + opacity | notification inbox panels and unread/read transitions | critical alerts that require modal confirmation | opacity-only near-instant state | `snippets/extended/notification-center/notification-item-priority.html` |
+| `bsx-notification-batch-arrive` | extended | notification-center | no | workflow-state | medium | low | color + opacity | notification inbox panels and unread/read transitions | critical alerts that require modal confirmation | opacity-only near-instant state | `snippets/extended/notification-center/notification-batch-arrive.html` |
+| `bsx-notification-empty-state` | extended | notification-center | no | workflow-state | medium | low | color + opacity | notification inbox panels and unread/read transitions | critical alerts that require modal confirmation | opacity-only near-instant state | `snippets/extended/notification-center/notification-empty-state.html` |
+| `bsx-mobile-sticky-save-bar` | extended | mobile | no | navigation-state | medium | low | color + opacity | mobile admin actions, sticky save bars, bottom nav, and filter sheets | desktop-only dense grids | opacity-only near-instant state | `snippets/extended/mobile/mobile-sticky-save-bar.html` |
+| `bsx-mobile-filter-sheet` | extended | mobile | no | navigation-state | medium | low | translate | mobile admin actions, sticky save bars, bottom nav, and filter sheets | desktop-only dense grids | opacity-only near-instant state | `snippets/extended/mobile/mobile-filter-sheet.html` |
+| `bsx-mobile-bulk-action-bar` | extended | mobile | no | navigation-state | medium | low | color + opacity | mobile admin actions, sticky save bars, bottom nav, and filter sheets | desktop-only dense grids | opacity-only near-instant state | `snippets/extended/mobile/mobile-bulk-action-bar.html` |
+| `bsx-mobile-inline-error` | extended | mobile | no | navigation-state | medium | medium | translate | mobile admin actions, sticky save bars, bottom nav, and filter sheets | desktop-only dense grids | opacity-only near-instant state | `snippets/extended/mobile/mobile-inline-error.html` |
+| `bsx-mobile-bottom-nav-active` | extended | mobile | no | navigation-state | medium | low | color + opacity | mobile admin actions, sticky save bars, bottom nav, and filter sheets | desktop-only dense grids | opacity-only near-instant state | `snippets/extended/mobile/mobile-bottom-nav-active.html` |
 
 ## modal-scale
 
@@ -224,6 +302,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: modal
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: low
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `.show`
 - Motion: scale
 - Best for: dialogs and confirmations
 - Avoid for: dense repeated workflows
@@ -238,6 +321,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: modal
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: low
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `.show`
 - Motion: translate
 - Best for: dialogs and confirmations
 - Avoid for: dense repeated workflows
@@ -252,6 +340,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: modal
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: low
+- Risk: low
+- CSS properties: `opacity`, `filter`
+- Bootstrap states: `.show`
 - Motion: opacity
 - Best for: dialogs and confirmations
 - Avoid for: dense repeated workflows
@@ -266,6 +359,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: modal
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: low
+- Risk: medium
+- CSS properties: `background-color`, `border-color`, `color`
+- Bootstrap states: `.show`
 - Motion: color + opacity
 - Best for: dialogs and confirmations
 - Avoid for: dense repeated workflows
@@ -280,6 +378,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: modal
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: low
+- Risk: low
+- CSS properties: `opacity`, `background-color`, `border-color`, `color`
+- Bootstrap states: `.show`, `.bsx-is-success`
 - Motion: color + opacity
 - Best for: dialogs and confirmations
 - Avoid for: dense repeated workflows
@@ -294,6 +397,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: modal
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: low
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `.show`
 - Motion: translate
 - Best for: dialogs and confirmations
 - Avoid for: dense repeated workflows
@@ -308,6 +416,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: dropdown
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`
+- Bootstrap states: `.dropdown-menu.show`
 - Motion: opacity
 - Best for: menus with clear visual hierarchy
 - Avoid for: menus requiring instant state changes
@@ -322,6 +435,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: dropdown
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `.dropdown-menu.show`
 - Motion: translate
 - Best for: menus with clear visual hierarchy
 - Avoid for: menus requiring instant state changes
@@ -336,6 +454,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: dropdown
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `.dropdown-menu.show`
 - Motion: scale
 - Best for: menus with clear visual hierarchy
 - Avoid for: menus requiring instant state changes
@@ -350,6 +473,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: dropdown
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `.dropdown-menu.show`
 - Motion: translate
 - Best for: menus with clear visual hierarchy
 - Avoid for: menus requiring instant state changes
@@ -364,6 +492,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: dropdown
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `.dropdown-menu.show`
 - Motion: translate
 - Best for: menus with clear visual hierarchy
 - Avoid for: menus requiring instant state changes
@@ -378,6 +511,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: dropdown
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`
+- Bootstrap states: `.dropdown-menu.show`
 - Motion: opacity
 - Best for: menus with clear visual hierarchy
 - Avoid for: menus requiring instant state changes
@@ -392,6 +530,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: offcanvas
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: low
+- Risk: low
+- CSS properties: `opacity`
+- Bootstrap states: `.show`
 - Motion: opacity
 - Best for: navigation and mobile panels
 - Avoid for: permanent desktop navigation
@@ -406,6 +549,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: offcanvas
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: low
+- Risk: low
+- CSS properties: `opacity`, `filter`
+- Bootstrap states: `.show`
 - Motion: opacity
 - Best for: navigation and mobile panels
 - Avoid for: permanent desktop navigation
@@ -420,6 +568,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: offcanvas
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: low
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `.show`
 - Motion: translate
 - Best for: navigation and mobile panels
 - Avoid for: permanent desktop navigation
@@ -434,6 +587,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: offcanvas
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: low
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `.show`
 - Motion: translate
 - Best for: navigation and mobile panels
 - Avoid for: permanent desktop navigation
@@ -448,6 +606,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: toast
 - Requires JS: yes
 - Runtime behavior: toast trigger
+- Kind: feedback-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `.show`
 - Motion: translate
 - Best for: brief asynchronous feedback
 - Avoid for: critical information requiring confirmation
@@ -462,6 +625,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: toast
 - Requires JS: yes
 - Runtime behavior: toast trigger
+- Kind: feedback-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `.show`
 - Motion: scale
 - Best for: brief asynchronous feedback
 - Avoid for: critical information requiring confirmation
@@ -476,6 +644,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: toast
 - Requires JS: yes
 - Runtime behavior: toast trigger
+- Kind: feedback-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `.show`
 - Motion: scale
 - Best for: brief asynchronous feedback
 - Avoid for: critical information requiring confirmation
@@ -490,6 +663,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: toast
 - Requires JS: yes
 - Runtime behavior: toast trigger
+- Kind: feedback-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`, `transform`, `background-color`, `border-color`, `color`
+- Bootstrap states: `.show`, `.bsx-is-success`
 - Motion: scale
 - Best for: brief asynchronous feedback
 - Avoid for: critical information requiring confirmation
@@ -504,6 +682,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: toast
 - Requires JS: yes
 - Runtime behavior: toast trigger
+- Kind: feedback-state
+- Density: medium
+- Risk: medium
+- CSS properties: `opacity`, `background-color`, `border-color`, `color`
+- Bootstrap states: `.show`, `.bsx-is-error`
 - Motion: shake
 - Best for: brief asynchronous feedback
 - Avoid for: critical information requiring confirmation
@@ -518,6 +701,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: toast
 - Requires JS: yes
 - Runtime behavior: toast trigger
+- Kind: feedback-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `.show`
 - Motion: translate
 - Best for: brief asynchronous feedback
 - Avoid for: critical information requiring confirmation
@@ -532,6 +720,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: alert
 - Requires JS: no
 - Runtime behavior: none
+- Kind: feedback-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: translate
 - Best for: inline feedback and validation summaries
 - Avoid for: decorative content
@@ -546,6 +739,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: alert
 - Requires JS: no
 - Runtime behavior: none
+- Kind: feedback-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: translate
 - Best for: inline feedback and validation summaries
 - Avoid for: decorative content
@@ -560,6 +758,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: alert
 - Requires JS: no
 - Runtime behavior: none
+- Kind: feedback-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`, `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: shake
 - Best for: inline feedback and validation summaries
 - Avoid for: decorative content
@@ -574,6 +777,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: alert
 - Requires JS: no
 - Runtime behavior: none
+- Kind: feedback-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: scale
 - Best for: inline feedback and validation summaries
 - Avoid for: decorative content
@@ -588,6 +796,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: alert
 - Requires JS: no
 - Runtime behavior: none
+- Kind: feedback-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`, `box-shadow`, `background-color`, `border-color`, `color`
+- Bootstrap states: `.bsx-is-success`
 - Motion: opacity
 - Best for: inline feedback and validation summaries
 - Avoid for: decorative content
@@ -602,6 +815,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: alert
 - Requires JS: yes
 - Runtime behavior: delayed alert dismissal
+- Kind: feedback-state
+- Density: medium
+- Risk: medium
+- CSS properties: `opacity`, `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: color + opacity
 - Best for: inline feedback and validation summaries
 - Avoid for: decorative content
@@ -616,6 +834,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: button
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: scale
 - Best for: direct interaction feedback
 - Avoid for: large continuously animated areas
@@ -630,6 +853,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: button
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: translate
 - Best for: direct interaction feedback
 - Avoid for: large continuously animated areas
@@ -644,6 +872,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: button
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`, `box-shadow`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: opacity
 - Best for: direct interaction feedback
 - Avoid for: large continuously animated areas
@@ -658,6 +891,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: button
 - Requires JS: yes
 - Runtime behavior: button loading and success state
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`
+- Bootstrap states: `[aria-busy]`, `.bsx-is-loading`
 - Motion: opacity + rotate
 - Best for: direct interaction feedback
 - Avoid for: large continuously animated areas
@@ -672,6 +910,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: button
 - Requires JS: yes
 - Runtime behavior: button loading and success state
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`
+- Bootstrap states: `[aria-busy]`, `.bsx-is-loading`
 - Motion: opacity
 - Best for: direct interaction feedback
 - Avoid for: large continuously animated areas
@@ -686,6 +929,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: button
 - Requires JS: yes
 - Runtime behavior: button loading and success state
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`, `transform`, `background-color`, `border-color`, `color`
+- Bootstrap states: `.bsx-is-success`
 - Motion: scale
 - Best for: direct interaction feedback
 - Avoid for: large continuously animated areas
@@ -700,6 +948,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: button
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: translate
 - Best for: direct interaction feedback
 - Avoid for: large continuously animated areas
@@ -714,6 +967,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: button
 - Requires JS: yes
 - Runtime behavior: pointer ripple
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`, `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: color + opacity
 - Best for: direct interaction feedback
 - Avoid for: large continuously animated areas
@@ -728,6 +986,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: form
 - Requires JS: no
 - Runtime behavior: none
+- Kind: form-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`, `box-shadow`
+- Bootstrap states: `.is-valid`, `.is-invalid`, `:focus-within`
 - Motion: color + opacity
 - Best for: focus and validation feedback
 - Avoid for: replacing native validation semantics
@@ -742,6 +1005,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: form
 - Requires JS: no
 - Runtime behavior: none
+- Kind: form-state
+- Density: medium
+- Risk: medium
+- CSS properties: `opacity`, `transform`
+- Bootstrap states: `.is-valid`, `.is-invalid`, `:focus-within`, `.bsx-is-error`
 - Motion: shake
 - Best for: focus and validation feedback
 - Avoid for: replacing native validation semantics
@@ -756,6 +1024,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: form
 - Requires JS: no
 - Runtime behavior: none
+- Kind: form-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`, `transform`
+- Bootstrap states: `.is-valid`, `.is-invalid`, `:focus-within`
 - Motion: color + opacity
 - Best for: focus and validation feedback
 - Avoid for: replacing native validation semantics
@@ -770,6 +1043,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: form
 - Requires JS: no
 - Runtime behavior: none
+- Kind: form-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `.is-valid`, `.is-invalid`, `:focus-within`
 - Motion: translate
 - Best for: focus and validation feedback
 - Avoid for: replacing native validation semantics
@@ -784,6 +1062,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: form
 - Requires JS: no
 - Runtime behavior: none
+- Kind: form-state
+- Density: medium
+- Risk: medium
+- CSS properties: `transform`, `opacity`, `background-color`, `border-color`, `color`
+- Bootstrap states: `.is-valid`, `.is-invalid`, `:focus-within`, `.bsx-is-error`
 - Motion: translate
 - Best for: focus and validation feedback
 - Avoid for: replacing native validation semantics
@@ -798,6 +1081,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: form
 - Requires JS: no
 - Runtime behavior: none
+- Kind: form-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`
+- Bootstrap states: `.is-valid`, `.is-invalid`, `:focus-within`
 - Motion: opacity
 - Best for: focus and validation feedback
 - Avoid for: replacing native validation semantics
@@ -812,6 +1100,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: form
 - Requires JS: no
 - Runtime behavior: none
+- Kind: form-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `.is-valid`, `.is-invalid`, `:focus-within`
 - Motion: scale
 - Best for: focus and validation feedback
 - Avoid for: replacing native validation semantics
@@ -826,6 +1119,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: form
 - Requires JS: yes
 - Runtime behavior: file drag state
+- Kind: form-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`, `transform`
+- Bootstrap states: `.is-valid`, `.is-invalid`, `:focus-within`
 - Motion: color + opacity
 - Best for: focus and validation feedback
 - Avoid for: replacing native validation semantics
@@ -840,6 +1138,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: card
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: translate
 - Best for: interactive content collections
 - Avoid for: non-interactive dense tables
@@ -854,6 +1157,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: card
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: scale
 - Best for: interactive content collections
 - Avoid for: non-interactive dense tables
@@ -868,6 +1176,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: card
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `box-shadow`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: color + opacity
 - Best for: interactive content collections
 - Avoid for: non-interactive dense tables
@@ -882,6 +1195,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: card
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: scale
 - Best for: interactive content collections
 - Avoid for: non-interactive dense tables
@@ -896,6 +1214,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: card
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`, `opacity`
+- Bootstrap states: `[aria-busy]`, `.bsx-is-loading`
 - Motion: opacity
 - Best for: interactive content collections
 - Avoid for: non-interactive dense tables
@@ -910,6 +1233,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: card
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: translate
 - Best for: interactive content collections
 - Avoid for: non-interactive dense tables
@@ -924,6 +1252,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: tabs
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`
+- Bootstrap states: `.active`, `[aria-current]`
 - Motion: opacity
 - Best for: section navigation and tab state
 - Avoid for: rapidly auto-rotating content
@@ -938,6 +1271,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: tabs
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `.active`, `[aria-current]`
 - Motion: translate
 - Best for: section navigation and tab state
 - Avoid for: rapidly auto-rotating content
@@ -952,6 +1290,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: tabs
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`, `box-shadow`, `background-color`, `border-color`, `color`
+- Bootstrap states: `.active`, `[aria-current]`
 - Motion: scale
 - Best for: section navigation and tab state
 - Avoid for: rapidly auto-rotating content
@@ -966,6 +1309,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: navbar
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: translate
 - Best for: section navigation and tab state
 - Avoid for: rapidly auto-rotating content
@@ -980,6 +1328,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: sidebar
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: high
+- Risk: low
+- CSS properties: `transform`, `box-shadow`, `background-color`, `border-color`, `color`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: translate
 - Best for: section navigation and tab state
 - Avoid for: rapidly auto-rotating content
@@ -994,6 +1347,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: accordion
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`, `transform`
+- Bootstrap states: `.collapse.show`, `[aria-expanded]`
 - Motion: rotate
 - Best for: disclosure controls
 - Avoid for: content that must remain continuously visible
@@ -1008,6 +1366,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: accordion
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`, `transform`
+- Bootstrap states: `.collapse.show`, `[aria-expanded]`
 - Motion: rotate
 - Best for: disclosure controls
 - Avoid for: content that must remain continuously visible
@@ -1022,6 +1385,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: accordion
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`
+- Bootstrap states: `.collapse.show`, `[aria-expanded]`
 - Motion: opacity
 - Best for: disclosure controls
 - Avoid for: content that must remain continuously visible
@@ -1036,6 +1404,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: accordion
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`
+- Bootstrap states: `.collapse.show`, `[aria-expanded]`
 - Motion: opacity
 - Best for: disclosure controls
 - Avoid for: content that must remain continuously visible
@@ -1050,6 +1423,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: accordion
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`, `transform`
+- Bootstrap states: `.collapse.show`, `[aria-expanded]`
 - Motion: color + opacity
 - Best for: disclosure controls
 - Avoid for: content that must remain continuously visible
@@ -1064,6 +1442,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: navbar
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: translate
 - Best for: application navigation
 - Avoid for: small inline controls
@@ -1078,6 +1461,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: navbar
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`, `opacity`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: opacity
 - Best for: application navigation
 - Avoid for: small inline controls
@@ -1092,6 +1480,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: navbar
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: rotate
 - Best for: application navigation
 - Avoid for: small inline controls
@@ -1106,6 +1499,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: sidebar
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: high
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: translate
 - Best for: application navigation
 - Avoid for: small inline controls
@@ -1120,6 +1518,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: sidebar
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: high
+- Risk: low
+- CSS properties: `transform`, `box-shadow`, `background-color`, `border-color`, `color`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: translate
 - Best for: application navigation
 - Avoid for: small inline controls
@@ -1134,6 +1537,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: badge
 - Requires JS: no
 - Runtime behavior: none
+- Kind: feedback-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: scale
 - Best for: status and metric updates
 - Avoid for: long text content
@@ -1148,6 +1556,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: badge
 - Requires JS: no
 - Runtime behavior: none
+- Kind: feedback-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: scale
 - Best for: status and metric updates
 - Avoid for: long text content
@@ -1162,6 +1575,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: badge
 - Requires JS: no
 - Runtime behavior: none
+- Kind: feedback-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`, `background-color`, `border-color`, `color`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: scale
 - Best for: status and metric updates
 - Avoid for: long text content
@@ -1176,6 +1594,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: counter
 - Requires JS: yes
 - Runtime behavior: counter update
+- Kind: feedback-state
+- Density: high
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: scale
 - Best for: status and metric updates
 - Avoid for: long text content
@@ -1190,6 +1613,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: counter
 - Requires JS: yes
 - Runtime behavior: counter update
+- Kind: feedback-state
+- Density: high
+- Risk: low
+- CSS properties: `opacity`, `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: color + opacity
 - Best for: status and metric updates
 - Avoid for: long text content
@@ -1204,6 +1632,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: table
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: high
+- Risk: low
+- CSS properties: `opacity`, `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: color + opacity
 - Best for: row state and collection changes
 - Avoid for: large simultaneous batches
@@ -1218,6 +1651,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: table
 - Requires JS: yes
 - Runtime behavior: table row mutation
+- Kind: component-state
+- Density: high
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: translate
 - Best for: row state and collection changes
 - Avoid for: large simultaneous batches
@@ -1232,6 +1670,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: table
 - Requires JS: yes
 - Runtime behavior: table row mutation
+- Kind: component-state
+- Density: high
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: translate
 - Best for: row state and collection changes
 - Avoid for: large simultaneous batches
@@ -1246,6 +1689,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: table
 - Requires JS: yes
 - Runtime behavior: table row mutation
+- Kind: component-state
+- Density: high
+- Risk: low
+- CSS properties: `opacity`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: opacity
 - Best for: row state and collection changes
 - Avoid for: large simultaneous batches
@@ -1260,6 +1708,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: list
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: high
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: translate
 - Best for: row state and collection changes
 - Avoid for: large simultaneous batches
@@ -1274,6 +1727,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: list
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: high
+- Risk: low
+- CSS properties: `transform`, `box-shadow`, `background-color`, `border-color`, `color`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: translate
 - Best for: row state and collection changes
 - Avoid for: large simultaneous batches
@@ -1288,6 +1746,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: skeleton
 - Requires JS: no
 - Runtime behavior: none
+- Kind: loading-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`
+- Bootstrap states: `[aria-busy]`, `.bsx-is-loading`
 - Motion: opacity
 - Best for: short loading states
 - Avoid for: unknown or very long waits without status
@@ -1302,6 +1765,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: skeleton
 - Requires JS: no
 - Runtime behavior: none
+- Kind: loading-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`, `transform`
+- Bootstrap states: `[aria-busy]`, `.bsx-is-loading`
 - Motion: scale + opacity
 - Best for: short loading states
 - Avoid for: unknown or very long waits without status
@@ -1316,6 +1784,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: skeleton
 - Requires JS: no
 - Runtime behavior: none
+- Kind: loading-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`
+- Bootstrap states: `[aria-busy]`, `.bsx-is-loading`
 - Motion: opacity
 - Best for: short loading states
 - Avoid for: unknown or very long waits without status
@@ -1330,6 +1803,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: skeleton
 - Requires JS: no
 - Runtime behavior: none
+- Kind: loading-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`
+- Bootstrap states: `[aria-busy]`, `.bsx-is-loading`
 - Motion: opacity
 - Best for: short loading states
 - Avoid for: unknown or very long waits without status
@@ -1344,6 +1822,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: loading state
 - Requires JS: no
 - Runtime behavior: none
+- Kind: loading-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`, `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: color + opacity
 - Best for: short loading states
 - Avoid for: unknown or very long waits without status
@@ -1358,6 +1841,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: loading state
 - Requires JS: no
 - Runtime behavior: none
+- Kind: loading-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`
+- Bootstrap states: `[aria-busy]`, `.bsx-is-loading`
 - Motion: opacity
 - Best for: short loading states
 - Avoid for: unknown or very long waits without status
@@ -1372,6 +1860,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: modal
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: low
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `.show`
 - Motion: scale
 - Best for: dialogs and confirmations
 - Avoid for: dense repeated workflows
@@ -1386,6 +1879,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: modal
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: low
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `.show`
 - Motion: scale
 - Best for: dialogs and confirmations
 - Avoid for: dense repeated workflows
@@ -1400,6 +1898,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: modal
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: low
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `.show`
 - Motion: translate
 - Best for: dialogs and confirmations
 - Avoid for: dense repeated workflows
@@ -1414,6 +1917,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: modal
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: low
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `.show`
 - Motion: translate
 - Best for: dialogs and confirmations
 - Avoid for: dense repeated workflows
@@ -1428,6 +1936,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: modal
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: low
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `.show`
 - Motion: translate
 - Best for: dialogs and confirmations
 - Avoid for: dense repeated workflows
@@ -1442,6 +1955,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: modal
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: low
+- Risk: low
+- CSS properties: `opacity`
+- Bootstrap states: `.show`
 - Motion: opacity
 - Best for: dialogs and confirmations
 - Avoid for: dense repeated workflows
@@ -1456,6 +1974,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: modal
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: low
+- Risk: low
+- CSS properties: `opacity`, `transform`, `filter`
+- Bootstrap states: `.show`
 - Motion: scale + opacity
 - Best for: dialogs and confirmations
 - Avoid for: dense repeated workflows
@@ -1470,6 +1993,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: modal
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: low
+- Risk: low
+- CSS properties: `opacity`
+- Bootstrap states: `.show`
 - Motion: opacity
 - Best for: dialogs and confirmations
 - Avoid for: dense repeated workflows
@@ -1484,6 +2012,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: modal
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: low
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `.show`
 - Motion: scale
 - Best for: dialogs and confirmations
 - Avoid for: dense repeated workflows
@@ -1498,6 +2031,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: modal
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: low
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `.show`
 - Motion: translate
 - Best for: dialogs and confirmations
 - Avoid for: dense repeated workflows
@@ -1512,6 +2050,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: dropdown
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `.dropdown-menu.show`
 - Motion: translate
 - Best for: menus with clear visual hierarchy
 - Avoid for: menus requiring instant state changes
@@ -1526,6 +2069,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: dropdown
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`
+- Bootstrap states: `.dropdown-menu.show`
 - Motion: opacity
 - Best for: menus with clear visual hierarchy
 - Avoid for: menus requiring instant state changes
@@ -1540,6 +2088,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: dropdown
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`, `transform`
+- Bootstrap states: `.dropdown-menu.show`
 - Motion: color + opacity
 - Best for: menus with clear visual hierarchy
 - Avoid for: menus requiring instant state changes
@@ -1554,6 +2107,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: dropdown
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`, `transform`
+- Bootstrap states: `.dropdown-menu.show`
 - Motion: color + opacity
 - Best for: menus with clear visual hierarchy
 - Avoid for: menus requiring instant state changes
@@ -1568,6 +2126,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: dropdown
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`, `filter`
+- Bootstrap states: `.dropdown-menu.show`
 - Motion: opacity
 - Best for: menus with clear visual hierarchy
 - Avoid for: menus requiring instant state changes
@@ -1582,6 +2145,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: dropdown
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`, `transform`
+- Bootstrap states: `.dropdown-menu.show`
 - Motion: color + opacity
 - Best for: menus with clear visual hierarchy
 - Avoid for: menus requiring instant state changes
@@ -1596,6 +2164,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: dropdown
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`, `box-shadow`, `background-color`, `border-color`, `color`
+- Bootstrap states: `.dropdown-menu.show`
 - Motion: scale
 - Best for: menus with clear visual hierarchy
 - Avoid for: menus requiring instant state changes
@@ -1610,6 +2183,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: dropdown
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`, `transform`
+- Bootstrap states: `.dropdown-menu.show`
 - Motion: color + opacity
 - Best for: menus with clear visual hierarchy
 - Avoid for: menus requiring instant state changes
@@ -1624,6 +2202,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: offcanvas
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: low
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `.show`
 - Motion: translate
 - Best for: navigation and mobile panels
 - Avoid for: permanent desktop navigation
@@ -1638,6 +2221,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: offcanvas
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: low
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `.show`
 - Motion: translate
 - Best for: navigation and mobile panels
 - Avoid for: permanent desktop navigation
@@ -1652,6 +2240,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: offcanvas
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: low
+- Risk: low
+- CSS properties: `opacity`
+- Bootstrap states: `.show`
 - Motion: opacity
 - Best for: navigation and mobile panels
 - Avoid for: permanent desktop navigation
@@ -1666,6 +2259,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: offcanvas
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: low
+- Risk: low
+- CSS properties: `opacity`
+- Bootstrap states: `.show`
 - Motion: opacity
 - Best for: navigation and mobile panels
 - Avoid for: permanent desktop navigation
@@ -1680,6 +2278,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: offcanvas
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: low
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `.show`
 - Motion: translate
 - Best for: navigation and mobile panels
 - Avoid for: permanent desktop navigation
@@ -1694,6 +2297,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: offcanvas
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: low
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `.show`
 - Motion: translate
 - Best for: navigation and mobile panels
 - Avoid for: permanent desktop navigation
@@ -1708,6 +2316,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: toast
 - Requires JS: yes
 - Runtime behavior: toast trigger
+- Kind: feedback-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `.show`
 - Motion: translate
 - Best for: brief asynchronous feedback
 - Avoid for: critical information requiring confirmation
@@ -1722,6 +2335,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: toast
 - Requires JS: yes
 - Runtime behavior: toast trigger
+- Kind: feedback-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `.show`
 - Motion: translate
 - Best for: brief asynchronous feedback
 - Avoid for: critical information requiring confirmation
@@ -1736,6 +2354,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: toast
 - Requires JS: yes
 - Runtime behavior: toast trigger
+- Kind: feedback-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `.show`
 - Motion: translate
 - Best for: brief asynchronous feedback
 - Avoid for: critical information requiring confirmation
@@ -1750,6 +2373,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: toast
 - Requires JS: yes
 - Runtime behavior: toast trigger
+- Kind: feedback-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`, `transform`, `background-color`, `border-color`, `color`
+- Bootstrap states: `.show`
 - Motion: scale
 - Best for: brief asynchronous feedback
 - Avoid for: critical information requiring confirmation
@@ -1764,6 +2392,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: toast
 - Requires JS: yes
 - Runtime behavior: toast trigger
+- Kind: feedback-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `.show`
 - Motion: color + opacity
 - Best for: brief asynchronous feedback
 - Avoid for: critical information requiring confirmation
@@ -1778,6 +2411,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: toast
 - Requires JS: yes
 - Runtime behavior: toast trigger
+- Kind: feedback-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `.show`
 - Motion: scale
 - Best for: brief asynchronous feedback
 - Avoid for: critical information requiring confirmation
@@ -1792,6 +2430,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: alert
 - Requires JS: no
 - Runtime behavior: none
+- Kind: feedback-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: translate
 - Best for: inline feedback and validation summaries
 - Avoid for: decorative content
@@ -1806,6 +2449,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: alert
 - Requires JS: no
 - Runtime behavior: none
+- Kind: feedback-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: opacity
 - Best for: inline feedback and validation summaries
 - Avoid for: decorative content
@@ -1820,6 +2468,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: alert
 - Requires JS: no
 - Runtime behavior: none
+- Kind: feedback-state
+- Density: medium
+- Risk: medium
+- CSS properties: `opacity`, `background-color`, `border-color`, `color`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: opacity
 - Best for: inline feedback and validation summaries
 - Avoid for: decorative content
@@ -1834,6 +2487,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: alert
 - Requires JS: no
 - Runtime behavior: none
+- Kind: feedback-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`, `background-color`, `border-color`, `color`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: shake
 - Best for: inline feedback and validation summaries
 - Avoid for: decorative content
@@ -1848,6 +2506,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: button
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: translate
 - Best for: direct interaction feedback
 - Avoid for: large continuously animated areas
@@ -1862,6 +2525,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: button
 - Requires JS: yes
 - Runtime behavior: button loading and success state
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`, `background-color`, `border-color`, `color`
+- Bootstrap states: `.bsx-is-success`
 - Motion: color + opacity
 - Best for: direct interaction feedback
 - Avoid for: large continuously animated areas
@@ -1876,6 +2544,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: button
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: medium
+- CSS properties: `transform`, `background-color`, `border-color`, `color`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: scale
 - Best for: direct interaction feedback
 - Avoid for: large continuously animated areas
@@ -1890,6 +2563,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: button
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: scale
 - Best for: direct interaction feedback
 - Avoid for: large continuously animated areas
@@ -1901,14 +2579,19 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Category: button
 - Class: `bsx-button-group-active-slide`
 - Level: extended
-- Bootstrap component: button
+- Bootstrap component: button-group
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`, `box-shadow`, `background-color`, `border-color`, `color`
+- Bootstrap states: `.active`, `[aria-current]`
 - Motion: translate
 - Best for: direct interaction feedback
 - Avoid for: large continuously animated areas
 - Reduced motion: opacity-only near-instant state
-- Snippet: `snippets/extended/button/button-group-active-slide.html`
+- Snippet: `snippets/extended/button-group/button-group-active-slide.html`
 
 ## button-disabled-soft
 
@@ -1918,6 +2601,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: button
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`, `background-color`, `border-color`, `color`
+- Bootstrap states: `.disabled`, `[disabled]`, `[aria-disabled]`
 - Motion: opacity
 - Best for: direct interaction feedback
 - Avoid for: large continuously animated areas
@@ -1932,6 +2620,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: form
 - Requires JS: no
 - Runtime behavior: none
+- Kind: form-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`, `box-shadow`
+- Bootstrap states: `.is-valid`, `.is-invalid`, `:focus-within`
 - Motion: opacity
 - Best for: focus and validation feedback
 - Avoid for: replacing native validation semantics
@@ -1946,6 +2639,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: form
 - Requires JS: no
 - Runtime behavior: none
+- Kind: form-state
+- Density: medium
+- Risk: medium
+- CSS properties: `transform`
+- Bootstrap states: `.is-valid`, `.is-invalid`, `:focus-within`, `.bsx-is-error`
 - Motion: scale
 - Best for: focus and validation feedback
 - Avoid for: replacing native validation semantics
@@ -1960,6 +2658,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: form
 - Requires JS: no
 - Runtime behavior: none
+- Kind: form-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`
+- Bootstrap states: `.is-valid`, `.is-invalid`, `:focus-within`
 - Motion: opacity
 - Best for: focus and validation feedback
 - Avoid for: replacing native validation semantics
@@ -1974,6 +2677,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: form
 - Requires JS: yes
 - Runtime behavior: input clearing
+- Kind: form-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `.is-valid`, `.is-invalid`, `:focus-within`
 - Motion: scale
 - Best for: focus and validation feedback
 - Avoid for: replacing native validation semantics
@@ -1988,6 +2696,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: form
 - Requires JS: no
 - Runtime behavior: none
+- Kind: form-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`
+- Bootstrap states: `.is-valid`, `.is-invalid`, `:focus-within`
 - Motion: opacity
 - Best for: focus and validation feedback
 - Avoid for: replacing native validation semantics
@@ -2002,6 +2715,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: form
 - Requires JS: no
 - Runtime behavior: none
+- Kind: form-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `.is-valid`, `.is-invalid`, `:focus-within`
 - Motion: scale
 - Best for: focus and validation feedback
 - Avoid for: replacing native validation semantics
@@ -2016,6 +2734,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: card
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`, `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: color + opacity
 - Best for: interactive content collections
 - Avoid for: non-interactive dense tables
@@ -2030,6 +2753,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: card
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`, `box-shadow`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: opacity
 - Best for: interactive content collections
 - Avoid for: non-interactive dense tables
@@ -2044,6 +2772,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: card
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: scale
 - Best for: interactive content collections
 - Avoid for: non-interactive dense tables
@@ -2058,6 +2791,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: card
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: translate
 - Best for: interactive content collections
 - Avoid for: non-interactive dense tables
@@ -2072,6 +2810,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: card
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: translate
 - Best for: interactive content collections
 - Avoid for: non-interactive dense tables
@@ -2086,6 +2829,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: card
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: translate
 - Best for: interactive content collections
 - Avoid for: non-interactive dense tables
@@ -2100,6 +2848,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: tabs
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `.active`, `[aria-current]`
 - Motion: translate
 - Best for: section navigation and tab state
 - Avoid for: rapidly auto-rotating content
@@ -2114,6 +2867,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: tabs
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `.active`, `[aria-current]`
 - Motion: translate
 - Best for: section navigation and tab state
 - Avoid for: rapidly auto-rotating content
@@ -2128,6 +2886,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: tabs
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `.active`, `[aria-current]`
 - Motion: translate
 - Best for: section navigation and tab state
 - Avoid for: rapidly auto-rotating content
@@ -2142,6 +2905,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: tabs
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`, `filter`
+- Bootstrap states: `.active`, `[aria-current]`
 - Motion: opacity
 - Best for: section navigation and tab state
 - Avoid for: rapidly auto-rotating content
@@ -2156,6 +2924,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: navbar
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: translate
 - Best for: section navigation and tab state
 - Avoid for: rapidly auto-rotating content
@@ -2170,6 +2943,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: sidebar
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: high
+- Risk: low
+- CSS properties: `transform`, `opacity`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: opacity
 - Best for: section navigation and tab state
 - Avoid for: rapidly auto-rotating content
@@ -2184,6 +2962,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: accordion
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `.collapse.show`, `[aria-expanded]`
 - Motion: translate
 - Best for: disclosure controls
 - Avoid for: content that must remain continuously visible
@@ -2198,6 +2981,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: accordion
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`, `transform`
+- Bootstrap states: `.collapse.show`, `[aria-expanded]`
 - Motion: color + opacity
 - Best for: disclosure controls
 - Avoid for: content that must remain continuously visible
@@ -2212,6 +3000,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: accordion
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`, `box-shadow`, `background-color`, `border-color`, `color`
+- Bootstrap states: `.collapse.show`, `[aria-expanded]`
 - Motion: opacity
 - Best for: disclosure controls
 - Avoid for: content that must remain continuously visible
@@ -2226,6 +3019,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: accordion
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`
+- Bootstrap states: `.collapse.show`, `[aria-expanded]`
 - Motion: opacity
 - Best for: disclosure controls
 - Avoid for: content that must remain continuously visible
@@ -2240,6 +3038,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: accordion
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `.collapse.show`, `[aria-expanded]`
 - Motion: translate
 - Best for: disclosure controls
 - Avoid for: content that must remain continuously visible
@@ -2254,6 +3057,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: navbar
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: scale
 - Best for: application navigation
 - Avoid for: small inline controls
@@ -2268,6 +3076,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: navbar
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: color + opacity
 - Best for: application navigation
 - Avoid for: small inline controls
@@ -2282,6 +3095,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: navbar
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: rotate
 - Best for: application navigation
 - Avoid for: small inline controls
@@ -2296,6 +3114,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: sidebar
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: high
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: translate
 - Best for: application navigation
 - Avoid for: small inline controls
@@ -2310,6 +3133,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: sidebar
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: high
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: translate
 - Best for: application navigation
 - Avoid for: small inline controls
@@ -2324,6 +3152,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: sidebar
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: high
+- Risk: low
+- CSS properties: `transform`, `clip-path`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: color + opacity
 - Best for: application navigation
 - Avoid for: small inline controls
@@ -2338,6 +3171,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: sidebar
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: high
+- Risk: low
+- CSS properties: `transform`, `opacity`, `filter`
+- Bootstrap states: `[aria-busy]`, `.bsx-is-loading`
 - Motion: opacity
 - Best for: application navigation
 - Avoid for: small inline controls
@@ -2352,6 +3190,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: badge
 - Requires JS: no
 - Runtime behavior: none
+- Kind: feedback-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: scale
 - Best for: status and metric updates
 - Avoid for: long text content
@@ -2366,6 +3209,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: badge
 - Requires JS: no
 - Runtime behavior: none
+- Kind: feedback-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: scale
 - Best for: status and metric updates
 - Avoid for: long text content
@@ -2380,6 +3228,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: badge
 - Requires JS: no
 - Runtime behavior: none
+- Kind: feedback-state
+- Density: medium
+- Risk: low
+- CSS properties: `background-color`, `border-color`, `color`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: color + opacity
 - Best for: status and metric updates
 - Avoid for: long text content
@@ -2394,6 +3247,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: counter
 - Requires JS: yes
 - Runtime behavior: counter update
+- Kind: feedback-state
+- Density: high
+- Risk: low
+- CSS properties: `opacity`, `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: color + opacity
 - Best for: status and metric updates
 - Avoid for: long text content
@@ -2408,6 +3266,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: counter
 - Requires JS: yes
 - Runtime behavior: counter update
+- Kind: feedback-state
+- Density: high
+- Risk: low
+- CSS properties: `opacity`, `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: color + opacity
 - Best for: status and metric updates
 - Avoid for: long text content
@@ -2422,6 +3285,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: counter
 - Requires JS: yes
 - Runtime behavior: counter update
+- Kind: feedback-state
+- Density: high
+- Risk: low
+- CSS properties: `opacity`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: opacity
 - Best for: status and metric updates
 - Avoid for: long text content
@@ -2436,6 +3304,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: table
 - Requires JS: yes
 - Runtime behavior: table row selection
+- Kind: component-state
+- Density: high
+- Risk: low
+- CSS properties: `box-shadow`
+- Bootstrap states: `.bsx-is-selected`
 - Motion: color + opacity
 - Best for: row state and collection changes
 - Avoid for: large simultaneous batches
@@ -2450,6 +3323,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: table
 - Requires JS: yes
 - Runtime behavior: table sort state
+- Kind: component-state
+- Density: high
+- Risk: low
+- CSS properties: `opacity`, `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: rotate
 - Best for: row state and collection changes
 - Avoid for: large simultaneous batches
@@ -2464,6 +3342,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: table
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: high
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: translate
 - Best for: row state and collection changes
 - Avoid for: large simultaneous batches
@@ -2478,6 +3361,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: list
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: high
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: translate
 - Best for: row state and collection changes
 - Avoid for: large simultaneous batches
@@ -2492,6 +3380,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: list
 - Requires JS: yes
 - Runtime behavior: list item removal
+- Kind: component-state
+- Density: high
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: translate
 - Best for: row state and collection changes
 - Avoid for: large simultaneous batches
@@ -2506,6 +3399,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: list
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: high
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: translate
 - Best for: row state and collection changes
 - Avoid for: large simultaneous batches
@@ -2520,6 +3418,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: skeleton
 - Requires JS: no
 - Runtime behavior: none
+- Kind: loading-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`
+- Bootstrap states: `[aria-busy]`, `.bsx-is-loading`
 - Motion: opacity
 - Best for: short loading states
 - Avoid for: unknown or very long waits without status
@@ -2534,6 +3437,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: skeleton
 - Requires JS: no
 - Runtime behavior: none
+- Kind: loading-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`
+- Bootstrap states: `[aria-busy]`, `.bsx-is-loading`
 - Motion: opacity
 - Best for: short loading states
 - Avoid for: unknown or very long waits without status
@@ -2548,6 +3456,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: skeleton
 - Requires JS: no
 - Runtime behavior: none
+- Kind: loading-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`
+- Bootstrap states: `[aria-busy]`, `.bsx-is-loading`
 - Motion: opacity
 - Best for: short loading states
 - Avoid for: unknown or very long waits without status
@@ -2562,6 +3475,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: loading state
 - Requires JS: no
 - Runtime behavior: none
+- Kind: loading-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`
+- Bootstrap states: `[aria-busy]`, `.bsx-is-loading`
 - Motion: opacity + rotate
 - Best for: short loading states
 - Avoid for: unknown or very long waits without status
@@ -2576,6 +3494,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: loading state
 - Requires JS: no
 - Runtime behavior: none
+- Kind: loading-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `[aria-busy]`, `.bsx-is-loading`
 - Motion: scale + rotate
 - Best for: short loading states
 - Avoid for: unknown or very long waits without status
@@ -2590,6 +3513,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: loading state
 - Requires JS: no
 - Runtime behavior: none
+- Kind: loading-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: color + opacity
 - Best for: short loading states
 - Avoid for: unknown or very long waits without status
@@ -2604,6 +3532,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: image
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: scale
 - Best for: media previews and galleries
 - Avoid for: essential images that must remain static
@@ -2618,6 +3551,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: image
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: opacity
 - Best for: media previews and galleries
 - Avoid for: essential images that must remain static
@@ -2632,6 +3570,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: image
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `[aria-busy]`, `.bsx-is-loading`
 - Motion: color + opacity
 - Best for: media previews and galleries
 - Avoid for: essential images that must remain static
@@ -2646,6 +3589,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: image
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: translate
 - Best for: media previews and galleries
 - Avoid for: essential images that must remain static
@@ -2660,6 +3608,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: image
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: translate
 - Best for: media previews and galleries
 - Avoid for: essential images that must remain static
@@ -2674,6 +3627,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: image
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: scale
 - Best for: media previews and galleries
 - Avoid for: essential images that must remain static
@@ -2688,6 +3646,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: image
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`, `background-color`, `border-color`, `color`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: scale
 - Best for: media previews and galleries
 - Avoid for: essential images that must remain static
@@ -2702,6 +3665,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: image
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: translate
 - Best for: media previews and galleries
 - Avoid for: essential images that must remain static
@@ -2716,6 +3684,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: media
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: translate
 - Best for: media previews and galleries
 - Avoid for: essential images that must remain static
@@ -2730,6 +3703,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: media
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`, `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: color + opacity
 - Best for: media previews and galleries
 - Avoid for: essential images that must remain static
@@ -2744,6 +3722,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: tooltip
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: low
+- Risk: low
+- CSS properties: `opacity`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: opacity
 - Best for: contextual supporting information
 - Avoid for: primary task content
@@ -2758,6 +3741,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: tooltip
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: low
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: translate
 - Best for: contextual supporting information
 - Avoid for: primary task content
@@ -2772,6 +3760,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: tooltip
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: low
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: translate
 - Best for: contextual supporting information
 - Avoid for: primary task content
@@ -2786,6 +3779,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: tooltip
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: low
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: scale
 - Best for: contextual supporting information
 - Avoid for: primary task content
@@ -2800,6 +3798,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: tooltip
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: low
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: scale
 - Best for: contextual supporting information
 - Avoid for: primary task content
@@ -2814,6 +3817,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: popover
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: low
+- Risk: low
+- CSS properties: `opacity`, `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: scale + opacity
 - Best for: contextual supporting information
 - Avoid for: primary task content
@@ -2828,6 +3836,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: popover
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: low
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: translate + scale
 - Best for: contextual supporting information
 - Avoid for: primary task content
@@ -2842,6 +3855,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: popover
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: low
+- Risk: low
+- CSS properties: `opacity`, `transform`, `filter`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: scale + opacity
 - Best for: contextual supporting information
 - Avoid for: primary task content
@@ -2856,6 +3874,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: popover
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: low
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: translate + scale
 - Best for: contextual supporting information
 - Avoid for: primary task content
@@ -2870,6 +3893,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: popover
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: low
+- Risk: medium
+- CSS properties: `opacity`, `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: scale + opacity
 - Best for: contextual supporting information
 - Avoid for: primary task content
@@ -2884,6 +3912,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: progress
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`, `opacity`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: translate + opacity
 - Best for: progress and multi-step flows
 - Avoid for: indeterminate tasks without a status model
@@ -2898,6 +3931,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: progress
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `background-position`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: color + opacity
 - Best for: progress and multi-step flows
 - Avoid for: indeterminate tasks without a status model
@@ -2912,6 +3950,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: progress
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`, `transform`, `background-color`, `border-color`, `color`
+- Bootstrap states: `.bsx-is-success`
 - Motion: scale
 - Best for: progress and multi-step flows
 - Avoid for: indeterminate tasks without a status model
@@ -2926,6 +3969,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: progress
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: medium
+- CSS properties: `transform`, `background-color`, `border-color`, `color`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: scale
 - Best for: progress and multi-step flows
 - Avoid for: indeterminate tasks without a status model
@@ -2940,6 +3988,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: stepper
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`, `box-shadow`, `background-color`, `border-color`, `color`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: scale
 - Best for: progress and multi-step flows
 - Avoid for: indeterminate tasks without a status model
@@ -2954,6 +4007,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: stepper
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`, `transform`
+- Bootstrap states: `.bsx-is-success`
 - Motion: color + opacity
 - Best for: progress and multi-step flows
 - Avoid for: indeterminate tasks without a status model
@@ -2968,6 +4026,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: stepper
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: translate
 - Best for: progress and multi-step flows
 - Avoid for: indeterminate tasks without a status model
@@ -2982,6 +4045,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: stepper
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: translate
 - Best for: progress and multi-step flows
 - Avoid for: indeterminate tasks without a status model
@@ -2996,6 +4064,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: stepper
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: opacity
 - Best for: progress and multi-step flows
 - Avoid for: indeterminate tasks without a status model
@@ -3010,6 +4083,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: page
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: low
+- Risk: low
+- CSS properties: `opacity`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: opacity
 - Best for: page and section state changes
 - Avoid for: continuous scroll-driven motion
@@ -3024,6 +4102,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: page
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: low
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: translate
 - Best for: page and section state changes
 - Avoid for: continuous scroll-driven motion
@@ -3038,6 +4121,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: page
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: low
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: translate
 - Best for: page and section state changes
 - Avoid for: continuous scroll-driven motion
@@ -3052,6 +4140,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: page
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: low
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: translate
 - Best for: page and section state changes
 - Avoid for: continuous scroll-driven motion
@@ -3066,6 +4159,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: page
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: low
+- Risk: low
+- CSS properties: `opacity`, `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: scale
 - Best for: page and section state changes
 - Avoid for: continuous scroll-driven motion
@@ -3080,6 +4178,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: page
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: low
+- Risk: medium
+- CSS properties: `opacity`, `background-color`, `border-color`, `color`
+- Bootstrap states: `.bsx-is-error`
 - Motion: shake
 - Best for: page and section state changes
 - Avoid for: continuous scroll-driven motion
@@ -3094,6 +4197,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: page
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: low
+- Risk: low
+- CSS properties: `opacity`, `background-color`, `border-color`, `color`
+- Bootstrap states: `.bsx-is-success`
 - Motion: color + opacity
 - Best for: page and section state changes
 - Avoid for: continuous scroll-driven motion
@@ -3108,6 +4216,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: page
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: low
+- Risk: low
+- CSS properties: `opacity`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: opacity
 - Best for: page and section state changes
 - Avoid for: continuous scroll-driven motion
@@ -3122,6 +4235,11 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: page
 - Requires JS: no
 - Runtime behavior: none
+- Kind: component-state
+- Density: low
+- Risk: low
+- CSS properties: `opacity`, `filter`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: opacity
 - Best for: page and section state changes
 - Avoid for: continuous scroll-driven motion
@@ -3136,8 +4254,1495 @@ Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy
 - Bootstrap component: page
 - Requires JS: yes
 - Runtime behavior: intersection observer
+- Kind: component-state
+- Density: low
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
 - Motion: translate
 - Best for: page and section state changes
 - Avoid for: continuous scroll-driven motion
 - Reduced motion: opacity-only near-instant state
 - Snippet: `snippets/extended/page/scroll-reveal-lite.html`
+
+## breadcrumb-current-marker
+
+- Category: breadcrumb
+- Class: `bsx-breadcrumb-current-marker`
+- Level: extended
+- Bootstrap component: breadcrumb
+- Requires JS: no
+- Runtime behavior: none
+- Kind: navigation-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`, `opacity`
+- Bootstrap states: `.active`, `[aria-current]`, `.bsx-is-success`
+- Motion: translate
+- Best for: admin location and hierarchy changes
+- Avoid for: purely decorative page titles
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/breadcrumb/breadcrumb-current-marker.html`
+
+## breadcrumb-parent-hover
+
+- Category: breadcrumb
+- Class: `bsx-breadcrumb-parent-hover`
+- Level: extended
+- Bootstrap component: breadcrumb
+- Requires JS: no
+- Runtime behavior: none
+- Kind: navigation-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`
+- Bootstrap states: `.active`, `[aria-current]`, `.bsx-is-success`
+- Motion: color + opacity
+- Best for: admin location and hierarchy changes
+- Avoid for: purely decorative page titles
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/breadcrumb/breadcrumb-parent-hover.html`
+
+## breadcrumb-path-update
+
+- Category: breadcrumb
+- Class: `bsx-breadcrumb-path-update`
+- Level: extended
+- Bootstrap component: breadcrumb
+- Requires JS: no
+- Runtime behavior: none
+- Kind: navigation-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`
+- Bootstrap states: `.active`, `[aria-current]`, `.bsx-is-success`
+- Motion: color + opacity
+- Best for: admin location and hierarchy changes
+- Avoid for: purely decorative page titles
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/breadcrumb/breadcrumb-path-update.html`
+
+## breadcrumb-step-complete
+
+- Category: breadcrumb
+- Class: `bsx-breadcrumb-step-complete`
+- Level: extended
+- Bootstrap component: breadcrumb
+- Requires JS: no
+- Runtime behavior: none
+- Kind: navigation-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`
+- Bootstrap states: `.active`, `[aria-current]`, `.bsx-is-success`
+- Motion: color + opacity
+- Best for: admin location and hierarchy changes
+- Avoid for: purely decorative page titles
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/breadcrumb/breadcrumb-step-complete.html`
+
+## breadcrumb-overflow-menu
+
+- Category: breadcrumb
+- Class: `bsx-breadcrumb-overflow-menu`
+- Level: extended
+- Bootstrap component: breadcrumb
+- Requires JS: no
+- Runtime behavior: none
+- Kind: navigation-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`
+- Bootstrap states: `.active`, `[aria-current]`, `.bsx-is-success`
+- Motion: color + opacity
+- Best for: admin location and hierarchy changes
+- Avoid for: purely decorative page titles
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/breadcrumb/breadcrumb-overflow-menu.html`
+
+## breadcrumb-context-return
+
+- Category: breadcrumb
+- Class: `bsx-breadcrumb-context-return`
+- Level: extended
+- Bootstrap component: breadcrumb
+- Requires JS: no
+- Runtime behavior: none
+- Kind: navigation-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`, `opacity`
+- Bootstrap states: `.active`, `[aria-current]`, `.bsx-is-success`
+- Motion: color + opacity
+- Best for: admin location and hierarchy changes
+- Avoid for: purely decorative page titles
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/breadcrumb/breadcrumb-context-return.html`
+
+## pagination-active-marker
+
+- Category: pagination
+- Class: `bsx-pagination-active-marker`
+- Level: extended
+- Bootstrap component: pagination
+- Requires JS: no
+- Runtime behavior: none
+- Kind: navigation-state
+- Density: high
+- Risk: low
+- CSS properties: `transform`, `box-shadow`, `background-color`, `border-color`, `color`
+- Bootstrap states: `.active`, `[aria-current]`
+- Motion: translate
+- Best for: paged tables and search results
+- Avoid for: infinite scroll without page state
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/pagination/pagination-active-marker.html`
+
+## pagination-page-jump
+
+- Category: pagination
+- Class: `bsx-pagination-page-jump`
+- Level: extended
+- Bootstrap component: pagination
+- Requires JS: no
+- Runtime behavior: none
+- Kind: navigation-state
+- Density: high
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `.active`, `[aria-current]`
+- Motion: color + opacity
+- Best for: paged tables and search results
+- Avoid for: infinite scroll without page state
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/pagination/pagination-page-jump.html`
+
+## pagination-loading-page
+
+- Category: pagination
+- Class: `bsx-pagination-loading-page`
+- Level: extended
+- Bootstrap component: pagination
+- Requires JS: no
+- Runtime behavior: none
+- Kind: navigation-state
+- Density: high
+- Risk: low
+- CSS properties: `opacity`
+- Bootstrap states: `.active`, `[aria-current]`, `[aria-busy]`, `.bsx-is-loading`
+- Motion: opacity
+- Best for: paged tables and search results
+- Avoid for: infinite scroll without page state
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/pagination/pagination-loading-page.html`
+
+## pagination-disabled-soft
+
+- Category: pagination
+- Class: `bsx-pagination-disabled-soft`
+- Level: extended
+- Bootstrap component: pagination
+- Requires JS: no
+- Runtime behavior: none
+- Kind: navigation-state
+- Density: high
+- Risk: low
+- CSS properties: `opacity`, `background-color`, `border-color`, `color`
+- Bootstrap states: `.active`, `[aria-current]`, `.disabled`, `[disabled]`, `[aria-disabled]`
+- Motion: opacity
+- Best for: paged tables and search results
+- Avoid for: infinite scroll without page state
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/pagination/pagination-disabled-soft.html`
+
+## pagination-compact-hover
+
+- Category: pagination
+- Class: `bsx-pagination-compact-hover`
+- Level: extended
+- Bootstrap component: pagination
+- Requires JS: no
+- Runtime behavior: none
+- Kind: navigation-state
+- Density: high
+- Risk: low
+- CSS properties: `opacity`, `transform`
+- Bootstrap states: `.active`, `[aria-current]`
+- Motion: color + opacity
+- Best for: paged tables and search results
+- Avoid for: infinite scroll without page state
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/pagination/pagination-compact-hover.html`
+
+## pagination-count-update
+
+- Category: pagination
+- Class: `bsx-pagination-count-update`
+- Level: extended
+- Bootstrap component: pagination
+- Requires JS: no
+- Runtime behavior: none
+- Kind: navigation-state
+- Density: high
+- Risk: low
+- CSS properties: `opacity`, `transform`
+- Bootstrap states: `.active`, `[aria-current]`
+- Motion: color + opacity
+- Best for: paged tables and search results
+- Avoid for: infinite scroll without page state
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/pagination/pagination-count-update.html`
+
+## button-group-active-marker
+
+- Category: button-group
+- Class: `bsx-button-group-active-marker`
+- Level: extended
+- Bootstrap component: button-group
+- Requires JS: no
+- Runtime behavior: none
+- Kind: navigation-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`, `box-shadow`, `background-color`, `border-color`, `color`
+- Bootstrap states: `.active`, `[aria-current]`
+- Motion: translate
+- Best for: segmented controls, density toggles, and bulk modes
+- Avoid for: single primary actions
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/button-group/button-group-active-marker.html`
+
+## button-group-segment-press
+
+- Category: button-group
+- Class: `bsx-button-group-segment-press`
+- Level: extended
+- Bootstrap component: button-group
+- Requires JS: no
+- Runtime behavior: none
+- Kind: navigation-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `.active`, `[aria-current]`
+- Motion: scale
+- Best for: segmented controls, density toggles, and bulk modes
+- Avoid for: single primary actions
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/button-group/button-group-segment-press.html`
+
+## button-group-bulk-ready
+
+- Category: button-group
+- Class: `bsx-button-group-bulk-ready`
+- Level: extended
+- Bootstrap component: button-group
+- Requires JS: no
+- Runtime behavior: none
+- Kind: navigation-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`
+- Bootstrap states: `.active`, `[aria-current]`, `.bsx-is-success`, `.bsx-is-selected`
+- Motion: color + opacity
+- Best for: segmented controls, density toggles, and bulk modes
+- Avoid for: single primary actions
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/button-group/button-group-bulk-ready.html`
+
+## button-group-toggle-sync
+
+- Category: button-group
+- Class: `bsx-button-group-toggle-sync`
+- Level: extended
+- Bootstrap component: button-group
+- Requires JS: no
+- Runtime behavior: none
+- Kind: navigation-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`, `transform`
+- Bootstrap states: `.active`, `[aria-current]`
+- Motion: color + opacity
+- Best for: segmented controls, density toggles, and bulk modes
+- Avoid for: single primary actions
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/button-group/button-group-toggle-sync.html`
+
+## button-group-density-switch
+
+- Category: button-group
+- Class: `bsx-button-group-density-switch`
+- Level: extended
+- Bootstrap component: button-group
+- Requires JS: no
+- Runtime behavior: none
+- Kind: navigation-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`, `transform`
+- Bootstrap states: `.active`, `[aria-current]`
+- Motion: color + opacity
+- Best for: segmented controls, density toggles, and bulk modes
+- Avoid for: single primary actions
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/button-group/button-group-density-switch.html`
+
+## button-group-filter-active
+
+- Category: button-group
+- Class: `bsx-button-group-filter-active`
+- Level: extended
+- Bootstrap component: button-group
+- Requires JS: no
+- Runtime behavior: none
+- Kind: navigation-state
+- Density: medium
+- Risk: low
+- CSS properties: `box-shadow`, `background-color`, `border-color`, `color`
+- Bootstrap states: `.active`, `[aria-current]`
+- Motion: color + opacity
+- Best for: segmented controls, density toggles, and bulk modes
+- Avoid for: single primary actions
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/button-group/button-group-filter-active.html`
+
+## input-group-focus-ring
+
+- Category: input-group
+- Class: `bsx-input-group-focus-ring`
+- Level: extended
+- Bootstrap component: input-group
+- Requires JS: no
+- Runtime behavior: none
+- Kind: form-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`, `box-shadow`
+- Bootstrap states: `.is-valid`, `.is-invalid`, `:focus-within`
+- Motion: color + opacity
+- Best for: search, copy, validation, and compound form controls
+- Avoid for: standalone long-form fields
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/input-group/input-group-focus-ring.html`
+
+## input-group-addon-highlight
+
+- Category: input-group
+- Class: `bsx-input-group-addon-highlight`
+- Level: extended
+- Bootstrap component: input-group
+- Requires JS: no
+- Runtime behavior: none
+- Kind: form-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`, `transform`
+- Bootstrap states: `.is-valid`, `.is-invalid`, `:focus-within`
+- Motion: color + opacity
+- Best for: search, copy, validation, and compound form controls
+- Avoid for: standalone long-form fields
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/input-group/input-group-addon-highlight.html`
+
+## input-group-copy-confirm
+
+- Category: input-group
+- Class: `bsx-input-group-copy-confirm`
+- Level: extended
+- Bootstrap component: input-group
+- Requires JS: no
+- Runtime behavior: none
+- Kind: form-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`, `transform`
+- Bootstrap states: `.is-valid`, `.is-invalid`, `:focus-within`
+- Motion: color + opacity
+- Best for: search, copy, validation, and compound form controls
+- Avoid for: standalone long-form fields
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/input-group/input-group-copy-confirm.html`
+
+## input-group-search-pending
+
+- Category: input-group
+- Class: `bsx-input-group-search-pending`
+- Level: extended
+- Bootstrap component: input-group
+- Requires JS: no
+- Runtime behavior: none
+- Kind: form-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`
+- Bootstrap states: `.is-valid`, `.is-invalid`, `:focus-within`, `[aria-busy]`, `.bsx-is-loading`
+- Motion: color + opacity
+- Best for: search, copy, validation, and compound form controls
+- Avoid for: standalone long-form fields
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/input-group/input-group-search-pending.html`
+
+## input-group-validation-sync
+
+- Category: input-group
+- Class: `bsx-input-group-validation-sync`
+- Level: extended
+- Bootstrap component: input-group
+- Requires JS: no
+- Runtime behavior: none
+- Kind: form-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`, `transform`
+- Bootstrap states: `.is-valid`, `.is-invalid`, `:focus-within`
+- Motion: color + opacity
+- Best for: search, copy, validation, and compound form controls
+- Avoid for: standalone long-form fields
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/input-group/input-group-validation-sync.html`
+
+## input-group-password-toggle
+
+- Category: input-group
+- Class: `bsx-input-group-password-toggle`
+- Level: extended
+- Bootstrap component: input-group
+- Requires JS: no
+- Runtime behavior: none
+- Kind: form-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`, `transform`
+- Bootstrap states: `.is-valid`, `.is-invalid`, `:focus-within`
+- Motion: color + opacity
+- Best for: search, copy, validation, and compound form controls
+- Avoid for: standalone long-form fields
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/input-group/input-group-password-toggle.html`
+
+## close-button-hover-ring
+
+- Category: close-button
+- Class: `bsx-close-button-hover-ring`
+- Level: extended
+- Bootstrap component: close-button
+- Requires JS: no
+- Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: medium
+- CSS properties: `box-shadow`
+- Bootstrap states: `:hover`, `:focus-visible`
+- Motion: color + opacity
+- Best for: dismiss, clear, and close affordances
+- Avoid for: destructive actions without confirmation
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/close-button/close-button-hover-ring.html`
+
+## close-button-confirm-pending
+
+- Category: close-button
+- Class: `bsx-close-button-confirm-pending`
+- Level: extended
+- Bootstrap component: close-button
+- Requires JS: no
+- Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: medium
+- CSS properties: `opacity`
+- Bootstrap states: `[aria-busy]`, `.bsx-is-loading`
+- Motion: color + opacity
+- Best for: dismiss, clear, and close affordances
+- Avoid for: destructive actions without confirmation
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/close-button/close-button-confirm-pending.html`
+
+## close-button-toast-dismiss
+
+- Category: close-button
+- Class: `bsx-close-button-toast-dismiss`
+- Level: extended
+- Bootstrap component: close-button
+- Requires JS: no
+- Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: medium
+- CSS properties: `opacity`, `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
+- Motion: color + opacity
+- Best for: dismiss, clear, and close affordances
+- Avoid for: destructive actions without confirmation
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/close-button/close-button-toast-dismiss.html`
+
+## close-button-panel-dismiss
+
+- Category: close-button
+- Class: `bsx-close-button-panel-dismiss`
+- Level: extended
+- Bootstrap component: close-button
+- Requires JS: no
+- Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: medium
+- CSS properties: `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
+- Motion: color + opacity
+- Best for: dismiss, clear, and close affordances
+- Avoid for: destructive actions without confirmation
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/close-button/close-button-panel-dismiss.html`
+
+## close-button-clear-filter
+
+- Category: close-button
+- Class: `bsx-close-button-clear-filter`
+- Level: extended
+- Bootstrap component: close-button
+- Requires JS: no
+- Runtime behavior: none
+- Kind: component-state
+- Density: medium
+- Risk: medium
+- CSS properties: `opacity`, `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
+- Motion: color + opacity
+- Best for: dismiss, clear, and close affordances
+- Avoid for: destructive actions without confirmation
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/close-button/close-button-clear-filter.html`
+
+## crud-row-create
+
+- Category: admin/crud
+- Class: `bsx-crud-row-create`
+- Level: extended
+- Bootstrap component: admin/crud
+- Requires JS: no
+- Runtime behavior: none
+- Kind: workflow-state
+- Density: high
+- Risk: medium
+- CSS properties: `opacity`, `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
+- Motion: color + opacity
+- Best for: CRUD tables, inline edit, dirty state, save feedback, and bulk actions
+- Avoid for: marketing cards
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/admin/crud/crud-row-create.html`
+
+## crud-row-save-pending
+
+- Category: admin/crud
+- Class: `bsx-crud-row-save-pending`
+- Level: extended
+- Bootstrap component: admin/crud
+- Requires JS: no
+- Runtime behavior: none
+- Kind: workflow-state
+- Density: high
+- Risk: medium
+- CSS properties: `opacity`
+- Bootstrap states: `[aria-busy]`, `.bsx-is-loading`
+- Motion: color + opacity
+- Best for: CRUD tables, inline edit, dirty state, save feedback, and bulk actions
+- Avoid for: marketing cards
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/admin/crud/crud-row-save-pending.html`
+
+## crud-row-save-success
+
+- Category: admin/crud
+- Class: `bsx-crud-row-save-success`
+- Level: extended
+- Bootstrap component: admin/crud
+- Requires JS: no
+- Runtime behavior: none
+- Kind: workflow-state
+- Density: high
+- Risk: medium
+- CSS properties: `opacity`, `background-color`, `border-color`, `color`
+- Bootstrap states: `.bsx-is-success`
+- Motion: color + opacity
+- Best for: CRUD tables, inline edit, dirty state, save feedback, and bulk actions
+- Avoid for: marketing cards
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/admin/crud/crud-row-save-success.html`
+
+## crud-row-save-error
+
+- Category: admin/crud
+- Class: `bsx-crud-row-save-error`
+- Level: extended
+- Bootstrap component: admin/crud
+- Requires JS: no
+- Runtime behavior: none
+- Kind: workflow-state
+- Density: high
+- Risk: medium
+- CSS properties: `opacity`, `background-color`, `border-color`, `color`
+- Bootstrap states: `.bsx-is-error`
+- Motion: color + opacity
+- Best for: CRUD tables, inline edit, dirty state, save feedback, and bulk actions
+- Avoid for: marketing cards
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/admin/crud/crud-row-save-error.html`
+
+## crud-inline-edit-focus
+
+- Category: admin/crud
+- Class: `bsx-crud-inline-edit-focus`
+- Level: extended
+- Bootstrap component: admin/crud
+- Requires JS: no
+- Runtime behavior: none
+- Kind: workflow-state
+- Density: high
+- Risk: medium
+- CSS properties: `transform`, `opacity`, `box-shadow`
+- Bootstrap states: `:hover`, `:focus-visible`
+- Motion: translate
+- Best for: CRUD tables, inline edit, dirty state, save feedback, and bulk actions
+- Avoid for: marketing cards
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/admin/crud/crud-inline-edit-focus.html`
+
+## crud-inline-edit-dirty
+
+- Category: admin/crud
+- Class: `bsx-crud-inline-edit-dirty`
+- Level: extended
+- Bootstrap component: admin/crud
+- Requires JS: no
+- Runtime behavior: none
+- Kind: workflow-state
+- Density: high
+- Risk: medium
+- CSS properties: `transform`, `opacity`, `background-color`, `border-color`, `color`
+- Bootstrap states: `.bsx-is-dirty`
+- Motion: translate
+- Best for: CRUD tables, inline edit, dirty state, save feedback, and bulk actions
+- Avoid for: marketing cards
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/admin/crud/crud-inline-edit-dirty.html`
+
+## crud-bulk-toolbar-reveal
+
+- Category: admin/crud
+- Class: `bsx-crud-bulk-toolbar-reveal`
+- Level: extended
+- Bootstrap component: admin/crud
+- Requires JS: no
+- Runtime behavior: none
+- Kind: workflow-state
+- Density: high
+- Risk: medium
+- CSS properties: `transform`
+- Bootstrap states: `.bsx-is-selected`
+- Motion: translate
+- Best for: CRUD tables, inline edit, dirty state, save feedback, and bulk actions
+- Avoid for: marketing cards
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/admin/crud/crud-bulk-toolbar-reveal.html`
+
+## crud-delete-confirm-row
+
+- Category: admin/crud
+- Class: `bsx-crud-delete-confirm-row`
+- Level: extended
+- Bootstrap component: admin/crud
+- Requires JS: no
+- Runtime behavior: none
+- Kind: workflow-state
+- Density: high
+- Risk: medium
+- CSS properties: `opacity`, `transform`
+- Bootstrap states: `.bsx-is-error`
+- Motion: color + opacity
+- Best for: CRUD tables, inline edit, dirty state, save feedback, and bulk actions
+- Avoid for: marketing cards
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/admin/crud/crud-delete-confirm-row.html`
+
+## crud-permission-disabled
+
+- Category: admin/crud
+- Class: `bsx-crud-permission-disabled`
+- Level: extended
+- Bootstrap component: admin/crud
+- Requires JS: no
+- Runtime behavior: none
+- Kind: workflow-state
+- Density: high
+- Risk: medium
+- CSS properties: `opacity`, `background-color`, `border-color`, `color`
+- Bootstrap states: `.disabled`, `[disabled]`, `[aria-disabled]`
+- Motion: color + opacity
+- Best for: CRUD tables, inline edit, dirty state, save feedback, and bulk actions
+- Avoid for: marketing cards
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/admin/crud/crud-permission-disabled.html`
+
+## filter-chip-active
+
+- Category: filter/search
+- Class: `bsx-filter-chip-active`
+- Level: extended
+- Bootstrap component: filter/search
+- Requires JS: no
+- Runtime behavior: none
+- Kind: workflow-state
+- Density: high
+- Risk: low
+- CSS properties: `box-shadow`, `background-color`, `border-color`, `color`
+- Bootstrap states: `:hover`, `:focus-visible`
+- Motion: color + opacity
+- Best for: admin filters, search results, chip removal, and empty results
+- Avoid for: static navigation
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/filter/search/filter-chip-active.html`
+
+## filter-chip-remove
+
+- Category: filter/search
+- Class: `bsx-filter-chip-remove`
+- Level: extended
+- Bootstrap component: filter/search
+- Requires JS: no
+- Runtime behavior: none
+- Kind: workflow-state
+- Density: high
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
+- Motion: translate
+- Best for: admin filters, search results, chip removal, and empty results
+- Avoid for: static navigation
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/filter/search/filter-chip-remove.html`
+
+## filter-panel-reveal
+
+- Category: filter/search
+- Class: `bsx-filter-panel-reveal`
+- Level: extended
+- Bootstrap component: filter/search
+- Requires JS: no
+- Runtime behavior: none
+- Kind: workflow-state
+- Density: high
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
+- Motion: translate
+- Best for: admin filters, search results, chip removal, and empty results
+- Avoid for: static navigation
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/filter/search/filter-panel-reveal.html`
+
+## filter-reset-flash
+
+- Category: filter/search
+- Class: `bsx-filter-reset-flash`
+- Level: extended
+- Bootstrap component: filter/search
+- Requires JS: no
+- Runtime behavior: none
+- Kind: workflow-state
+- Density: high
+- Risk: low
+- CSS properties: `opacity`
+- Bootstrap states: `:hover`, `:focus-visible`
+- Motion: opacity
+- Best for: admin filters, search results, chip removal, and empty results
+- Avoid for: static navigation
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/filter/search/filter-reset-flash.html`
+
+## search-input-focus
+
+- Category: filter/search
+- Class: `bsx-search-input-focus`
+- Level: extended
+- Bootstrap component: filter/search
+- Requires JS: no
+- Runtime behavior: none
+- Kind: workflow-state
+- Density: high
+- Risk: low
+- CSS properties: `opacity`, `box-shadow`
+- Bootstrap states: `:hover`, `:focus-visible`
+- Motion: color + opacity
+- Best for: admin filters, search results, chip removal, and empty results
+- Avoid for: static navigation
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/filter/search/search-input-focus.html`
+
+## search-results-update
+
+- Category: filter/search
+- Class: `bsx-search-results-update`
+- Level: extended
+- Bootstrap component: filter/search
+- Requires JS: no
+- Runtime behavior: none
+- Kind: workflow-state
+- Density: high
+- Risk: low
+- CSS properties: `opacity`, `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
+- Motion: color + opacity
+- Best for: admin filters, search results, chip removal, and empty results
+- Avoid for: static navigation
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/filter/search/search-results-update.html`
+
+## search-no-results-state
+
+- Category: filter/search
+- Class: `bsx-search-no-results-state`
+- Level: extended
+- Bootstrap component: filter/search
+- Requires JS: no
+- Runtime behavior: none
+- Kind: workflow-state
+- Density: high
+- Risk: low
+- CSS properties: `opacity`, `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
+- Motion: color + opacity
+- Best for: admin filters, search results, chip removal, and empty results
+- Avoid for: static navigation
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/filter/search/search-no-results-state.html`
+
+## form-wizard-step-current
+
+- Category: form-wizard
+- Class: `bsx-form-wizard-step-current`
+- Level: extended
+- Bootstrap component: form-wizard
+- Requires JS: no
+- Runtime behavior: none
+- Kind: form-state
+- Density: medium
+- Risk: medium
+- CSS properties: `opacity`, `transform`
+- Bootstrap states: `.is-valid`, `.is-invalid`, `:focus-within`
+- Motion: color + opacity
+- Best for: multi-step forms with validation and review states
+- Avoid for: single-page forms without steps
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/form-wizard/form-wizard-step-current.html`
+
+## form-wizard-step-complete
+
+- Category: form-wizard
+- Class: `bsx-form-wizard-step-complete`
+- Level: extended
+- Bootstrap component: form-wizard
+- Requires JS: no
+- Runtime behavior: none
+- Kind: form-state
+- Density: medium
+- Risk: medium
+- CSS properties: `opacity`, `transform`
+- Bootstrap states: `.is-valid`, `.is-invalid`, `:focus-within`, `.bsx-is-success`
+- Motion: color + opacity
+- Best for: multi-step forms with validation and review states
+- Avoid for: single-page forms without steps
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/form-wizard/form-wizard-step-complete.html`
+
+## form-wizard-step-error
+
+- Category: form-wizard
+- Class: `bsx-form-wizard-step-error`
+- Level: extended
+- Bootstrap component: form-wizard
+- Requires JS: no
+- Runtime behavior: none
+- Kind: form-state
+- Density: medium
+- Risk: medium
+- CSS properties: `opacity`, `background-color`, `border-color`, `color`
+- Bootstrap states: `.is-valid`, `.is-invalid`, `:focus-within`, `.bsx-is-error`
+- Motion: color + opacity
+- Best for: multi-step forms with validation and review states
+- Avoid for: single-page forms without steps
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/form-wizard/form-wizard-step-error.html`
+
+## form-wizard-progress-sync
+
+- Category: form-wizard
+- Class: `bsx-form-wizard-progress-sync`
+- Level: extended
+- Bootstrap component: form-wizard
+- Requires JS: no
+- Runtime behavior: none
+- Kind: form-state
+- Density: medium
+- Risk: medium
+- CSS properties: `opacity`, `transform`
+- Bootstrap states: `.is-valid`, `.is-invalid`, `:focus-within`
+- Motion: color + opacity
+- Best for: multi-step forms with validation and review states
+- Avoid for: single-page forms without steps
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/form-wizard/form-wizard-progress-sync.html`
+
+## form-wizard-section-enter
+
+- Category: form-wizard
+- Class: `bsx-form-wizard-section-enter`
+- Level: extended
+- Bootstrap component: form-wizard
+- Requires JS: no
+- Runtime behavior: none
+- Kind: form-state
+- Density: medium
+- Risk: medium
+- CSS properties: `opacity`, `transform`
+- Bootstrap states: `.is-valid`, `.is-invalid`, `:focus-within`
+- Motion: color + opacity
+- Best for: multi-step forms with validation and review states
+- Avoid for: single-page forms without steps
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/form-wizard/form-wizard-section-enter.html`
+
+## form-wizard-section-exit
+
+- Category: form-wizard
+- Class: `bsx-form-wizard-section-exit`
+- Level: extended
+- Bootstrap component: form-wizard
+- Requires JS: no
+- Runtime behavior: none
+- Kind: form-state
+- Density: medium
+- Risk: medium
+- CSS properties: `opacity`, `transform`
+- Bootstrap states: `.is-valid`, `.is-invalid`, `:focus-within`
+- Motion: color + opacity
+- Best for: multi-step forms with validation and review states
+- Avoid for: single-page forms without steps
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/form-wizard/form-wizard-section-exit.html`
+
+## form-wizard-review-dirty
+
+- Category: form-wizard
+- Class: `bsx-form-wizard-review-dirty`
+- Level: extended
+- Bootstrap component: form-wizard
+- Requires JS: no
+- Runtime behavior: none
+- Kind: form-state
+- Density: medium
+- Risk: medium
+- CSS properties: `opacity`, `background-color`, `border-color`, `color`
+- Bootstrap states: `.is-valid`, `.is-invalid`, `:focus-within`, `.bsx-is-dirty`
+- Motion: color + opacity
+- Best for: multi-step forms with validation and review states
+- Avoid for: single-page forms without steps
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/form-wizard/form-wizard-review-dirty.html`
+
+## form-wizard-submit-ready
+
+- Category: form-wizard
+- Class: `bsx-form-wizard-submit-ready`
+- Level: extended
+- Bootstrap component: form-wizard
+- Requires JS: no
+- Runtime behavior: none
+- Kind: form-state
+- Density: medium
+- Risk: medium
+- CSS properties: `opacity`
+- Bootstrap states: `.is-valid`, `.is-invalid`, `:focus-within`, `.bsx-is-success`
+- Motion: color + opacity
+- Best for: multi-step forms with validation and review states
+- Avoid for: single-page forms without steps
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/form-wizard/form-wizard-submit-ready.html`
+
+## state-empty-reveal
+
+- Category: state
+- Class: `bsx-state-empty-reveal`
+- Level: extended
+- Bootstrap component: state
+- Requires JS: no
+- Runtime behavior: none
+- Kind: feedback-state
+- Density: medium
+- Risk: medium
+- CSS properties: `transform`, `opacity`
+- Bootstrap states: `:hover`, `:focus-visible`
+- Motion: translate
+- Best for: empty, error, success, warning, offline, lock, and unsaved states
+- Avoid for: decorative content blocks
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/state/state-empty-reveal.html`
+
+## state-error-inline
+
+- Category: state
+- Class: `bsx-state-error-inline`
+- Level: extended
+- Bootstrap component: state
+- Requires JS: no
+- Runtime behavior: none
+- Kind: feedback-state
+- Density: medium
+- Risk: medium
+- CSS properties: `transform`, `opacity`, `background-color`, `border-color`, `color`
+- Bootstrap states: `.bsx-is-error`
+- Motion: translate
+- Best for: empty, error, success, warning, offline, lock, and unsaved states
+- Avoid for: decorative content blocks
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/state/state-error-inline.html`
+
+## state-success-inline
+
+- Category: state
+- Class: `bsx-state-success-inline`
+- Level: extended
+- Bootstrap component: state
+- Requires JS: no
+- Runtime behavior: none
+- Kind: feedback-state
+- Density: medium
+- Risk: medium
+- CSS properties: `transform`, `opacity`, `background-color`, `border-color`, `color`
+- Bootstrap states: `.bsx-is-success`
+- Motion: translate
+- Best for: empty, error, success, warning, offline, lock, and unsaved states
+- Avoid for: decorative content blocks
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/state/state-success-inline.html`
+
+## state-warning-inline
+
+- Category: state
+- Class: `bsx-state-warning-inline`
+- Level: extended
+- Bootstrap component: state
+- Requires JS: no
+- Runtime behavior: none
+- Kind: feedback-state
+- Density: medium
+- Risk: medium
+- CSS properties: `transform`, `opacity`, `background-color`, `border-color`, `color`
+- Bootstrap states: `:hover`, `:focus-visible`
+- Motion: translate
+- Best for: empty, error, success, warning, offline, lock, and unsaved states
+- Avoid for: decorative content blocks
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/state/state-warning-inline.html`
+
+## state-unsaved-changes
+
+- Category: state
+- Class: `bsx-state-unsaved-changes`
+- Level: extended
+- Bootstrap component: state
+- Requires JS: no
+- Runtime behavior: none
+- Kind: feedback-state
+- Density: medium
+- Risk: medium
+- CSS properties: `opacity`, `transform`
+- Bootstrap states: `.bsx-is-dirty`
+- Motion: color + opacity
+- Best for: empty, error, success, warning, offline, lock, and unsaved states
+- Avoid for: decorative content blocks
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/state/state-unsaved-changes.html`
+
+## state-offline-banner
+
+- Category: state
+- Class: `bsx-state-offline-banner`
+- Level: extended
+- Bootstrap component: state
+- Requires JS: no
+- Runtime behavior: none
+- Kind: feedback-state
+- Density: medium
+- Risk: medium
+- CSS properties: `transform`, `opacity`
+- Bootstrap states: `:hover`, `:focus-visible`
+- Motion: translate
+- Best for: empty, error, success, warning, offline, lock, and unsaved states
+- Avoid for: decorative content blocks
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/state/state-offline-banner.html`
+
+## state-locked-record
+
+- Category: state
+- Class: `bsx-state-locked-record`
+- Level: extended
+- Bootstrap component: state
+- Requires JS: no
+- Runtime behavior: none
+- Kind: feedback-state
+- Density: medium
+- Risk: medium
+- CSS properties: `opacity`, `background-color`, `border-color`, `color`
+- Bootstrap states: `.disabled`, `[disabled]`, `[aria-disabled]`
+- Motion: color + opacity
+- Best for: empty, error, success, warning, offline, lock, and unsaved states
+- Avoid for: decorative content blocks
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/state/state-locked-record.html`
+
+## data-loading-table-overlay
+
+- Category: data-loading
+- Class: `bsx-data-loading-table-overlay`
+- Level: extended
+- Bootstrap component: data-loading
+- Requires JS: no
+- Runtime behavior: none
+- Kind: workflow-state
+- Density: high
+- Risk: low
+- CSS properties: `transform`, `opacity`
+- Bootstrap states: `[aria-busy]`, `.bsx-is-loading`
+- Motion: opacity
+- Best for: table, card, metric, filter, save, and inline loading states
+- Avoid for: unknown long-running jobs without copy
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/data-loading/data-loading-table-overlay.html`
+
+## data-loading-card-overlay
+
+- Category: data-loading
+- Class: `bsx-data-loading-card-overlay`
+- Level: extended
+- Bootstrap component: data-loading
+- Requires JS: no
+- Runtime behavior: none
+- Kind: workflow-state
+- Density: high
+- Risk: low
+- CSS properties: `transform`, `opacity`
+- Bootstrap states: `[aria-busy]`, `.bsx-is-loading`
+- Motion: opacity
+- Best for: table, card, metric, filter, save, and inline loading states
+- Avoid for: unknown long-running jobs without copy
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/data-loading/data-loading-card-overlay.html`
+
+## data-loading-row-skeleton
+
+- Category: data-loading
+- Class: `bsx-data-loading-row-skeleton`
+- Level: extended
+- Bootstrap component: data-loading
+- Requires JS: no
+- Runtime behavior: none
+- Kind: workflow-state
+- Density: high
+- Risk: low
+- CSS properties: `opacity`
+- Bootstrap states: `[aria-busy]`, `.bsx-is-loading`
+- Motion: opacity
+- Best for: table, card, metric, filter, save, and inline loading states
+- Avoid for: unknown long-running jobs without copy
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/data-loading/data-loading-row-skeleton.html`
+
+## data-loading-filter-pending
+
+- Category: data-loading
+- Class: `bsx-data-loading-filter-pending`
+- Level: extended
+- Bootstrap component: data-loading
+- Requires JS: no
+- Runtime behavior: none
+- Kind: workflow-state
+- Density: high
+- Risk: low
+- CSS properties: `opacity`
+- Bootstrap states: `[aria-busy]`, `.bsx-is-loading`
+- Motion: opacity
+- Best for: table, card, metric, filter, save, and inline loading states
+- Avoid for: unknown long-running jobs without copy
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/data-loading/data-loading-filter-pending.html`
+
+## data-loading-save-button
+
+- Category: data-loading
+- Class: `bsx-data-loading-save-button`
+- Level: extended
+- Bootstrap component: data-loading
+- Requires JS: no
+- Runtime behavior: none
+- Kind: workflow-state
+- Density: high
+- Risk: low
+- CSS properties: `opacity`
+- Bootstrap states: `[aria-busy]`, `.bsx-is-loading`
+- Motion: opacity
+- Best for: table, card, metric, filter, save, and inline loading states
+- Avoid for: unknown long-running jobs without copy
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/data-loading/data-loading-save-button.html`
+
+## data-loading-metric-refresh
+
+- Category: data-loading
+- Class: `bsx-data-loading-metric-refresh`
+- Level: extended
+- Bootstrap component: data-loading
+- Requires JS: no
+- Runtime behavior: none
+- Kind: workflow-state
+- Density: high
+- Risk: low
+- CSS properties: `opacity`
+- Bootstrap states: `[aria-busy]`, `.bsx-is-loading`
+- Motion: opacity
+- Best for: table, card, metric, filter, save, and inline loading states
+- Avoid for: unknown long-running jobs without copy
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/data-loading/data-loading-metric-refresh.html`
+
+## data-loading-inline-spinner
+
+- Category: data-loading
+- Class: `bsx-data-loading-inline-spinner`
+- Level: extended
+- Bootstrap component: data-loading
+- Requires JS: no
+- Runtime behavior: none
+- Kind: workflow-state
+- Density: high
+- Risk: low
+- CSS properties: `transform`, `opacity`
+- Bootstrap states: `[aria-busy]`, `.bsx-is-loading`
+- Motion: translate + opacity + rotate
+- Best for: table, card, metric, filter, save, and inline loading states
+- Avoid for: unknown long-running jobs without copy
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/data-loading/data-loading-inline-spinner.html`
+
+## notification-center-panel
+
+- Category: notification-center
+- Class: `bsx-notification-center-panel`
+- Level: extended
+- Bootstrap component: notification-center
+- Requires JS: no
+- Runtime behavior: none
+- Kind: workflow-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
+- Motion: color + opacity
+- Best for: notification inbox panels and unread/read transitions
+- Avoid for: critical alerts that require modal confirmation
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/notification-center/notification-center-panel.html`
+
+## notification-item-unread
+
+- Category: notification-center
+- Class: `bsx-notification-item-unread`
+- Level: extended
+- Bootstrap component: notification-center
+- Requires JS: no
+- Runtime behavior: none
+- Kind: workflow-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`, `background-color`, `border-color`, `color`
+- Bootstrap states: `.bsx-is-success`
+- Motion: color + opacity
+- Best for: notification inbox panels and unread/read transitions
+- Avoid for: critical alerts that require modal confirmation
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/notification-center/notification-item-unread.html`
+
+## notification-item-read
+
+- Category: notification-center
+- Class: `bsx-notification-item-read`
+- Level: extended
+- Bootstrap component: notification-center
+- Requires JS: no
+- Runtime behavior: none
+- Kind: workflow-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`
+- Bootstrap states: `.bsx-is-success`
+- Motion: color + opacity
+- Best for: notification inbox panels and unread/read transitions
+- Avoid for: critical alerts that require modal confirmation
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/notification-center/notification-item-read.html`
+
+## notification-item-priority
+
+- Category: notification-center
+- Class: `bsx-notification-item-priority`
+- Level: extended
+- Bootstrap component: notification-center
+- Requires JS: no
+- Runtime behavior: none
+- Kind: workflow-state
+- Density: medium
+- Risk: low
+- CSS properties: `background-color`, `border-color`, `color`
+- Bootstrap states: `:hover`, `:focus-visible`
+- Motion: color + opacity
+- Best for: notification inbox panels and unread/read transitions
+- Avoid for: critical alerts that require modal confirmation
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/notification-center/notification-item-priority.html`
+
+## notification-batch-arrive
+
+- Category: notification-center
+- Class: `bsx-notification-batch-arrive`
+- Level: extended
+- Bootstrap component: notification-center
+- Requires JS: no
+- Runtime behavior: none
+- Kind: workflow-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`, `transform`
+- Bootstrap states: `:hover`, `:focus-visible`
+- Motion: color + opacity
+- Best for: notification inbox panels and unread/read transitions
+- Avoid for: critical alerts that require modal confirmation
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/notification-center/notification-batch-arrive.html`
+
+## notification-empty-state
+
+- Category: notification-center
+- Class: `bsx-notification-empty-state`
+- Level: extended
+- Bootstrap component: notification-center
+- Requires JS: no
+- Runtime behavior: none
+- Kind: workflow-state
+- Density: medium
+- Risk: low
+- CSS properties: `opacity`
+- Bootstrap states: `:hover`, `:focus-visible`
+- Motion: color + opacity
+- Best for: notification inbox panels and unread/read transitions
+- Avoid for: critical alerts that require modal confirmation
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/notification-center/notification-empty-state.html`
+
+## mobile-sticky-save-bar
+
+- Category: mobile
+- Class: `bsx-mobile-sticky-save-bar`
+- Level: extended
+- Bootstrap component: mobile
+- Requires JS: no
+- Runtime behavior: none
+- Kind: navigation-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `.active`, `[aria-current]`
+- Motion: color + opacity
+- Best for: mobile admin actions, sticky save bars, bottom nav, and filter sheets
+- Avoid for: desktop-only dense grids
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/mobile/mobile-sticky-save-bar.html`
+
+## mobile-filter-sheet
+
+- Category: mobile
+- Class: `bsx-mobile-filter-sheet`
+- Level: extended
+- Bootstrap component: mobile
+- Requires JS: no
+- Runtime behavior: none
+- Kind: navigation-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `.active`, `[aria-current]`
+- Motion: translate
+- Best for: mobile admin actions, sticky save bars, bottom nav, and filter sheets
+- Avoid for: desktop-only dense grids
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/mobile/mobile-filter-sheet.html`
+
+## mobile-bulk-action-bar
+
+- Category: mobile
+- Class: `bsx-mobile-bulk-action-bar`
+- Level: extended
+- Bootstrap component: mobile
+- Requires JS: no
+- Runtime behavior: none
+- Kind: navigation-state
+- Density: medium
+- Risk: low
+- CSS properties: `transform`
+- Bootstrap states: `.active`, `[aria-current]`, `.bsx-is-selected`
+- Motion: color + opacity
+- Best for: mobile admin actions, sticky save bars, bottom nav, and filter sheets
+- Avoid for: desktop-only dense grids
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/mobile/mobile-bulk-action-bar.html`
+
+## mobile-inline-error
+
+- Category: mobile
+- Class: `bsx-mobile-inline-error`
+- Level: extended
+- Bootstrap component: mobile
+- Requires JS: no
+- Runtime behavior: none
+- Kind: navigation-state
+- Density: medium
+- Risk: medium
+- CSS properties: `transform`, `opacity`, `background-color`, `border-color`, `color`
+- Bootstrap states: `.active`, `[aria-current]`, `.bsx-is-error`
+- Motion: translate
+- Best for: mobile admin actions, sticky save bars, bottom nav, and filter sheets
+- Avoid for: desktop-only dense grids
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/mobile/mobile-inline-error.html`
+
+## mobile-bottom-nav-active
+
+- Category: mobile
+- Class: `bsx-mobile-bottom-nav-active`
+- Level: extended
+- Bootstrap component: mobile
+- Requires JS: no
+- Runtime behavior: none
+- Kind: navigation-state
+- Density: medium
+- Risk: low
+- CSS properties: `box-shadow`, `background-color`, `border-color`, `color`
+- Bootstrap states: `.active`, `[aria-current]`
+- Motion: color + opacity
+- Best for: mobile admin actions, sticky save bars, bottom nav, and filter sheets
+- Avoid for: desktop-only dense grids
+- Reduced motion: opacity-only near-instant state
+- Snippet: `snippets/extended/mobile/mobile-bottom-nav-active.html`

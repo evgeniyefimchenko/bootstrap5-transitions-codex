@@ -275,6 +275,108 @@ const extendedGroups = {
     "content-blur-swap",
     "scroll-reveal-lite",
   ],
+  breadcrumb: [
+    "breadcrumb-current-marker",
+    "breadcrumb-parent-hover",
+    "breadcrumb-path-update",
+    "breadcrumb-step-complete",
+    "breadcrumb-overflow-menu",
+    "breadcrumb-context-return",
+  ],
+  pagination: [
+    "pagination-active-marker",
+    "pagination-page-jump",
+    "pagination-loading-page",
+    "pagination-disabled-soft",
+    "pagination-compact-hover",
+    "pagination-count-update",
+  ],
+  "button-group": [
+    "button-group-active-marker",
+    "button-group-segment-press",
+    "button-group-bulk-ready",
+    "button-group-toggle-sync",
+    "button-group-density-switch",
+    "button-group-filter-active",
+  ],
+  "input-group": [
+    "input-group-focus-ring",
+    "input-group-addon-highlight",
+    "input-group-copy-confirm",
+    "input-group-search-pending",
+    "input-group-validation-sync",
+    "input-group-password-toggle",
+  ],
+  "close-button": [
+    "close-button-hover-ring",
+    "close-button-confirm-pending",
+    "close-button-toast-dismiss",
+    "close-button-panel-dismiss",
+    "close-button-clear-filter",
+  ],
+  "admin/crud": [
+    "crud-row-create",
+    "crud-row-save-pending",
+    "crud-row-save-success",
+    "crud-row-save-error",
+    "crud-inline-edit-focus",
+    "crud-inline-edit-dirty",
+    "crud-bulk-toolbar-reveal",
+    "crud-delete-confirm-row",
+    "crud-permission-disabled",
+  ],
+  "filter/search": [
+    "filter-chip-active",
+    "filter-chip-remove",
+    "filter-panel-reveal",
+    "filter-reset-flash",
+    "search-input-focus",
+    "search-results-update",
+    "search-no-results-state",
+  ],
+  "form-wizard": [
+    "form-wizard-step-current",
+    "form-wizard-step-complete",
+    "form-wizard-step-error",
+    "form-wizard-progress-sync",
+    "form-wizard-section-enter",
+    "form-wizard-section-exit",
+    "form-wizard-review-dirty",
+    "form-wizard-submit-ready",
+  ],
+  state: [
+    "state-empty-reveal",
+    "state-error-inline",
+    "state-success-inline",
+    "state-warning-inline",
+    "state-unsaved-changes",
+    "state-offline-banner",
+    "state-locked-record",
+  ],
+  "data-loading": [
+    "data-loading-table-overlay",
+    "data-loading-card-overlay",
+    "data-loading-row-skeleton",
+    "data-loading-filter-pending",
+    "data-loading-save-button",
+    "data-loading-metric-refresh",
+    "data-loading-inline-spinner",
+  ],
+  "notification-center": [
+    "notification-center-panel",
+    "notification-item-unread",
+    "notification-item-read",
+    "notification-item-priority",
+    "notification-batch-arrive",
+    "notification-empty-state",
+  ],
+  mobile: [
+    "mobile-sticky-save-bar",
+    "mobile-filter-sheet",
+    "mobile-bulk-action-bar",
+    "mobile-inline-error",
+    "mobile-bottom-nav-active",
+  ],
 };
 
 const runtimeBehaviors = new Map([
@@ -308,6 +410,18 @@ function getRuntimeBehavior(name) {
 }
 
 const directoryRules = [
+  [/^breadcrumb-/, "breadcrumb"],
+  [/^pagination-/, "pagination"],
+  [/^button-group-/, "button-group"],
+  [/^input-group-/, "input-group"],
+  [/^close-button-/, "close-button"],
+  [/^crud-/, "admin/crud"],
+  [/^(filter|search)-/, "filter/search"],
+  [/^form-wizard-/, "form-wizard"],
+  [/^state-/, "state"],
+  [/^data-loading-/, "data-loading"],
+  [/^notification-/, "notification-center"],
+  [/^mobile-/, "mobile"],
   [/^modal-/, "modal"],
   [/^dropdown-/, "dropdown"],
   [/^offcanvas-/, "offcanvas"],
@@ -356,7 +470,157 @@ const descriptions = {
   "tooltip/popover": ["contextual supporting information", "primary task content"],
   "progress/stepper": ["progress and multi-step flows", "indeterminate tasks without a status model"],
   "page/layout": ["page and section state changes", "continuous scroll-driven motion"],
+  breadcrumb: ["admin location and hierarchy changes", "purely decorative page titles"],
+  pagination: ["paged tables and search results", "infinite scroll without page state"],
+  "button-group": ["segmented controls, density toggles, and bulk modes", "single primary actions"],
+  "input-group": ["search, copy, validation, and compound form controls", "standalone long-form fields"],
+  "close-button": ["dismiss, clear, and close affordances", "destructive actions without confirmation"],
+  "admin/crud": ["CRUD tables, inline edit, dirty state, save feedback, and bulk actions", "marketing cards"],
+  "filter/search": ["admin filters, search results, chip removal, and empty results", "static navigation"],
+  "form-wizard": ["multi-step forms with validation and review states", "single-page forms without steps"],
+  state: ["empty, error, success, warning, offline, lock, and unsaved states", "decorative content blocks"],
+  "data-loading": ["table, card, metric, filter, save, and inline loading states", "unknown long-running jobs without copy"],
+  "notification-center": ["notification inbox panels and unread/read transitions", "critical alerts that require modal confirmation"],
+  mobile: ["mobile admin actions, sticky save bars, bottom nav, and filter sheets", "desktop-only dense grids"],
 };
+
+const densityByCategory = {
+  "admin/crud": "high",
+  "filter/search": "high",
+  "data-loading": "high",
+  pagination: "high",
+  breadcrumb: "medium",
+  "button-group": "medium",
+  "input-group": "medium",
+  "close-button": "medium",
+  "form-wizard": "medium",
+  state: "medium",
+  "notification-center": "medium",
+  mobile: "medium",
+};
+
+function getKind(category, directory) {
+  if (["admin/crud", "filter/search", "data-loading", "notification-center"].includes(category)) {
+    return "workflow-state";
+  }
+  if (["breadcrumb", "pagination", "button-group", "mobile"].includes(category)) {
+    return "navigation-state";
+  }
+  if (["form", "input-group", "form-wizard"].includes(category)) {
+    return "form-state";
+  }
+  if (["state", "alert", "toast", "badge/counter"].includes(category)) {
+    return "feedback-state";
+  }
+  if (directory === "loading" || category === "skeleton/loading") {
+    return "loading-state";
+  }
+  return "component-state";
+}
+
+function getDensity(category, directory) {
+  if (densityByCategory[category]) {
+    return densityByCategory[category];
+  }
+  if (["table", "list", "sidebar", "counter"].includes(directory)) {
+    return "high";
+  }
+  if (["modal", "offcanvas", "popover", "tooltip", "page"].includes(directory)) {
+    return "low";
+  }
+  return "medium";
+}
+
+function getRisk(name, category) {
+  if (/delete|danger|error|invalid|offline|locked|permission|unsaved|dismiss|close/.test(name)) {
+    return "medium";
+  }
+  if (["admin/crud", "form-wizard", "state"].includes(category)) {
+    return "medium";
+  }
+  return "low";
+}
+
+function getCssProperties(name) {
+  const properties = [];
+  if (/slide|lift|reveal|stagger|sheet|marker|underline|line|fill|insert|remove|jump|return|bar|panel|overlay/.test(name)) {
+    properties.push("transform");
+  }
+  if (/fade|soft|blur|glow|flash|loading|skeleton|shimmer|wave|pending|empty|read|unread|disabled|locked|dirty|focus|success|error|warning|offline/.test(name)) {
+    properties.push("opacity");
+  }
+  if (/scale|pop|press|bump|zoom|bounce|pulse|ping/.test(name)) {
+    properties.push("transform");
+  }
+  if (/shadow|glow|ring|focus|active|selected/.test(name)) {
+    properties.push("box-shadow");
+  }
+  if (/color|status|success|error|warning|danger|active|dirty|disabled|locked|permission|unread|priority/.test(name)) {
+    properties.push("background-color", "border-color", "color");
+  }
+  if (/blur/.test(name)) {
+    properties.push("filter");
+  }
+  if (/mini-expand/.test(name)) {
+    properties.push("clip-path");
+  }
+  if (/striped-motion/.test(name)) {
+    properties.push("background-position");
+  }
+  if (properties.length === 0) {
+    properties.push("opacity", "transform");
+  }
+  return [...new Set(properties)];
+}
+
+function getBootstrapStates(name, directory) {
+  const states = new Set();
+  if (["modal", "offcanvas", "toast"].includes(directory)) {
+    states.add(".show");
+  }
+  if (["dropdown"].includes(directory)) {
+    states.add(".dropdown-menu.show");
+  }
+  if (["tabs", "pagination", "breadcrumb", "button-group", "mobile"].includes(directory)) {
+    states.add(".active");
+    states.add("[aria-current]");
+  }
+  if (["accordion"].includes(directory)) {
+    states.add(".collapse.show");
+    states.add("[aria-expanded]");
+  }
+  if (["form", "input-group", "form-wizard"].includes(directory)) {
+    states.add(".is-valid");
+    states.add(".is-invalid");
+    states.add(":focus-within");
+  }
+  if (/disabled|permission|locked/.test(name)) {
+    states.add(".disabled");
+    states.add("[disabled]");
+    states.add("[aria-disabled]");
+  }
+  if (/loading|pending|save-button|spinner|skeleton|overlay/.test(name)) {
+    states.add("[aria-busy]");
+    states.add(".bsx-is-loading");
+  }
+  if (/success|complete|read/.test(name)) {
+    states.add(".bsx-is-success");
+  }
+  if (/error|invalid|delete/.test(name)) {
+    states.add(".bsx-is-error");
+  }
+  if (/dirty|unsaved/.test(name)) {
+    states.add(".bsx-is-dirty");
+  }
+  if (/selected|bulk/.test(name)) {
+    states.add(".bsx-is-selected");
+  }
+  if (states.size === 0) {
+    states.add(":hover");
+    states.add(":focus-visible");
+  }
+  return [...states];
+}
 
 function getDirectory(name) {
   return directoryRules.find(([pattern]) => pattern.test(name))?.[1] ?? "page";
@@ -389,6 +653,11 @@ function makeEffects(groups, level) {
         requiresJs: Boolean(runtimeBehavior),
         runtimeBehavior,
         motion: getMotion(name),
+        kind: getKind(category, directory),
+        density: getDensity(category, directory),
+        risk: getRisk(name, category),
+        cssProperties: getCssProperties(name),
+        bootstrapStates: getBootstrapStates(name, directory),
         bestFor,
         avoidFor,
         reducedMotion: /fade|blur|glow|color|shadow/.test(name)
