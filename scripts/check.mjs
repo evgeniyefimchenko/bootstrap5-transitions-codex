@@ -70,6 +70,19 @@ for (const file of requiredFiles) {
   assert(await exists(file), `Missing required file: ${file}`);
 }
 
+const markdownYamlFiles = [
+  "AGENTS.md",
+  "README.md",
+  ...(await walk("references")).filter((file) => /\.(?:md|ya?ml)$/i.test(file)),
+  ...(await walk(".agents/skills/bootstrap5-transitions")).filter((file) => /\.(?:md|ya?ml)$/i.test(file)),
+];
+
+for (const file of markdownYamlFiles) {
+  const lines = (await read(file)).split(/\r?\n/);
+  const longLineIndex = lines.findIndex((line) => line.length > 1000);
+  assert(longLineIndex === -1, `${file}:${longLineIndex + 1} has a line longer than 1000 characters`);
+}
+
 const coreCss = await read("assets/css/core.css");
 const extendedCss = await read("assets/css/extended.css");
 const aggregateCss = await read("assets/css/bootstrap5-transitions.css");
@@ -77,6 +90,10 @@ const catalog = await read("references/catalog.md");
 const skillCatalog = await read(".agents/skills/bootstrap5-transitions/references/catalog.md");
 const skill = await read(".agents/skills/bootstrap5-transitions/SKILL.md");
 const openaiYaml = await read(".agents/skills/bootstrap5-transitions/agents/openai.yaml");
+const catalogLf = catalog.replace(/\r\n/g, "\n");
+const skillCatalogLf = skillCatalog.replace(/\r\n/g, "\n");
+const skillLf = skill.replace(/\r\n/g, "\n");
+const openaiYamlLf = openaiYaml.replace(/\r\n/g, "\n");
 const index = await read("index.html");
 const readme = await read("README.md");
 const runtimeJs = await read("assets/js/bootstrap5-transitions.js");
@@ -105,20 +122,25 @@ assert(!/```(?:jsx|vue|svelte|angular)|\$\([^)]*\)\.(?:addClass|removeClass|togg
 assert(readme.includes("assets/js/bootstrap5-transitions.js"), "README does not explain the reusable runtime");
 assert(readme.includes("assets/js/demo.js"), "README does not distinguish demo-only JavaScript");
 assert(readme.includes("Agent Skill quality rules"), "README must include Agent Skill quality rules");
-assert(catalog.includes("| Class | Level | Component | Requires JS |"), "Main catalog must include summary table");
-assert(skillCatalog.includes("| Class | Level | Component | Requires JS |"), "Skill catalog must include summary table");
-assert((catalog.match(/^## /gm) ?? []).length >= effects.length, "Main catalog must contain one heading per effect");
-assert((skillCatalog.match(/^## /gm) ?? []).length >= effects.length, "Skill catalog must contain one heading per effect");
+assert(catalogLf.includes("| Class | Level | Component | Requires JS |"), "Main catalog must include summary table");
+assert(skillCatalogLf.includes("| Class | Level | Component | Requires JS |"), "Skill catalog must include summary table");
+assert((catalogLf.match(/^## /gm) ?? []).length >= 100, "Main catalog must contain at least 100 effect headings");
+assert((skillCatalogLf.match(/^## /gm) ?? []).length >= 100, "Skill catalog must contain at least 100 effect headings");
+assert((catalogLf.match(/^## /gm) ?? []).length >= effects.length, "Main catalog must contain one heading per effect");
+assert((skillCatalogLf.match(/^## /gm) ?? []).length >= effects.length, "Skill catalog must contain one heading per effect");
 
-assert(openaiYaml.split(/\r?\n/).length >= 4, "openai.yaml must be multi-line YAML");
-assert(openaiYaml.includes("interface:"), "openai.yaml missing interface key");
-assert(openaiYaml.includes('display_name: "Bootstrap 5 Transitions"'), "openai.yaml display_name mismatch");
-assert(openaiYaml.includes("data-bs-* attributes"), "openai.yaml default_prompt must mention data-bs-* preservation");
+assert(/^---\nname:/.test(skillLf), "Skill frontmatter must start with multi-line YAML and name");
+assert(/\n---\n\n# Bootstrap 5 Transitions Skill/.test(skillLf), "Skill body must start after frontmatter with a blank line");
 
-const frontmatterMatch = skill.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+assert(openaiYamlLf.split("\n").length >= 4, "openai.yaml must be multi-line YAML");
+assert(openaiYamlLf.includes("interface:\n  display_name:"), "openai.yaml must use a nested interface.display_name block");
+assert(openaiYamlLf.includes('display_name: "Bootstrap 5 Transitions"'), "openai.yaml display_name mismatch");
+assert(openaiYamlLf.includes("data-bs-* attributes"), "openai.yaml default_prompt must mention data-bs-* preservation");
+
+const frontmatterMatch = skillLf.match(/^---\n([\s\S]*?)\n---/);
 assert(frontmatterMatch, "Skill frontmatter format is invalid");
 if (frontmatterMatch) {
-  const frontmatterLines = frontmatterMatch[1].split(/\r?\n/);
+  const frontmatterLines = frontmatterMatch[1].split("\n");
   const frontmatter = Object.fromEntries(frontmatterLines.map((line) => {
     const separator = line.indexOf(":");
     return [line.slice(0, separator).trim(), line.slice(separator + 1).trim()];

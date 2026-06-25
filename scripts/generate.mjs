@@ -340,7 +340,7 @@ ${markup}`;
 
 async function write(relativePath, content) {
   const path = resolve(root, relativePath);
-  const normalizedContent = `${content.trim()}\n`;
+  const normalizedContent = normalizeGeneratedContent(content);
 
   if (checkOnly) {
     let currentContent = "";
@@ -361,45 +361,55 @@ async function write(relativePath, content) {
   await writeFile(path, normalizedContent, "utf8");
 }
 
+function normalizeGeneratedContent(content) {
+  const lfContent = content.replace(/\r\n/g, "\n");
+  return `${lfContent.replace(/\n*$/u, "")}\n`;
+}
+
 function catalogFor(items, heading) {
-  const tableRows = items.map((effect) => [
-    `\`${effect.className}\``,
-    effect.level,
-    effect.component,
-    effect.requiresJs ? "yes" : "no",
-    effect.motion,
-    effect.bestFor,
-    effect.avoidFor,
-    effect.reducedMotion,
-    `\`${effect.snippetPath}\``,
-  ].join(" | "));
+  const summaryTable = [
+    "| Class | Level | Component | Requires JS | Motion | Best for | Avoid for | Reduced motion | Snippet |",
+    "|---|---|---|---|---|---|---|---|---|",
+    ...items.map((effect) => [
+      `| \`${effect.className}\``,
+      effect.level,
+      effect.component,
+      effect.requiresJs ? "yes" : "no",
+      effect.motion,
+      effect.bestFor,
+      effect.avoidFor,
+      effect.reducedMotion,
+      `\`${effect.snippetPath}\` |`,
+    ].join(" | ")),
+  ].join("\n");
 
-  const blocks = items.map(
-    (effect) => `## ${effect.name}
+  const blocks = items.map((effect) => [
+    `## ${effect.name}`,
+    "",
+    `- Category: ${effect.category}`,
+    `- Class: \`${effect.className}\``,
+    `- Level: ${effect.level}`,
+    `- Bootstrap component: ${effect.component}`,
+    `- Requires JS: ${effect.requiresJs ? "yes" : "no"}`,
+    `- Runtime behavior: ${effect.runtimeBehavior ?? "none"}`,
+    `- Motion: ${effect.motion}`,
+    `- Best for: ${effect.bestFor}`,
+    `- Avoid for: ${effect.avoidFor}`,
+    `- Reduced motion: ${effect.reducedMotion}`,
+    `- Snippet: \`${effect.snippetPath}\``,
+  ].join("\n"));
 
-- Category: ${effect.category}
-- Class: \`${effect.className}\`
-- Level: ${effect.level}
-- Bootstrap component: ${effect.component}
-- Requires JS: ${effect.requiresJs ? "yes" : "no"}
-- Runtime behavior: ${effect.runtimeBehavior ?? "none"}
-- Motion: ${effect.motion}
-- Best for: ${effect.bestFor}
-- Avoid for: ${effect.avoidFor}
-- Reduced motion: ${effect.reducedMotion}
-- Snippet: \`${effect.snippetPath}\``,
-  );
-  return `# ${heading}
-
-Generated from \`scripts/effects.mjs\`. Every entry maps one CSS class to one copy-paste snippet. Entries marked \`Requires JS: yes\` also require \`assets/js/bootstrap5-transitions.js\` after the Bootstrap bundle.
-
-## Summary
-
-| Class | Level | Component | Requires JS | Motion | Best for | Avoid for | Reduced motion | Snippet |
-|---|---|---|---|---|---|---|---|---|
-${tableRows.map((row) => `| ${row} |`).join("\n")}
-
-${blocks.join("\n\n")}`;
+  return [
+    `# ${heading}`,
+    "",
+    "Generated from `scripts/effects.mjs`. Every entry maps one CSS class to one copy-paste snippet. Entries marked `Requires JS: yes` also require `assets/js/bootstrap5-transitions.js` after the Bootstrap bundle.",
+    "",
+    "## Summary",
+    "",
+    summaryTable,
+    "",
+    blocks.join("\n\n"),
+  ].join("\n");
 }
 
 for (const effect of effects) {
