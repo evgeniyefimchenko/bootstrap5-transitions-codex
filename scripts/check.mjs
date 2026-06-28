@@ -55,6 +55,8 @@ const requiredFiles = [
   "references/usage-examples.md",
   "references/reduced-motion.md",
   "references/codex-usage.md",
+  "references/admin-ui-patterns.md",
+  "references/codex-recipes.md",
   ".agents/skills/bootstrap5-transitions/SKILL.md",
   ".agents/skills/bootstrap5-transitions/agents/openai.yaml",
   ".agents/skills/bootstrap5-transitions/references/catalog.md",
@@ -64,6 +66,8 @@ const requiredFiles = [
   ".agents/skills/bootstrap5-transitions/references/visual-polish.md",
   ".agents/skills/bootstrap5-transitions/references/color-contrast.md",
   ".agents/skills/bootstrap5-transitions/references/review-format.md",
+  ".agents/skills/bootstrap5-transitions/references/admin-ui-patterns.md",
+  ".agents/skills/bootstrap5-transitions/references/codex-recipes.md",
 ];
 
 for (const file of requiredFiles) {
@@ -114,38 +118,144 @@ const appliedUxCategories = [
   "mobile",
 ];
 const allowedKinds = new Set([
-  "component-state",
-  "feedback-state",
-  "form-state",
-  "loading-state",
-  "navigation-state",
-  "workflow-state",
+  "entry",
+  "exit",
+  "feedback",
+  "validation",
+  "loading",
+  "selection",
+  "navigation",
+  "state",
+  "danger",
+  "success",
+  "data-change",
 ]);
-const allowedDensities = new Set(["low", "medium", "high"]);
-const allowedRisks = new Set(["low", "medium", "high"]);
+const allowedDensities = new Set(["dense-admin", "normal-ui", "marketing", "mobile"]);
+const allowedRisks = new Set(["safe", "medium", "visual-diff", "requires-js"]);
 const allowedCssProperties = new Set([
   "background-color",
-  "background-position",
   "border-color",
   "box-shadow",
   "clip-path",
   "color",
   "filter",
   "opacity",
+  "outline-color",
+  "text-decoration-color",
   "transform",
 ]);
+const forbiddenCssProperties = new Set([
+  "width",
+  "height",
+  "max-width",
+  "max-height",
+  "top",
+  "right",
+  "bottom",
+  "left",
+  "margin",
+  "padding",
+]);
 const appliedUxEffects = effects.filter((effect) => appliedUxCategories.includes(effect.category));
+const requiredScenarioEffects = new Set([
+  "pagination-item-press",
+  "pagination-active-slide",
+  "pagination-loading-fade",
+  "pagination-disabled-soft",
+  "pagination-page-change",
+  "pagination-jump-focus",
+  "input-group-focus-ring",
+  "input-group-addon-highlight",
+  "input-group-button-press",
+  "input-group-error-shake",
+  "input-group-success-glow",
+  "input-group-copy-success",
+  "crud-row-created-flash",
+  "crud-row-updated-flash",
+  "crud-row-deleted-collapse",
+  "crud-row-restored-pop",
+  "crud-save-success-bar",
+  "crud-save-error-shake",
+  "crud-inline-edit-focus",
+  "crud-inline-edit-saving",
+  "crud-bulk-action-bar-slide",
+  "crud-bulk-selection-bump",
+  "crud-permission-locked-soft",
+  "crud-danger-zone-pulse",
+  "filter-panel-slide",
+  "filter-chip-pop",
+  "filter-chip-remove",
+  "filter-applied-flash",
+  "filter-reset-fade",
+  "search-input-focus-glow",
+  "search-results-reveal",
+  "search-empty-pop",
+  "search-loading-line",
+  "sort-direction-flip",
+  "wizard-step-enter",
+  "wizard-step-exit",
+  "wizard-step-invalid-shake",
+  "wizard-step-complete-check",
+  "wizard-summary-reveal",
+  "wizard-back-soft",
+  "wizard-next-press",
+  "wizard-saving-overlay",
+  "state-empty-pop",
+  "state-empty-icon-float",
+  "state-error-shake",
+  "state-error-retry-press",
+  "state-success-check",
+  "state-warning-attention",
+  "state-offline-pulse",
+  "state-reconnect-fade",
+  "data-card-refresh",
+  "data-table-refresh",
+  "data-section-loading-fade",
+  "data-overlay-blur",
+  "data-inline-saving",
+  "data-chart-loading",
+  "data-kpi-refresh",
+  "data-diff-highlight",
+  "notification-item-new",
+  "notification-item-read-fade",
+  "notification-item-remove",
+  "notification-counter-bump",
+  "notification-panel-slide",
+  "notification-priority-pulse",
+  "mobile-bottom-bar-active",
+  "mobile-tabbar-press",
+  "mobile-fab-pop",
+  "mobile-fab-menu-stagger",
+  "mobile-swipe-action-reveal",
+  "mobile-sticky-save-bar",
+  "mobile-keyboard-safe-panel",
+  "mobile-filter-sheet",
+]);
+
+function catalogBlockFor(source, effectName) {
+  const start = source.indexOf(`## ${effectName}`);
+  if (start === -1) {
+    return "";
+  }
+  const next = source.indexOf("\n## ", start + 1);
+  return source.slice(start, next === -1 ? source.length : next);
+}
 
 assert(coreEffects.length === 82, `Expected 82 core effects, found ${coreEffects.length}`);
-assert(appliedUxEffects.length === 78, `Expected 78 applied UX effects, found ${appliedUxEffects.length}`);
+assert(appliedUxEffects.length === 89, `Expected 89 applied UX effects, found ${appliedUxEffects.length}`);
 for (const category of appliedUxCategories) {
   assert(
     appliedUxEffects.some((effect) => effect.category === category),
     `Missing applied UX category: ${category}`,
   );
 }
-assert(extendedEffects.length === 205, `Expected 205 extended effects, found ${extendedEffects.length}`);
-assert(effects.length === 287, `Expected 287 total effects, found ${effects.length}`);
+for (const effectName of requiredScenarioEffects) {
+  assert(effects.some((effect) => effect.name === effectName), `Missing scenario effect: ${effectName}`);
+}
+assert(requiredScenarioEffects.size >= 70 && requiredScenarioEffects.size <= 85, `Required scenario effect count must be 70-85, found ${requiredScenarioEffects.size}`);
+assert(extendedEffects.length === 216, `Expected 216 extended effects, found ${extendedEffects.length}`);
+assert(effects.length === 298, `Expected 298 total effects, found ${effects.length}`);
+assert(effects.length >= 285 && effects.length <= 300, `Total effect count must stay between 285 and 300, found ${effects.length}`);
 assert(aggregateCss.includes('@import "./core.css";'), "Aggregate CSS does not import core.css");
 assert(aggregateCss.includes('@import "./extended.css";'), "Aggregate CSS does not import extended.css");
 assert(packageJson.license === "MIT", "package.json license must be MIT");
@@ -166,8 +276,10 @@ assert(!/```(?:jsx|vue|svelte|angular)|\$\([^)]*\)\.(?:addClass|removeClass|togg
 assert(readme.includes("assets/js/bootstrap5-transitions.js"), "README does not explain the reusable runtime");
 assert(readme.includes("assets/js/demo.js"), "README does not distinguish demo-only JavaScript");
 assert(readme.includes("Agent Skill quality rules"), "README must include Agent Skill quality rules");
-assert(catalogLf.includes("| Class | Level | Component | Requires JS |"), "Main catalog must include summary table");
-assert(skillCatalogLf.includes("| Class | Level | Component | Requires JS |"), "Skill catalog must include summary table");
+assert(readme.includes("Scenario-first effect selection"), "README must explain scenario-first effect selection");
+assert(skillLf.includes("## Effect Selection Metadata"), "Skill must explain effect selection metadata");
+assert(catalogLf.includes("| Class | Level | Component | Kind | Density | Risk | Requires JS |"), "Main catalog must include metadata columns");
+assert(skillCatalogLf.includes("| Class | Level | Component | Kind | Density | Risk | Requires JS |"), "Skill catalog must include metadata columns");
 assert((catalogLf.match(/^## /gm) ?? []).length >= 100, "Main catalog must contain at least 100 effect headings");
 assert((skillCatalogLf.match(/^## /gm) ?? []).length >= 100, "Skill catalog must contain at least 100 effect headings");
 assert((catalogLf.match(/^## /gm) ?? []).length >= effects.length, "Main catalog must contain one heading per effect");
@@ -198,15 +310,27 @@ if (frontmatterMatch) {
 
 for (const effect of effects) {
   const css = effect.level === "core" ? coreCss : extendedCss;
+  assert(effect.kind, `Missing kind: ${effect.name}`);
+  assert(effect.density, `Missing density: ${effect.name}`);
+  assert(effect.risk, `Missing risk: ${effect.name}`);
+  assert(Array.isArray(effect.cssProperties) && effect.cssProperties.length > 0, `Missing cssProperties: ${effect.name}`);
+  assert(Array.isArray(effect.bootstrapStates), `Missing bootstrapStates: ${effect.name}`);
+  assert(typeof effect.requiresMarkupChange === "boolean", `Missing requiresMarkupChange: ${effect.name}`);
+  assert(effect.scenario, `Missing scenario: ${effect.name}`);
   assert(allowedKinds.has(effect.kind), `Invalid kind metadata for ${effect.name}`);
   assert(allowedDensities.has(effect.density), `Invalid density metadata for ${effect.name}`);
   assert(allowedRisks.has(effect.risk), `Invalid risk metadata for ${effect.name}`);
-  assert(Array.isArray(effect.cssProperties) && effect.cssProperties.length > 0, `Missing cssProperties metadata for ${effect.name}`);
+  assert(
+    !effect.requiresJs || effect.risk === "requires-js",
+    `JS effect must have risk="requires-js": ${effect.name}`,
+  );
   assert(
     effect.cssProperties.every((property) => allowedCssProperties.has(property)),
     `Invalid cssProperties metadata for ${effect.name}: ${effect.cssProperties.join(", ")}`,
   );
-  assert(Array.isArray(effect.bootstrapStates) && effect.bootstrapStates.length > 0, `Missing bootstrapStates metadata for ${effect.name}`);
+  for (const property of effect.cssProperties) {
+    assert(!forbiddenCssProperties.has(property), `Forbidden cssProperty ${property}: ${effect.name}`);
+  }
   assert(effect.bootstrapStates.every((state) => typeof state === "string" && state.length > 0), `Invalid bootstrapStates metadata for ${effect.name}`);
   assert(new RegExp(`\\.${effect.className}(?![a-z0-9-])`).test(css), `Missing CSS selector: .${effect.className}`);
   assert(await exists(effect.snippetPath), `Missing snippet: ${effect.snippetPath}`);
@@ -224,17 +348,18 @@ for (const effect of effects) {
       `Snippet uses data-bsx-action but is marked CSS-only: ${effect.snippetPath}`,
     );
   }
-  assert(catalog.includes(`## ${effect.name}`), `Main catalog missing ${effect.name}`);
-  assert(skillCatalog.includes(`## ${effect.name}`), `Skill catalog missing ${effect.name}`);
-  assert(
-    catalog.includes(`Runtime behavior: ${effect.runtimeBehavior ?? "none"}`),
-    `Main catalog runtime behavior mismatch for ${effect.name}`,
-  );
-  assert(catalog.includes(`Kind: ${effect.kind}`), `Main catalog kind metadata mismatch for ${effect.name}`);
-  assert(catalog.includes(`Density: ${effect.density}`), `Main catalog density metadata mismatch for ${effect.name}`);
-  assert(catalog.includes(`Risk: ${effect.risk}`), `Main catalog risk metadata mismatch for ${effect.name}`);
-  assert(catalog.includes("CSS properties:"), `Main catalog cssProperties metadata missing for ${effect.name}`);
-  assert(catalog.includes("Bootstrap states:"), `Main catalog bootstrapStates metadata missing for ${effect.name}`);
+  const mainBlock = catalogBlockFor(catalogLf, effect.name);
+  const skillBlock = catalogBlockFor(skillCatalogLf, effect.name);
+  assert(mainBlock, `Main catalog missing ${effect.name}`);
+  assert(skillBlock, `Skill catalog missing ${effect.name}`);
+  assert(mainBlock.includes(`- Kind: ${effect.kind}`), `Main catalog kind mismatch: ${effect.name}`);
+  assert(mainBlock.includes(`- Density: ${effect.density}`), `Main catalog density mismatch: ${effect.name}`);
+  assert(mainBlock.includes(`- Risk: ${effect.risk}`), `Main catalog risk mismatch: ${effect.name}`);
+  assert(mainBlock.includes(`- Requires markup change: ${effect.requiresMarkupChange ? "true" : "false"}`), `Main catalog markup-change mismatch: ${effect.name}`);
+  assert(mainBlock.includes(`- Scenario: ${effect.scenario}`), `Main catalog scenario mismatch: ${effect.name}`);
+  assert(mainBlock.includes(`- Runtime behavior: ${effect.runtimeBehavior ?? "none"}`), `Main catalog runtime behavior mismatch: ${effect.name}`);
+  assert(mainBlock.includes(`- CSS properties: ${effect.cssProperties.join(", ")}`), `Main catalog cssProperties mismatch: ${effect.name}`);
+  assert(mainBlock.includes(`- Bootstrap states: ${effect.bootstrapStates.length ? effect.bootstrapStates.join(", ") : "none"}`), `Main catalog bootstrapStates mismatch: ${effect.name}`);
 }
 
 for (const [name, css] of [["core.css", coreCss], ["extended.css", extendedCss]]) {
@@ -283,6 +408,20 @@ assert((stackToastSnippet.match(/\bclass="toast(?:\s|")/g) ?? []).length >= 2, "
 const runtimeActions = new Set(
   [...runtimeJs.matchAll(/case\s+"([^"]+)"/g)].map((match) => match[1]),
 );
+const requiredRuntimeActions = [
+  "copy-input",
+  "pagination-loading",
+  "crud-inline-save",
+  "crud-bulk-toggle",
+  "filter-chip-remove",
+  "filter-reset",
+  "wizard-step",
+  "retry-state",
+  "data-refresh",
+  "notification-remove",
+  "mobile-fab-toggle",
+  "mobile-swipe-action",
+];
 const snippetActions = new Set();
 
 const sourceFiles = [
@@ -306,6 +445,10 @@ for (const file of sourceFiles) {
 
 for (const action of snippetActions) {
   assert(runtimeActions.has(action), `Reusable runtime does not implement data-bsx-action="${action}"`);
+}
+
+for (const action of requiredRuntimeActions) {
+  assert(runtimeActions.has(action), `Reusable runtime missing required action "${action}"`);
 }
 
 const snippetFiles = (await walk("snippets")).filter((file) => file.endsWith(".html"));

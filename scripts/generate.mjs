@@ -1,4 +1,4 @@
-import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { mkdir, readFile, readdir, rm, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import { coreEffects, effects, extendedEffects } from "./effects.mjs";
 
@@ -29,10 +29,50 @@ function iconMarkup() {
   return '<span class="bsx-icon" aria-hidden="true">→</span>';
 }
 
+function actionAttribute(effect) {
+  return effect.runtimeAction ? ` data-bsx-action="${effect.runtimeAction}"` : "";
+}
+
+async function walk(relativePath) {
+  const path = resolve(root, relativePath);
+  let entries = [];
+  try {
+    entries = await readdir(path, { withFileTypes: true });
+  } catch {
+    return [];
+  }
+
+  const files = [];
+  for (const entry of entries) {
+    const child = `${relativePath}/${entry.name}`;
+    if (entry.isDirectory()) {
+      files.push(...await walk(child));
+    } else {
+      files.push(child.replaceAll("\\", "/"));
+    }
+  }
+  return files;
+}
+
+async function removeStaleSnippets() {
+  if (checkOnly) {
+    return;
+  }
+
+  const expectedSnippets = new Set(effects.map((effect) => effect.snippetPath));
+  const currentSnippets = (await walk("snippets")).filter((file) => file.endsWith(".html"));
+  await Promise.all(
+    currentSnippets
+      .filter((file) => !expectedSnippets.has(file))
+      .map((file) => rm(resolve(root, file), { force: true })),
+  );
+}
+
 function snippetMarkupFor(effect) {
   const { name, className, directory, requiresJs } = effect;
   const id = idFor(name);
   const label = title(name);
+  const actionAttr = actionAttribute(effect);
 
   switch (directory) {
     case "modal":
@@ -329,8 +369,8 @@ function snippetMarkupFor(effect) {
       return `<nav class="${className}" aria-label="${label}">
   <ul class="pagination mb-0" ${name.includes("loading") ? 'aria-busy="true"' : ""}>
     <li class="page-item disabled"><a class="page-link" href="#" aria-disabled="true">Previous</a></li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item active" aria-current="page"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#"${actionAttr}>1</a></li>
+    <li class="page-item active" aria-current="page"><a class="page-link" href="#"${actionAttr}>2</a></li>
     <li class="page-item"><a class="page-link" href="#">3</a></li>
     <li class="page-item"><a class="page-link" href="#">Next</a></li>
   </ul>
@@ -344,10 +384,10 @@ function snippetMarkupFor(effect) {
     case "input-group":
       return `<div class="${className}">
   <label class="form-label" for="${id}">${label}</label>
-  <div class="input-group ${name.includes("validation") ? "has-validation" : ""}" ${name.includes("pending") ? 'aria-busy="true"' : ""}>
+  <div class="input-group ${name.includes("error") ? "has-validation" : ""}" ${name.includes("loading") ? 'aria-busy="true"' : ""}>
     <span class="input-group-text" id="${id}Addon">#</span>
-    <input class="form-control ${name.includes("validation") ? "is-invalid" : ""}" id="${id}" type="text" value="CRM-2048" aria-describedby="${id}Addon ${id}Feedback">
-    <button class="btn btn-outline-secondary" type="button">${name.includes("password") ? "Show" : "Apply"}</button>
+    <input class="form-control ${name.includes("error") ? "is-invalid" : name.includes("success") ? "is-valid" : ""}" id="${id}" type="text" value="CRM-2048" aria-describedby="${id}Addon ${id}Feedback">
+    <button class="btn btn-outline-secondary" type="button"${actionAttr}>${name.includes("copy") ? "Copy" : "Apply"}</button>
     <div class="invalid-feedback" id="${id}Feedback">Check this value before saving.</div>
   </div>
 </div>`;
@@ -361,14 +401,14 @@ function snippetMarkupFor(effect) {
   <div class="d-flex align-items-center justify-content-between gap-2 mb-2">
     <span class="small text-body-secondary">3 selected records</span>
     <div class="btn-group btn-group-sm" role="group" aria-label="Bulk actions">
-      <button type="button" class="btn btn-outline-secondary">Edit</button>
-      <button type="button" class="btn btn-outline-danger">Delete</button>
+      <button type="button" class="btn btn-outline-secondary"${actionAttr}>Edit</button>
+      <button type="button" class="btn btn-outline-danger"${name.includes("bulk") ? actionAttr : ""}>Delete</button>
     </div>
   </div>
   <table class="table table-hover align-middle mb-0">
     <thead><tr><th scope="col">Customer</th><th scope="col">State</th><th scope="col">Updated</th></tr></thead>
     <tbody>
-      <tr class="${name.includes("error") || name.includes("delete") ? "bsx-is-error" : name.includes("success") ? "bsx-is-success" : name.includes("dirty") ? "bsx-is-dirty" : name.includes("pending") ? "bsx-is-loading" : ""}">
+      <tr class="${name.includes("error") || name.includes("delete") || name.includes("danger") ? "bsx-is-error" : name.includes("success") || name.includes("restored") ? "bsx-is-success" : name.includes("updated") || name.includes("created") ? "bsx-is-updated" : name.includes("saving") ? "bsx-is-loading" : name.includes("bulk") ? "bsx-is-selected" : ""}">
         <th scope="row">Acme Ltd</th>
         <td><span class="badge text-bg-primary">Open</span></td>
         <td><span class="text-body-secondary">Now</span></td>
@@ -380,12 +420,12 @@ function snippetMarkupFor(effect) {
       return `<section class="card ${className}">
   <div class="card-body">
     <label class="form-label" for="${id}">${label}</label>
-    <div class="input-group mb-3" ${name.includes("search") ? 'aria-busy="true"' : ""}>
+    <div class="input-group mb-3" ${name.includes("loading") ? 'aria-busy="true"' : ""}>
       <input class="form-control" id="${id}" type="search" value="active customers">
-      <button class="btn btn-outline-secondary" type="button">Search</button>
+      <button class="btn btn-outline-secondary" type="button"${name.includes("reset") ? actionAttr : ""}>${name.includes("reset") ? "Reset" : "Search"}</button>
     </div>
     <div class="d-flex flex-wrap gap-2">
-      <span class="badge text-bg-primary bsx-filter-chip">Status: active</span>
+      <span class="badge text-bg-primary bsx-filter-chip"${name.includes("remove") ? actionAttr : ""}>Status: active</span>
       <span class="badge text-bg-secondary bsx-filter-chip">Owner: me</span>
     </div>
   </div>
@@ -394,18 +434,18 @@ function snippetMarkupFor(effect) {
       return `<form class="${className}">
   <ol class="list-unstyled d-flex mb-3" aria-label="${label}">
     <li class="bsx-step bsx-is-complete"><span class="bsx-step-marker" aria-hidden="true">✓</span>Account</li>
-    <li class="bsx-step bsx-is-active" aria-current="step"><span class="bsx-step-marker" aria-hidden="true">2</span>Details</li>
-    <li class="bsx-step ${name.includes("error") ? "bsx-is-error" : ""}"><span class="bsx-step-marker" aria-hidden="true">3</span>Review</li>
+    <li class="bsx-step bsx-is-active" aria-current="step"${name.includes("wizard-step") ? actionAttr : ""}><span class="bsx-step-marker" aria-hidden="true">2</span>Details</li>
+    <li class="bsx-step ${name.includes("invalid") ? "bsx-is-error" : ""}"><span class="bsx-step-marker" aria-hidden="true">3</span>Review</li>
   </ol>
   <div class="card">
     <div class="card-body">
       <label class="form-label" for="${id}">Company name</label>
-      <input class="form-control ${name.includes("error") ? "is-invalid" : ""}" id="${id}" type="text" value="Acme Ltd">
+      <input class="form-control ${name.includes("invalid") ? "is-invalid" : ""}" id="${id}" type="text" value="Acme Ltd">
       <div class="invalid-feedback">Resolve this step before submitting.</div>
     </div>
     <div class="card-footer d-flex justify-content-end gap-2">
-      <button type="button" class="btn btn-outline-secondary">Back</button>
-      <button type="submit" class="btn btn-primary">Save step</button>
+      <button type="button" class="btn btn-outline-secondary"${name.includes("back") ? actionAttr : ""}>Back</button>
+      <button type="${requiresJs ? "button" : "submit"}" class="btn btn-primary"${name.includes("saving") || name.includes("next") ? actionAttr : ""}>Save step</button>
     </div>
   </div>
 </form>`;
@@ -414,7 +454,7 @@ function snippetMarkupFor(effect) {
   <div class="card-body">
     <h2 class="h5">${label}</h2>
     <p class="text-body-secondary mb-3">Use this state for admin workflows that need a clear non-motion signal.</p>
-    <button type="button" class="btn ${name.includes("error") ? "btn-danger" : "btn-primary"}">Primary action</button>
+    <button type="button" class="btn ${name.includes("error") ? "btn-danger" : "btn-primary"}"${actionAttr}>${name.includes("retry") ? "Retry" : "Primary action"}</button>
   </div>
 </section>`;
     case "data-loading":
@@ -426,6 +466,7 @@ function snippetMarkupFor(effect) {
     </div>
     <div class="bsx-skeleton-line rounded mb-2"></div>
     <div class="bsx-skeleton-line rounded w-75"></div>
+    <button type="button" class="btn btn-sm btn-outline-primary mt-3"${actionAttr}>Refresh data</button>
   </div>
 </section>`;
     case "notification-center":
@@ -435,7 +476,7 @@ function snippetMarkupFor(effect) {
     <span class="badge text-bg-primary">3</span>
   </div>
   <div class="list-group list-group-flush">
-    <a href="#" class="list-group-item list-group-item-action bsx-is-unread">New lead assigned</a>
+    <a href="#" class="list-group-item list-group-item-action bsx-is-unread"${actionAttr}>New lead assigned</a>
     <a href="#" class="list-group-item list-group-item-action">Invoice paid</a>
   </div>
 </section>`;
@@ -443,7 +484,7 @@ function snippetMarkupFor(effect) {
       return `<section class="border rounded p-3 ${className}" aria-label="${label}">
   <div class="d-flex align-items-center justify-content-between gap-3">
     <span class="fw-semibold">Mobile CRM action</span>
-    <button type="button" class="btn btn-primary btn-sm">Save</button>
+    <button type="button" class="btn btn-primary btn-sm"${actionAttr} aria-expanded="false">Save</button>
   </div>
   <nav class="nav nav-pills nav-fill mt-3" aria-label="Mobile navigation">
     <a class="nav-link active" aria-current="page" href="#">Today</a>
@@ -502,20 +543,21 @@ function normalizeGeneratedContent(content) {
 
 function catalogFor(items, heading) {
   const summaryTable = [
-    "| Class | Level | Component | Requires JS | Kind | Density | Risk | Motion | Best for | Avoid for | Reduced motion | Snippet |",
-    "|---|---|---|---|---|---|---|---|---|---|---|---|",
+    "| Class | Level | Component | Kind | Density | Risk | Requires JS | Motion | CSS properties | Bootstrap states | Best for | Avoid for | Snippet |",
+    "|---|---|---|---|---|---|---|---|---|---|---|---|---|",
     ...items.map((effect) => [
       `| \`${effect.className}\``,
       effect.level,
       effect.component,
-      effect.requiresJs ? "yes" : "no",
       effect.kind,
       effect.density,
       effect.risk,
+      effect.requiresJs ? "yes" : "no",
       effect.motion,
+      effect.cssProperties.map((property) => `\`${property}\``).join(", "),
+      effect.bootstrapStates.length ? effect.bootstrapStates.map((state) => `\`${state}\``).join(", ") : "none",
       effect.bestFor,
       effect.avoidFor,
-      effect.reducedMotion,
       `\`${effect.snippetPath}\` |`,
     ].join(" | ")),
   ].join("\n");
@@ -527,14 +569,17 @@ function catalogFor(items, heading) {
     `- Class: \`${effect.className}\``,
     `- Level: ${effect.level}`,
     `- Bootstrap component: ${effect.component}`,
-    `- Requires JS: ${effect.requiresJs ? "yes" : "no"}`,
-    `- Runtime behavior: ${effect.runtimeBehavior ?? "none"}`,
     `- Kind: ${effect.kind}`,
     `- Density: ${effect.density}`,
     `- Risk: ${effect.risk}`,
-    `- CSS properties: ${effect.cssProperties.map((property) => `\`${property}\``).join(", ")}`,
-    `- Bootstrap states: ${effect.bootstrapStates.map((state) => `\`${state}\``).join(", ")}`,
+    `- Requires JS: ${effect.requiresJs ? "yes" : "no"}`,
+    `- Requires markup change: ${effect.requiresMarkupChange ? "true" : "false"}`,
+    `- Runtime behavior: ${effect.runtimeBehavior ?? "none"}`,
+    `- Runtime action: ${effect.runtimeAction ?? "none"}`,
     `- Motion: ${effect.motion}`,
+    `- CSS properties: ${effect.cssProperties.join(", ")}`,
+    `- Bootstrap states: ${effect.bootstrapStates.length ? effect.bootstrapStates.join(", ") : "none"}`,
+    `- Scenario: ${effect.scenario}`,
     `- Best for: ${effect.bestFor}`,
     `- Avoid for: ${effect.avoidFor}`,
     `- Reduced motion: ${effect.reducedMotion}`,
@@ -553,6 +598,8 @@ function catalogFor(items, heading) {
     blocks.join("\n\n"),
   ].join("\n");
 }
+
+await removeStaleSnippets();
 
 for (const effect of effects) {
   await write(effect.snippetPath, snippetFor(effect));

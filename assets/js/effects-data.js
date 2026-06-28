@@ -8,16 +8,19 @@ window.bsxEffects = [
     "component": "modal",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "scale",
-    "kind": "component-state",
-    "density": "low",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "marketing",
+    "risk": "safe",
     "cssProperties": [
       "transform"
     ],
     "bootstrapStates": [
       ".show"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply modal scale to dialogs and confirmations in a Bootstrap 5 modal pattern",
     "bestFor": "dialogs and confirmations",
     "avoidFor": "dense repeated workflows",
     "reducedMotion": "opacity-only near-instant state",
@@ -33,16 +36,19 @@ window.bsxEffects = [
     "component": "modal",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "translate",
-    "kind": "component-state",
-    "density": "low",
-    "risk": "low",
+    "kind": "entry",
+    "density": "marketing",
+    "risk": "safe",
     "cssProperties": [
       "transform"
     ],
     "bootstrapStates": [
       ".show"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply modal slide up to dialogs and confirmations in a Bootstrap 5 modal pattern",
     "bestFor": "dialogs and confirmations",
     "avoidFor": "dense repeated workflows",
     "reducedMotion": "opacity-only near-instant state",
@@ -58,10 +64,11 @@ window.bsxEffects = [
     "component": "modal",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "opacity",
-    "kind": "component-state",
-    "density": "low",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "marketing",
+    "risk": "medium",
     "cssProperties": [
       "opacity",
       "filter"
@@ -69,6 +76,8 @@ window.bsxEffects = [
     "bootstrapStates": [
       ".show"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply modal blur backdrop to dialogs and confirmations in a Bootstrap 5 modal pattern",
     "bestFor": "dialogs and confirmations",
     "avoidFor": "dense repeated workflows",
     "reducedMotion": "near-instant opacity or color state",
@@ -84,9 +93,10 @@ window.bsxEffects = [
     "component": "modal",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "color + opacity",
-    "kind": "component-state",
-    "density": "low",
+    "kind": "danger",
+    "density": "marketing",
     "risk": "medium",
     "cssProperties": [
       "background-color",
@@ -94,8 +104,11 @@ window.bsxEffects = [
       "color"
     ],
     "bootstrapStates": [
-      ".show"
+      ".show",
+      ".bsx-is-error"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply modal danger confirm to dialogs and confirmations in a Bootstrap 5 modal pattern",
     "bestFor": "dialogs and confirmations",
     "avoidFor": "dense repeated workflows",
     "reducedMotion": "opacity-only near-instant state",
@@ -111,10 +124,11 @@ window.bsxEffects = [
     "component": "modal",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "color + opacity",
-    "kind": "component-state",
-    "density": "low",
-    "risk": "low",
+    "kind": "success",
+    "density": "marketing",
+    "risk": "safe",
     "cssProperties": [
       "opacity",
       "background-color",
@@ -125,6 +139,8 @@ window.bsxEffects = [
       ".show",
       ".bsx-is-success"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply modal success confirm to dialogs and confirmations in a Bootstrap 5 modal pattern",
     "bestFor": "dialogs and confirmations",
     "avoidFor": "dense repeated workflows",
     "reducedMotion": "opacity-only near-instant state",
@@ -140,16 +156,19 @@ window.bsxEffects = [
     "component": "modal",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "translate",
-    "kind": "component-state",
-    "density": "low",
-    "risk": "low",
+    "kind": "navigation",
+    "density": "marketing",
+    "risk": "safe",
     "cssProperties": [
       "transform"
     ],
     "bootstrapStates": [
       ".show"
     ],
+    "requiresMarkupChange": true,
+    "scenario": "apply modal sheet mobile to dialogs and confirmations in a Bootstrap 5 modal pattern",
     "bestFor": "dialogs and confirmations",
     "avoidFor": "dense repeated workflows",
     "reducedMotion": "opacity-only near-instant state",
@@ -165,16 +184,19 @@ window.bsxEffects = [
     "component": "dropdown",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "opacity",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "navigation",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "opacity"
     ],
     "bootstrapStates": [
       ".dropdown-menu.show"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply dropdown soft to menus with clear visual hierarchy in a Bootstrap 5 dropdown pattern",
     "bestFor": "menus with clear visual hierarchy",
     "avoidFor": "menus requiring instant state changes",
     "reducedMotion": "opacity-only near-instant state",
@@ -190,16 +212,19 @@ window.bsxEffects = [
     "component": "dropdown",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "translate",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "navigation",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "transform"
     ],
     "bootstrapStates": [
       ".dropdown-menu.show"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply dropdown slide down to menus with clear visual hierarchy in a Bootstrap 5 dropdown pattern",
     "bestFor": "menus with clear visual hierarchy",
     "avoidFor": "menus requiring instant state changes",
     "reducedMotion": "opacity-only near-instant state",
@@ -215,16 +240,19 @@ window.bsxEffects = [
     "component": "dropdown",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "scale",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "navigation",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "transform"
     ],
     "bootstrapStates": [
       ".dropdown-menu.show"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply dropdown scale to menus with clear visual hierarchy in a Bootstrap 5 dropdown pattern",
     "bestFor": "menus with clear visual hierarchy",
     "avoidFor": "menus requiring instant state changes",
     "reducedMotion": "opacity-only near-instant state",
@@ -240,16 +268,19 @@ window.bsxEffects = [
     "component": "dropdown",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "translate",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "navigation",
+    "density": "normal-ui",
+    "risk": "visual-diff",
     "cssProperties": [
       "transform"
     ],
     "bootstrapStates": [
       ".dropdown-menu.show"
     ],
+    "requiresMarkupChange": true,
+    "scenario": "apply dropdown menu stagger to menus with clear visual hierarchy in a Bootstrap 5 dropdown pattern",
     "bestFor": "menus with clear visual hierarchy",
     "avoidFor": "menus requiring instant state changes",
     "reducedMotion": "opacity-only near-instant state",
@@ -265,16 +296,19 @@ window.bsxEffects = [
     "component": "dropdown",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "translate",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "navigation",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "transform"
     ],
     "bootstrapStates": [
       ".dropdown-menu.show"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply dropdown item hover slide to menus with clear visual hierarchy in a Bootstrap 5 dropdown pattern",
     "bestFor": "menus with clear visual hierarchy",
     "avoidFor": "menus requiring instant state changes",
     "reducedMotion": "opacity-only near-instant state",
@@ -290,16 +324,19 @@ window.bsxEffects = [
     "component": "dropdown",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "opacity",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "navigation",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "opacity"
     ],
     "bootstrapStates": [
       ".dropdown-menu.show"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply dropdown mega menu soft to menus with clear visual hierarchy in a Bootstrap 5 dropdown pattern",
     "bestFor": "menus with clear visual hierarchy",
     "avoidFor": "menus requiring instant state changes",
     "reducedMotion": "opacity-only near-instant state",
@@ -315,16 +352,19 @@ window.bsxEffects = [
     "component": "offcanvas",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "opacity",
-    "kind": "component-state",
-    "density": "low",
-    "risk": "low",
+    "kind": "navigation",
+    "density": "marketing",
+    "risk": "safe",
     "cssProperties": [
       "opacity"
     ],
     "bootstrapStates": [
       ".show"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply offcanvas soft to navigation and mobile panels in a Bootstrap 5 offcanvas pattern",
     "bestFor": "navigation and mobile panels",
     "avoidFor": "permanent desktop navigation",
     "reducedMotion": "opacity-only near-instant state",
@@ -340,10 +380,11 @@ window.bsxEffects = [
     "component": "offcanvas",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "opacity",
-    "kind": "component-state",
-    "density": "low",
-    "risk": "low",
+    "kind": "navigation",
+    "density": "marketing",
+    "risk": "medium",
     "cssProperties": [
       "opacity",
       "filter"
@@ -351,6 +392,8 @@ window.bsxEffects = [
     "bootstrapStates": [
       ".show"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply offcanvas blur backdrop to navigation and mobile panels in a Bootstrap 5 offcanvas pattern",
     "bestFor": "navigation and mobile panels",
     "avoidFor": "permanent desktop navigation",
     "reducedMotion": "near-instant opacity or color state",
@@ -366,16 +409,19 @@ window.bsxEffects = [
     "component": "offcanvas",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "translate",
-    "kind": "component-state",
-    "density": "low",
-    "risk": "low",
+    "kind": "navigation",
+    "density": "marketing",
+    "risk": "safe",
     "cssProperties": [
       "transform"
     ],
     "bootstrapStates": [
       ".show"
     ],
+    "requiresMarkupChange": true,
+    "scenario": "apply offcanvas mobile sheet to navigation and mobile panels in a Bootstrap 5 offcanvas pattern",
     "bestFor": "navigation and mobile panels",
     "avoidFor": "permanent desktop navigation",
     "reducedMotion": "opacity-only near-instant state",
@@ -391,16 +437,19 @@ window.bsxEffects = [
     "component": "offcanvas",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "translate",
-    "kind": "component-state",
-    "density": "low",
-    "risk": "low",
+    "kind": "navigation",
+    "density": "marketing",
+    "risk": "visual-diff",
     "cssProperties": [
       "transform"
     ],
     "bootstrapStates": [
       ".show"
     ],
+    "requiresMarkupChange": true,
+    "scenario": "apply offcanvas menu stagger to navigation and mobile panels in a Bootstrap 5 offcanvas pattern",
     "bestFor": "navigation and mobile panels",
     "avoidFor": "permanent desktop navigation",
     "reducedMotion": "opacity-only near-instant state",
@@ -416,16 +465,19 @@ window.bsxEffects = [
     "component": "toast",
     "requiresJs": true,
     "runtimeBehavior": "toast trigger",
+    "runtimeAction": "show-toast",
     "motion": "translate",
-    "kind": "feedback-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "normal-ui",
+    "risk": "requires-js",
     "cssProperties": [
       "transform"
     ],
     "bootstrapStates": [
       ".show"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply toast slide right to brief asynchronous feedback in a Bootstrap 5 toast pattern",
     "bestFor": "brief asynchronous feedback",
     "avoidFor": "critical information requiring confirmation",
     "reducedMotion": "opacity-only near-instant state",
@@ -441,16 +493,19 @@ window.bsxEffects = [
     "component": "toast",
     "requiresJs": true,
     "runtimeBehavior": "toast trigger",
+    "runtimeAction": "show-toast",
     "motion": "scale",
-    "kind": "feedback-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "entry",
+    "density": "normal-ui",
+    "risk": "requires-js",
     "cssProperties": [
       "transform"
     ],
     "bootstrapStates": [
       ".show"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply toast pop to brief asynchronous feedback in a Bootstrap 5 toast pattern",
     "bestFor": "brief asynchronous feedback",
     "avoidFor": "critical information requiring confirmation",
     "reducedMotion": "opacity-only near-instant state",
@@ -466,16 +521,19 @@ window.bsxEffects = [
     "component": "toast",
     "requiresJs": true,
     "runtimeBehavior": "toast trigger",
+    "runtimeAction": "show-toast",
     "motion": "scale",
-    "kind": "feedback-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "entry",
+    "density": "normal-ui",
+    "risk": "requires-js",
     "cssProperties": [
       "transform"
     ],
     "bootstrapStates": [
       ".show"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply toast stack pop to brief asynchronous feedback in a Bootstrap 5 toast pattern",
     "bestFor": "brief asynchronous feedback",
     "avoidFor": "critical information requiring confirmation",
     "reducedMotion": "opacity-only near-instant state",
@@ -491,13 +549,14 @@ window.bsxEffects = [
     "component": "toast",
     "requiresJs": true,
     "runtimeBehavior": "toast trigger",
+    "runtimeAction": "show-toast",
     "motion": "scale",
-    "kind": "feedback-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "success",
+    "density": "normal-ui",
+    "risk": "requires-js",
     "cssProperties": [
-      "opacity",
       "transform",
+      "opacity",
       "background-color",
       "border-color",
       "color"
@@ -506,6 +565,8 @@ window.bsxEffects = [
       ".show",
       ".bsx-is-success"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply toast success pop to brief asynchronous feedback in a Bootstrap 5 toast pattern",
     "bestFor": "brief asynchronous feedback",
     "avoidFor": "critical information requiring confirmation",
     "reducedMotion": "opacity-only near-instant state",
@@ -521,10 +582,11 @@ window.bsxEffects = [
     "component": "toast",
     "requiresJs": true,
     "runtimeBehavior": "toast trigger",
+    "runtimeAction": "show-toast",
     "motion": "shake",
-    "kind": "feedback-state",
-    "density": "medium",
-    "risk": "medium",
+    "kind": "state",
+    "density": "normal-ui",
+    "risk": "requires-js",
     "cssProperties": [
       "opacity",
       "background-color",
@@ -535,6 +597,8 @@ window.bsxEffects = [
       ".show",
       ".bsx-is-error"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply toast error shake to brief asynchronous feedback in a Bootstrap 5 toast pattern",
     "bestFor": "brief asynchronous feedback",
     "avoidFor": "critical information requiring confirmation",
     "reducedMotion": "opacity-only near-instant state",
@@ -550,16 +614,19 @@ window.bsxEffects = [
     "component": "toast",
     "requiresJs": true,
     "runtimeBehavior": "toast trigger",
+    "runtimeAction": "show-toast",
     "motion": "translate",
-    "kind": "feedback-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "normal-ui",
+    "risk": "requires-js",
     "cssProperties": [
       "transform"
     ],
     "bootstrapStates": [
       ".show"
     ],
+    "requiresMarkupChange": true,
+    "scenario": "apply toast progress line to brief asynchronous feedback in a Bootstrap 5 toast pattern",
     "bestFor": "brief asynchronous feedback",
     "avoidFor": "critical information requiring confirmation",
     "reducedMotion": "opacity-only near-instant state",
@@ -575,17 +642,17 @@ window.bsxEffects = [
     "component": "alert",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "translate",
-    "kind": "feedback-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "entry",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "apply alert reveal to inline feedback and validation summaries in a Bootstrap 5 alert pattern",
     "bestFor": "inline feedback and validation summaries",
     "avoidFor": "decorative content",
     "reducedMotion": "opacity-only near-instant state",
@@ -601,17 +668,17 @@ window.bsxEffects = [
     "component": "alert",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "translate",
-    "kind": "feedback-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "apply alert slide down to inline feedback and validation summaries in a Bootstrap 5 alert pattern",
     "bestFor": "inline feedback and validation summaries",
     "avoidFor": "decorative content",
     "reducedMotion": "opacity-only near-instant state",
@@ -627,18 +694,18 @@ window.bsxEffects = [
     "component": "alert",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "shake",
-    "kind": "feedback-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "normal-ui",
+    "risk": "medium",
     "cssProperties": [
       "opacity",
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "apply alert shake to inline feedback and validation summaries in a Bootstrap 5 alert pattern",
     "bestFor": "inline feedback and validation summaries",
     "avoidFor": "decorative content",
     "reducedMotion": "opacity-only near-instant state",
@@ -654,17 +721,17 @@ window.bsxEffects = [
     "component": "alert",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "scale",
-    "kind": "feedback-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "apply alert pulse border to inline feedback and validation summaries in a Bootstrap 5 alert pattern",
     "bestFor": "inline feedback and validation summaries",
     "avoidFor": "decorative content",
     "reducedMotion": "opacity-only near-instant state",
@@ -680,10 +747,11 @@ window.bsxEffects = [
     "component": "alert",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "opacity",
-    "kind": "feedback-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "success",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "opacity",
       "box-shadow",
@@ -694,6 +762,8 @@ window.bsxEffects = [
     "bootstrapStates": [
       ".bsx-is-success"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply alert success glow to inline feedback and validation summaries in a Bootstrap 5 alert pattern",
     "bestFor": "inline feedback and validation summaries",
     "avoidFor": "decorative content",
     "reducedMotion": "near-instant opacity or color state",
@@ -709,18 +779,17 @@ window.bsxEffects = [
     "component": "alert",
     "requiresJs": true,
     "runtimeBehavior": "delayed alert dismissal",
+    "runtimeAction": null,
     "motion": "color + opacity",
-    "kind": "feedback-state",
-    "density": "medium",
-    "risk": "medium",
+    "kind": "exit",
+    "density": "normal-ui",
+    "risk": "requires-js",
     "cssProperties": [
-      "opacity",
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "apply alert dismissible exit to inline feedback and validation summaries in a Bootstrap 5 alert pattern",
     "bestFor": "inline feedback and validation summaries",
     "avoidFor": "decorative content",
     "reducedMotion": "opacity-only near-instant state",
@@ -736,17 +805,17 @@ window.bsxEffects = [
     "component": "button",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "scale",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "apply button press to direct interaction feedback in a Bootstrap 5 button pattern",
     "bestFor": "direct interaction feedback",
     "avoidFor": "large continuously animated areas",
     "reducedMotion": "opacity-only near-instant state",
@@ -762,17 +831,17 @@ window.bsxEffects = [
     "component": "button",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "translate",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "apply button hover lift to direct interaction feedback in a Bootstrap 5 button pattern",
     "bestFor": "direct interaction feedback",
     "avoidFor": "large continuously animated areas",
     "reducedMotion": "opacity-only near-instant state",
@@ -788,18 +857,18 @@ window.bsxEffects = [
     "component": "button",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "opacity",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "opacity",
       "box-shadow"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "apply button hover glow to direct interaction feedback in a Bootstrap 5 button pattern",
     "bestFor": "direct interaction feedback",
     "avoidFor": "large continuously animated areas",
     "reducedMotion": "near-instant opacity or color state",
@@ -815,10 +884,11 @@ window.bsxEffects = [
     "component": "button",
     "requiresJs": true,
     "runtimeBehavior": "button loading and success state",
+    "runtimeAction": "button-state",
     "motion": "opacity + rotate",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "loading",
+    "density": "normal-ui",
+    "risk": "requires-js",
     "cssProperties": [
       "opacity"
     ],
@@ -826,6 +896,8 @@ window.bsxEffects = [
       "[aria-busy]",
       ".bsx-is-loading"
     ],
+    "requiresMarkupChange": true,
+    "scenario": "apply button loading spinner to direct interaction feedback in a Bootstrap 5 button pattern",
     "bestFor": "direct interaction feedback",
     "avoidFor": "large continuously animated areas",
     "reducedMotion": "opacity-only near-instant state",
@@ -841,10 +913,11 @@ window.bsxEffects = [
     "component": "button",
     "requiresJs": true,
     "runtimeBehavior": "button loading and success state",
+    "runtimeAction": "button-state",
     "motion": "opacity",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "loading",
+    "density": "normal-ui",
+    "risk": "requires-js",
     "cssProperties": [
       "opacity"
     ],
@@ -852,6 +925,8 @@ window.bsxEffects = [
       "[aria-busy]",
       ".bsx-is-loading"
     ],
+    "requiresMarkupChange": true,
+    "scenario": "apply button loading dots to direct interaction feedback in a Bootstrap 5 button pattern",
     "bestFor": "direct interaction feedback",
     "avoidFor": "large continuously animated areas",
     "reducedMotion": "opacity-only near-instant state",
@@ -867,13 +942,14 @@ window.bsxEffects = [
     "component": "button",
     "requiresJs": true,
     "runtimeBehavior": "button loading and success state",
+    "runtimeAction": "button-state",
     "motion": "scale",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "success",
+    "density": "normal-ui",
+    "risk": "requires-js",
     "cssProperties": [
-      "opacity",
       "transform",
+      "opacity",
       "background-color",
       "border-color",
       "color"
@@ -881,6 +957,8 @@ window.bsxEffects = [
     "bootstrapStates": [
       ".bsx-is-success"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply button success pop to direct interaction feedback in a Bootstrap 5 button pattern",
     "bestFor": "direct interaction feedback",
     "avoidFor": "large continuously animated areas",
     "reducedMotion": "opacity-only near-instant state",
@@ -896,17 +974,17 @@ window.bsxEffects = [
     "component": "button",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "translate",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": true,
+    "scenario": "apply button icon slide to direct interaction feedback in a Bootstrap 5 button pattern",
     "bestFor": "direct interaction feedback",
     "avoidFor": "large continuously animated areas",
     "reducedMotion": "opacity-only near-instant state",
@@ -922,18 +1000,18 @@ window.bsxEffects = [
     "component": "button",
     "requiresJs": true,
     "runtimeBehavior": "pointer ripple",
+    "runtimeAction": "button-state",
     "motion": "color + opacity",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "normal-ui",
+    "risk": "requires-js",
     "cssProperties": [
       "opacity",
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": true,
+    "scenario": "apply button ripple lite to direct interaction feedback in a Bootstrap 5 button pattern",
     "bestFor": "direct interaction feedback",
     "avoidFor": "large continuously animated areas",
     "reducedMotion": "opacity-only near-instant state",
@@ -949,19 +1027,23 @@ window.bsxEffects = [
     "component": "form",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "color + opacity",
-    "kind": "form-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "opacity",
-      "box-shadow"
+      "box-shadow",
+      "outline-color"
     ],
     "bootstrapStates": [
       ".is-valid",
       ".is-invalid",
       ":focus-within"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply form focus ring to focus and validation feedback in a Bootstrap 5 form pattern",
     "bestFor": "focus and validation feedback",
     "avoidFor": "replacing native validation semantics",
     "reducedMotion": "opacity-only near-instant state",
@@ -977,9 +1059,10 @@ window.bsxEffects = [
     "component": "form",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "shake",
-    "kind": "form-state",
-    "density": "medium",
+    "kind": "validation",
+    "density": "normal-ui",
     "risk": "medium",
     "cssProperties": [
       "opacity",
@@ -991,6 +1074,8 @@ window.bsxEffects = [
       ":focus-within",
       ".bsx-is-error"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply form invalid shake to focus and validation feedback in a Bootstrap 5 form pattern",
     "bestFor": "focus and validation feedback",
     "avoidFor": "replacing native validation semantics",
     "reducedMotion": "opacity-only near-instant state",
@@ -1006,10 +1091,11 @@ window.bsxEffects = [
     "component": "form",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "color + opacity",
-    "kind": "form-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "success",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "opacity",
       "transform"
@@ -1019,6 +1105,8 @@ window.bsxEffects = [
       ".is-invalid",
       ":focus-within"
     ],
+    "requiresMarkupChange": true,
+    "scenario": "apply form valid check to focus and validation feedback in a Bootstrap 5 form pattern",
     "bestFor": "focus and validation feedback",
     "avoidFor": "replacing native validation semantics",
     "reducedMotion": "opacity-only near-instant state",
@@ -1034,10 +1122,11 @@ window.bsxEffects = [
     "component": "form",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "translate",
-    "kind": "form-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "entry",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "transform"
     ],
@@ -1046,6 +1135,8 @@ window.bsxEffects = [
       ".is-invalid",
       ":focus-within"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply form help text reveal to focus and validation feedback in a Bootstrap 5 form pattern",
     "bestFor": "focus and validation feedback",
     "avoidFor": "replacing native validation semantics",
     "reducedMotion": "opacity-only near-instant state",
@@ -1061,9 +1152,10 @@ window.bsxEffects = [
     "component": "form",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "translate",
-    "kind": "form-state",
-    "density": "medium",
+    "kind": "state",
+    "density": "normal-ui",
     "risk": "medium",
     "cssProperties": [
       "transform",
@@ -1078,6 +1170,8 @@ window.bsxEffects = [
       ":focus-within",
       ".bsx-is-error"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply form error text slide to focus and validation feedback in a Bootstrap 5 form pattern",
     "bestFor": "focus and validation feedback",
     "avoidFor": "replacing native validation semantics",
     "reducedMotion": "opacity-only near-instant state",
@@ -1093,10 +1187,11 @@ window.bsxEffects = [
     "component": "form",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "opacity",
-    "kind": "form-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "opacity"
     ],
@@ -1105,6 +1200,8 @@ window.bsxEffects = [
       ".is-invalid",
       ":focus-within"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply form switch toggle soft to focus and validation feedback in a Bootstrap 5 form pattern",
     "bestFor": "focus and validation feedback",
     "avoidFor": "replacing native validation semantics",
     "reducedMotion": "opacity-only near-instant state",
@@ -1120,10 +1217,11 @@ window.bsxEffects = [
     "component": "form",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "scale",
-    "kind": "form-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "success",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "transform"
     ],
@@ -1132,6 +1230,8 @@ window.bsxEffects = [
       ".is-invalid",
       ":focus-within"
     ],
+    "requiresMarkupChange": true,
+    "scenario": "apply form checkbox pop to focus and validation feedback in a Bootstrap 5 form pattern",
     "bestFor": "focus and validation feedback",
     "avoidFor": "replacing native validation semantics",
     "reducedMotion": "opacity-only near-instant state",
@@ -1147,10 +1247,11 @@ window.bsxEffects = [
     "component": "form",
     "requiresJs": true,
     "runtimeBehavior": "file drag state",
+    "runtimeAction": null,
     "motion": "color + opacity",
-    "kind": "form-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "normal-ui",
+    "risk": "requires-js",
     "cssProperties": [
       "opacity",
       "transform"
@@ -1160,6 +1261,8 @@ window.bsxEffects = [
       ".is-invalid",
       ":focus-within"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply form file drop highlight to focus and validation feedback in a Bootstrap 5 form pattern",
     "bestFor": "focus and validation feedback",
     "avoidFor": "replacing native validation semantics",
     "reducedMotion": "opacity-only near-instant state",
@@ -1175,17 +1278,17 @@ window.bsxEffects = [
     "component": "card",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "translate",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "apply card hover lift to interactive content collections in a Bootstrap 5 card pattern",
     "bestFor": "interactive content collections",
     "avoidFor": "non-interactive dense tables",
     "reducedMotion": "opacity-only near-instant state",
@@ -1201,17 +1304,17 @@ window.bsxEffects = [
     "component": "card",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "scale",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "apply card hover scale to interactive content collections in a Bootstrap 5 card pattern",
     "bestFor": "interactive content collections",
     "avoidFor": "non-interactive dense tables",
     "reducedMotion": "opacity-only near-instant state",
@@ -1227,17 +1330,17 @@ window.bsxEffects = [
     "component": "card",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "color + opacity",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "box-shadow"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "apply card hover shadow to interactive content collections in a Bootstrap 5 card pattern",
     "bestFor": "interactive content collections",
     "avoidFor": "non-interactive dense tables",
     "reducedMotion": "near-instant opacity or color state",
@@ -1253,17 +1356,17 @@ window.bsxEffects = [
     "component": "card",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "scale",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "normal-ui",
+    "risk": "visual-diff",
     "cssProperties": [
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "apply card image zoom to interactive content collections in a Bootstrap 5 card pattern",
     "bestFor": "interactive content collections",
     "avoidFor": "non-interactive dense tables",
     "reducedMotion": "opacity-only near-instant state",
@@ -1279,10 +1382,11 @@ window.bsxEffects = [
     "component": "card",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "opacity",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "loading",
+    "density": "normal-ui",
+    "risk": "medium",
     "cssProperties": [
       "transform",
       "opacity"
@@ -1291,6 +1395,8 @@ window.bsxEffects = [
       "[aria-busy]",
       ".bsx-is-loading"
     ],
+    "requiresMarkupChange": true,
+    "scenario": "apply card image fade overlay to interactive content collections in a Bootstrap 5 card pattern",
     "bestFor": "interactive content collections",
     "avoidFor": "non-interactive dense tables",
     "reducedMotion": "near-instant opacity or color state",
@@ -1306,17 +1412,17 @@ window.bsxEffects = [
     "component": "card",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "translate",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "normal-ui",
+    "risk": "visual-diff",
     "cssProperties": [
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": true,
+    "scenario": "apply card stagger list to interactive content collections in a Bootstrap 5 card pattern",
     "bestFor": "interactive content collections",
     "avoidFor": "non-interactive dense tables",
     "reducedMotion": "opacity-only near-instant state",
@@ -1332,10 +1438,11 @@ window.bsxEffects = [
     "component": "tabs",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "opacity",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "navigation",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "opacity"
     ],
@@ -1343,6 +1450,8 @@ window.bsxEffects = [
       ".active",
       "[aria-current]"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply tabs fade to section navigation and tab state in a Bootstrap 5 tabs pattern",
     "bestFor": "section navigation and tab state",
     "avoidFor": "rapidly auto-rotating content",
     "reducedMotion": "near-instant opacity or color state",
@@ -1358,17 +1467,21 @@ window.bsxEffects = [
     "component": "tabs",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "translate",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "navigation",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
-      "transform"
+      "transform",
+      "text-decoration-color"
     ],
     "bootstrapStates": [
       ".active",
       "[aria-current]"
     ],
+    "requiresMarkupChange": true,
+    "scenario": "apply tabs underline slide to section navigation and tab state in a Bootstrap 5 tabs pattern",
     "bestFor": "section navigation and tab state",
     "avoidFor": "rapidly auto-rotating content",
     "reducedMotion": "opacity-only near-instant state",
@@ -1384,10 +1497,11 @@ window.bsxEffects = [
     "component": "tabs",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "scale",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "navigation",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "transform",
       "box-shadow",
@@ -1399,6 +1513,8 @@ window.bsxEffects = [
       ".active",
       "[aria-current]"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply tabs pill active pop to section navigation and tab state in a Bootstrap 5 tabs pattern",
     "bestFor": "section navigation and tab state",
     "avoidFor": "rapidly auto-rotating content",
     "reducedMotion": "opacity-only near-instant state",
@@ -1414,17 +1530,18 @@ window.bsxEffects = [
     "component": "navbar",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "translate",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "navigation",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
-      "transform"
+      "transform",
+      "text-decoration-color"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": true,
+    "scenario": "apply nav link hover underline to section navigation and tab state in a Bootstrap 5 navbar pattern",
     "bestFor": "section navigation and tab state",
     "avoidFor": "rapidly auto-rotating content",
     "reducedMotion": "opacity-only near-instant state",
@@ -1440,10 +1557,11 @@ window.bsxEffects = [
     "component": "sidebar",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "translate",
-    "kind": "component-state",
-    "density": "high",
-    "risk": "low",
+    "kind": "selection",
+    "density": "dense-admin",
+    "risk": "safe",
     "cssProperties": [
       "transform",
       "box-shadow",
@@ -1451,10 +1569,9 @@ window.bsxEffects = [
       "border-color",
       "color"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": true,
+    "scenario": "apply nav sidebar active marker to section navigation and tab state in a Bootstrap 5 sidebar pattern",
     "bestFor": "section navigation and tab state",
     "avoidFor": "rapidly auto-rotating content",
     "reducedMotion": "opacity-only near-instant state",
@@ -1470,10 +1587,11 @@ window.bsxEffects = [
     "component": "accordion",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "rotate",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "opacity",
       "transform"
@@ -1482,6 +1600,8 @@ window.bsxEffects = [
       ".collapse.show",
       "[aria-expanded]"
     ],
+    "requiresMarkupChange": true,
+    "scenario": "apply accordion icon rotate to disclosure controls in a Bootstrap 5 accordion pattern",
     "bestFor": "disclosure controls",
     "avoidFor": "content that must remain continuously visible",
     "reducedMotion": "opacity-only near-instant state",
@@ -1497,10 +1617,11 @@ window.bsxEffects = [
     "component": "accordion",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "rotate",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "opacity",
       "transform"
@@ -1509,6 +1630,8 @@ window.bsxEffects = [
       ".collapse.show",
       "[aria-expanded]"
     ],
+    "requiresMarkupChange": true,
+    "scenario": "apply accordion icon plus minus to disclosure controls in a Bootstrap 5 accordion pattern",
     "bestFor": "disclosure controls",
     "avoidFor": "content that must remain continuously visible",
     "reducedMotion": "opacity-only near-instant state",
@@ -1524,10 +1647,11 @@ window.bsxEffects = [
     "component": "accordion",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "opacity",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "exit",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "opacity"
     ],
@@ -1535,6 +1659,8 @@ window.bsxEffects = [
       ".collapse.show",
       "[aria-expanded]"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply accordion body fade to disclosure controls in a Bootstrap 5 accordion pattern",
     "bestFor": "disclosure controls",
     "avoidFor": "content that must remain continuously visible",
     "reducedMotion": "near-instant opacity or color state",
@@ -1550,17 +1676,21 @@ window.bsxEffects = [
     "component": "accordion",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "opacity",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "exit",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
+      "transform",
       "opacity"
     ],
     "bootstrapStates": [
       ".collapse.show",
       "[aria-expanded]"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply collapse soft to disclosure controls in a Bootstrap 5 accordion pattern",
     "bestFor": "disclosure controls",
     "avoidFor": "content that must remain continuously visible",
     "reducedMotion": "opacity-only near-instant state",
@@ -1576,18 +1706,20 @@ window.bsxEffects = [
     "component": "accordion",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "color + opacity",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "exit",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
-      "opacity",
       "transform"
     ],
     "bootstrapStates": [
       ".collapse.show",
       "[aria-expanded]"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply collapse height smooth to disclosure controls in a Bootstrap 5 accordion pattern",
     "bestFor": "disclosure controls",
     "avoidFor": "content that must remain continuously visible",
     "reducedMotion": "opacity-only near-instant state",
@@ -1603,17 +1735,17 @@ window.bsxEffects = [
     "component": "navbar",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "translate",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "navigation",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": true,
+    "scenario": "apply navbar link hover line to application navigation in a Bootstrap 5 navbar pattern",
     "bestFor": "application navigation",
     "avoidFor": "small inline controls",
     "reducedMotion": "opacity-only near-instant state",
@@ -1629,18 +1761,18 @@ window.bsxEffects = [
     "component": "navbar",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "opacity",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "navigation",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "transform",
       "opacity"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": true,
+    "scenario": "apply navbar mobile collapse soft to application navigation in a Bootstrap 5 navbar pattern",
     "bestFor": "application navigation",
     "avoidFor": "small inline controls",
     "reducedMotion": "opacity-only near-instant state",
@@ -1656,17 +1788,17 @@ window.bsxEffects = [
     "component": "navbar",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "rotate",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "navigation",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": true,
+    "scenario": "apply navbar toggler morph to application navigation in a Bootstrap 5 navbar pattern",
     "bestFor": "application navigation",
     "avoidFor": "small inline controls",
     "reducedMotion": "opacity-only near-instant state",
@@ -1682,17 +1814,17 @@ window.bsxEffects = [
     "component": "sidebar",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "translate",
-    "kind": "component-state",
-    "density": "high",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "dense-admin",
+    "risk": "safe",
     "cssProperties": [
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": true,
+    "scenario": "apply sidebar slide in to application navigation in a Bootstrap 5 sidebar pattern",
     "bestFor": "application navigation",
     "avoidFor": "small inline controls",
     "reducedMotion": "opacity-only near-instant state",
@@ -1708,10 +1840,11 @@ window.bsxEffects = [
     "component": "sidebar",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "translate",
-    "kind": "component-state",
-    "density": "high",
-    "risk": "low",
+    "kind": "selection",
+    "density": "dense-admin",
+    "risk": "safe",
     "cssProperties": [
       "transform",
       "box-shadow",
@@ -1719,10 +1852,9 @@ window.bsxEffects = [
       "border-color",
       "color"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": true,
+    "scenario": "apply sidebar item active marker to application navigation in a Bootstrap 5 sidebar pattern",
     "bestFor": "application navigation",
     "avoidFor": "small inline controls",
     "reducedMotion": "opacity-only near-instant state",
@@ -1738,17 +1870,17 @@ window.bsxEffects = [
     "component": "badge",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "scale",
-    "kind": "feedback-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "entry",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "apply badge pop to status and metric updates in a Bootstrap 5 badge pattern",
     "bestFor": "status and metric updates",
     "avoidFor": "long text content",
     "reducedMotion": "opacity-only near-instant state",
@@ -1764,17 +1896,17 @@ window.bsxEffects = [
     "component": "badge",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "scale",
-    "kind": "feedback-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "apply badge notification ping to status and metric updates in a Bootstrap 5 badge pattern",
     "bestFor": "status and metric updates",
     "avoidFor": "long text content",
     "reducedMotion": "opacity-only near-instant state",
@@ -1790,20 +1922,20 @@ window.bsxEffects = [
     "component": "badge",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "scale",
-    "kind": "feedback-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "transform",
       "background-color",
       "border-color",
       "color"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "apply badge status pulse to status and metric updates in a Bootstrap 5 badge pattern",
     "bestFor": "status and metric updates",
     "avoidFor": "long text content",
     "reducedMotion": "opacity-only near-instant state",
@@ -1819,17 +1951,17 @@ window.bsxEffects = [
     "component": "counter",
     "requiresJs": true,
     "runtimeBehavior": "counter update",
+    "runtimeAction": "counter",
     "motion": "scale",
-    "kind": "feedback-state",
-    "density": "high",
-    "risk": "low",
+    "kind": "data-change",
+    "density": "dense-admin",
+    "risk": "requires-js",
     "cssProperties": [
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": true,
+    "scenario": "apply counter bump to status and metric updates in a Bootstrap 5 counter pattern",
     "bestFor": "status and metric updates",
     "avoidFor": "long text content",
     "reducedMotion": "opacity-only near-instant state",
@@ -1845,18 +1977,18 @@ window.bsxEffects = [
     "component": "counter",
     "requiresJs": true,
     "runtimeBehavior": "counter update",
+    "runtimeAction": "counter",
     "motion": "color + opacity",
-    "kind": "feedback-state",
-    "density": "high",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "dense-admin",
+    "risk": "requires-js",
     "cssProperties": [
       "opacity",
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "apply metric card update to status and metric updates in a Bootstrap 5 counter pattern",
     "bestFor": "status and metric updates",
     "avoidFor": "long text content",
     "reducedMotion": "opacity-only near-instant state",
@@ -1872,18 +2004,18 @@ window.bsxEffects = [
     "component": "table",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "color + opacity",
-    "kind": "component-state",
-    "density": "high",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "dense-admin",
+    "risk": "safe",
     "cssProperties": [
       "opacity",
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "apply table row hover to row state and collection changes in a Bootstrap 5 table pattern",
     "bestFor": "row state and collection changes",
     "avoidFor": "large simultaneous batches",
     "reducedMotion": "opacity-only near-instant state",
@@ -1899,17 +2031,17 @@ window.bsxEffects = [
     "component": "table",
     "requiresJs": true,
     "runtimeBehavior": "table row mutation",
+    "runtimeAction": "table-row",
     "motion": "translate",
-    "kind": "component-state",
-    "density": "high",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "dense-admin",
+    "risk": "requires-js",
     "cssProperties": [
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "apply table row insert to row state and collection changes in a Bootstrap 5 table pattern",
     "bestFor": "row state and collection changes",
     "avoidFor": "large simultaneous batches",
     "reducedMotion": "opacity-only near-instant state",
@@ -1925,17 +2057,17 @@ window.bsxEffects = [
     "component": "table",
     "requiresJs": true,
     "runtimeBehavior": "table row mutation",
+    "runtimeAction": "table-row",
     "motion": "translate",
-    "kind": "component-state",
-    "density": "high",
-    "risk": "low",
+    "kind": "exit",
+    "density": "dense-admin",
+    "risk": "requires-js",
     "cssProperties": [
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "apply table row remove to row state and collection changes in a Bootstrap 5 table pattern",
     "bestFor": "row state and collection changes",
     "avoidFor": "large simultaneous batches",
     "reducedMotion": "opacity-only near-instant state",
@@ -1951,17 +2083,17 @@ window.bsxEffects = [
     "component": "table",
     "requiresJs": true,
     "runtimeBehavior": "table row mutation",
+    "runtimeAction": "table-row",
     "motion": "opacity",
-    "kind": "component-state",
-    "density": "high",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "dense-admin",
+    "risk": "requires-js",
     "cssProperties": [
       "opacity"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "apply table row update flash to row state and collection changes in a Bootstrap 5 table pattern",
     "bestFor": "row state and collection changes",
     "avoidFor": "large simultaneous batches",
     "reducedMotion": "opacity-only near-instant state",
@@ -1977,17 +2109,17 @@ window.bsxEffects = [
     "component": "list",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "translate",
-    "kind": "component-state",
-    "density": "high",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "dense-admin",
+    "risk": "visual-diff",
     "cssProperties": [
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": true,
+    "scenario": "apply list item stagger to row state and collection changes in a Bootstrap 5 list pattern",
     "bestFor": "row state and collection changes",
     "avoidFor": "large simultaneous batches",
     "reducedMotion": "opacity-only near-instant state",
@@ -2003,10 +2135,11 @@ window.bsxEffects = [
     "component": "list",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "translate",
-    "kind": "component-state",
-    "density": "high",
-    "risk": "low",
+    "kind": "selection",
+    "density": "dense-admin",
+    "risk": "safe",
     "cssProperties": [
       "transform",
       "box-shadow",
@@ -2014,10 +2147,9 @@ window.bsxEffects = [
       "border-color",
       "color"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": true,
+    "scenario": "apply list group active marker to row state and collection changes in a Bootstrap 5 list pattern",
     "bestFor": "row state and collection changes",
     "avoidFor": "large simultaneous batches",
     "reducedMotion": "opacity-only near-instant state",
@@ -2033,10 +2165,11 @@ window.bsxEffects = [
     "component": "skeleton",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "opacity",
-    "kind": "loading-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "loading",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "opacity"
     ],
@@ -2044,6 +2177,8 @@ window.bsxEffects = [
       "[aria-busy]",
       ".bsx-is-loading"
     ],
+    "requiresMarkupChange": true,
+    "scenario": "apply skeleton shimmer to short loading states in a Bootstrap 5 skeleton pattern",
     "bestFor": "short loading states",
     "avoidFor": "unknown or very long waits without status",
     "reducedMotion": "opacity-only near-instant state",
@@ -2059,10 +2194,11 @@ window.bsxEffects = [
     "component": "skeleton",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "scale + opacity",
-    "kind": "loading-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "loading",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "opacity",
       "transform"
@@ -2071,6 +2207,8 @@ window.bsxEffects = [
       "[aria-busy]",
       ".bsx-is-loading"
     ],
+    "requiresMarkupChange": true,
+    "scenario": "apply skeleton pulse to short loading states in a Bootstrap 5 skeleton pattern",
     "bestFor": "short loading states",
     "avoidFor": "unknown or very long waits without status",
     "reducedMotion": "opacity-only near-instant state",
@@ -2086,10 +2224,11 @@ window.bsxEffects = [
     "component": "skeleton",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "opacity",
-    "kind": "loading-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "loading",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "opacity"
     ],
@@ -2097,6 +2236,8 @@ window.bsxEffects = [
       "[aria-busy]",
       ".bsx-is-loading"
     ],
+    "requiresMarkupChange": true,
+    "scenario": "apply skeleton card to short loading states in a Bootstrap 5 skeleton pattern",
     "bestFor": "short loading states",
     "avoidFor": "unknown or very long waits without status",
     "reducedMotion": "opacity-only near-instant state",
@@ -2112,10 +2253,11 @@ window.bsxEffects = [
     "component": "skeleton",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "opacity",
-    "kind": "loading-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "loading",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "opacity"
     ],
@@ -2123,6 +2265,8 @@ window.bsxEffects = [
       "[aria-busy]",
       ".bsx-is-loading"
     ],
+    "requiresMarkupChange": true,
+    "scenario": "apply skeleton table to short loading states in a Bootstrap 5 skeleton pattern",
     "bestFor": "short loading states",
     "avoidFor": "unknown or very long waits without status",
     "reducedMotion": "opacity-only near-instant state",
@@ -2138,18 +2282,18 @@ window.bsxEffects = [
     "component": "loading state",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "color + opacity",
-    "kind": "loading-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "loading",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "opacity",
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": true,
+    "scenario": "apply loader dots to short loading states in a Bootstrap 5 loading pattern",
     "bestFor": "short loading states",
     "avoidFor": "unknown or very long waits without status",
     "reducedMotion": "opacity-only near-instant state",
@@ -2165,10 +2309,11 @@ window.bsxEffects = [
     "component": "loading state",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "opacity",
-    "kind": "loading-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "loading",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "opacity"
     ],
@@ -2176,6 +2321,8 @@ window.bsxEffects = [
       "[aria-busy]",
       ".bsx-is-loading"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply page loading fade to short loading states in a Bootstrap 5 loading pattern",
     "bestFor": "short loading states",
     "avoidFor": "unknown or very long waits without status",
     "reducedMotion": "near-instant opacity or color state",
@@ -2191,16 +2338,19 @@ window.bsxEffects = [
     "component": "modal",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "scale",
-    "kind": "component-state",
-    "density": "low",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "marketing",
+    "risk": "safe",
     "cssProperties": [
       "transform"
     ],
     "bootstrapStates": [
       ".show"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply modal scale sm to dialogs and confirmations in a Bootstrap 5 modal pattern",
     "bestFor": "dialogs and confirmations",
     "avoidFor": "dense repeated workflows",
     "reducedMotion": "opacity-only near-instant state",
@@ -2216,16 +2366,19 @@ window.bsxEffects = [
     "component": "modal",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "scale",
-    "kind": "component-state",
-    "density": "low",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "marketing",
+    "risk": "safe",
     "cssProperties": [
       "transform"
     ],
     "bootstrapStates": [
       ".show"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply modal scale lg to dialogs and confirmations in a Bootstrap 5 modal pattern",
     "bestFor": "dialogs and confirmations",
     "avoidFor": "dense repeated workflows",
     "reducedMotion": "opacity-only near-instant state",
@@ -2241,16 +2394,19 @@ window.bsxEffects = [
     "component": "modal",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "translate",
-    "kind": "component-state",
-    "density": "low",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "marketing",
+    "risk": "safe",
     "cssProperties": [
       "transform"
     ],
     "bootstrapStates": [
       ".show"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply modal slide down to dialogs and confirmations in a Bootstrap 5 modal pattern",
     "bestFor": "dialogs and confirmations",
     "avoidFor": "dense repeated workflows",
     "reducedMotion": "opacity-only near-instant state",
@@ -2266,16 +2422,19 @@ window.bsxEffects = [
     "component": "modal",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "translate",
-    "kind": "component-state",
-    "density": "low",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "marketing",
+    "risk": "safe",
     "cssProperties": [
       "transform"
     ],
     "bootstrapStates": [
       ".show"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply modal slide left to dialogs and confirmations in a Bootstrap 5 modal pattern",
     "bestFor": "dialogs and confirmations",
     "avoidFor": "dense repeated workflows",
     "reducedMotion": "opacity-only near-instant state",
@@ -2291,16 +2450,19 @@ window.bsxEffects = [
     "component": "modal",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "translate",
-    "kind": "component-state",
-    "density": "low",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "marketing",
+    "risk": "safe",
     "cssProperties": [
       "transform"
     ],
     "bootstrapStates": [
       ".show"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply modal slide right to dialogs and confirmations in a Bootstrap 5 modal pattern",
     "bestFor": "dialogs and confirmations",
     "avoidFor": "dense repeated workflows",
     "reducedMotion": "opacity-only near-instant state",
@@ -2316,16 +2478,19 @@ window.bsxEffects = [
     "component": "modal",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "opacity",
-    "kind": "component-state",
-    "density": "low",
-    "risk": "low",
+    "kind": "exit",
+    "density": "marketing",
+    "risk": "safe",
     "cssProperties": [
       "opacity"
     ],
     "bootstrapStates": [
       ".show"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply modal fade soft to dialogs and confirmations in a Bootstrap 5 modal pattern",
     "bestFor": "dialogs and confirmations",
     "avoidFor": "dense repeated workflows",
     "reducedMotion": "near-instant opacity or color state",
@@ -2341,10 +2506,11 @@ window.bsxEffects = [
     "component": "modal",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "scale + opacity",
-    "kind": "component-state",
-    "density": "low",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "marketing",
+    "risk": "medium",
     "cssProperties": [
       "opacity",
       "transform",
@@ -2353,6 +2519,8 @@ window.bsxEffects = [
     "bootstrapStates": [
       ".show"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply modal zoom blur to dialogs and confirmations in a Bootstrap 5 modal pattern",
     "bestFor": "dialogs and confirmations",
     "avoidFor": "dense repeated workflows",
     "reducedMotion": "near-instant opacity or color state",
@@ -2368,16 +2536,19 @@ window.bsxEffects = [
     "component": "modal",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "opacity",
-    "kind": "component-state",
-    "density": "low",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "marketing",
+    "risk": "visual-diff",
     "cssProperties": [
       "opacity"
     ],
     "bootstrapStates": [
       ".show"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply modal fullscreen soft to dialogs and confirmations in a Bootstrap 5 modal pattern",
     "bestFor": "dialogs and confirmations",
     "avoidFor": "dense repeated workflows",
     "reducedMotion": "opacity-only near-instant state",
@@ -2393,16 +2564,19 @@ window.bsxEffects = [
     "component": "modal",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "scale",
-    "kind": "component-state",
-    "density": "low",
-    "risk": "low",
+    "kind": "entry",
+    "density": "marketing",
+    "risk": "safe",
     "cssProperties": [
       "transform"
     ],
     "bootstrapStates": [
       ".show"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply modal stack pop to dialogs and confirmations in a Bootstrap 5 modal pattern",
     "bestFor": "dialogs and confirmations",
     "avoidFor": "dense repeated workflows",
     "reducedMotion": "opacity-only near-instant state",
@@ -2418,16 +2592,19 @@ window.bsxEffects = [
     "component": "modal",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "translate",
-    "kind": "component-state",
-    "density": "low",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "marketing",
+    "risk": "visual-diff",
     "cssProperties": [
       "transform"
     ],
     "bootstrapStates": [
       ".show"
     ],
+    "requiresMarkupChange": true,
+    "scenario": "apply modal content stagger to dialogs and confirmations in a Bootstrap 5 modal pattern",
     "bestFor": "dialogs and confirmations",
     "avoidFor": "dense repeated workflows",
     "reducedMotion": "opacity-only near-instant state",
@@ -2443,16 +2620,19 @@ window.bsxEffects = [
     "component": "dropdown",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "translate",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "navigation",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "transform"
     ],
     "bootstrapStates": [
       ".dropdown-menu.show"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply dropdown slide up to menus with clear visual hierarchy in a Bootstrap 5 dropdown pattern",
     "bestFor": "menus with clear visual hierarchy",
     "avoidFor": "menus requiring instant state changes",
     "reducedMotion": "opacity-only near-instant state",
@@ -2468,16 +2648,19 @@ window.bsxEffects = [
     "component": "dropdown",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "opacity",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "navigation",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "opacity"
     ],
     "bootstrapStates": [
       ".dropdown-menu.show"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply dropdown fade to menus with clear visual hierarchy in a Bootstrap 5 dropdown pattern",
     "bestFor": "menus with clear visual hierarchy",
     "avoidFor": "menus requiring instant state changes",
     "reducedMotion": "near-instant opacity or color state",
@@ -2493,10 +2676,11 @@ window.bsxEffects = [
     "component": "dropdown",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "color + opacity",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "navigation",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "opacity",
       "transform"
@@ -2504,6 +2688,8 @@ window.bsxEffects = [
     "bootstrapStates": [
       ".dropdown-menu.show"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply dropdown origin top to menus with clear visual hierarchy in a Bootstrap 5 dropdown pattern",
     "bestFor": "menus with clear visual hierarchy",
     "avoidFor": "menus requiring instant state changes",
     "reducedMotion": "opacity-only near-instant state",
@@ -2519,10 +2705,11 @@ window.bsxEffects = [
     "component": "dropdown",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "color + opacity",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "navigation",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "opacity",
       "transform"
@@ -2530,6 +2717,8 @@ window.bsxEffects = [
     "bootstrapStates": [
       ".dropdown-menu.show"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply dropdown origin bottom to menus with clear visual hierarchy in a Bootstrap 5 dropdown pattern",
     "bestFor": "menus with clear visual hierarchy",
     "avoidFor": "menus requiring instant state changes",
     "reducedMotion": "opacity-only near-instant state",
@@ -2545,10 +2734,11 @@ window.bsxEffects = [
     "component": "dropdown",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "opacity",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "navigation",
+    "density": "normal-ui",
+    "risk": "medium",
     "cssProperties": [
       "opacity",
       "filter"
@@ -2556,6 +2746,8 @@ window.bsxEffects = [
     "bootstrapStates": [
       ".dropdown-menu.show"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply dropdown blur to menus with clear visual hierarchy in a Bootstrap 5 dropdown pattern",
     "bestFor": "menus with clear visual hierarchy",
     "avoidFor": "menus requiring instant state changes",
     "reducedMotion": "near-instant opacity or color state",
@@ -2571,10 +2763,11 @@ window.bsxEffects = [
     "component": "dropdown",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "color + opacity",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "navigation",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "opacity",
       "transform"
@@ -2582,6 +2775,8 @@ window.bsxEffects = [
     "bootstrapStates": [
       ".dropdown-menu.show"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply dropdown item hover bg to menus with clear visual hierarchy in a Bootstrap 5 dropdown pattern",
     "bestFor": "menus with clear visual hierarchy",
     "avoidFor": "menus requiring instant state changes",
     "reducedMotion": "opacity-only near-instant state",
@@ -2597,10 +2792,11 @@ window.bsxEffects = [
     "component": "dropdown",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "scale",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "navigation",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "transform",
       "box-shadow",
@@ -2611,6 +2807,8 @@ window.bsxEffects = [
     "bootstrapStates": [
       ".dropdown-menu.show"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply dropdown item active pop to menus with clear visual hierarchy in a Bootstrap 5 dropdown pattern",
     "bestFor": "menus with clear visual hierarchy",
     "avoidFor": "menus requiring instant state changes",
     "reducedMotion": "opacity-only near-instant state",
@@ -2626,10 +2824,11 @@ window.bsxEffects = [
     "component": "dropdown",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "color + opacity",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "navigation",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "opacity",
       "transform"
@@ -2637,6 +2836,8 @@ window.bsxEffects = [
     "bootstrapStates": [
       ".dropdown-menu.show"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply dropdown user menu to menus with clear visual hierarchy in a Bootstrap 5 dropdown pattern",
     "bestFor": "menus with clear visual hierarchy",
     "avoidFor": "menus requiring instant state changes",
     "reducedMotion": "opacity-only near-instant state",
@@ -2652,16 +2853,19 @@ window.bsxEffects = [
     "component": "offcanvas",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "translate",
-    "kind": "component-state",
-    "density": "low",
-    "risk": "low",
+    "kind": "navigation",
+    "density": "marketing",
+    "risk": "safe",
     "cssProperties": [
       "transform"
     ],
     "bootstrapStates": [
       ".show"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply offcanvas slide fast to navigation and mobile panels in a Bootstrap 5 offcanvas pattern",
     "bestFor": "navigation and mobile panels",
     "avoidFor": "permanent desktop navigation",
     "reducedMotion": "opacity-only near-instant state",
@@ -2677,16 +2881,19 @@ window.bsxEffects = [
     "component": "offcanvas",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "translate",
-    "kind": "component-state",
-    "density": "low",
-    "risk": "low",
+    "kind": "navigation",
+    "density": "marketing",
+    "risk": "safe",
     "cssProperties": [
       "transform"
     ],
     "bootstrapStates": [
       ".show"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply offcanvas slide slow to navigation and mobile panels in a Bootstrap 5 offcanvas pattern",
     "bestFor": "navigation and mobile panels",
     "avoidFor": "permanent desktop navigation",
     "reducedMotion": "opacity-only near-instant state",
@@ -2702,16 +2909,19 @@ window.bsxEffects = [
     "component": "offcanvas",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "opacity",
-    "kind": "component-state",
-    "density": "low",
-    "risk": "low",
+    "kind": "navigation",
+    "density": "marketing",
+    "risk": "safe",
     "cssProperties": [
       "opacity"
     ],
     "bootstrapStates": [
       ".show"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply offcanvas left soft to navigation and mobile panels in a Bootstrap 5 offcanvas pattern",
     "bestFor": "navigation and mobile panels",
     "avoidFor": "permanent desktop navigation",
     "reducedMotion": "opacity-only near-instant state",
@@ -2727,16 +2937,19 @@ window.bsxEffects = [
     "component": "offcanvas",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "opacity",
-    "kind": "component-state",
-    "density": "low",
-    "risk": "low",
+    "kind": "navigation",
+    "density": "marketing",
+    "risk": "safe",
     "cssProperties": [
       "opacity"
     ],
     "bootstrapStates": [
       ".show"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply offcanvas right soft to navigation and mobile panels in a Bootstrap 5 offcanvas pattern",
     "bestFor": "navigation and mobile panels",
     "avoidFor": "permanent desktop navigation",
     "reducedMotion": "opacity-only near-instant state",
@@ -2752,16 +2965,19 @@ window.bsxEffects = [
     "component": "offcanvas",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "translate",
-    "kind": "component-state",
-    "density": "low",
-    "risk": "low",
+    "kind": "navigation",
+    "density": "marketing",
+    "risk": "safe",
     "cssProperties": [
       "transform"
     ],
     "bootstrapStates": [
       ".show"
     ],
+    "requiresMarkupChange": true,
+    "scenario": "apply offcanvas bottom sheet to navigation and mobile panels in a Bootstrap 5 offcanvas pattern",
     "bestFor": "navigation and mobile panels",
     "avoidFor": "permanent desktop navigation",
     "reducedMotion": "opacity-only near-instant state",
@@ -2777,16 +2993,19 @@ window.bsxEffects = [
     "component": "offcanvas",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "translate",
-    "kind": "component-state",
-    "density": "low",
-    "risk": "low",
+    "kind": "navigation",
+    "density": "marketing",
+    "risk": "safe",
     "cssProperties": [
       "transform"
     ],
     "bootstrapStates": [
       ".show"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply offcanvas header reveal to navigation and mobile panels in a Bootstrap 5 offcanvas pattern",
     "bestFor": "navigation and mobile panels",
     "avoidFor": "permanent desktop navigation",
     "reducedMotion": "opacity-only near-instant state",
@@ -2802,16 +3021,19 @@ window.bsxEffects = [
     "component": "toast",
     "requiresJs": true,
     "runtimeBehavior": "toast trigger",
+    "runtimeAction": "show-toast",
     "motion": "translate",
-    "kind": "feedback-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "normal-ui",
+    "risk": "requires-js",
     "cssProperties": [
       "transform"
     ],
     "bootstrapStates": [
       ".show"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply toast slide left to brief asynchronous feedback in a Bootstrap 5 toast pattern",
     "bestFor": "brief asynchronous feedback",
     "avoidFor": "critical information requiring confirmation",
     "reducedMotion": "opacity-only near-instant state",
@@ -2827,16 +3049,19 @@ window.bsxEffects = [
     "component": "toast",
     "requiresJs": true,
     "runtimeBehavior": "toast trigger",
+    "runtimeAction": "show-toast",
     "motion": "translate",
-    "kind": "feedback-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "normal-ui",
+    "risk": "requires-js",
     "cssProperties": [
       "transform"
     ],
     "bootstrapStates": [
       ".show"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply toast slide top to brief asynchronous feedback in a Bootstrap 5 toast pattern",
     "bestFor": "brief asynchronous feedback",
     "avoidFor": "critical information requiring confirmation",
     "reducedMotion": "opacity-only near-instant state",
@@ -2852,16 +3077,19 @@ window.bsxEffects = [
     "component": "toast",
     "requiresJs": true,
     "runtimeBehavior": "toast trigger",
+    "runtimeAction": "show-toast",
     "motion": "translate",
-    "kind": "feedback-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "normal-ui",
+    "risk": "requires-js",
     "cssProperties": [
       "transform"
     ],
     "bootstrapStates": [
       ".show"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply toast slide bottom to brief asynchronous feedback in a Bootstrap 5 toast pattern",
     "bestFor": "brief asynchronous feedback",
     "avoidFor": "critical information requiring confirmation",
     "reducedMotion": "opacity-only near-instant state",
@@ -2877,10 +3105,11 @@ window.bsxEffects = [
     "component": "toast",
     "requiresJs": true,
     "runtimeBehavior": "toast trigger",
+    "runtimeAction": "show-toast",
     "motion": "scale",
-    "kind": "feedback-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "state",
+    "density": "normal-ui",
+    "risk": "requires-js",
     "cssProperties": [
       "opacity",
       "transform",
@@ -2891,6 +3120,8 @@ window.bsxEffects = [
     "bootstrapStates": [
       ".show"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply toast warning pulse to brief asynchronous feedback in a Bootstrap 5 toast pattern",
     "bestFor": "brief asynchronous feedback",
     "avoidFor": "critical information requiring confirmation",
     "reducedMotion": "opacity-only near-instant state",
@@ -2906,16 +3137,19 @@ window.bsxEffects = [
     "component": "toast",
     "requiresJs": true,
     "runtimeBehavior": "toast trigger",
+    "runtimeAction": "show-toast",
     "motion": "color + opacity",
-    "kind": "feedback-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "normal-ui",
+    "risk": "requires-js",
     "cssProperties": [
       "transform"
     ],
     "bootstrapStates": [
       ".show"
     ],
+    "requiresMarkupChange": true,
+    "scenario": "apply toast auto hide bar to brief asynchronous feedback in a Bootstrap 5 toast pattern",
     "bestFor": "brief asynchronous feedback",
     "avoidFor": "critical information requiring confirmation",
     "reducedMotion": "opacity-only near-instant state",
@@ -2931,16 +3165,19 @@ window.bsxEffects = [
     "component": "toast",
     "requiresJs": true,
     "runtimeBehavior": "toast trigger",
+    "runtimeAction": "show-toast",
     "motion": "scale",
-    "kind": "feedback-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "normal-ui",
+    "risk": "requires-js",
     "cssProperties": [
       "transform"
     ],
     "bootstrapStates": [
       ".show"
     ],
+    "requiresMarkupChange": true,
+    "scenario": "apply toast icon bounce to brief asynchronous feedback in a Bootstrap 5 toast pattern",
     "bestFor": "brief asynchronous feedback",
     "avoidFor": "critical information requiring confirmation",
     "reducedMotion": "opacity-only near-instant state",
@@ -2956,17 +3193,17 @@ window.bsxEffects = [
     "component": "alert",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "translate",
-    "kind": "feedback-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "entry",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "apply alert slide up to inline feedback and validation summaries in a Bootstrap 5 alert pattern",
     "bestFor": "inline feedback and validation summaries",
     "avoidFor": "decorative content",
     "reducedMotion": "opacity-only near-instant state",
@@ -2982,17 +3219,17 @@ window.bsxEffects = [
     "component": "alert",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "opacity",
-    "kind": "feedback-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "exit",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "opacity"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "apply alert fade soft to inline feedback and validation summaries in a Bootstrap 5 alert pattern",
     "bestFor": "inline feedback and validation summaries",
     "avoidFor": "decorative content",
     "reducedMotion": "near-instant opacity or color state",
@@ -3008,9 +3245,10 @@ window.bsxEffects = [
     "component": "alert",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "opacity",
-    "kind": "feedback-state",
-    "density": "medium",
+    "kind": "danger",
+    "density": "normal-ui",
     "risk": "medium",
     "cssProperties": [
       "opacity",
@@ -3019,9 +3257,10 @@ window.bsxEffects = [
       "color"
     ],
     "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
+      ".bsx-is-error"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply alert danger flash to inline feedback and validation summaries in a Bootstrap 5 alert pattern",
     "bestFor": "inline feedback and validation summaries",
     "avoidFor": "decorative content",
     "reducedMotion": "opacity-only near-instant state",
@@ -3037,20 +3276,20 @@ window.bsxEffects = [
     "component": "alert",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "shake",
-    "kind": "feedback-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "state",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "opacity",
       "background-color",
       "border-color",
       "color"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "apply alert warning attention to inline feedback and validation summaries in a Bootstrap 5 alert pattern",
     "bestFor": "inline feedback and validation summaries",
     "avoidFor": "decorative content",
     "reducedMotion": "opacity-only near-instant state",
@@ -3066,17 +3305,17 @@ window.bsxEffects = [
     "component": "button",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "translate",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "apply button hover slide bg to direct interaction feedback in a Bootstrap 5 button pattern",
     "bestFor": "direct interaction feedback",
     "avoidFor": "large continuously animated areas",
     "reducedMotion": "opacity-only near-instant state",
@@ -3092,10 +3331,11 @@ window.bsxEffects = [
     "component": "button",
     "requiresJs": true,
     "runtimeBehavior": "button loading and success state",
+    "runtimeAction": "button-state",
     "motion": "color + opacity",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "success",
+    "density": "normal-ui",
+    "risk": "requires-js",
     "cssProperties": [
       "opacity",
       "background-color",
@@ -3105,6 +3345,8 @@ window.bsxEffects = [
     "bootstrapStates": [
       ".bsx-is-success"
     ],
+    "requiresMarkupChange": true,
+    "scenario": "apply button success check to direct interaction feedback in a Bootstrap 5 button pattern",
     "bestFor": "direct interaction feedback",
     "avoidFor": "large continuously animated areas",
     "reducedMotion": "opacity-only near-instant state",
@@ -3120,9 +3362,10 @@ window.bsxEffects = [
     "component": "button",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "scale",
-    "kind": "component-state",
-    "density": "medium",
+    "kind": "danger",
+    "density": "normal-ui",
     "risk": "medium",
     "cssProperties": [
       "transform",
@@ -3131,9 +3374,10 @@ window.bsxEffects = [
       "color"
     ],
     "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
+      ".bsx-is-error"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply button danger pulse to direct interaction feedback in a Bootstrap 5 button pattern",
     "bestFor": "direct interaction feedback",
     "avoidFor": "large continuously animated areas",
     "reducedMotion": "opacity-only near-instant state",
@@ -3149,17 +3393,17 @@ window.bsxEffects = [
     "component": "button",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "scale",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": true,
+    "scenario": "apply button icon bounce to direct interaction feedback in a Bootstrap 5 button pattern",
     "bestFor": "direct interaction feedback",
     "avoidFor": "large continuously animated areas",
     "reducedMotion": "opacity-only near-instant state",
@@ -3175,10 +3419,11 @@ window.bsxEffects = [
     "component": "button-group",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "translate",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "navigation",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "transform",
       "box-shadow",
@@ -3190,6 +3435,8 @@ window.bsxEffects = [
       ".active",
       "[aria-current]"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply button group active slide to direct interaction feedback in a Bootstrap 5 button-group pattern",
     "bestFor": "direct interaction feedback",
     "avoidFor": "large continuously animated areas",
     "reducedMotion": "opacity-only near-instant state",
@@ -3205,10 +3452,11 @@ window.bsxEffects = [
     "component": "button",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "opacity",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "state",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "opacity",
       "background-color",
@@ -3220,6 +3468,8 @@ window.bsxEffects = [
       "[disabled]",
       "[aria-disabled]"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply button disabled soft to direct interaction feedback in a Bootstrap 5 button pattern",
     "bestFor": "direct interaction feedback",
     "avoidFor": "large continuously animated areas",
     "reducedMotion": "opacity-only near-instant state",
@@ -3235,19 +3485,23 @@ window.bsxEffects = [
     "component": "form",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "opacity",
-    "kind": "form-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "opacity",
-      "box-shadow"
+      "box-shadow",
+      "outline-color"
     ],
     "bootstrapStates": [
       ".is-valid",
       ".is-invalid",
       ":focus-within"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply form focus glow to focus and validation feedback in a Bootstrap 5 form pattern",
     "bestFor": "focus and validation feedback",
     "avoidFor": "replacing native validation semantics",
     "reducedMotion": "near-instant opacity or color state",
@@ -3263,9 +3517,10 @@ window.bsxEffects = [
     "component": "form",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "scale",
-    "kind": "form-state",
-    "density": "medium",
+    "kind": "validation",
+    "density": "normal-ui",
     "risk": "medium",
     "cssProperties": [
       "transform"
@@ -3276,6 +3531,8 @@ window.bsxEffects = [
       ":focus-within",
       ".bsx-is-error"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply form invalid pulse to focus and validation feedback in a Bootstrap 5 form pattern",
     "bestFor": "focus and validation feedback",
     "avoidFor": "replacing native validation semantics",
     "reducedMotion": "opacity-only near-instant state",
@@ -3291,11 +3548,13 @@ window.bsxEffects = [
     "component": "form",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "opacity",
-    "kind": "form-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
+      "transform",
       "opacity"
     ],
     "bootstrapStates": [
@@ -3303,6 +3562,8 @@ window.bsxEffects = [
       ".is-invalid",
       ":focus-within"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply form label float soft to focus and validation feedback in a Bootstrap 5 form pattern",
     "bestFor": "focus and validation feedback",
     "avoidFor": "replacing native validation semantics",
     "reducedMotion": "opacity-only near-instant state",
@@ -3318,10 +3579,11 @@ window.bsxEffects = [
     "component": "form",
     "requiresJs": true,
     "runtimeBehavior": "input clearing",
+    "runtimeAction": "clear-input",
     "motion": "scale",
-    "kind": "form-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "entry",
+    "density": "normal-ui",
+    "risk": "requires-js",
     "cssProperties": [
       "transform"
     ],
@@ -3330,6 +3592,8 @@ window.bsxEffects = [
       ".is-invalid",
       ":focus-within"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply form input clear pop to focus and validation feedback in a Bootstrap 5 form pattern",
     "bestFor": "focus and validation feedback",
     "avoidFor": "replacing native validation semantics",
     "reducedMotion": "opacity-only near-instant state",
@@ -3345,10 +3609,11 @@ window.bsxEffects = [
     "component": "form",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "opacity",
-    "kind": "form-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "opacity"
     ],
@@ -3357,6 +3622,8 @@ window.bsxEffects = [
       ".is-invalid",
       ":focus-within"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply form select open soft to focus and validation feedback in a Bootstrap 5 form pattern",
     "bestFor": "focus and validation feedback",
     "avoidFor": "replacing native validation semantics",
     "reducedMotion": "opacity-only near-instant state",
@@ -3372,10 +3639,11 @@ window.bsxEffects = [
     "component": "form",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "scale",
-    "kind": "form-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "entry",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "transform"
     ],
@@ -3384,6 +3652,8 @@ window.bsxEffects = [
       ".is-invalid",
       ":focus-within"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply form radio pop to focus and validation feedback in a Bootstrap 5 form pattern",
     "bestFor": "focus and validation feedback",
     "avoidFor": "replacing native validation semantics",
     "reducedMotion": "opacity-only near-instant state",
@@ -3399,18 +3669,18 @@ window.bsxEffects = [
     "component": "card",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "color + opacity",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "opacity",
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "apply card hover border to interactive content collections in a Bootstrap 5 card pattern",
     "bestFor": "interactive content collections",
     "avoidFor": "non-interactive dense tables",
     "reducedMotion": "opacity-only near-instant state",
@@ -3426,18 +3696,18 @@ window.bsxEffects = [
     "component": "card",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "opacity",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "opacity",
       "box-shadow"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "apply card hover glow to interactive content collections in a Bootstrap 5 card pattern",
     "bestFor": "interactive content collections",
     "avoidFor": "non-interactive dense tables",
     "reducedMotion": "near-instant opacity or color state",
@@ -3453,17 +3723,17 @@ window.bsxEffects = [
     "component": "card",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "scale",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "apply card click press to interactive content collections in a Bootstrap 5 card pattern",
     "bestFor": "interactive content collections",
     "avoidFor": "non-interactive dense tables",
     "reducedMotion": "opacity-only near-instant state",
@@ -3479,17 +3749,17 @@ window.bsxEffects = [
     "component": "card",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "translate",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "entry",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "apply card reveal to interactive content collections in a Bootstrap 5 card pattern",
     "bestFor": "interactive content collections",
     "avoidFor": "non-interactive dense tables",
     "reducedMotion": "opacity-only near-instant state",
@@ -3505,17 +3775,17 @@ window.bsxEffects = [
     "component": "card",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "translate",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "entry",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "apply card footer reveal to interactive content collections in a Bootstrap 5 card pattern",
     "bestFor": "interactive content collections",
     "avoidFor": "non-interactive dense tables",
     "reducedMotion": "opacity-only near-instant state",
@@ -3531,17 +3801,17 @@ window.bsxEffects = [
     "component": "card",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "translate",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "apply card action slide to interactive content collections in a Bootstrap 5 card pattern",
     "bestFor": "interactive content collections",
     "avoidFor": "non-interactive dense tables",
     "reducedMotion": "opacity-only near-instant state",
@@ -3557,10 +3827,11 @@ window.bsxEffects = [
     "component": "tabs",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "translate",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "navigation",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "transform"
     ],
@@ -3568,6 +3839,8 @@ window.bsxEffects = [
       ".active",
       "[aria-current]"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply tabs slide left to section navigation and tab state in a Bootstrap 5 tabs pattern",
     "bestFor": "section navigation and tab state",
     "avoidFor": "rapidly auto-rotating content",
     "reducedMotion": "opacity-only near-instant state",
@@ -3583,10 +3856,11 @@ window.bsxEffects = [
     "component": "tabs",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "translate",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "navigation",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "transform"
     ],
@@ -3594,6 +3868,8 @@ window.bsxEffects = [
       ".active",
       "[aria-current]"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply tabs slide right to section navigation and tab state in a Bootstrap 5 tabs pattern",
     "bestFor": "section navigation and tab state",
     "avoidFor": "rapidly auto-rotating content",
     "reducedMotion": "opacity-only near-instant state",
@@ -3609,10 +3885,11 @@ window.bsxEffects = [
     "component": "tabs",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "translate",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "navigation",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "transform"
     ],
@@ -3620,6 +3897,8 @@ window.bsxEffects = [
       ".active",
       "[aria-current]"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply tabs content reveal to section navigation and tab state in a Bootstrap 5 tabs pattern",
     "bestFor": "section navigation and tab state",
     "avoidFor": "rapidly auto-rotating content",
     "reducedMotion": "opacity-only near-instant state",
@@ -3635,10 +3914,11 @@ window.bsxEffects = [
     "component": "tabs",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "opacity",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "navigation",
+    "density": "normal-ui",
+    "risk": "medium",
     "cssProperties": [
       "opacity",
       "filter"
@@ -3647,6 +3927,8 @@ window.bsxEffects = [
       ".active",
       "[aria-current]"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply tabs content blur to section navigation and tab state in a Bootstrap 5 tabs pattern",
     "bestFor": "section navigation and tab state",
     "avoidFor": "rapidly auto-rotating content",
     "reducedMotion": "near-instant opacity or color state",
@@ -3662,17 +3944,17 @@ window.bsxEffects = [
     "component": "navbar",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "translate",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "navigation",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "apply nav link hover slide to section navigation and tab state in a Bootstrap 5 navbar pattern",
     "bestFor": "section navigation and tab state",
     "avoidFor": "rapidly auto-rotating content",
     "reducedMotion": "opacity-only near-instant state",
@@ -3688,18 +3970,18 @@ window.bsxEffects = [
     "component": "sidebar",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "opacity",
-    "kind": "component-state",
-    "density": "high",
-    "risk": "low",
+    "kind": "navigation",
+    "density": "dense-admin",
+    "risk": "safe",
     "cssProperties": [
       "transform",
       "opacity"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": true,
+    "scenario": "apply nav sidebar collapse soft to section navigation and tab state in a Bootstrap 5 sidebar pattern",
     "bestFor": "section navigation and tab state",
     "avoidFor": "rapidly auto-rotating content",
     "reducedMotion": "opacity-only near-instant state",
@@ -3715,10 +3997,11 @@ window.bsxEffects = [
     "component": "accordion",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "translate",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "transform"
     ],
@@ -3726,6 +4009,8 @@ window.bsxEffects = [
       ".collapse.show",
       "[aria-expanded]"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply accordion body slide to disclosure controls in a Bootstrap 5 accordion pattern",
     "bestFor": "disclosure controls",
     "avoidFor": "content that must remain continuously visible",
     "reducedMotion": "opacity-only near-instant state",
@@ -3741,10 +4026,11 @@ window.bsxEffects = [
     "component": "accordion",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "color + opacity",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "opacity",
       "transform"
@@ -3753,6 +4039,8 @@ window.bsxEffects = [
       ".collapse.show",
       "[aria-expanded]"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply accordion header hover to disclosure controls in a Bootstrap 5 accordion pattern",
     "bestFor": "disclosure controls",
     "avoidFor": "content that must remain continuously visible",
     "reducedMotion": "opacity-only near-instant state",
@@ -3768,10 +4056,11 @@ window.bsxEffects = [
     "component": "accordion",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "opacity",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "opacity",
       "box-shadow",
@@ -3783,6 +4072,8 @@ window.bsxEffects = [
       ".collapse.show",
       "[aria-expanded]"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply accordion active glow to disclosure controls in a Bootstrap 5 accordion pattern",
     "bestFor": "disclosure controls",
     "avoidFor": "content that must remain continuously visible",
     "reducedMotion": "near-instant opacity or color state",
@@ -3798,17 +4089,21 @@ window.bsxEffects = [
     "component": "accordion",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "opacity",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "exit",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
+      "transform",
       "opacity"
     ],
     "bootstrapStates": [
       ".collapse.show",
       "[aria-expanded]"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply collapse fade to disclosure controls in a Bootstrap 5 accordion pattern",
     "bestFor": "disclosure controls",
     "avoidFor": "content that must remain continuously visible",
     "reducedMotion": "near-instant opacity or color state",
@@ -3824,10 +4119,11 @@ window.bsxEffects = [
     "component": "accordion",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "translate",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "entry",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "transform"
     ],
@@ -3835,6 +4131,8 @@ window.bsxEffects = [
       ".collapse.show",
       "[aria-expanded]"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply collapse card reveal to disclosure controls in a Bootstrap 5 accordion pattern",
     "bestFor": "disclosure controls",
     "avoidFor": "content that must remain continuously visible",
     "reducedMotion": "opacity-only near-instant state",
@@ -3850,17 +4148,17 @@ window.bsxEffects = [
     "component": "navbar",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "scale",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "navigation",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": true,
+    "scenario": "apply navbar brand pop to application navigation in a Bootstrap 5 navbar pattern",
     "bestFor": "application navigation",
     "avoidFor": "small inline controls",
     "reducedMotion": "opacity-only near-instant state",
@@ -3876,17 +4174,17 @@ window.bsxEffects = [
     "component": "navbar",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "color + opacity",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "navigation",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": true,
+    "scenario": "apply navbar link hover bg to application navigation in a Bootstrap 5 navbar pattern",
     "bestFor": "application navigation",
     "avoidFor": "small inline controls",
     "reducedMotion": "opacity-only near-instant state",
@@ -3902,17 +4200,17 @@ window.bsxEffects = [
     "component": "navbar",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "rotate",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "navigation",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": true,
+    "scenario": "apply navbar toggler spin to application navigation in a Bootstrap 5 navbar pattern",
     "bestFor": "application navigation",
     "avoidFor": "small inline controls",
     "reducedMotion": "opacity-only near-instant state",
@@ -3928,17 +4226,17 @@ window.bsxEffects = [
     "component": "sidebar",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "translate",
-    "kind": "component-state",
-    "density": "high",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "dense-admin",
+    "risk": "safe",
     "cssProperties": [
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": true,
+    "scenario": "apply sidebar item hover slide to application navigation in a Bootstrap 5 sidebar pattern",
     "bestFor": "application navigation",
     "avoidFor": "small inline controls",
     "reducedMotion": "opacity-only near-instant state",
@@ -3954,17 +4252,17 @@ window.bsxEffects = [
     "component": "sidebar",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "translate",
-    "kind": "component-state",
-    "density": "high",
-    "risk": "low",
+    "kind": "navigation",
+    "density": "dense-admin",
+    "risk": "safe",
     "cssProperties": [
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": true,
+    "scenario": "apply sidebar submenu reveal to application navigation in a Bootstrap 5 sidebar pattern",
     "bestFor": "application navigation",
     "avoidFor": "small inline controls",
     "reducedMotion": "opacity-only near-instant state",
@@ -3980,18 +4278,18 @@ window.bsxEffects = [
     "component": "sidebar",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "color + opacity",
-    "kind": "component-state",
-    "density": "high",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "dense-admin",
+    "risk": "safe",
     "cssProperties": [
       "transform",
       "clip-path"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": true,
+    "scenario": "apply sidebar mini expand to application navigation in a Bootstrap 5 sidebar pattern",
     "bestFor": "application navigation",
     "avoidFor": "small inline controls",
     "reducedMotion": "opacity-only near-instant state",
@@ -4007,10 +4305,11 @@ window.bsxEffects = [
     "component": "sidebar",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "opacity",
-    "kind": "component-state",
-    "density": "high",
-    "risk": "low",
+    "kind": "loading",
+    "density": "dense-admin",
+    "risk": "medium",
     "cssProperties": [
       "transform",
       "opacity",
@@ -4020,6 +4319,8 @@ window.bsxEffects = [
       "[aria-busy]",
       ".bsx-is-loading"
     ],
+    "requiresMarkupChange": true,
+    "scenario": "apply sidebar overlay blur to application navigation in a Bootstrap 5 sidebar pattern",
     "bestFor": "application navigation",
     "avoidFor": "small inline controls",
     "reducedMotion": "near-instant opacity or color state",
@@ -4035,17 +4336,17 @@ window.bsxEffects = [
     "component": "badge",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "scale",
-    "kind": "feedback-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "apply badge pulse to status and metric updates in a Bootstrap 5 badge pattern",
     "bestFor": "status and metric updates",
     "avoidFor": "long text content",
     "reducedMotion": "opacity-only near-instant state",
@@ -4061,17 +4362,17 @@ window.bsxEffects = [
     "component": "badge",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "scale",
-    "kind": "feedback-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "apply badge count bump to status and metric updates in a Bootstrap 5 badge pattern",
     "bestFor": "status and metric updates",
     "avoidFor": "long text content",
     "reducedMotion": "opacity-only near-instant state",
@@ -4087,19 +4388,19 @@ window.bsxEffects = [
     "component": "badge",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "color + opacity",
-    "kind": "feedback-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "background-color",
       "border-color",
       "color"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": true,
+    "scenario": "apply badge status dot to status and metric updates in a Bootstrap 5 badge pattern",
     "bestFor": "status and metric updates",
     "avoidFor": "long text content",
     "reducedMotion": "opacity-only near-instant state",
@@ -4115,18 +4416,18 @@ window.bsxEffects = [
     "component": "counter",
     "requiresJs": true,
     "runtimeBehavior": "counter update",
+    "runtimeAction": "counter",
     "motion": "color + opacity",
-    "kind": "feedback-state",
-    "density": "high",
-    "risk": "low",
+    "kind": "data-change",
+    "density": "dense-admin",
+    "risk": "requires-js",
     "cssProperties": [
       "opacity",
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": true,
+    "scenario": "apply counter change up to status and metric updates in a Bootstrap 5 counter pattern",
     "bestFor": "status and metric updates",
     "avoidFor": "long text content",
     "reducedMotion": "opacity-only near-instant state",
@@ -4142,18 +4443,18 @@ window.bsxEffects = [
     "component": "counter",
     "requiresJs": true,
     "runtimeBehavior": "counter update",
+    "runtimeAction": "counter",
     "motion": "color + opacity",
-    "kind": "feedback-state",
-    "density": "high",
-    "risk": "low",
+    "kind": "data-change",
+    "density": "dense-admin",
+    "risk": "requires-js",
     "cssProperties": [
       "opacity",
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": true,
+    "scenario": "apply counter change down to status and metric updates in a Bootstrap 5 counter pattern",
     "bestFor": "status and metric updates",
     "avoidFor": "long text content",
     "reducedMotion": "opacity-only near-instant state",
@@ -4169,17 +4470,17 @@ window.bsxEffects = [
     "component": "counter",
     "requiresJs": true,
     "runtimeBehavior": "counter update",
+    "runtimeAction": "counter",
     "motion": "opacity",
-    "kind": "feedback-state",
-    "density": "high",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "dense-admin",
+    "risk": "requires-js",
     "cssProperties": [
       "opacity"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "apply price change flash to status and metric updates in a Bootstrap 5 counter pattern",
     "bestFor": "status and metric updates",
     "avoidFor": "long text content",
     "reducedMotion": "opacity-only near-instant state",
@@ -4195,16 +4496,19 @@ window.bsxEffects = [
     "component": "table",
     "requiresJs": true,
     "runtimeBehavior": "table row selection",
+    "runtimeAction": "table-row",
     "motion": "color + opacity",
-    "kind": "component-state",
-    "density": "high",
-    "risk": "low",
+    "kind": "selection",
+    "density": "dense-admin",
+    "risk": "requires-js",
     "cssProperties": [
       "box-shadow"
     ],
     "bootstrapStates": [
       ".bsx-is-selected"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply table row selected to row state and collection changes in a Bootstrap 5 table pattern",
     "bestFor": "row state and collection changes",
     "avoidFor": "large simultaneous batches",
     "reducedMotion": "opacity-only near-instant state",
@@ -4220,18 +4524,18 @@ window.bsxEffects = [
     "component": "table",
     "requiresJs": true,
     "runtimeBehavior": "table sort state",
+    "runtimeAction": "sort",
     "motion": "rotate",
-    "kind": "component-state",
-    "density": "high",
-    "risk": "low",
+    "kind": "data-change",
+    "density": "dense-admin",
+    "risk": "requires-js",
     "cssProperties": [
       "opacity",
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": true,
+    "scenario": "apply table sort icon rotate to row state and collection changes in a Bootstrap 5 table pattern",
     "bestFor": "row state and collection changes",
     "avoidFor": "large simultaneous batches",
     "reducedMotion": "opacity-only near-instant state",
@@ -4247,17 +4551,17 @@ window.bsxEffects = [
     "component": "table",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "translate",
-    "kind": "component-state",
-    "density": "high",
-    "risk": "low",
+    "kind": "entry",
+    "density": "dense-admin",
+    "risk": "safe",
     "cssProperties": [
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "apply table filter reveal to row state and collection changes in a Bootstrap 5 table pattern",
     "bestFor": "row state and collection changes",
     "avoidFor": "large simultaneous batches",
     "reducedMotion": "opacity-only near-instant state",
@@ -4273,17 +4577,17 @@ window.bsxEffects = [
     "component": "list",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "translate",
-    "kind": "component-state",
-    "density": "high",
-    "risk": "low",
+    "kind": "entry",
+    "density": "dense-admin",
+    "risk": "safe",
     "cssProperties": [
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "apply list item reveal to row state and collection changes in a Bootstrap 5 list pattern",
     "bestFor": "row state and collection changes",
     "avoidFor": "large simultaneous batches",
     "reducedMotion": "opacity-only near-instant state",
@@ -4299,17 +4603,17 @@ window.bsxEffects = [
     "component": "list",
     "requiresJs": true,
     "runtimeBehavior": "list item removal",
+    "runtimeAction": "list-item",
     "motion": "translate",
-    "kind": "component-state",
-    "density": "high",
-    "risk": "low",
+    "kind": "exit",
+    "density": "dense-admin",
+    "risk": "requires-js",
     "cssProperties": [
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "apply list item remove to row state and collection changes in a Bootstrap 5 list pattern",
     "bestFor": "row state and collection changes",
     "avoidFor": "large simultaneous batches",
     "reducedMotion": "opacity-only near-instant state",
@@ -4325,17 +4629,17 @@ window.bsxEffects = [
     "component": "list",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "translate",
-    "kind": "component-state",
-    "density": "high",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "dense-admin",
+    "risk": "safe",
     "cssProperties": [
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "apply list group hover slide to row state and collection changes in a Bootstrap 5 list pattern",
     "bestFor": "row state and collection changes",
     "avoidFor": "large simultaneous batches",
     "reducedMotion": "opacity-only near-instant state",
@@ -4351,10 +4655,11 @@ window.bsxEffects = [
     "component": "skeleton",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "opacity",
-    "kind": "loading-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "loading",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "opacity"
     ],
@@ -4362,6 +4667,8 @@ window.bsxEffects = [
       "[aria-busy]",
       ".bsx-is-loading"
     ],
+    "requiresMarkupChange": true,
+    "scenario": "apply skeleton wave to short loading states in a Bootstrap 5 skeleton pattern",
     "bestFor": "short loading states",
     "avoidFor": "unknown or very long waits without status",
     "reducedMotion": "opacity-only near-instant state",
@@ -4377,10 +4684,11 @@ window.bsxEffects = [
     "component": "skeleton",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "opacity",
-    "kind": "loading-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "loading",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "opacity"
     ],
@@ -4388,6 +4696,8 @@ window.bsxEffects = [
       "[aria-busy]",
       ".bsx-is-loading"
     ],
+    "requiresMarkupChange": true,
+    "scenario": "apply skeleton avatar to short loading states in a Bootstrap 5 skeleton pattern",
     "bestFor": "short loading states",
     "avoidFor": "unknown or very long waits without status",
     "reducedMotion": "opacity-only near-instant state",
@@ -4403,10 +4713,11 @@ window.bsxEffects = [
     "component": "skeleton",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "opacity",
-    "kind": "loading-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "loading",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "opacity"
     ],
@@ -4414,6 +4725,8 @@ window.bsxEffects = [
       "[aria-busy]",
       ".bsx-is-loading"
     ],
+    "requiresMarkupChange": true,
+    "scenario": "apply skeleton button to short loading states in a Bootstrap 5 skeleton pattern",
     "bestFor": "short loading states",
     "avoidFor": "unknown or very long waits without status",
     "reducedMotion": "opacity-only near-instant state",
@@ -4429,10 +4742,11 @@ window.bsxEffects = [
     "component": "loading state",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "opacity + rotate",
-    "kind": "loading-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "loading",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "opacity"
     ],
@@ -4440,6 +4754,8 @@ window.bsxEffects = [
       "[aria-busy]",
       ".bsx-is-loading"
     ],
+    "requiresMarkupChange": true,
+    "scenario": "apply spinner fade to short loading states in a Bootstrap 5 loading pattern",
     "bestFor": "short loading states",
     "avoidFor": "unknown or very long waits without status",
     "reducedMotion": "near-instant opacity or color state",
@@ -4455,10 +4771,11 @@ window.bsxEffects = [
     "component": "loading state",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "scale + rotate",
-    "kind": "loading-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "loading",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "transform"
     ],
@@ -4466,6 +4783,8 @@ window.bsxEffects = [
       "[aria-busy]",
       ".bsx-is-loading"
     ],
+    "requiresMarkupChange": true,
+    "scenario": "apply spinner scale to short loading states in a Bootstrap 5 loading pattern",
     "bestFor": "short loading states",
     "avoidFor": "unknown or very long waits without status",
     "reducedMotion": "opacity-only near-instant state",
@@ -4481,17 +4800,17 @@ window.bsxEffects = [
     "component": "loading state",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "color + opacity",
-    "kind": "loading-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "loading",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": true,
+    "scenario": "apply loader bar to short loading states in a Bootstrap 5 loading pattern",
     "bestFor": "short loading states",
     "avoidFor": "unknown or very long waits without status",
     "reducedMotion": "opacity-only near-instant state",
@@ -4507,17 +4826,17 @@ window.bsxEffects = [
     "component": "image",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "scale",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "marketing",
+    "risk": "visual-diff",
     "cssProperties": [
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "apply image hover zoom to media previews and galleries in a Bootstrap 5 image pattern",
     "bestFor": "media previews and galleries",
     "avoidFor": "essential images that must remain static",
     "reducedMotion": "opacity-only near-instant state",
@@ -4533,17 +4852,17 @@ window.bsxEffects = [
     "component": "image",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "opacity",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "exit",
+    "density": "marketing",
+    "risk": "visual-diff",
     "cssProperties": [
       "opacity"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "apply image hover fade to media previews and galleries in a Bootstrap 5 image pattern",
     "bestFor": "media previews and galleries",
     "avoidFor": "essential images that must remain static",
     "reducedMotion": "near-instant opacity or color state",
@@ -4559,10 +4878,11 @@ window.bsxEffects = [
     "component": "image",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "color + opacity",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "loading",
+    "density": "marketing",
+    "risk": "medium",
     "cssProperties": [
       "transform"
     ],
@@ -4570,6 +4890,8 @@ window.bsxEffects = [
       "[aria-busy]",
       ".bsx-is-loading"
     ],
+    "requiresMarkupChange": true,
+    "scenario": "apply image hover overlay to media previews and galleries in a Bootstrap 5 image pattern",
     "bestFor": "media previews and galleries",
     "avoidFor": "essential images that must remain static",
     "reducedMotion": "opacity-only near-instant state",
@@ -4585,17 +4907,17 @@ window.bsxEffects = [
     "component": "image",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "translate",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "marketing",
+    "risk": "visual-diff",
     "cssProperties": [
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "apply image hover caption slide to media previews and galleries in a Bootstrap 5 image pattern",
     "bestFor": "media previews and galleries",
     "avoidFor": "essential images that must remain static",
     "reducedMotion": "opacity-only near-instant state",
@@ -4611,17 +4933,17 @@ window.bsxEffects = [
     "component": "image",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "translate",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "entry",
+    "density": "marketing",
+    "risk": "visual-diff",
     "cssProperties": [
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "apply image lazy reveal to media previews and galleries in a Bootstrap 5 image pattern",
     "bestFor": "media previews and galleries",
     "avoidFor": "essential images that must remain static",
     "reducedMotion": "opacity-only near-instant state",
@@ -4637,17 +4959,17 @@ window.bsxEffects = [
     "component": "image",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "scale",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "entry",
+    "density": "marketing",
+    "risk": "visual-diff",
     "cssProperties": [
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "apply avatar pop to media previews and galleries in a Bootstrap 5 image pattern",
     "bestFor": "media previews and galleries",
     "avoidFor": "essential images that must remain static",
     "reducedMotion": "opacity-only near-instant state",
@@ -4663,20 +4985,20 @@ window.bsxEffects = [
     "component": "image",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "scale",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "marketing",
+    "risk": "visual-diff",
     "cssProperties": [
       "transform",
       "background-color",
       "border-color",
       "color"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "apply avatar status pulse to media previews and galleries in a Bootstrap 5 image pattern",
     "bestFor": "media previews and galleries",
     "avoidFor": "essential images that must remain static",
     "reducedMotion": "opacity-only near-instant state",
@@ -4692,17 +5014,17 @@ window.bsxEffects = [
     "component": "image",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "translate",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "entry",
+    "density": "marketing",
+    "risk": "visual-diff",
     "cssProperties": [
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "apply gallery item reveal to media previews and galleries in a Bootstrap 5 image pattern",
     "bestFor": "media previews and galleries",
     "avoidFor": "essential images that must remain static",
     "reducedMotion": "opacity-only near-instant state",
@@ -4718,17 +5040,17 @@ window.bsxEffects = [
     "component": "media",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "translate",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "marketing",
+    "risk": "visual-diff",
     "cssProperties": [
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "apply carousel caption slide to media previews and galleries in a Bootstrap 5 media pattern",
     "bestFor": "media previews and galleries",
     "avoidFor": "essential images that must remain static",
     "reducedMotion": "opacity-only near-instant state",
@@ -4744,18 +5066,18 @@ window.bsxEffects = [
     "component": "media",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "color + opacity",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "marketing",
+    "risk": "visual-diff",
     "cssProperties": [
       "opacity",
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "apply carousel control hover to media previews and galleries in a Bootstrap 5 media pattern",
     "bestFor": "media previews and galleries",
     "avoidFor": "essential images that must remain static",
     "reducedMotion": "opacity-only near-instant state",
@@ -4771,17 +5093,17 @@ window.bsxEffects = [
     "component": "tooltip",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "opacity",
-    "kind": "component-state",
-    "density": "low",
-    "risk": "low",
+    "kind": "exit",
+    "density": "marketing",
+    "risk": "safe",
     "cssProperties": [
       "opacity"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "apply tooltip fade soft to contextual supporting information in a Bootstrap 5 tooltip pattern",
     "bestFor": "contextual supporting information",
     "avoidFor": "primary task content",
     "reducedMotion": "near-instant opacity or color state",
@@ -4797,17 +5119,17 @@ window.bsxEffects = [
     "component": "tooltip",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "translate",
-    "kind": "component-state",
-    "density": "low",
-    "risk": "low",
+    "kind": "entry",
+    "density": "marketing",
+    "risk": "safe",
     "cssProperties": [
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "apply tooltip slide up to contextual supporting information in a Bootstrap 5 tooltip pattern",
     "bestFor": "contextual supporting information",
     "avoidFor": "primary task content",
     "reducedMotion": "opacity-only near-instant state",
@@ -4823,17 +5145,17 @@ window.bsxEffects = [
     "component": "tooltip",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "translate",
-    "kind": "component-state",
-    "density": "low",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "marketing",
+    "risk": "safe",
     "cssProperties": [
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "apply tooltip slide down to contextual supporting information in a Bootstrap 5 tooltip pattern",
     "bestFor": "contextual supporting information",
     "avoidFor": "primary task content",
     "reducedMotion": "opacity-only near-instant state",
@@ -4849,17 +5171,17 @@ window.bsxEffects = [
     "component": "tooltip",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "scale",
-    "kind": "component-state",
-    "density": "low",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "marketing",
+    "risk": "safe",
     "cssProperties": [
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "apply tooltip scale to contextual supporting information in a Bootstrap 5 tooltip pattern",
     "bestFor": "contextual supporting information",
     "avoidFor": "primary task content",
     "reducedMotion": "opacity-only near-instant state",
@@ -4875,17 +5197,17 @@ window.bsxEffects = [
     "component": "tooltip",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "scale",
-    "kind": "component-state",
-    "density": "low",
-    "risk": "low",
+    "kind": "entry",
+    "density": "marketing",
+    "risk": "safe",
     "cssProperties": [
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "apply tooltip pop to contextual supporting information in a Bootstrap 5 tooltip pattern",
     "bestFor": "contextual supporting information",
     "avoidFor": "primary task content",
     "reducedMotion": "opacity-only near-instant state",
@@ -4901,18 +5223,18 @@ window.bsxEffects = [
     "component": "popover",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "scale + opacity",
-    "kind": "component-state",
-    "density": "low",
-    "risk": "low",
+    "kind": "entry",
+    "density": "marketing",
+    "risk": "safe",
     "cssProperties": [
-      "opacity",
-      "transform"
+      "transform",
+      "opacity"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "apply popover soft to contextual supporting information in a Bootstrap 5 popover pattern",
     "bestFor": "contextual supporting information",
     "avoidFor": "primary task content",
     "reducedMotion": "opacity-only near-instant state",
@@ -4928,17 +5250,17 @@ window.bsxEffects = [
     "component": "popover",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "translate + scale",
-    "kind": "component-state",
-    "density": "low",
-    "risk": "low",
+    "kind": "entry",
+    "density": "marketing",
+    "risk": "safe",
     "cssProperties": [
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "apply popover slide to contextual supporting information in a Bootstrap 5 popover pattern",
     "bestFor": "contextual supporting information",
     "avoidFor": "primary task content",
     "reducedMotion": "opacity-only near-instant state",
@@ -4954,19 +5276,19 @@ window.bsxEffects = [
     "component": "popover",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "scale + opacity",
-    "kind": "component-state",
-    "density": "low",
-    "risk": "low",
+    "kind": "entry",
+    "density": "marketing",
+    "risk": "medium",
     "cssProperties": [
-      "opacity",
       "transform",
+      "opacity",
       "filter"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "apply popover blur to contextual supporting information in a Bootstrap 5 popover pattern",
     "bestFor": "contextual supporting information",
     "avoidFor": "primary task content",
     "reducedMotion": "near-instant opacity or color state",
@@ -4982,17 +5304,17 @@ window.bsxEffects = [
     "component": "popover",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "translate + scale",
-    "kind": "component-state",
-    "density": "low",
-    "risk": "low",
+    "kind": "entry",
+    "density": "marketing",
+    "risk": "visual-diff",
     "cssProperties": [
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": true,
+    "scenario": "apply popover content stagger to contextual supporting information in a Bootstrap 5 popover pattern",
     "bestFor": "contextual supporting information",
     "avoidFor": "primary task content",
     "reducedMotion": "opacity-only near-instant state",
@@ -5008,18 +5330,18 @@ window.bsxEffects = [
     "component": "popover",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "scale + opacity",
-    "kind": "component-state",
-    "density": "low",
+    "kind": "entry",
+    "density": "marketing",
     "risk": "medium",
     "cssProperties": [
-      "opacity",
-      "transform"
+      "transform",
+      "opacity"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "apply popover dismiss fade to contextual supporting information in a Bootstrap 5 popover pattern",
     "bestFor": "contextual supporting information",
     "avoidFor": "primary task content",
     "reducedMotion": "near-instant opacity or color state",
@@ -5035,18 +5357,18 @@ window.bsxEffects = [
     "component": "progress",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "translate + opacity",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "transform",
       "opacity"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": true,
+    "scenario": "apply progress fill soft to progress and multi-step flows in a Bootstrap 5 progress pattern",
     "bestFor": "progress and multi-step flows",
     "avoidFor": "indeterminate tasks without a status model",
     "reducedMotion": "opacity-only near-instant state",
@@ -5062,17 +5384,18 @@ window.bsxEffects = [
     "component": "progress",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "color + opacity",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
-      "background-position"
+      "opacity",
+      "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": true,
+    "scenario": "apply progress striped motion to progress and multi-step flows in a Bootstrap 5 progress pattern",
     "bestFor": "progress and multi-step flows",
     "avoidFor": "indeterminate tasks without a status model",
     "reducedMotion": "opacity-only near-instant state",
@@ -5088,13 +5411,14 @@ window.bsxEffects = [
     "component": "progress",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "scale",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "success",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
-      "opacity",
       "transform",
+      "opacity",
       "background-color",
       "border-color",
       "color"
@@ -5102,6 +5426,8 @@ window.bsxEffects = [
     "bootstrapStates": [
       ".bsx-is-success"
     ],
+    "requiresMarkupChange": true,
+    "scenario": "apply progress success pop to progress and multi-step flows in a Bootstrap 5 progress pattern",
     "bestFor": "progress and multi-step flows",
     "avoidFor": "indeterminate tasks without a status model",
     "reducedMotion": "opacity-only near-instant state",
@@ -5117,9 +5443,10 @@ window.bsxEffects = [
     "component": "progress",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "scale",
-    "kind": "component-state",
-    "density": "medium",
+    "kind": "danger",
+    "density": "normal-ui",
     "risk": "medium",
     "cssProperties": [
       "transform",
@@ -5128,9 +5455,10 @@ window.bsxEffects = [
       "color"
     ],
     "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
+      ".bsx-is-error"
     ],
+    "requiresMarkupChange": true,
+    "scenario": "apply progress danger pulse to progress and multi-step flows in a Bootstrap 5 progress pattern",
     "bestFor": "progress and multi-step flows",
     "avoidFor": "indeterminate tasks without a status model",
     "reducedMotion": "opacity-only near-instant state",
@@ -5146,10 +5474,11 @@ window.bsxEffects = [
     "component": "stepper",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "scale",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "entry",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "transform",
       "box-shadow",
@@ -5157,10 +5486,9 @@ window.bsxEffects = [
       "border-color",
       "color"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "apply stepper active pop to progress and multi-step flows in a Bootstrap 5 stepper pattern",
     "bestFor": "progress and multi-step flows",
     "avoidFor": "indeterminate tasks without a status model",
     "reducedMotion": "opacity-only near-instant state",
@@ -5176,10 +5504,11 @@ window.bsxEffects = [
     "component": "stepper",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "color + opacity",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "success",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "opacity",
       "transform"
@@ -5187,6 +5516,8 @@ window.bsxEffects = [
     "bootstrapStates": [
       ".bsx-is-success"
     ],
+    "requiresMarkupChange": true,
+    "scenario": "apply stepper complete check to progress and multi-step flows in a Bootstrap 5 stepper pattern",
     "bestFor": "progress and multi-step flows",
     "avoidFor": "indeterminate tasks without a status model",
     "reducedMotion": "opacity-only near-instant state",
@@ -5202,17 +5533,17 @@ window.bsxEffects = [
     "component": "stepper",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "translate",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": true,
+    "scenario": "apply stepper line fill to progress and multi-step flows in a Bootstrap 5 stepper pattern",
     "bestFor": "progress and multi-step flows",
     "avoidFor": "indeterminate tasks without a status model",
     "reducedMotion": "opacity-only near-instant state",
@@ -5228,17 +5559,17 @@ window.bsxEffects = [
     "component": "stepper",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "translate",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "navigation",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "apply wizard page slide to progress and multi-step flows in a Bootstrap 5 stepper pattern",
     "bestFor": "progress and multi-step flows",
     "avoidFor": "indeterminate tasks without a status model",
     "reducedMotion": "opacity-only near-instant state",
@@ -5254,17 +5585,17 @@ window.bsxEffects = [
     "component": "stepper",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "opacity",
-    "kind": "component-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "navigation",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "opacity"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "apply wizard page fade to progress and multi-step flows in a Bootstrap 5 stepper pattern",
     "bestFor": "progress and multi-step flows",
     "avoidFor": "indeterminate tasks without a status model",
     "reducedMotion": "near-instant opacity or color state",
@@ -5280,17 +5611,17 @@ window.bsxEffects = [
     "component": "page",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "opacity",
-    "kind": "component-state",
-    "density": "low",
-    "risk": "low",
+    "kind": "entry",
+    "density": "marketing",
+    "risk": "visual-diff",
     "cssProperties": [
       "opacity"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "apply page fade in to page and section state changes in a Bootstrap 5 page pattern",
     "bestFor": "page and section state changes",
     "avoidFor": "continuous scroll-driven motion",
     "reducedMotion": "near-instant opacity or color state",
@@ -5306,17 +5637,17 @@ window.bsxEffects = [
     "component": "page",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "translate",
-    "kind": "component-state",
-    "density": "low",
-    "risk": "low",
+    "kind": "entry",
+    "density": "marketing",
+    "risk": "visual-diff",
     "cssProperties": [
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "apply page slide up to page and section state changes in a Bootstrap 5 page pattern",
     "bestFor": "page and section state changes",
     "avoidFor": "continuous scroll-driven motion",
     "reducedMotion": "opacity-only near-instant state",
@@ -5332,17 +5663,17 @@ window.bsxEffects = [
     "component": "page",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "translate",
-    "kind": "component-state",
-    "density": "low",
-    "risk": "low",
+    "kind": "entry",
+    "density": "marketing",
+    "risk": "visual-diff",
     "cssProperties": [
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "apply page section reveal to page and section state changes in a Bootstrap 5 page pattern",
     "bestFor": "page and section state changes",
     "avoidFor": "continuous scroll-driven motion",
     "reducedMotion": "opacity-only near-instant state",
@@ -5358,17 +5689,17 @@ window.bsxEffects = [
     "component": "page",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "translate",
-    "kind": "component-state",
-    "density": "low",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "marketing",
+    "risk": "visual-diff",
     "cssProperties": [
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": true,
+    "scenario": "apply page section stagger to page and section state changes in a Bootstrap 5 page pattern",
     "bestFor": "page and section state changes",
     "avoidFor": "continuous scroll-driven motion",
     "reducedMotion": "opacity-only near-instant state",
@@ -5384,18 +5715,18 @@ window.bsxEffects = [
     "component": "page",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "scale",
-    "kind": "component-state",
-    "density": "low",
-    "risk": "low",
+    "kind": "state",
+    "density": "marketing",
+    "risk": "visual-diff",
     "cssProperties": [
-      "opacity",
-      "transform"
+      "transform",
+      "opacity"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "apply page empty state pop to page and section state changes in a Bootstrap 5 page pattern",
     "bestFor": "page and section state changes",
     "avoidFor": "continuous scroll-driven motion",
     "reducedMotion": "opacity-only near-instant state",
@@ -5411,9 +5742,10 @@ window.bsxEffects = [
     "component": "page",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "shake",
-    "kind": "component-state",
-    "density": "low",
+    "kind": "state",
+    "density": "marketing",
     "risk": "medium",
     "cssProperties": [
       "opacity",
@@ -5424,6 +5756,8 @@ window.bsxEffects = [
     "bootstrapStates": [
       ".bsx-is-error"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply page error shake to page and section state changes in a Bootstrap 5 page pattern",
     "bestFor": "page and section state changes",
     "avoidFor": "continuous scroll-driven motion",
     "reducedMotion": "opacity-only near-instant state",
@@ -5439,10 +5773,11 @@ window.bsxEffects = [
     "component": "page",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "color + opacity",
-    "kind": "component-state",
-    "density": "low",
-    "risk": "low",
+    "kind": "success",
+    "density": "marketing",
+    "risk": "visual-diff",
     "cssProperties": [
       "opacity",
       "background-color",
@@ -5452,6 +5787,8 @@ window.bsxEffects = [
     "bootstrapStates": [
       ".bsx-is-success"
     ],
+    "requiresMarkupChange": true,
+    "scenario": "apply page success check to page and section state changes in a Bootstrap 5 page pattern",
     "bestFor": "page and section state changes",
     "avoidFor": "continuous scroll-driven motion",
     "reducedMotion": "opacity-only near-instant state",
@@ -5467,17 +5804,17 @@ window.bsxEffects = [
     "component": "page",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "opacity",
-    "kind": "component-state",
-    "density": "low",
-    "risk": "low",
+    "kind": "exit",
+    "density": "marketing",
+    "risk": "visual-diff",
     "cssProperties": [
       "opacity"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "apply content fade swap to page and section state changes in a Bootstrap 5 page pattern",
     "bestFor": "page and section state changes",
     "avoidFor": "continuous scroll-driven motion",
     "reducedMotion": "near-instant opacity or color state",
@@ -5493,18 +5830,18 @@ window.bsxEffects = [
     "component": "page",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "opacity",
-    "kind": "component-state",
-    "density": "low",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "marketing",
+    "risk": "medium",
     "cssProperties": [
       "opacity",
       "filter"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "apply content blur swap to page and section state changes in a Bootstrap 5 page pattern",
     "bestFor": "page and section state changes",
     "avoidFor": "continuous scroll-driven motion",
     "reducedMotion": "near-instant opacity or color state",
@@ -5520,17 +5857,17 @@ window.bsxEffects = [
     "component": "page",
     "requiresJs": true,
     "runtimeBehavior": "intersection observer",
+    "runtimeAction": null,
     "motion": "translate",
-    "kind": "component-state",
-    "density": "low",
-    "risk": "low",
+    "kind": "entry",
+    "density": "marketing",
+    "risk": "requires-js",
     "cssProperties": [
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "apply scroll reveal lite to page and section state changes in a Bootstrap 5 page pattern",
     "bestFor": "page and section state changes",
     "avoidFor": "continuous scroll-driven motion",
     "reducedMotion": "opacity-only near-instant state",
@@ -5546,10 +5883,11 @@ window.bsxEffects = [
     "component": "breadcrumb",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "translate",
-    "kind": "navigation-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "navigation",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "transform",
       "opacity"
@@ -5559,6 +5897,8 @@ window.bsxEffects = [
       "[aria-current]",
       ".bsx-is-success"
     ],
+    "requiresMarkupChange": true,
+    "scenario": "apply breadcrumb current marker to admin location and hierarchy changes in a Bootstrap 5 breadcrumb pattern",
     "bestFor": "admin location and hierarchy changes",
     "avoidFor": "purely decorative page titles",
     "reducedMotion": "opacity-only near-instant state",
@@ -5574,10 +5914,11 @@ window.bsxEffects = [
     "component": "breadcrumb",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "color + opacity",
-    "kind": "navigation-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "navigation",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "opacity"
     ],
@@ -5586,6 +5927,8 @@ window.bsxEffects = [
       "[aria-current]",
       ".bsx-is-success"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply breadcrumb parent hover to admin location and hierarchy changes in a Bootstrap 5 breadcrumb pattern",
     "bestFor": "admin location and hierarchy changes",
     "avoidFor": "purely decorative page titles",
     "reducedMotion": "opacity-only near-instant state",
@@ -5601,10 +5944,11 @@ window.bsxEffects = [
     "component": "breadcrumb",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "color + opacity",
-    "kind": "navigation-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "data-change",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "opacity"
     ],
@@ -5613,6 +5957,8 @@ window.bsxEffects = [
       "[aria-current]",
       ".bsx-is-success"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply breadcrumb path update to admin location and hierarchy changes in a Bootstrap 5 breadcrumb pattern",
     "bestFor": "admin location and hierarchy changes",
     "avoidFor": "purely decorative page titles",
     "reducedMotion": "opacity-only near-instant state",
@@ -5628,10 +5974,11 @@ window.bsxEffects = [
     "component": "breadcrumb",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "color + opacity",
-    "kind": "navigation-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "success",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "opacity"
     ],
@@ -5640,6 +5987,8 @@ window.bsxEffects = [
       "[aria-current]",
       ".bsx-is-success"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply breadcrumb step complete to admin location and hierarchy changes in a Bootstrap 5 breadcrumb pattern",
     "bestFor": "admin location and hierarchy changes",
     "avoidFor": "purely decorative page titles",
     "reducedMotion": "opacity-only near-instant state",
@@ -5655,10 +6004,11 @@ window.bsxEffects = [
     "component": "breadcrumb",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "color + opacity",
-    "kind": "navigation-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "navigation",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "opacity"
     ],
@@ -5667,6 +6017,8 @@ window.bsxEffects = [
       "[aria-current]",
       ".bsx-is-success"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply breadcrumb overflow menu to admin location and hierarchy changes in a Bootstrap 5 breadcrumb pattern",
     "bestFor": "admin location and hierarchy changes",
     "avoidFor": "purely decorative page titles",
     "reducedMotion": "opacity-only near-instant state",
@@ -5682,10 +6034,11 @@ window.bsxEffects = [
     "component": "breadcrumb",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "color + opacity",
-    "kind": "navigation-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "navigation",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "transform",
       "opacity"
@@ -5695,6 +6048,8 @@ window.bsxEffects = [
       "[aria-current]",
       ".bsx-is-success"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply breadcrumb context return to admin location and hierarchy changes in a Bootstrap 5 breadcrumb pattern",
     "bestFor": "admin location and hierarchy changes",
     "avoidFor": "purely decorative page titles",
     "reducedMotion": "opacity-only near-instant state",
@@ -5702,18 +6057,48 @@ window.bsxEffects = [
     "snippet": "<nav class=\"bsx-breadcrumb-context-return\" aria-label=\"Breadcrumb\">\n  <ol class=\"breadcrumb mb-0\">\n    <li class=\"breadcrumb-item\"><a href=\"#\">CRM</a></li>\n    <li class=\"breadcrumb-item\"><a href=\"#\">Customers</a></li>\n    <li class=\"breadcrumb-item active\" aria-current=\"page\">Acme profile</li>\n  </ol>\n</nav>"
   },
   {
-    "name": "pagination-active-marker",
+    "name": "pagination-item-press",
     "level": "extended",
     "category": "pagination",
     "directory": "pagination",
-    "className": "bsx-pagination-active-marker",
+    "className": "bsx-pagination-item-press",
     "component": "pagination",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
+    "motion": "scale",
+    "kind": "navigation",
+    "density": "dense-admin",
+    "risk": "safe",
+    "cssProperties": [
+      "transform"
+    ],
+    "bootstrapStates": [
+      ".active",
+      "[aria-current]"
+    ],
+    "requiresMarkupChange": false,
+    "scenario": "provide tactile feedback when a page item is pressed",
+    "bestFor": "paged tables and search results",
+    "avoidFor": "infinite scroll without page state",
+    "reducedMotion": "opacity-only near-instant state",
+    "snippetPath": "snippets/extended/pagination/pagination-item-press.html",
+    "snippet": "<nav class=\"bsx-pagination-item-press\" aria-label=\"Pagination Item Press\">\n  <ul class=\"pagination mb-0\" >\n    <li class=\"page-item disabled\"><a class=\"page-link\" href=\"#\" aria-disabled=\"true\">Previous</a></li>\n    <li class=\"page-item\"><a class=\"page-link\" href=\"#\">1</a></li>\n    <li class=\"page-item active\" aria-current=\"page\"><a class=\"page-link\" href=\"#\">2</a></li>\n    <li class=\"page-item\"><a class=\"page-link\" href=\"#\">3</a></li>\n    <li class=\"page-item\"><a class=\"page-link\" href=\"#\">Next</a></li>\n  </ul>\n</nav>"
+  },
+  {
+    "name": "pagination-active-slide",
+    "level": "extended",
+    "category": "pagination",
+    "directory": "pagination",
+    "className": "bsx-pagination-active-slide",
+    "component": "pagination",
+    "requiresJs": false,
+    "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "translate",
-    "kind": "navigation-state",
-    "density": "high",
-    "risk": "low",
+    "kind": "navigation",
+    "density": "dense-admin",
+    "risk": "safe",
     "cssProperties": [
       "transform",
       "box-shadow",
@@ -5725,51 +6110,28 @@ window.bsxEffects = [
       ".active",
       "[aria-current]"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "show the active page in a paged admin list",
     "bestFor": "paged tables and search results",
     "avoidFor": "infinite scroll without page state",
     "reducedMotion": "opacity-only near-instant state",
-    "snippetPath": "snippets/extended/pagination/pagination-active-marker.html",
-    "snippet": "<nav class=\"bsx-pagination-active-marker\" aria-label=\"Pagination Active Marker\">\n  <ul class=\"pagination mb-0\" >\n    <li class=\"page-item disabled\"><a class=\"page-link\" href=\"#\" aria-disabled=\"true\">Previous</a></li>\n    <li class=\"page-item\"><a class=\"page-link\" href=\"#\">1</a></li>\n    <li class=\"page-item active\" aria-current=\"page\"><a class=\"page-link\" href=\"#\">2</a></li>\n    <li class=\"page-item\"><a class=\"page-link\" href=\"#\">3</a></li>\n    <li class=\"page-item\"><a class=\"page-link\" href=\"#\">Next</a></li>\n  </ul>\n</nav>"
+    "snippetPath": "snippets/extended/pagination/pagination-active-slide.html",
+    "snippet": "<nav class=\"bsx-pagination-active-slide\" aria-label=\"Pagination Active Slide\">\n  <ul class=\"pagination mb-0\" >\n    <li class=\"page-item disabled\"><a class=\"page-link\" href=\"#\" aria-disabled=\"true\">Previous</a></li>\n    <li class=\"page-item\"><a class=\"page-link\" href=\"#\">1</a></li>\n    <li class=\"page-item active\" aria-current=\"page\"><a class=\"page-link\" href=\"#\">2</a></li>\n    <li class=\"page-item\"><a class=\"page-link\" href=\"#\">3</a></li>\n    <li class=\"page-item\"><a class=\"page-link\" href=\"#\">Next</a></li>\n  </ul>\n</nav>"
   },
   {
-    "name": "pagination-page-jump",
+    "name": "pagination-loading-fade",
     "level": "extended",
     "category": "pagination",
     "directory": "pagination",
-    "className": "bsx-pagination-page-jump",
+    "className": "bsx-pagination-loading-fade",
     "component": "pagination",
-    "requiresJs": false,
-    "runtimeBehavior": null,
-    "motion": "color + opacity",
-    "kind": "navigation-state",
-    "density": "high",
-    "risk": "low",
-    "cssProperties": [
-      "transform"
-    ],
-    "bootstrapStates": [
-      ".active",
-      "[aria-current]"
-    ],
-    "bestFor": "paged tables and search results",
-    "avoidFor": "infinite scroll without page state",
-    "reducedMotion": "opacity-only near-instant state",
-    "snippetPath": "snippets/extended/pagination/pagination-page-jump.html",
-    "snippet": "<nav class=\"bsx-pagination-page-jump\" aria-label=\"Pagination Page Jump\">\n  <ul class=\"pagination mb-0\" >\n    <li class=\"page-item disabled\"><a class=\"page-link\" href=\"#\" aria-disabled=\"true\">Previous</a></li>\n    <li class=\"page-item\"><a class=\"page-link\" href=\"#\">1</a></li>\n    <li class=\"page-item active\" aria-current=\"page\"><a class=\"page-link\" href=\"#\">2</a></li>\n    <li class=\"page-item\"><a class=\"page-link\" href=\"#\">3</a></li>\n    <li class=\"page-item\"><a class=\"page-link\" href=\"#\">Next</a></li>\n  </ul>\n</nav>"
-  },
-  {
-    "name": "pagination-loading-page",
-    "level": "extended",
-    "category": "pagination",
-    "directory": "pagination",
-    "className": "bsx-pagination-loading-page",
-    "component": "pagination",
-    "requiresJs": false,
-    "runtimeBehavior": null,
+    "requiresJs": true,
+    "runtimeBehavior": "pagination loading state",
+    "runtimeAction": "pagination-loading",
     "motion": "opacity",
-    "kind": "navigation-state",
-    "density": "high",
-    "risk": "low",
+    "kind": "loading",
+    "density": "dense-admin",
+    "risk": "requires-js",
     "cssProperties": [
       "opacity"
     ],
@@ -5779,11 +6141,13 @@ window.bsxEffects = [
       "[aria-busy]",
       ".bsx-is-loading"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "soften pagination while the next page is loading",
     "bestFor": "paged tables and search results",
     "avoidFor": "infinite scroll without page state",
-    "reducedMotion": "opacity-only near-instant state",
-    "snippetPath": "snippets/extended/pagination/pagination-loading-page.html",
-    "snippet": "<nav class=\"bsx-pagination-loading-page\" aria-label=\"Pagination Loading Page\">\n  <ul class=\"pagination mb-0\" aria-busy=\"true\">\n    <li class=\"page-item disabled\"><a class=\"page-link\" href=\"#\" aria-disabled=\"true\">Previous</a></li>\n    <li class=\"page-item\"><a class=\"page-link\" href=\"#\">1</a></li>\n    <li class=\"page-item active\" aria-current=\"page\"><a class=\"page-link\" href=\"#\">2</a></li>\n    <li class=\"page-item\"><a class=\"page-link\" href=\"#\">3</a></li>\n    <li class=\"page-item\"><a class=\"page-link\" href=\"#\">Next</a></li>\n  </ul>\n</nav>"
+    "reducedMotion": "near-instant opacity or color state",
+    "snippetPath": "snippets/extended/pagination/pagination-loading-fade.html",
+    "snippet": "<!-- Requires Bootstrap bundle and assets/js/bootstrap5-transitions.js. -->\n<nav class=\"bsx-pagination-loading-fade\" aria-label=\"Pagination Loading Fade\">\n  <ul class=\"pagination mb-0\" aria-busy=\"true\">\n    <li class=\"page-item disabled\"><a class=\"page-link\" href=\"#\" aria-disabled=\"true\">Previous</a></li>\n    <li class=\"page-item\"><a class=\"page-link\" href=\"#\" data-bsx-action=\"pagination-loading\">1</a></li>\n    <li class=\"page-item active\" aria-current=\"page\"><a class=\"page-link\" href=\"#\" data-bsx-action=\"pagination-loading\">2</a></li>\n    <li class=\"page-item\"><a class=\"page-link\" href=\"#\">3</a></li>\n    <li class=\"page-item\"><a class=\"page-link\" href=\"#\">Next</a></li>\n  </ul>\n</nav>"
   },
   {
     "name": "pagination-disabled-soft",
@@ -5794,10 +6158,11 @@ window.bsxEffects = [
     "component": "pagination",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "opacity",
-    "kind": "navigation-state",
-    "density": "high",
-    "risk": "low",
+    "kind": "navigation",
+    "density": "dense-admin",
+    "risk": "safe",
     "cssProperties": [
       "opacity",
       "background-color",
@@ -5811,6 +6176,8 @@ window.bsxEffects = [
       "[disabled]",
       "[aria-disabled]"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "make disabled pagination controls visibly inactive",
     "bestFor": "paged tables and search results",
     "avoidFor": "infinite scroll without page state",
     "reducedMotion": "opacity-only near-instant state",
@@ -5818,18 +6185,19 @@ window.bsxEffects = [
     "snippet": "<nav class=\"bsx-pagination-disabled-soft\" aria-label=\"Pagination Disabled Soft\">\n  <ul class=\"pagination mb-0\" >\n    <li class=\"page-item disabled\"><a class=\"page-link\" href=\"#\" aria-disabled=\"true\">Previous</a></li>\n    <li class=\"page-item\"><a class=\"page-link\" href=\"#\">1</a></li>\n    <li class=\"page-item active\" aria-current=\"page\"><a class=\"page-link\" href=\"#\">2</a></li>\n    <li class=\"page-item\"><a class=\"page-link\" href=\"#\">3</a></li>\n    <li class=\"page-item\"><a class=\"page-link\" href=\"#\">Next</a></li>\n  </ul>\n</nav>"
   },
   {
-    "name": "pagination-compact-hover",
+    "name": "pagination-page-change",
     "level": "extended",
     "category": "pagination",
     "directory": "pagination",
-    "className": "bsx-pagination-compact-hover",
+    "className": "bsx-pagination-page-change",
     "component": "pagination",
-    "requiresJs": false,
-    "runtimeBehavior": null,
+    "requiresJs": true,
+    "runtimeBehavior": "pagination loading state",
+    "runtimeAction": "pagination-loading",
     "motion": "color + opacity",
-    "kind": "navigation-state",
-    "density": "high",
-    "risk": "low",
+    "kind": "data-change",
+    "density": "dense-admin",
+    "risk": "requires-js",
     "cssProperties": [
       "opacity",
       "transform"
@@ -5838,38 +6206,45 @@ window.bsxEffects = [
       ".active",
       "[aria-current]"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "indicate a page change request without a full page animation",
     "bestFor": "paged tables and search results",
     "avoidFor": "infinite scroll without page state",
     "reducedMotion": "opacity-only near-instant state",
-    "snippetPath": "snippets/extended/pagination/pagination-compact-hover.html",
-    "snippet": "<nav class=\"bsx-pagination-compact-hover\" aria-label=\"Pagination Compact Hover\">\n  <ul class=\"pagination mb-0\" >\n    <li class=\"page-item disabled\"><a class=\"page-link\" href=\"#\" aria-disabled=\"true\">Previous</a></li>\n    <li class=\"page-item\"><a class=\"page-link\" href=\"#\">1</a></li>\n    <li class=\"page-item active\" aria-current=\"page\"><a class=\"page-link\" href=\"#\">2</a></li>\n    <li class=\"page-item\"><a class=\"page-link\" href=\"#\">3</a></li>\n    <li class=\"page-item\"><a class=\"page-link\" href=\"#\">Next</a></li>\n  </ul>\n</nav>"
+    "snippetPath": "snippets/extended/pagination/pagination-page-change.html",
+    "snippet": "<!-- Requires Bootstrap bundle and assets/js/bootstrap5-transitions.js. -->\n<nav class=\"bsx-pagination-page-change\" aria-label=\"Pagination Page Change\">\n  <ul class=\"pagination mb-0\" >\n    <li class=\"page-item disabled\"><a class=\"page-link\" href=\"#\" aria-disabled=\"true\">Previous</a></li>\n    <li class=\"page-item\"><a class=\"page-link\" href=\"#\" data-bsx-action=\"pagination-loading\">1</a></li>\n    <li class=\"page-item active\" aria-current=\"page\"><a class=\"page-link\" href=\"#\" data-bsx-action=\"pagination-loading\">2</a></li>\n    <li class=\"page-item\"><a class=\"page-link\" href=\"#\">3</a></li>\n    <li class=\"page-item\"><a class=\"page-link\" href=\"#\">Next</a></li>\n  </ul>\n</nav>"
   },
   {
-    "name": "pagination-count-update",
+    "name": "pagination-jump-focus",
     "level": "extended",
     "category": "pagination",
     "directory": "pagination",
-    "className": "bsx-pagination-count-update",
+    "className": "bsx-pagination-jump-focus",
     "component": "pagination",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "color + opacity",
-    "kind": "navigation-state",
-    "density": "high",
-    "risk": "low",
+    "kind": "navigation",
+    "density": "dense-admin",
+    "risk": "safe",
     "cssProperties": [
+      "transform",
       "opacity",
-      "transform"
+      "box-shadow",
+      "outline-color"
     ],
     "bootstrapStates": [
       ".active",
       "[aria-current]"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "highlight a jump-to-page control on keyboard focus",
     "bestFor": "paged tables and search results",
     "avoidFor": "infinite scroll without page state",
     "reducedMotion": "opacity-only near-instant state",
-    "snippetPath": "snippets/extended/pagination/pagination-count-update.html",
-    "snippet": "<nav class=\"bsx-pagination-count-update\" aria-label=\"Pagination Count Update\">\n  <ul class=\"pagination mb-0\" >\n    <li class=\"page-item disabled\"><a class=\"page-link\" href=\"#\" aria-disabled=\"true\">Previous</a></li>\n    <li class=\"page-item\"><a class=\"page-link\" href=\"#\">1</a></li>\n    <li class=\"page-item active\" aria-current=\"page\"><a class=\"page-link\" href=\"#\">2</a></li>\n    <li class=\"page-item\"><a class=\"page-link\" href=\"#\">3</a></li>\n    <li class=\"page-item\"><a class=\"page-link\" href=\"#\">Next</a></li>\n  </ul>\n</nav>"
+    "snippetPath": "snippets/extended/pagination/pagination-jump-focus.html",
+    "snippet": "<nav class=\"bsx-pagination-jump-focus\" aria-label=\"Pagination Jump Focus\">\n  <ul class=\"pagination mb-0\" >\n    <li class=\"page-item disabled\"><a class=\"page-link\" href=\"#\" aria-disabled=\"true\">Previous</a></li>\n    <li class=\"page-item\"><a class=\"page-link\" href=\"#\">1</a></li>\n    <li class=\"page-item active\" aria-current=\"page\"><a class=\"page-link\" href=\"#\">2</a></li>\n    <li class=\"page-item\"><a class=\"page-link\" href=\"#\">3</a></li>\n    <li class=\"page-item\"><a class=\"page-link\" href=\"#\">Next</a></li>\n  </ul>\n</nav>"
   },
   {
     "name": "button-group-active-marker",
@@ -5880,10 +6255,11 @@ window.bsxEffects = [
     "component": "button-group",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "translate",
-    "kind": "navigation-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "selection",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "transform",
       "box-shadow",
@@ -5895,6 +6271,8 @@ window.bsxEffects = [
       ".active",
       "[aria-current]"
     ],
+    "requiresMarkupChange": true,
+    "scenario": "apply button group active marker to segmented controls, density toggles, and bulk modes in a Bootstrap 5 button-group pattern",
     "bestFor": "segmented controls, density toggles, and bulk modes",
     "avoidFor": "single primary actions",
     "reducedMotion": "opacity-only near-instant state",
@@ -5910,10 +6288,11 @@ window.bsxEffects = [
     "component": "button-group",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "scale",
-    "kind": "navigation-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "transform"
     ],
@@ -5921,6 +6300,8 @@ window.bsxEffects = [
       ".active",
       "[aria-current]"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply button group segment press to segmented controls, density toggles, and bulk modes in a Bootstrap 5 button-group pattern",
     "bestFor": "segmented controls, density toggles, and bulk modes",
     "avoidFor": "single primary actions",
     "reducedMotion": "opacity-only near-instant state",
@@ -5936,10 +6317,11 @@ window.bsxEffects = [
     "component": "button-group",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "color + opacity",
-    "kind": "navigation-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "selection",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "opacity"
     ],
@@ -5949,6 +6331,8 @@ window.bsxEffects = [
       ".bsx-is-success",
       ".bsx-is-selected"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply button group bulk ready to segmented controls, density toggles, and bulk modes in a Bootstrap 5 button-group pattern",
     "bestFor": "segmented controls, density toggles, and bulk modes",
     "avoidFor": "single primary actions",
     "reducedMotion": "opacity-only near-instant state",
@@ -5964,10 +6348,11 @@ window.bsxEffects = [
     "component": "button-group",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "color + opacity",
-    "kind": "navigation-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "opacity",
       "transform"
@@ -5976,6 +6361,8 @@ window.bsxEffects = [
       ".active",
       "[aria-current]"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply button group toggle sync to segmented controls, density toggles, and bulk modes in a Bootstrap 5 button-group pattern",
     "bestFor": "segmented controls, density toggles, and bulk modes",
     "avoidFor": "single primary actions",
     "reducedMotion": "opacity-only near-instant state",
@@ -5991,10 +6378,11 @@ window.bsxEffects = [
     "component": "button-group",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "color + opacity",
-    "kind": "navigation-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "opacity",
       "transform"
@@ -6003,6 +6391,8 @@ window.bsxEffects = [
       ".active",
       "[aria-current]"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply button group density switch to segmented controls, density toggles, and bulk modes in a Bootstrap 5 button-group pattern",
     "bestFor": "segmented controls, density toggles, and bulk modes",
     "avoidFor": "single primary actions",
     "reducedMotion": "opacity-only near-instant state",
@@ -6018,10 +6408,11 @@ window.bsxEffects = [
     "component": "button-group",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "color + opacity",
-    "kind": "navigation-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "box-shadow",
       "background-color",
@@ -6032,6 +6423,8 @@ window.bsxEffects = [
       ".active",
       "[aria-current]"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply button group filter active to segmented controls, density toggles, and bulk modes in a Bootstrap 5 button-group pattern",
     "bestFor": "segmented controls, density toggles, and bulk modes",
     "avoidFor": "single primary actions",
     "reducedMotion": "opacity-only near-instant state",
@@ -6047,19 +6440,23 @@ window.bsxEffects = [
     "component": "input-group",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "color + opacity",
-    "kind": "form-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "dense-admin",
+    "risk": "safe",
     "cssProperties": [
       "opacity",
-      "box-shadow"
+      "box-shadow",
+      "outline-color"
     ],
     "bootstrapStates": [
       ".is-valid",
       ".is-invalid",
       ":focus-within"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "show focus across a compound input group",
     "bestFor": "search, copy, validation, and compound form controls",
     "avoidFor": "standalone long-form fields",
     "reducedMotion": "opacity-only near-instant state",
@@ -6075,10 +6472,11 @@ window.bsxEffects = [
     "component": "input-group",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "color + opacity",
-    "kind": "form-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "feedback",
+    "density": "dense-admin",
+    "risk": "safe",
     "cssProperties": [
       "opacity",
       "transform"
@@ -6088,6 +6486,8 @@ window.bsxEffects = [
       ".is-invalid",
       ":focus-within"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "highlight an addon when its input is active",
     "bestFor": "search, copy, validation, and compound form controls",
     "avoidFor": "standalone long-form fields",
     "reducedMotion": "opacity-only near-instant state",
@@ -6095,20 +6495,20 @@ window.bsxEffects = [
     "snippet": "<div class=\"bsx-input-group-addon-highlight\">\n  <label class=\"form-label\" for=\"bsxInputGroupAddonHighlight\">Input Group Addon Highlight</label>\n  <div class=\"input-group \" >\n    <span class=\"input-group-text\" id=\"bsxInputGroupAddonHighlightAddon\">#</span>\n    <input class=\"form-control \" id=\"bsxInputGroupAddonHighlight\" type=\"text\" value=\"CRM-2048\" aria-describedby=\"bsxInputGroupAddonHighlightAddon bsxInputGroupAddonHighlightFeedback\">\n    <button class=\"btn btn-outline-secondary\" type=\"button\">Apply</button>\n    <div class=\"invalid-feedback\" id=\"bsxInputGroupAddonHighlightFeedback\">Check this value before saving.</div>\n  </div>\n</div>"
   },
   {
-    "name": "input-group-copy-confirm",
+    "name": "input-group-button-press",
     "level": "extended",
     "category": "input-group",
     "directory": "input-group",
-    "className": "bsx-input-group-copy-confirm",
+    "className": "bsx-input-group-button-press",
     "component": "input-group",
     "requiresJs": false,
     "runtimeBehavior": null,
-    "motion": "color + opacity",
-    "kind": "form-state",
-    "density": "medium",
-    "risk": "low",
+    "runtimeAction": null,
+    "motion": "scale",
+    "kind": "feedback",
+    "density": "dense-admin",
+    "risk": "safe",
     "cssProperties": [
-      "opacity",
       "transform"
     ],
     "bootstrapStates": [
@@ -6116,96 +6516,116 @@ window.bsxEffects = [
       ".is-invalid",
       ":focus-within"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "add press feedback to an input group action button",
     "bestFor": "search, copy, validation, and compound form controls",
     "avoidFor": "standalone long-form fields",
     "reducedMotion": "opacity-only near-instant state",
-    "snippetPath": "snippets/extended/input-group/input-group-copy-confirm.html",
-    "snippet": "<div class=\"bsx-input-group-copy-confirm\">\n  <label class=\"form-label\" for=\"bsxInputGroupCopyConfirm\">Input Group Copy Confirm</label>\n  <div class=\"input-group \" >\n    <span class=\"input-group-text\" id=\"bsxInputGroupCopyConfirmAddon\">#</span>\n    <input class=\"form-control \" id=\"bsxInputGroupCopyConfirm\" type=\"text\" value=\"CRM-2048\" aria-describedby=\"bsxInputGroupCopyConfirmAddon bsxInputGroupCopyConfirmFeedback\">\n    <button class=\"btn btn-outline-secondary\" type=\"button\">Apply</button>\n    <div class=\"invalid-feedback\" id=\"bsxInputGroupCopyConfirmFeedback\">Check this value before saving.</div>\n  </div>\n</div>"
+    "snippetPath": "snippets/extended/input-group/input-group-button-press.html",
+    "snippet": "<div class=\"bsx-input-group-button-press\">\n  <label class=\"form-label\" for=\"bsxInputGroupButtonPress\">Input Group Button Press</label>\n  <div class=\"input-group \" >\n    <span class=\"input-group-text\" id=\"bsxInputGroupButtonPressAddon\">#</span>\n    <input class=\"form-control \" id=\"bsxInputGroupButtonPress\" type=\"text\" value=\"CRM-2048\" aria-describedby=\"bsxInputGroupButtonPressAddon bsxInputGroupButtonPressFeedback\">\n    <button class=\"btn btn-outline-secondary\" type=\"button\">Apply</button>\n    <div class=\"invalid-feedback\" id=\"bsxInputGroupButtonPressFeedback\">Check this value before saving.</div>\n  </div>\n</div>"
   },
   {
-    "name": "input-group-search-pending",
+    "name": "input-group-error-shake",
     "level": "extended",
     "category": "input-group",
     "directory": "input-group",
-    "className": "bsx-input-group-search-pending",
+    "className": "bsx-input-group-error-shake",
     "component": "input-group",
     "requiresJs": false,
     "runtimeBehavior": null,
-    "motion": "color + opacity",
-    "kind": "form-state",
-    "density": "medium",
-    "risk": "low",
+    "runtimeAction": null,
+    "motion": "shake",
+    "kind": "validation",
+    "density": "dense-admin",
+    "risk": "medium",
     "cssProperties": [
-      "opacity"
+      "opacity",
+      "background-color",
+      "border-color",
+      "color"
     ],
     "bootstrapStates": [
       ".is-valid",
       ".is-invalid",
       ":focus-within",
-      "[aria-busy]",
-      ".bsx-is-loading"
+      ".bsx-is-error"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "sync validation feedback across a compound input group",
     "bestFor": "search, copy, validation, and compound form controls",
     "avoidFor": "standalone long-form fields",
     "reducedMotion": "opacity-only near-instant state",
-    "snippetPath": "snippets/extended/input-group/input-group-search-pending.html",
-    "snippet": "<div class=\"bsx-input-group-search-pending\">\n  <label class=\"form-label\" for=\"bsxInputGroupSearchPending\">Input Group Search Pending</label>\n  <div class=\"input-group \" aria-busy=\"true\">\n    <span class=\"input-group-text\" id=\"bsxInputGroupSearchPendingAddon\">#</span>\n    <input class=\"form-control \" id=\"bsxInputGroupSearchPending\" type=\"text\" value=\"CRM-2048\" aria-describedby=\"bsxInputGroupSearchPendingAddon bsxInputGroupSearchPendingFeedback\">\n    <button class=\"btn btn-outline-secondary\" type=\"button\">Apply</button>\n    <div class=\"invalid-feedback\" id=\"bsxInputGroupSearchPendingFeedback\">Check this value before saving.</div>\n  </div>\n</div>"
+    "snippetPath": "snippets/extended/input-group/input-group-error-shake.html",
+    "snippet": "<div class=\"bsx-input-group-error-shake\">\n  <label class=\"form-label\" for=\"bsxInputGroupErrorShake\">Input Group Error Shake</label>\n  <div class=\"input-group has-validation\" >\n    <span class=\"input-group-text\" id=\"bsxInputGroupErrorShakeAddon\">#</span>\n    <input class=\"form-control is-invalid\" id=\"bsxInputGroupErrorShake\" type=\"text\" value=\"CRM-2048\" aria-describedby=\"bsxInputGroupErrorShakeAddon bsxInputGroupErrorShakeFeedback\">\n    <button class=\"btn btn-outline-secondary\" type=\"button\">Apply</button>\n    <div class=\"invalid-feedback\" id=\"bsxInputGroupErrorShakeFeedback\">Check this value before saving.</div>\n  </div>\n</div>"
   },
   {
-    "name": "input-group-validation-sync",
+    "name": "input-group-success-glow",
     "level": "extended",
     "category": "input-group",
     "directory": "input-group",
-    "className": "bsx-input-group-validation-sync",
+    "className": "bsx-input-group-success-glow",
     "component": "input-group",
     "requiresJs": false,
     "runtimeBehavior": null,
-    "motion": "color + opacity",
-    "kind": "form-state",
-    "density": "medium",
-    "risk": "low",
+    "runtimeAction": null,
+    "motion": "opacity",
+    "kind": "validation",
+    "density": "dense-admin",
+    "risk": "safe",
     "cssProperties": [
       "opacity",
-      "transform"
+      "box-shadow",
+      "background-color",
+      "border-color",
+      "color"
     ],
     "bootstrapStates": [
       ".is-valid",
       ".is-invalid",
-      ":focus-within"
+      ":focus-within",
+      ".bsx-is-success"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "confirm a successful input group action",
     "bestFor": "search, copy, validation, and compound form controls",
     "avoidFor": "standalone long-form fields",
-    "reducedMotion": "opacity-only near-instant state",
-    "snippetPath": "snippets/extended/input-group/input-group-validation-sync.html",
-    "snippet": "<div class=\"bsx-input-group-validation-sync\">\n  <label class=\"form-label\" for=\"bsxInputGroupValidationSync\">Input Group Validation Sync</label>\n  <div class=\"input-group has-validation\" >\n    <span class=\"input-group-text\" id=\"bsxInputGroupValidationSyncAddon\">#</span>\n    <input class=\"form-control is-invalid\" id=\"bsxInputGroupValidationSync\" type=\"text\" value=\"CRM-2048\" aria-describedby=\"bsxInputGroupValidationSyncAddon bsxInputGroupValidationSyncFeedback\">\n    <button class=\"btn btn-outline-secondary\" type=\"button\">Apply</button>\n    <div class=\"invalid-feedback\" id=\"bsxInputGroupValidationSyncFeedback\">Check this value before saving.</div>\n  </div>\n</div>"
+    "reducedMotion": "near-instant opacity or color state",
+    "snippetPath": "snippets/extended/input-group/input-group-success-glow.html",
+    "snippet": "<div class=\"bsx-input-group-success-glow\">\n  <label class=\"form-label\" for=\"bsxInputGroupSuccessGlow\">Input Group Success Glow</label>\n  <div class=\"input-group \" >\n    <span class=\"input-group-text\" id=\"bsxInputGroupSuccessGlowAddon\">#</span>\n    <input class=\"form-control is-valid\" id=\"bsxInputGroupSuccessGlow\" type=\"text\" value=\"CRM-2048\" aria-describedby=\"bsxInputGroupSuccessGlowAddon bsxInputGroupSuccessGlowFeedback\">\n    <button class=\"btn btn-outline-secondary\" type=\"button\">Apply</button>\n    <div class=\"invalid-feedback\" id=\"bsxInputGroupSuccessGlowFeedback\">Check this value before saving.</div>\n  </div>\n</div>"
   },
   {
-    "name": "input-group-password-toggle",
+    "name": "input-group-copy-success",
     "level": "extended",
     "category": "input-group",
     "directory": "input-group",
-    "className": "bsx-input-group-password-toggle",
+    "className": "bsx-input-group-copy-success",
     "component": "input-group",
-    "requiresJs": false,
-    "runtimeBehavior": null,
+    "requiresJs": true,
+    "runtimeBehavior": "copy value confirmation",
+    "runtimeAction": "copy-input",
     "motion": "color + opacity",
-    "kind": "form-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "success",
+    "density": "dense-admin",
+    "risk": "requires-js",
     "cssProperties": [
       "opacity",
-      "transform"
+      "background-color",
+      "border-color",
+      "color"
     ],
     "bootstrapStates": [
       ".is-valid",
       ".is-invalid",
-      ":focus-within"
+      ":focus-within",
+      ".bsx-is-success"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "confirm that an API key or token was copied",
     "bestFor": "search, copy, validation, and compound form controls",
     "avoidFor": "standalone long-form fields",
     "reducedMotion": "opacity-only near-instant state",
-    "snippetPath": "snippets/extended/input-group/input-group-password-toggle.html",
-    "snippet": "<div class=\"bsx-input-group-password-toggle\">\n  <label class=\"form-label\" for=\"bsxInputGroupPasswordToggle\">Input Group Password Toggle</label>\n  <div class=\"input-group \" >\n    <span class=\"input-group-text\" id=\"bsxInputGroupPasswordToggleAddon\">#</span>\n    <input class=\"form-control \" id=\"bsxInputGroupPasswordToggle\" type=\"text\" value=\"CRM-2048\" aria-describedby=\"bsxInputGroupPasswordToggleAddon bsxInputGroupPasswordToggleFeedback\">\n    <button class=\"btn btn-outline-secondary\" type=\"button\">Show</button>\n    <div class=\"invalid-feedback\" id=\"bsxInputGroupPasswordToggleFeedback\">Check this value before saving.</div>\n  </div>\n</div>"
+    "snippetPath": "snippets/extended/input-group/input-group-copy-success.html",
+    "snippet": "<!-- Requires Bootstrap bundle and assets/js/bootstrap5-transitions.js. -->\n<div class=\"bsx-input-group-copy-success\">\n  <label class=\"form-label\" for=\"bsxInputGroupCopySuccess\">Input Group Copy Success</label>\n  <div class=\"input-group \" >\n    <span class=\"input-group-text\" id=\"bsxInputGroupCopySuccessAddon\">#</span>\n    <input class=\"form-control is-valid\" id=\"bsxInputGroupCopySuccess\" type=\"text\" value=\"CRM-2048\" aria-describedby=\"bsxInputGroupCopySuccessAddon bsxInputGroupCopySuccessFeedback\">\n    <button class=\"btn btn-outline-secondary\" type=\"button\" data-bsx-action=\"copy-input\">Copy</button>\n    <div class=\"invalid-feedback\" id=\"bsxInputGroupCopySuccessFeedback\">Check this value before saving.</div>\n  </div>\n</div>"
   },
   {
     "name": "close-button-hover-ring",
@@ -6216,17 +6636,18 @@ window.bsxEffects = [
     "component": "close-button",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "color + opacity",
-    "kind": "component-state",
-    "density": "medium",
+    "kind": "feedback",
+    "density": "normal-ui",
     "risk": "medium",
     "cssProperties": [
-      "box-shadow"
+      "box-shadow",
+      "outline-color"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "apply close button hover ring to dismiss, clear, and close affordances in a Bootstrap 5 close-button pattern",
     "bestFor": "dismiss, clear, and close affordances",
     "avoidFor": "destructive actions without confirmation",
     "reducedMotion": "opacity-only near-instant state",
@@ -6242,9 +6663,10 @@ window.bsxEffects = [
     "component": "close-button",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "color + opacity",
-    "kind": "component-state",
-    "density": "medium",
+    "kind": "loading",
+    "density": "normal-ui",
     "risk": "medium",
     "cssProperties": [
       "opacity"
@@ -6253,6 +6675,8 @@ window.bsxEffects = [
       "[aria-busy]",
       ".bsx-is-loading"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "apply close button confirm pending to dismiss, clear, and close affordances in a Bootstrap 5 close-button pattern",
     "bestFor": "dismiss, clear, and close affordances",
     "avoidFor": "destructive actions without confirmation",
     "reducedMotion": "opacity-only near-instant state",
@@ -6268,18 +6692,18 @@ window.bsxEffects = [
     "component": "close-button",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "color + opacity",
-    "kind": "component-state",
-    "density": "medium",
+    "kind": "exit",
+    "density": "normal-ui",
     "risk": "medium",
     "cssProperties": [
       "opacity",
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "apply close button toast dismiss to dismiss, clear, and close affordances in a Bootstrap 5 close-button pattern",
     "bestFor": "dismiss, clear, and close affordances",
     "avoidFor": "destructive actions without confirmation",
     "reducedMotion": "opacity-only near-instant state",
@@ -6295,17 +6719,17 @@ window.bsxEffects = [
     "component": "close-button",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "color + opacity",
-    "kind": "component-state",
-    "density": "medium",
+    "kind": "navigation",
+    "density": "normal-ui",
     "risk": "medium",
     "cssProperties": [
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "apply close button panel dismiss to dismiss, clear, and close affordances in a Bootstrap 5 close-button pattern",
     "bestFor": "dismiss, clear, and close affordances",
     "avoidFor": "destructive actions without confirmation",
     "reducedMotion": "opacity-only near-instant state",
@@ -6321,18 +6745,18 @@ window.bsxEffects = [
     "component": "close-button",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "color + opacity",
-    "kind": "component-state",
-    "density": "medium",
+    "kind": "feedback",
+    "density": "normal-ui",
     "risk": "medium",
     "cssProperties": [
       "opacity",
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "apply close button clear filter to dismiss, clear, and close affordances in a Bootstrap 5 close-button pattern",
     "bestFor": "dismiss, clear, and close affordances",
     "avoidFor": "destructive actions without confirmation",
     "reducedMotion": "opacity-only near-instant state",
@@ -6340,72 +6764,133 @@ window.bsxEffects = [
     "snippet": "<div class=\"alert alert-light border d-flex align-items-center justify-content-between gap-3 bsx-close-button-clear-filter\" role=\"status\">\n  <span>Close Button Clear Filter</span>\n  <button type=\"button\" class=\"btn-close\" aria-label=\"Close\"></button>\n</div>"
   },
   {
-    "name": "crud-row-create",
+    "name": "crud-row-created-flash",
     "level": "extended",
     "category": "admin/crud",
     "directory": "admin/crud",
-    "className": "bsx-crud-row-create",
+    "className": "bsx-crud-row-created-flash",
     "component": "admin/crud",
     "requiresJs": false,
     "runtimeBehavior": null,
-    "motion": "color + opacity",
-    "kind": "workflow-state",
-    "density": "high",
-    "risk": "medium",
-    "cssProperties": [
-      "opacity",
-      "transform"
-    ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
-    "bestFor": "CRUD tables, inline edit, dirty state, save feedback, and bulk actions",
-    "avoidFor": "marketing cards",
-    "reducedMotion": "opacity-only near-instant state",
-    "snippetPath": "snippets/extended/admin/crud/crud-row-create.html",
-    "snippet": "<div class=\"table-responsive bsx-crud-row-create\">\n  <div class=\"d-flex align-items-center justify-content-between gap-2 mb-2\">\n    <span class=\"small text-body-secondary\">3 selected records</span>\n    <div class=\"btn-group btn-group-sm\" role=\"group\" aria-label=\"Bulk actions\">\n      <button type=\"button\" class=\"btn btn-outline-secondary\">Edit</button>\n      <button type=\"button\" class=\"btn btn-outline-danger\">Delete</button>\n    </div>\n  </div>\n  <table class=\"table table-hover align-middle mb-0\">\n    <thead><tr><th scope=\"col\">Customer</th><th scope=\"col\">State</th><th scope=\"col\">Updated</th></tr></thead>\n    <tbody>\n      <tr class=\"\">\n        <th scope=\"row\">Acme Ltd</th>\n        <td><span class=\"badge text-bg-primary\">Open</span></td>\n        <td><span class=\"text-body-secondary\">Now</span></td>\n      </tr>\n    </tbody>\n  </table>\n</div>"
-  },
-  {
-    "name": "crud-row-save-pending",
-    "level": "extended",
-    "category": "admin/crud",
-    "directory": "admin/crud",
-    "className": "bsx-crud-row-save-pending",
-    "component": "admin/crud",
-    "requiresJs": false,
-    "runtimeBehavior": null,
-    "motion": "color + opacity",
-    "kind": "workflow-state",
-    "density": "high",
-    "risk": "medium",
+    "runtimeAction": null,
+    "motion": "opacity",
+    "kind": "data-change",
+    "density": "dense-admin",
+    "risk": "safe",
     "cssProperties": [
       "opacity"
     ],
     "bootstrapStates": [
-      "[aria-busy]",
-      ".bsx-is-loading"
+      ".bsx-is-updated"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "highlight a newly created table row",
     "bestFor": "CRUD tables, inline edit, dirty state, save feedback, and bulk actions",
     "avoidFor": "marketing cards",
     "reducedMotion": "opacity-only near-instant state",
-    "snippetPath": "snippets/extended/admin/crud/crud-row-save-pending.html",
-    "snippet": "<div class=\"table-responsive bsx-crud-row-save-pending\">\n  <div class=\"d-flex align-items-center justify-content-between gap-2 mb-2\">\n    <span class=\"small text-body-secondary\">3 selected records</span>\n    <div class=\"btn-group btn-group-sm\" role=\"group\" aria-label=\"Bulk actions\">\n      <button type=\"button\" class=\"btn btn-outline-secondary\">Edit</button>\n      <button type=\"button\" class=\"btn btn-outline-danger\">Delete</button>\n    </div>\n  </div>\n  <table class=\"table table-hover align-middle mb-0\">\n    <thead><tr><th scope=\"col\">Customer</th><th scope=\"col\">State</th><th scope=\"col\">Updated</th></tr></thead>\n    <tbody>\n      <tr class=\"bsx-is-loading\">\n        <th scope=\"row\">Acme Ltd</th>\n        <td><span class=\"badge text-bg-primary\">Open</span></td>\n        <td><span class=\"text-body-secondary\">Now</span></td>\n      </tr>\n    </tbody>\n  </table>\n</div>"
+    "snippetPath": "snippets/extended/admin/crud/crud-row-created-flash.html",
+    "snippet": "<div class=\"table-responsive bsx-crud-row-created-flash\">\n  <div class=\"d-flex align-items-center justify-content-between gap-2 mb-2\">\n    <span class=\"small text-body-secondary\">3 selected records</span>\n    <div class=\"btn-group btn-group-sm\" role=\"group\" aria-label=\"Bulk actions\">\n      <button type=\"button\" class=\"btn btn-outline-secondary\">Edit</button>\n      <button type=\"button\" class=\"btn btn-outline-danger\">Delete</button>\n    </div>\n  </div>\n  <table class=\"table table-hover align-middle mb-0\">\n    <thead><tr><th scope=\"col\">Customer</th><th scope=\"col\">State</th><th scope=\"col\">Updated</th></tr></thead>\n    <tbody>\n      <tr class=\"bsx-is-updated\">\n        <th scope=\"row\">Acme Ltd</th>\n        <td><span class=\"badge text-bg-primary\">Open</span></td>\n        <td><span class=\"text-body-secondary\">Now</span></td>\n      </tr>\n    </tbody>\n  </table>\n</div>"
   },
   {
-    "name": "crud-row-save-success",
+    "name": "crud-row-updated-flash",
     "level": "extended",
     "category": "admin/crud",
     "directory": "admin/crud",
-    "className": "bsx-crud-row-save-success",
+    "className": "bsx-crud-row-updated-flash",
     "component": "admin/crud",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
+    "motion": "opacity",
+    "kind": "data-change",
+    "density": "dense-admin",
+    "risk": "safe",
+    "cssProperties": [
+      "opacity"
+    ],
+    "bootstrapStates": [
+      ".bsx-is-updated"
+    ],
+    "requiresMarkupChange": false,
+    "scenario": "highlight a table row after an Ajax update",
+    "bestFor": "CRUD tables, inline edit, dirty state, save feedback, and bulk actions",
+    "avoidFor": "marketing cards",
+    "reducedMotion": "opacity-only near-instant state",
+    "snippetPath": "snippets/extended/admin/crud/crud-row-updated-flash.html",
+    "snippet": "<div class=\"table-responsive bsx-crud-row-updated-flash\">\n  <div class=\"d-flex align-items-center justify-content-between gap-2 mb-2\">\n    <span class=\"small text-body-secondary\">3 selected records</span>\n    <div class=\"btn-group btn-group-sm\" role=\"group\" aria-label=\"Bulk actions\">\n      <button type=\"button\" class=\"btn btn-outline-secondary\">Edit</button>\n      <button type=\"button\" class=\"btn btn-outline-danger\">Delete</button>\n    </div>\n  </div>\n  <table class=\"table table-hover align-middle mb-0\">\n    <thead><tr><th scope=\"col\">Customer</th><th scope=\"col\">State</th><th scope=\"col\">Updated</th></tr></thead>\n    <tbody>\n      <tr class=\"bsx-is-updated\">\n        <th scope=\"row\">Acme Ltd</th>\n        <td><span class=\"badge text-bg-primary\">Open</span></td>\n        <td><span class=\"text-body-secondary\">Now</span></td>\n      </tr>\n    </tbody>\n  </table>\n</div>"
+  },
+  {
+    "name": "crud-row-deleted-collapse",
+    "level": "extended",
+    "category": "admin/crud",
+    "directory": "admin/crud",
+    "className": "bsx-crud-row-deleted-collapse",
+    "component": "admin/crud",
+    "requiresJs": false,
+    "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "color + opacity",
-    "kind": "workflow-state",
-    "density": "high",
+    "kind": "danger",
+    "density": "dense-admin",
     "risk": "medium",
     "cssProperties": [
+      "transform"
+    ],
+    "bootstrapStates": [
+      ".bsx-is-error"
+    ],
+    "requiresMarkupChange": false,
+    "scenario": "softly remove a deleted table row",
+    "bestFor": "CRUD tables, inline edit, dirty state, save feedback, and bulk actions",
+    "avoidFor": "marketing cards",
+    "reducedMotion": "opacity-only near-instant state",
+    "snippetPath": "snippets/extended/admin/crud/crud-row-deleted-collapse.html",
+    "snippet": "<div class=\"table-responsive bsx-crud-row-deleted-collapse\">\n  <div class=\"d-flex align-items-center justify-content-between gap-2 mb-2\">\n    <span class=\"small text-body-secondary\">3 selected records</span>\n    <div class=\"btn-group btn-group-sm\" role=\"group\" aria-label=\"Bulk actions\">\n      <button type=\"button\" class=\"btn btn-outline-secondary\">Edit</button>\n      <button type=\"button\" class=\"btn btn-outline-danger\">Delete</button>\n    </div>\n  </div>\n  <table class=\"table table-hover align-middle mb-0\">\n    <thead><tr><th scope=\"col\">Customer</th><th scope=\"col\">State</th><th scope=\"col\">Updated</th></tr></thead>\n    <tbody>\n      <tr class=\"bsx-is-error\">\n        <th scope=\"row\">Acme Ltd</th>\n        <td><span class=\"badge text-bg-primary\">Open</span></td>\n        <td><span class=\"text-body-secondary\">Now</span></td>\n      </tr>\n    </tbody>\n  </table>\n</div>"
+  },
+  {
+    "name": "crud-row-restored-pop",
+    "level": "extended",
+    "category": "admin/crud",
+    "directory": "admin/crud",
+    "className": "bsx-crud-row-restored-pop",
+    "component": "admin/crud",
+    "requiresJs": false,
+    "runtimeBehavior": null,
+    "runtimeAction": null,
+    "motion": "scale",
+    "kind": "success",
+    "density": "dense-admin",
+    "risk": "safe",
+    "cssProperties": [
+      "transform"
+    ],
+    "bootstrapStates": [
+      ".bsx-is-success"
+    ],
+    "requiresMarkupChange": false,
+    "scenario": "show that a previously deleted row was restored",
+    "bestFor": "CRUD tables, inline edit, dirty state, save feedback, and bulk actions",
+    "avoidFor": "marketing cards",
+    "reducedMotion": "opacity-only near-instant state",
+    "snippetPath": "snippets/extended/admin/crud/crud-row-restored-pop.html",
+    "snippet": "<div class=\"table-responsive bsx-crud-row-restored-pop\">\n  <div class=\"d-flex align-items-center justify-content-between gap-2 mb-2\">\n    <span class=\"small text-body-secondary\">3 selected records</span>\n    <div class=\"btn-group btn-group-sm\" role=\"group\" aria-label=\"Bulk actions\">\n      <button type=\"button\" class=\"btn btn-outline-secondary\">Edit</button>\n      <button type=\"button\" class=\"btn btn-outline-danger\">Delete</button>\n    </div>\n  </div>\n  <table class=\"table table-hover align-middle mb-0\">\n    <thead><tr><th scope=\"col\">Customer</th><th scope=\"col\">State</th><th scope=\"col\">Updated</th></tr></thead>\n    <tbody>\n      <tr class=\"bsx-is-success\">\n        <th scope=\"row\">Acme Ltd</th>\n        <td><span class=\"badge text-bg-primary\">Open</span></td>\n        <td><span class=\"text-body-secondary\">Now</span></td>\n      </tr>\n    </tbody>\n  </table>\n</div>"
+  },
+  {
+    "name": "crud-save-success-bar",
+    "level": "extended",
+    "category": "admin/crud",
+    "directory": "admin/crud",
+    "className": "bsx-crud-save-success-bar",
+    "component": "admin/crud",
+    "requiresJs": false,
+    "runtimeBehavior": null,
+    "runtimeAction": null,
+    "motion": "color + opacity",
+    "kind": "success",
+    "density": "dense-admin",
+    "risk": "safe",
+    "cssProperties": [
+      "transform",
       "opacity",
       "background-color",
       "border-color",
@@ -6414,24 +6899,27 @@ window.bsxEffects = [
     "bootstrapStates": [
       ".bsx-is-success"
     ],
+    "requiresMarkupChange": true,
+    "scenario": "show a quiet save success bar in a module configuration screen",
     "bestFor": "CRUD tables, inline edit, dirty state, save feedback, and bulk actions",
     "avoidFor": "marketing cards",
     "reducedMotion": "opacity-only near-instant state",
-    "snippetPath": "snippets/extended/admin/crud/crud-row-save-success.html",
-    "snippet": "<div class=\"table-responsive bsx-crud-row-save-success\">\n  <div class=\"d-flex align-items-center justify-content-between gap-2 mb-2\">\n    <span class=\"small text-body-secondary\">3 selected records</span>\n    <div class=\"btn-group btn-group-sm\" role=\"group\" aria-label=\"Bulk actions\">\n      <button type=\"button\" class=\"btn btn-outline-secondary\">Edit</button>\n      <button type=\"button\" class=\"btn btn-outline-danger\">Delete</button>\n    </div>\n  </div>\n  <table class=\"table table-hover align-middle mb-0\">\n    <thead><tr><th scope=\"col\">Customer</th><th scope=\"col\">State</th><th scope=\"col\">Updated</th></tr></thead>\n    <tbody>\n      <tr class=\"bsx-is-success\">\n        <th scope=\"row\">Acme Ltd</th>\n        <td><span class=\"badge text-bg-primary\">Open</span></td>\n        <td><span class=\"text-body-secondary\">Now</span></td>\n      </tr>\n    </tbody>\n  </table>\n</div>"
+    "snippetPath": "snippets/extended/admin/crud/crud-save-success-bar.html",
+    "snippet": "<div class=\"table-responsive bsx-crud-save-success-bar\">\n  <div class=\"d-flex align-items-center justify-content-between gap-2 mb-2\">\n    <span class=\"small text-body-secondary\">3 selected records</span>\n    <div class=\"btn-group btn-group-sm\" role=\"group\" aria-label=\"Bulk actions\">\n      <button type=\"button\" class=\"btn btn-outline-secondary\">Edit</button>\n      <button type=\"button\" class=\"btn btn-outline-danger\">Delete</button>\n    </div>\n  </div>\n  <table class=\"table table-hover align-middle mb-0\">\n    <thead><tr><th scope=\"col\">Customer</th><th scope=\"col\">State</th><th scope=\"col\">Updated</th></tr></thead>\n    <tbody>\n      <tr class=\"bsx-is-success\">\n        <th scope=\"row\">Acme Ltd</th>\n        <td><span class=\"badge text-bg-primary\">Open</span></td>\n        <td><span class=\"text-body-secondary\">Now</span></td>\n      </tr>\n    </tbody>\n  </table>\n</div>"
   },
   {
-    "name": "crud-row-save-error",
+    "name": "crud-save-error-shake",
     "level": "extended",
     "category": "admin/crud",
     "directory": "admin/crud",
-    "className": "bsx-crud-row-save-error",
+    "className": "bsx-crud-save-error-shake",
     "component": "admin/crud",
     "requiresJs": false,
     "runtimeBehavior": null,
-    "motion": "color + opacity",
-    "kind": "workflow-state",
-    "density": "high",
+    "runtimeAction": null,
+    "motion": "shake",
+    "kind": "state",
+    "density": "dense-admin",
     "risk": "medium",
     "cssProperties": [
       "opacity",
@@ -6442,11 +6930,13 @@ window.bsxEffects = [
     "bootstrapStates": [
       ".bsx-is-error"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "draw attention to a failed save without hiding inline errors",
     "bestFor": "CRUD tables, inline edit, dirty state, save feedback, and bulk actions",
     "avoidFor": "marketing cards",
     "reducedMotion": "opacity-only near-instant state",
-    "snippetPath": "snippets/extended/admin/crud/crud-row-save-error.html",
-    "snippet": "<div class=\"table-responsive bsx-crud-row-save-error\">\n  <div class=\"d-flex align-items-center justify-content-between gap-2 mb-2\">\n    <span class=\"small text-body-secondary\">3 selected records</span>\n    <div class=\"btn-group btn-group-sm\" role=\"group\" aria-label=\"Bulk actions\">\n      <button type=\"button\" class=\"btn btn-outline-secondary\">Edit</button>\n      <button type=\"button\" class=\"btn btn-outline-danger\">Delete</button>\n    </div>\n  </div>\n  <table class=\"table table-hover align-middle mb-0\">\n    <thead><tr><th scope=\"col\">Customer</th><th scope=\"col\">State</th><th scope=\"col\">Updated</th></tr></thead>\n    <tbody>\n      <tr class=\"bsx-is-error\">\n        <th scope=\"row\">Acme Ltd</th>\n        <td><span class=\"badge text-bg-primary\">Open</span></td>\n        <td><span class=\"text-body-secondary\">Now</span></td>\n      </tr>\n    </tbody>\n  </table>\n</div>"
+    "snippetPath": "snippets/extended/admin/crud/crud-save-error-shake.html",
+    "snippet": "<div class=\"table-responsive bsx-crud-save-error-shake\">\n  <div class=\"d-flex align-items-center justify-content-between gap-2 mb-2\">\n    <span class=\"small text-body-secondary\">3 selected records</span>\n    <div class=\"btn-group btn-group-sm\" role=\"group\" aria-label=\"Bulk actions\">\n      <button type=\"button\" class=\"btn btn-outline-secondary\">Edit</button>\n      <button type=\"button\" class=\"btn btn-outline-danger\">Delete</button>\n    </div>\n  </div>\n  <table class=\"table table-hover align-middle mb-0\">\n    <thead><tr><th scope=\"col\">Customer</th><th scope=\"col\">State</th><th scope=\"col\">Updated</th></tr></thead>\n    <tbody>\n      <tr class=\"bsx-is-error\">\n        <th scope=\"row\">Acme Ltd</th>\n        <td><span class=\"badge text-bg-primary\">Open</span></td>\n        <td><span class=\"text-body-secondary\">Now</span></td>\n      </tr>\n    </tbody>\n  </table>\n</div>"
   },
   {
     "name": "crud-inline-edit-focus",
@@ -6457,19 +6947,20 @@ window.bsxEffects = [
     "component": "admin/crud",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "translate",
-    "kind": "workflow-state",
-    "density": "high",
-    "risk": "medium",
+    "kind": "feedback",
+    "density": "dense-admin",
+    "risk": "safe",
     "cssProperties": [
       "transform",
       "opacity",
-      "box-shadow"
+      "box-shadow",
+      "outline-color"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": true,
+    "scenario": "highlight the active inline edit row",
     "bestFor": "CRUD tables, inline edit, dirty state, save feedback, and bulk actions",
     "avoidFor": "marketing cards",
     "reducedMotion": "opacity-only near-instant state",
@@ -6477,97 +6968,101 @@ window.bsxEffects = [
     "snippet": "<div class=\"table-responsive bsx-crud-inline-edit-focus\">\n  <div class=\"d-flex align-items-center justify-content-between gap-2 mb-2\">\n    <span class=\"small text-body-secondary\">3 selected records</span>\n    <div class=\"btn-group btn-group-sm\" role=\"group\" aria-label=\"Bulk actions\">\n      <button type=\"button\" class=\"btn btn-outline-secondary\">Edit</button>\n      <button type=\"button\" class=\"btn btn-outline-danger\">Delete</button>\n    </div>\n  </div>\n  <table class=\"table table-hover align-middle mb-0\">\n    <thead><tr><th scope=\"col\">Customer</th><th scope=\"col\">State</th><th scope=\"col\">Updated</th></tr></thead>\n    <tbody>\n      <tr class=\"\">\n        <th scope=\"row\">Acme Ltd</th>\n        <td><span class=\"badge text-bg-primary\">Open</span></td>\n        <td><span class=\"text-body-secondary\">Now</span></td>\n      </tr>\n    </tbody>\n  </table>\n</div>"
   },
   {
-    "name": "crud-inline-edit-dirty",
+    "name": "crud-inline-edit-saving",
     "level": "extended",
     "category": "admin/crud",
     "directory": "admin/crud",
-    "className": "bsx-crud-inline-edit-dirty",
+    "className": "bsx-crud-inline-edit-saving",
     "component": "admin/crud",
-    "requiresJs": false,
-    "runtimeBehavior": null,
+    "requiresJs": true,
+    "runtimeBehavior": "inline save state",
+    "runtimeAction": "crud-inline-save",
     "motion": "translate",
-    "kind": "workflow-state",
-    "density": "high",
-    "risk": "medium",
+    "kind": "loading",
+    "density": "dense-admin",
+    "risk": "requires-js",
     "cssProperties": [
       "transform",
-      "opacity",
-      "background-color",
-      "border-color",
-      "color"
+      "opacity"
     ],
-    "bootstrapStates": [
-      ".bsx-is-dirty"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": true,
+    "scenario": "show an inline row save in progress",
     "bestFor": "CRUD tables, inline edit, dirty state, save feedback, and bulk actions",
     "avoidFor": "marketing cards",
     "reducedMotion": "opacity-only near-instant state",
-    "snippetPath": "snippets/extended/admin/crud/crud-inline-edit-dirty.html",
-    "snippet": "<div class=\"table-responsive bsx-crud-inline-edit-dirty\">\n  <div class=\"d-flex align-items-center justify-content-between gap-2 mb-2\">\n    <span class=\"small text-body-secondary\">3 selected records</span>\n    <div class=\"btn-group btn-group-sm\" role=\"group\" aria-label=\"Bulk actions\">\n      <button type=\"button\" class=\"btn btn-outline-secondary\">Edit</button>\n      <button type=\"button\" class=\"btn btn-outline-danger\">Delete</button>\n    </div>\n  </div>\n  <table class=\"table table-hover align-middle mb-0\">\n    <thead><tr><th scope=\"col\">Customer</th><th scope=\"col\">State</th><th scope=\"col\">Updated</th></tr></thead>\n    <tbody>\n      <tr class=\"bsx-is-dirty\">\n        <th scope=\"row\">Acme Ltd</th>\n        <td><span class=\"badge text-bg-primary\">Open</span></td>\n        <td><span class=\"text-body-secondary\">Now</span></td>\n      </tr>\n    </tbody>\n  </table>\n</div>"
+    "snippetPath": "snippets/extended/admin/crud/crud-inline-edit-saving.html",
+    "snippet": "<!-- Requires Bootstrap bundle and assets/js/bootstrap5-transitions.js. -->\n<div class=\"table-responsive bsx-crud-inline-edit-saving\">\n  <div class=\"d-flex align-items-center justify-content-between gap-2 mb-2\">\n    <span class=\"small text-body-secondary\">3 selected records</span>\n    <div class=\"btn-group btn-group-sm\" role=\"group\" aria-label=\"Bulk actions\">\n      <button type=\"button\" class=\"btn btn-outline-secondary\" data-bsx-action=\"crud-inline-save\">Edit</button>\n      <button type=\"button\" class=\"btn btn-outline-danger\">Delete</button>\n    </div>\n  </div>\n  <table class=\"table table-hover align-middle mb-0\">\n    <thead><tr><th scope=\"col\">Customer</th><th scope=\"col\">State</th><th scope=\"col\">Updated</th></tr></thead>\n    <tbody>\n      <tr class=\"bsx-is-loading\">\n        <th scope=\"row\">Acme Ltd</th>\n        <td><span class=\"badge text-bg-primary\">Open</span></td>\n        <td><span class=\"text-body-secondary\">Now</span></td>\n      </tr>\n    </tbody>\n  </table>\n</div>"
   },
   {
-    "name": "crud-bulk-toolbar-reveal",
+    "name": "crud-bulk-action-bar-slide",
     "level": "extended",
     "category": "admin/crud",
     "directory": "admin/crud",
-    "className": "bsx-crud-bulk-toolbar-reveal",
+    "className": "bsx-crud-bulk-action-bar-slide",
     "component": "admin/crud",
-    "requiresJs": false,
-    "runtimeBehavior": null,
+    "requiresJs": true,
+    "runtimeBehavior": "bulk selection state",
+    "runtimeAction": "crud-bulk-toggle",
     "motion": "translate",
-    "kind": "workflow-state",
-    "density": "high",
-    "risk": "medium",
+    "kind": "selection",
+    "density": "dense-admin",
+    "risk": "requires-js",
     "cssProperties": [
       "transform"
     ],
     "bootstrapStates": [
       ".bsx-is-selected"
     ],
+    "requiresMarkupChange": true,
+    "scenario": "reveal a bulk action bar after rows are selected",
     "bestFor": "CRUD tables, inline edit, dirty state, save feedback, and bulk actions",
     "avoidFor": "marketing cards",
     "reducedMotion": "opacity-only near-instant state",
-    "snippetPath": "snippets/extended/admin/crud/crud-bulk-toolbar-reveal.html",
-    "snippet": "<div class=\"table-responsive bsx-crud-bulk-toolbar-reveal\">\n  <div class=\"d-flex align-items-center justify-content-between gap-2 mb-2\">\n    <span class=\"small text-body-secondary\">3 selected records</span>\n    <div class=\"btn-group btn-group-sm\" role=\"group\" aria-label=\"Bulk actions\">\n      <button type=\"button\" class=\"btn btn-outline-secondary\">Edit</button>\n      <button type=\"button\" class=\"btn btn-outline-danger\">Delete</button>\n    </div>\n  </div>\n  <table class=\"table table-hover align-middle mb-0\">\n    <thead><tr><th scope=\"col\">Customer</th><th scope=\"col\">State</th><th scope=\"col\">Updated</th></tr></thead>\n    <tbody>\n      <tr class=\"\">\n        <th scope=\"row\">Acme Ltd</th>\n        <td><span class=\"badge text-bg-primary\">Open</span></td>\n        <td><span class=\"text-body-secondary\">Now</span></td>\n      </tr>\n    </tbody>\n  </table>\n</div>"
+    "snippetPath": "snippets/extended/admin/crud/crud-bulk-action-bar-slide.html",
+    "snippet": "<!-- Requires Bootstrap bundle and assets/js/bootstrap5-transitions.js. -->\n<div class=\"table-responsive bsx-crud-bulk-action-bar-slide\">\n  <div class=\"d-flex align-items-center justify-content-between gap-2 mb-2\">\n    <span class=\"small text-body-secondary\">3 selected records</span>\n    <div class=\"btn-group btn-group-sm\" role=\"group\" aria-label=\"Bulk actions\">\n      <button type=\"button\" class=\"btn btn-outline-secondary\" data-bsx-action=\"crud-bulk-toggle\">Edit</button>\n      <button type=\"button\" class=\"btn btn-outline-danger\" data-bsx-action=\"crud-bulk-toggle\">Delete</button>\n    </div>\n  </div>\n  <table class=\"table table-hover align-middle mb-0\">\n    <thead><tr><th scope=\"col\">Customer</th><th scope=\"col\">State</th><th scope=\"col\">Updated</th></tr></thead>\n    <tbody>\n      <tr class=\"bsx-is-selected\">\n        <th scope=\"row\">Acme Ltd</th>\n        <td><span class=\"badge text-bg-primary\">Open</span></td>\n        <td><span class=\"text-body-secondary\">Now</span></td>\n      </tr>\n    </tbody>\n  </table>\n</div>"
   },
   {
-    "name": "crud-delete-confirm-row",
+    "name": "crud-bulk-selection-bump",
     "level": "extended",
     "category": "admin/crud",
     "directory": "admin/crud",
-    "className": "bsx-crud-delete-confirm-row",
+    "className": "bsx-crud-bulk-selection-bump",
     "component": "admin/crud",
-    "requiresJs": false,
-    "runtimeBehavior": null,
-    "motion": "color + opacity",
-    "kind": "workflow-state",
-    "density": "high",
-    "risk": "medium",
+    "requiresJs": true,
+    "runtimeBehavior": "bulk selection state",
+    "runtimeAction": "crud-bulk-toggle",
+    "motion": "scale",
+    "kind": "selection",
+    "density": "dense-admin",
+    "risk": "requires-js",
     "cssProperties": [
-      "opacity",
       "transform"
     ],
     "bootstrapStates": [
-      ".bsx-is-error"
+      ".bsx-is-selected"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "confirm bulk row selection count changes",
     "bestFor": "CRUD tables, inline edit, dirty state, save feedback, and bulk actions",
     "avoidFor": "marketing cards",
     "reducedMotion": "opacity-only near-instant state",
-    "snippetPath": "snippets/extended/admin/crud/crud-delete-confirm-row.html",
-    "snippet": "<div class=\"table-responsive bsx-crud-delete-confirm-row\">\n  <div class=\"d-flex align-items-center justify-content-between gap-2 mb-2\">\n    <span class=\"small text-body-secondary\">3 selected records</span>\n    <div class=\"btn-group btn-group-sm\" role=\"group\" aria-label=\"Bulk actions\">\n      <button type=\"button\" class=\"btn btn-outline-secondary\">Edit</button>\n      <button type=\"button\" class=\"btn btn-outline-danger\">Delete</button>\n    </div>\n  </div>\n  <table class=\"table table-hover align-middle mb-0\">\n    <thead><tr><th scope=\"col\">Customer</th><th scope=\"col\">State</th><th scope=\"col\">Updated</th></tr></thead>\n    <tbody>\n      <tr class=\"bsx-is-error\">\n        <th scope=\"row\">Acme Ltd</th>\n        <td><span class=\"badge text-bg-primary\">Open</span></td>\n        <td><span class=\"text-body-secondary\">Now</span></td>\n      </tr>\n    </tbody>\n  </table>\n</div>"
+    "snippetPath": "snippets/extended/admin/crud/crud-bulk-selection-bump.html",
+    "snippet": "<!-- Requires Bootstrap bundle and assets/js/bootstrap5-transitions.js. -->\n<div class=\"table-responsive bsx-crud-bulk-selection-bump\">\n  <div class=\"d-flex align-items-center justify-content-between gap-2 mb-2\">\n    <span class=\"small text-body-secondary\">3 selected records</span>\n    <div class=\"btn-group btn-group-sm\" role=\"group\" aria-label=\"Bulk actions\">\n      <button type=\"button\" class=\"btn btn-outline-secondary\" data-bsx-action=\"crud-bulk-toggle\">Edit</button>\n      <button type=\"button\" class=\"btn btn-outline-danger\" data-bsx-action=\"crud-bulk-toggle\">Delete</button>\n    </div>\n  </div>\n  <table class=\"table table-hover align-middle mb-0\">\n    <thead><tr><th scope=\"col\">Customer</th><th scope=\"col\">State</th><th scope=\"col\">Updated</th></tr></thead>\n    <tbody>\n      <tr class=\"bsx-is-selected\">\n        <th scope=\"row\">Acme Ltd</th>\n        <td><span class=\"badge text-bg-primary\">Open</span></td>\n        <td><span class=\"text-body-secondary\">Now</span></td>\n      </tr>\n    </tbody>\n  </table>\n</div>"
   },
   {
-    "name": "crud-permission-disabled",
+    "name": "crud-permission-locked-soft",
     "level": "extended",
     "category": "admin/crud",
     "directory": "admin/crud",
-    "className": "bsx-crud-permission-disabled",
+    "className": "bsx-crud-permission-locked-soft",
     "component": "admin/crud",
     "requiresJs": false,
     "runtimeBehavior": null,
-    "motion": "color + opacity",
-    "kind": "workflow-state",
-    "density": "high",
+    "runtimeAction": null,
+    "motion": "opacity",
+    "kind": "danger",
+    "density": "dense-admin",
     "risk": "medium",
     "cssProperties": [
       "opacity",
@@ -6580,40 +7075,96 @@ window.bsxEffects = [
       "[disabled]",
       "[aria-disabled]"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "show that a record is locked by permissions",
     "bestFor": "CRUD tables, inline edit, dirty state, save feedback, and bulk actions",
     "avoidFor": "marketing cards",
     "reducedMotion": "opacity-only near-instant state",
-    "snippetPath": "snippets/extended/admin/crud/crud-permission-disabled.html",
-    "snippet": "<div class=\"table-responsive bsx-crud-permission-disabled\">\n  <div class=\"d-flex align-items-center justify-content-between gap-2 mb-2\">\n    <span class=\"small text-body-secondary\">3 selected records</span>\n    <div class=\"btn-group btn-group-sm\" role=\"group\" aria-label=\"Bulk actions\">\n      <button type=\"button\" class=\"btn btn-outline-secondary\">Edit</button>\n      <button type=\"button\" class=\"btn btn-outline-danger\">Delete</button>\n    </div>\n  </div>\n  <table class=\"table table-hover align-middle mb-0\">\n    <thead><tr><th scope=\"col\">Customer</th><th scope=\"col\">State</th><th scope=\"col\">Updated</th></tr></thead>\n    <tbody>\n      <tr class=\"\">\n        <th scope=\"row\">Acme Ltd</th>\n        <td><span class=\"badge text-bg-primary\">Open</span></td>\n        <td><span class=\"text-body-secondary\">Now</span></td>\n      </tr>\n    </tbody>\n  </table>\n</div>"
+    "snippetPath": "snippets/extended/admin/crud/crud-permission-locked-soft.html",
+    "snippet": "<div class=\"table-responsive bsx-crud-permission-locked-soft\">\n  <div class=\"d-flex align-items-center justify-content-between gap-2 mb-2\">\n    <span class=\"small text-body-secondary\">3 selected records</span>\n    <div class=\"btn-group btn-group-sm\" role=\"group\" aria-label=\"Bulk actions\">\n      <button type=\"button\" class=\"btn btn-outline-secondary\">Edit</button>\n      <button type=\"button\" class=\"btn btn-outline-danger\">Delete</button>\n    </div>\n  </div>\n  <table class=\"table table-hover align-middle mb-0\">\n    <thead><tr><th scope=\"col\">Customer</th><th scope=\"col\">State</th><th scope=\"col\">Updated</th></tr></thead>\n    <tbody>\n      <tr class=\"\">\n        <th scope=\"row\">Acme Ltd</th>\n        <td><span class=\"badge text-bg-primary\">Open</span></td>\n        <td><span class=\"text-body-secondary\">Now</span></td>\n      </tr>\n    </tbody>\n  </table>\n</div>"
   },
   {
-    "name": "filter-chip-active",
+    "name": "crud-danger-zone-pulse",
     "level": "extended",
-    "category": "filter/search",
-    "directory": "filter/search",
-    "className": "bsx-filter-chip-active",
-    "component": "filter/search",
+    "category": "admin/crud",
+    "directory": "admin/crud",
+    "className": "bsx-crud-danger-zone-pulse",
+    "component": "admin/crud",
     "requiresJs": false,
     "runtimeBehavior": null,
-    "motion": "color + opacity",
-    "kind": "workflow-state",
-    "density": "high",
-    "risk": "low",
+    "runtimeAction": null,
+    "motion": "scale",
+    "kind": "danger",
+    "density": "dense-admin",
+    "risk": "medium",
     "cssProperties": [
-      "box-shadow",
+      "transform",
       "background-color",
       "border-color",
       "color"
     ],
     "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
+      ".bsx-is-error"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "warn before a destructive admin action",
+    "bestFor": "CRUD tables, inline edit, dirty state, save feedback, and bulk actions",
+    "avoidFor": "marketing cards",
+    "reducedMotion": "opacity-only near-instant state",
+    "snippetPath": "snippets/extended/admin/crud/crud-danger-zone-pulse.html",
+    "snippet": "<div class=\"table-responsive bsx-crud-danger-zone-pulse\">\n  <div class=\"d-flex align-items-center justify-content-between gap-2 mb-2\">\n    <span class=\"small text-body-secondary\">3 selected records</span>\n    <div class=\"btn-group btn-group-sm\" role=\"group\" aria-label=\"Bulk actions\">\n      <button type=\"button\" class=\"btn btn-outline-secondary\">Edit</button>\n      <button type=\"button\" class=\"btn btn-outline-danger\">Delete</button>\n    </div>\n  </div>\n  <table class=\"table table-hover align-middle mb-0\">\n    <thead><tr><th scope=\"col\">Customer</th><th scope=\"col\">State</th><th scope=\"col\">Updated</th></tr></thead>\n    <tbody>\n      <tr class=\"bsx-is-error\">\n        <th scope=\"row\">Acme Ltd</th>\n        <td><span class=\"badge text-bg-primary\">Open</span></td>\n        <td><span class=\"text-body-secondary\">Now</span></td>\n      </tr>\n    </tbody>\n  </table>\n</div>"
+  },
+  {
+    "name": "filter-panel-slide",
+    "level": "extended",
+    "category": "filter/search",
+    "directory": "filter/search",
+    "className": "bsx-filter-panel-slide",
+    "component": "filter/search",
+    "requiresJs": false,
+    "runtimeBehavior": null,
+    "runtimeAction": null,
+    "motion": "translate",
+    "kind": "navigation",
+    "density": "dense-admin",
+    "risk": "safe",
+    "cssProperties": [
+      "transform"
+    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "reveal an admin filter panel",
     "bestFor": "admin filters, search results, chip removal, and empty results",
     "avoidFor": "static navigation",
     "reducedMotion": "opacity-only near-instant state",
-    "snippetPath": "snippets/extended/filter/search/filter-chip-active.html",
-    "snippet": "<section class=\"card bsx-filter-chip-active\">\n  <div class=\"card-body\">\n    <label class=\"form-label\" for=\"bsxFilterChipActive\">Filter Chip Active</label>\n    <div class=\"input-group mb-3\" >\n      <input class=\"form-control\" id=\"bsxFilterChipActive\" type=\"search\" value=\"active customers\">\n      <button class=\"btn btn-outline-secondary\" type=\"button\">Search</button>\n    </div>\n    <div class=\"d-flex flex-wrap gap-2\">\n      <span class=\"badge text-bg-primary bsx-filter-chip\">Status: active</span>\n      <span class=\"badge text-bg-secondary bsx-filter-chip\">Owner: me</span>\n    </div>\n  </div>\n</section>"
+    "snippetPath": "snippets/extended/filter/search/filter-panel-slide.html",
+    "snippet": "<section class=\"card bsx-filter-panel-slide\">\n  <div class=\"card-body\">\n    <label class=\"form-label\" for=\"bsxFilterPanelSlide\">Filter Panel Slide</label>\n    <div class=\"input-group mb-3\" >\n      <input class=\"form-control\" id=\"bsxFilterPanelSlide\" type=\"search\" value=\"active customers\">\n      <button class=\"btn btn-outline-secondary\" type=\"button\">Search</button>\n    </div>\n    <div class=\"d-flex flex-wrap gap-2\">\n      <span class=\"badge text-bg-primary bsx-filter-chip\">Status: active</span>\n      <span class=\"badge text-bg-secondary bsx-filter-chip\">Owner: me</span>\n    </div>\n  </div>\n</section>"
+  },
+  {
+    "name": "filter-chip-pop",
+    "level": "extended",
+    "category": "filter/search",
+    "directory": "filter/search",
+    "className": "bsx-filter-chip-pop",
+    "component": "filter/search",
+    "requiresJs": false,
+    "runtimeBehavior": null,
+    "runtimeAction": null,
+    "motion": "scale",
+    "kind": "selection",
+    "density": "dense-admin",
+    "risk": "safe",
+    "cssProperties": [
+      "transform"
+    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "confirm an applied filter chip",
+    "bestFor": "admin filters, search results, chip removal, and empty results",
+    "avoidFor": "static navigation",
+    "reducedMotion": "opacity-only near-instant state",
+    "snippetPath": "snippets/extended/filter/search/filter-chip-pop.html",
+    "snippet": "<section class=\"card bsx-filter-chip-pop\">\n  <div class=\"card-body\">\n    <label class=\"form-label\" for=\"bsxFilterChipPop\">Filter Chip Pop</label>\n    <div class=\"input-group mb-3\" >\n      <input class=\"form-control\" id=\"bsxFilterChipPop\" type=\"search\" value=\"active customers\">\n      <button class=\"btn btn-outline-secondary\" type=\"button\">Search</button>\n    </div>\n    <div class=\"d-flex flex-wrap gap-2\">\n      <span class=\"badge text-bg-primary bsx-filter-chip\">Status: active</span>\n      <span class=\"badge text-bg-secondary bsx-filter-chip\">Owner: me</span>\n    </div>\n  </div>\n</section>"
   },
   {
     "name": "filter-chip-remove",
@@ -6622,173 +7173,229 @@ window.bsxEffects = [
     "directory": "filter/search",
     "className": "bsx-filter-chip-remove",
     "component": "filter/search",
-    "requiresJs": false,
-    "runtimeBehavior": null,
+    "requiresJs": true,
+    "runtimeBehavior": "filter chip removal",
+    "runtimeAction": "filter-chip-remove",
     "motion": "translate",
-    "kind": "workflow-state",
-    "density": "high",
-    "risk": "low",
+    "kind": "selection",
+    "density": "dense-admin",
+    "risk": "requires-js",
     "cssProperties": [
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "remove a filter chip without shifting attention",
     "bestFor": "admin filters, search results, chip removal, and empty results",
     "avoidFor": "static navigation",
     "reducedMotion": "opacity-only near-instant state",
     "snippetPath": "snippets/extended/filter/search/filter-chip-remove.html",
-    "snippet": "<section class=\"card bsx-filter-chip-remove\">\n  <div class=\"card-body\">\n    <label class=\"form-label\" for=\"bsxFilterChipRemove\">Filter Chip Remove</label>\n    <div class=\"input-group mb-3\" >\n      <input class=\"form-control\" id=\"bsxFilterChipRemove\" type=\"search\" value=\"active customers\">\n      <button class=\"btn btn-outline-secondary\" type=\"button\">Search</button>\n    </div>\n    <div class=\"d-flex flex-wrap gap-2\">\n      <span class=\"badge text-bg-primary bsx-filter-chip\">Status: active</span>\n      <span class=\"badge text-bg-secondary bsx-filter-chip\">Owner: me</span>\n    </div>\n  </div>\n</section>"
+    "snippet": "<!-- Requires Bootstrap bundle and assets/js/bootstrap5-transitions.js. -->\n<section class=\"card bsx-filter-chip-remove\">\n  <div class=\"card-body\">\n    <label class=\"form-label\" for=\"bsxFilterChipRemove\">Filter Chip Remove</label>\n    <div class=\"input-group mb-3\" >\n      <input class=\"form-control\" id=\"bsxFilterChipRemove\" type=\"search\" value=\"active customers\">\n      <button class=\"btn btn-outline-secondary\" type=\"button\">Search</button>\n    </div>\n    <div class=\"d-flex flex-wrap gap-2\">\n      <span class=\"badge text-bg-primary bsx-filter-chip\" data-bsx-action=\"filter-chip-remove\">Status: active</span>\n      <span class=\"badge text-bg-secondary bsx-filter-chip\">Owner: me</span>\n    </div>\n  </div>\n</section>"
   },
   {
-    "name": "filter-panel-reveal",
+    "name": "filter-applied-flash",
     "level": "extended",
     "category": "filter/search",
     "directory": "filter/search",
-    "className": "bsx-filter-panel-reveal",
+    "className": "bsx-filter-applied-flash",
     "component": "filter/search",
     "requiresJs": false,
     "runtimeBehavior": null,
-    "motion": "translate",
-    "kind": "workflow-state",
-    "density": "high",
-    "risk": "low",
-    "cssProperties": [
-      "transform"
-    ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
-    "bestFor": "admin filters, search results, chip removal, and empty results",
-    "avoidFor": "static navigation",
-    "reducedMotion": "opacity-only near-instant state",
-    "snippetPath": "snippets/extended/filter/search/filter-panel-reveal.html",
-    "snippet": "<section class=\"card bsx-filter-panel-reveal\">\n  <div class=\"card-body\">\n    <label class=\"form-label\" for=\"bsxFilterPanelReveal\">Filter Panel Reveal</label>\n    <div class=\"input-group mb-3\" >\n      <input class=\"form-control\" id=\"bsxFilterPanelReveal\" type=\"search\" value=\"active customers\">\n      <button class=\"btn btn-outline-secondary\" type=\"button\">Search</button>\n    </div>\n    <div class=\"d-flex flex-wrap gap-2\">\n      <span class=\"badge text-bg-primary bsx-filter-chip\">Status: active</span>\n      <span class=\"badge text-bg-secondary bsx-filter-chip\">Owner: me</span>\n    </div>\n  </div>\n</section>"
-  },
-  {
-    "name": "filter-reset-flash",
-    "level": "extended",
-    "category": "filter/search",
-    "directory": "filter/search",
-    "className": "bsx-filter-reset-flash",
-    "component": "filter/search",
-    "requiresJs": false,
-    "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "opacity",
-    "kind": "workflow-state",
-    "density": "high",
-    "risk": "low",
+    "kind": "data-change",
+    "density": "dense-admin",
+    "risk": "safe",
     "cssProperties": [
       "opacity"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "confirm that filters were applied to a product list",
     "bestFor": "admin filters, search results, chip removal, and empty results",
     "avoidFor": "static navigation",
     "reducedMotion": "opacity-only near-instant state",
-    "snippetPath": "snippets/extended/filter/search/filter-reset-flash.html",
-    "snippet": "<section class=\"card bsx-filter-reset-flash\">\n  <div class=\"card-body\">\n    <label class=\"form-label\" for=\"bsxFilterResetFlash\">Filter Reset Flash</label>\n    <div class=\"input-group mb-3\" >\n      <input class=\"form-control\" id=\"bsxFilterResetFlash\" type=\"search\" value=\"active customers\">\n      <button class=\"btn btn-outline-secondary\" type=\"button\">Search</button>\n    </div>\n    <div class=\"d-flex flex-wrap gap-2\">\n      <span class=\"badge text-bg-primary bsx-filter-chip\">Status: active</span>\n      <span class=\"badge text-bg-secondary bsx-filter-chip\">Owner: me</span>\n    </div>\n  </div>\n</section>"
+    "snippetPath": "snippets/extended/filter/search/filter-applied-flash.html",
+    "snippet": "<section class=\"card bsx-filter-applied-flash\">\n  <div class=\"card-body\">\n    <label class=\"form-label\" for=\"bsxFilterAppliedFlash\">Filter Applied Flash</label>\n    <div class=\"input-group mb-3\" >\n      <input class=\"form-control\" id=\"bsxFilterAppliedFlash\" type=\"search\" value=\"active customers\">\n      <button class=\"btn btn-outline-secondary\" type=\"button\">Search</button>\n    </div>\n    <div class=\"d-flex flex-wrap gap-2\">\n      <span class=\"badge text-bg-primary bsx-filter-chip\">Status: active</span>\n      <span class=\"badge text-bg-secondary bsx-filter-chip\">Owner: me</span>\n    </div>\n  </div>\n</section>"
   },
   {
-    "name": "search-input-focus",
+    "name": "filter-reset-fade",
     "level": "extended",
     "category": "filter/search",
     "directory": "filter/search",
-    "className": "bsx-search-input-focus",
+    "className": "bsx-filter-reset-fade",
     "component": "filter/search",
-    "requiresJs": false,
-    "runtimeBehavior": null,
-    "motion": "color + opacity",
-    "kind": "workflow-state",
-    "density": "high",
-    "risk": "low",
+    "requiresJs": true,
+    "runtimeBehavior": "filter reset state",
+    "runtimeAction": "filter-reset",
+    "motion": "opacity",
+    "kind": "data-change",
+    "density": "dense-admin",
+    "risk": "requires-js",
     "cssProperties": [
-      "opacity",
-      "box-shadow"
+      "opacity"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "softly reset filter state",
     "bestFor": "admin filters, search results, chip removal, and empty results",
     "avoidFor": "static navigation",
-    "reducedMotion": "opacity-only near-instant state",
-    "snippetPath": "snippets/extended/filter/search/search-input-focus.html",
-    "snippet": "<section class=\"card bsx-search-input-focus\">\n  <div class=\"card-body\">\n    <label class=\"form-label\" for=\"bsxSearchInputFocus\">Search Input Focus</label>\n    <div class=\"input-group mb-3\" aria-busy=\"true\">\n      <input class=\"form-control\" id=\"bsxSearchInputFocus\" type=\"search\" value=\"active customers\">\n      <button class=\"btn btn-outline-secondary\" type=\"button\">Search</button>\n    </div>\n    <div class=\"d-flex flex-wrap gap-2\">\n      <span class=\"badge text-bg-primary bsx-filter-chip\">Status: active</span>\n      <span class=\"badge text-bg-secondary bsx-filter-chip\">Owner: me</span>\n    </div>\n  </div>\n</section>"
+    "reducedMotion": "near-instant opacity or color state",
+    "snippetPath": "snippets/extended/filter/search/filter-reset-fade.html",
+    "snippet": "<!-- Requires Bootstrap bundle and assets/js/bootstrap5-transitions.js. -->\n<section class=\"card bsx-filter-reset-fade\">\n  <div class=\"card-body\">\n    <label class=\"form-label\" for=\"bsxFilterResetFade\">Filter Reset Fade</label>\n    <div class=\"input-group mb-3\" >\n      <input class=\"form-control\" id=\"bsxFilterResetFade\" type=\"search\" value=\"active customers\">\n      <button class=\"btn btn-outline-secondary\" type=\"button\" data-bsx-action=\"filter-reset\">Reset</button>\n    </div>\n    <div class=\"d-flex flex-wrap gap-2\">\n      <span class=\"badge text-bg-primary bsx-filter-chip\">Status: active</span>\n      <span class=\"badge text-bg-secondary bsx-filter-chip\">Owner: me</span>\n    </div>\n  </div>\n</section>"
   },
   {
-    "name": "search-results-update",
+    "name": "search-input-focus-glow",
     "level": "extended",
     "category": "filter/search",
     "directory": "filter/search",
-    "className": "bsx-search-results-update",
+    "className": "bsx-search-input-focus-glow",
     "component": "filter/search",
     "requiresJs": false,
     "runtimeBehavior": null,
-    "motion": "color + opacity",
-    "kind": "workflow-state",
-    "density": "high",
-    "risk": "low",
+    "runtimeAction": null,
+    "motion": "opacity",
+    "kind": "feedback",
+    "density": "dense-admin",
+    "risk": "safe",
     "cssProperties": [
       "opacity",
+      "box-shadow",
+      "outline-color"
+    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "show focus on a dense search input",
+    "bestFor": "admin filters, search results, chip removal, and empty results",
+    "avoidFor": "static navigation",
+    "reducedMotion": "near-instant opacity or color state",
+    "snippetPath": "snippets/extended/filter/search/search-input-focus-glow.html",
+    "snippet": "<section class=\"card bsx-search-input-focus-glow\">\n  <div class=\"card-body\">\n    <label class=\"form-label\" for=\"bsxSearchInputFocusGlow\">Search Input Focus Glow</label>\n    <div class=\"input-group mb-3\" >\n      <input class=\"form-control\" id=\"bsxSearchInputFocusGlow\" type=\"search\" value=\"active customers\">\n      <button class=\"btn btn-outline-secondary\" type=\"button\">Search</button>\n    </div>\n    <div class=\"d-flex flex-wrap gap-2\">\n      <span class=\"badge text-bg-primary bsx-filter-chip\">Status: active</span>\n      <span class=\"badge text-bg-secondary bsx-filter-chip\">Owner: me</span>\n    </div>\n  </div>\n</section>"
+  },
+  {
+    "name": "search-results-reveal",
+    "level": "extended",
+    "category": "filter/search",
+    "directory": "filter/search",
+    "className": "bsx-search-results-reveal",
+    "component": "filter/search",
+    "requiresJs": false,
+    "runtimeBehavior": null,
+    "runtimeAction": null,
+    "motion": "translate",
+    "kind": "data-change",
+    "density": "dense-admin",
+    "risk": "safe",
+    "cssProperties": [
       "transform"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "reveal refreshed search results",
     "bestFor": "admin filters, search results, chip removal, and empty results",
     "avoidFor": "static navigation",
     "reducedMotion": "opacity-only near-instant state",
-    "snippetPath": "snippets/extended/filter/search/search-results-update.html",
-    "snippet": "<section class=\"card bsx-search-results-update\">\n  <div class=\"card-body\">\n    <label class=\"form-label\" for=\"bsxSearchResultsUpdate\">Search Results Update</label>\n    <div class=\"input-group mb-3\" aria-busy=\"true\">\n      <input class=\"form-control\" id=\"bsxSearchResultsUpdate\" type=\"search\" value=\"active customers\">\n      <button class=\"btn btn-outline-secondary\" type=\"button\">Search</button>\n    </div>\n    <div class=\"d-flex flex-wrap gap-2\">\n      <span class=\"badge text-bg-primary bsx-filter-chip\">Status: active</span>\n      <span class=\"badge text-bg-secondary bsx-filter-chip\">Owner: me</span>\n    </div>\n  </div>\n</section>"
+    "snippetPath": "snippets/extended/filter/search/search-results-reveal.html",
+    "snippet": "<section class=\"card bsx-search-results-reveal\">\n  <div class=\"card-body\">\n    <label class=\"form-label\" for=\"bsxSearchResultsReveal\">Search Results Reveal</label>\n    <div class=\"input-group mb-3\" >\n      <input class=\"form-control\" id=\"bsxSearchResultsReveal\" type=\"search\" value=\"active customers\">\n      <button class=\"btn btn-outline-secondary\" type=\"button\">Search</button>\n    </div>\n    <div class=\"d-flex flex-wrap gap-2\">\n      <span class=\"badge text-bg-primary bsx-filter-chip\">Status: active</span>\n      <span class=\"badge text-bg-secondary bsx-filter-chip\">Owner: me</span>\n    </div>\n  </div>\n</section>"
   },
   {
-    "name": "search-no-results-state",
+    "name": "search-empty-pop",
     "level": "extended",
     "category": "filter/search",
     "directory": "filter/search",
-    "className": "bsx-search-no-results-state",
+    "className": "bsx-search-empty-pop",
     "component": "filter/search",
     "requiresJs": false,
     "runtimeBehavior": null,
-    "motion": "color + opacity",
-    "kind": "workflow-state",
-    "density": "high",
-    "risk": "low",
+    "runtimeAction": null,
+    "motion": "scale",
+    "kind": "state",
+    "density": "dense-admin",
+    "risk": "safe",
     "cssProperties": [
-      "opacity",
-      "transform"
+      "transform",
+      "opacity"
     ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "show an empty search result state",
     "bestFor": "admin filters, search results, chip removal, and empty results",
     "avoidFor": "static navigation",
     "reducedMotion": "opacity-only near-instant state",
-    "snippetPath": "snippets/extended/filter/search/search-no-results-state.html",
-    "snippet": "<section class=\"card bsx-search-no-results-state\">\n  <div class=\"card-body\">\n    <label class=\"form-label\" for=\"bsxSearchNoResultsState\">Search No Results State</label>\n    <div class=\"input-group mb-3\" aria-busy=\"true\">\n      <input class=\"form-control\" id=\"bsxSearchNoResultsState\" type=\"search\" value=\"active customers\">\n      <button class=\"btn btn-outline-secondary\" type=\"button\">Search</button>\n    </div>\n    <div class=\"d-flex flex-wrap gap-2\">\n      <span class=\"badge text-bg-primary bsx-filter-chip\">Status: active</span>\n      <span class=\"badge text-bg-secondary bsx-filter-chip\">Owner: me</span>\n    </div>\n  </div>\n</section>"
+    "snippetPath": "snippets/extended/filter/search/search-empty-pop.html",
+    "snippet": "<section class=\"card bsx-search-empty-pop\">\n  <div class=\"card-body\">\n    <label class=\"form-label\" for=\"bsxSearchEmptyPop\">Search Empty Pop</label>\n    <div class=\"input-group mb-3\" >\n      <input class=\"form-control\" id=\"bsxSearchEmptyPop\" type=\"search\" value=\"active customers\">\n      <button class=\"btn btn-outline-secondary\" type=\"button\">Search</button>\n    </div>\n    <div class=\"d-flex flex-wrap gap-2\">\n      <span class=\"badge text-bg-primary bsx-filter-chip\">Status: active</span>\n      <span class=\"badge text-bg-secondary bsx-filter-chip\">Owner: me</span>\n    </div>\n  </div>\n</section>"
   },
   {
-    "name": "form-wizard-step-current",
+    "name": "search-loading-line",
+    "level": "extended",
+    "category": "filter/search",
+    "directory": "filter/search",
+    "className": "bsx-search-loading-line",
+    "component": "filter/search",
+    "requiresJs": false,
+    "runtimeBehavior": null,
+    "runtimeAction": null,
+    "motion": "translate + opacity",
+    "kind": "loading",
+    "density": "dense-admin",
+    "risk": "safe",
+    "cssProperties": [
+      "transform",
+      "opacity"
+    ],
+    "bootstrapStates": [
+      "[aria-busy]",
+      ".bsx-is-loading"
+    ],
+    "requiresMarkupChange": true,
+    "scenario": "show search loading with a slim line indicator",
+    "bestFor": "admin filters, search results, chip removal, and empty results",
+    "avoidFor": "static navigation",
+    "reducedMotion": "opacity-only near-instant state",
+    "snippetPath": "snippets/extended/filter/search/search-loading-line.html",
+    "snippet": "<section class=\"card bsx-search-loading-line\">\n  <div class=\"card-body\">\n    <label class=\"form-label\" for=\"bsxSearchLoadingLine\">Search Loading Line</label>\n    <div class=\"input-group mb-3\" aria-busy=\"true\">\n      <input class=\"form-control\" id=\"bsxSearchLoadingLine\" type=\"search\" value=\"active customers\">\n      <button class=\"btn btn-outline-secondary\" type=\"button\">Search</button>\n    </div>\n    <div class=\"d-flex flex-wrap gap-2\">\n      <span class=\"badge text-bg-primary bsx-filter-chip\">Status: active</span>\n      <span class=\"badge text-bg-secondary bsx-filter-chip\">Owner: me</span>\n    </div>\n  </div>\n</section>"
+  },
+  {
+    "name": "sort-direction-flip",
+    "level": "extended",
+    "category": "filter/search",
+    "directory": "filter/search",
+    "className": "bsx-sort-direction-flip",
+    "component": "filter/search",
+    "requiresJs": false,
+    "runtimeBehavior": null,
+    "runtimeAction": null,
+    "motion": "color + opacity",
+    "kind": "data-change",
+    "density": "dense-admin",
+    "risk": "safe",
+    "cssProperties": [
+      "transform"
+    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "show a table sort direction change",
+    "bestFor": "admin filters, search results, chip removal, and empty results",
+    "avoidFor": "static navigation",
+    "reducedMotion": "opacity-only near-instant state",
+    "snippetPath": "snippets/extended/filter/search/sort-direction-flip.html",
+    "snippet": "<section class=\"card bsx-sort-direction-flip\">\n  <div class=\"card-body\">\n    <label class=\"form-label\" for=\"bsxSortDirectionFlip\">Sort Direction Flip</label>\n    <div class=\"input-group mb-3\" >\n      <input class=\"form-control\" id=\"bsxSortDirectionFlip\" type=\"search\" value=\"active customers\">\n      <button class=\"btn btn-outline-secondary\" type=\"button\">Search</button>\n    </div>\n    <div class=\"d-flex flex-wrap gap-2\">\n      <span class=\"badge text-bg-primary bsx-filter-chip\">Status: active</span>\n      <span class=\"badge text-bg-secondary bsx-filter-chip\">Owner: me</span>\n    </div>\n  </div>\n</section>"
+  },
+  {
+    "name": "wizard-step-enter",
     "level": "extended",
     "category": "form-wizard",
     "directory": "form-wizard",
-    "className": "bsx-form-wizard-step-current",
+    "className": "bsx-wizard-step-enter",
     "component": "form-wizard",
-    "requiresJs": false,
-    "runtimeBehavior": null,
+    "requiresJs": true,
+    "runtimeBehavior": "wizard step state",
+    "runtimeAction": "wizard-step",
     "motion": "color + opacity",
-    "kind": "form-state",
-    "density": "medium",
-    "risk": "medium",
+    "kind": "navigation",
+    "density": "normal-ui",
+    "risk": "requires-js",
     "cssProperties": [
-      "opacity",
       "transform"
     ],
     "bootstrapStates": [
@@ -6796,59 +7403,61 @@ window.bsxEffects = [
       ".is-invalid",
       ":focus-within"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "show a form wizard step entering",
     "bestFor": "multi-step forms with validation and review states",
     "avoidFor": "single-page forms without steps",
     "reducedMotion": "opacity-only near-instant state",
-    "snippetPath": "snippets/extended/form-wizard/form-wizard-step-current.html",
-    "snippet": "<form class=\"bsx-form-wizard-step-current\">\n  <ol class=\"list-unstyled d-flex mb-3\" aria-label=\"Form Wizard Step Current\">\n    <li class=\"bsx-step bsx-is-complete\"><span class=\"bsx-step-marker\" aria-hidden=\"true\">✓</span>Account</li>\n    <li class=\"bsx-step bsx-is-active\" aria-current=\"step\"><span class=\"bsx-step-marker\" aria-hidden=\"true\">2</span>Details</li>\n    <li class=\"bsx-step \"><span class=\"bsx-step-marker\" aria-hidden=\"true\">3</span>Review</li>\n  </ol>\n  <div class=\"card\">\n    <div class=\"card-body\">\n      <label class=\"form-label\" for=\"bsxFormWizardStepCurrent\">Company name</label>\n      <input class=\"form-control \" id=\"bsxFormWizardStepCurrent\" type=\"text\" value=\"Acme Ltd\">\n      <div class=\"invalid-feedback\">Resolve this step before submitting.</div>\n    </div>\n    <div class=\"card-footer d-flex justify-content-end gap-2\">\n      <button type=\"button\" class=\"btn btn-outline-secondary\">Back</button>\n      <button type=\"submit\" class=\"btn btn-primary\">Save step</button>\n    </div>\n  </div>\n</form>"
+    "snippetPath": "snippets/extended/form-wizard/wizard-step-enter.html",
+    "snippet": "<!-- Requires Bootstrap bundle and assets/js/bootstrap5-transitions.js. -->\n<form class=\"bsx-wizard-step-enter\">\n  <ol class=\"list-unstyled d-flex mb-3\" aria-label=\"Wizard Step Enter\">\n    <li class=\"bsx-step bsx-is-complete\"><span class=\"bsx-step-marker\" aria-hidden=\"true\">✓</span>Account</li>\n    <li class=\"bsx-step bsx-is-active\" aria-current=\"step\" data-bsx-action=\"wizard-step\"><span class=\"bsx-step-marker\" aria-hidden=\"true\">2</span>Details</li>\n    <li class=\"bsx-step \"><span class=\"bsx-step-marker\" aria-hidden=\"true\">3</span>Review</li>\n  </ol>\n  <div class=\"card\">\n    <div class=\"card-body\">\n      <label class=\"form-label\" for=\"bsxWizardStepEnter\">Company name</label>\n      <input class=\"form-control \" id=\"bsxWizardStepEnter\" type=\"text\" value=\"Acme Ltd\">\n      <div class=\"invalid-feedback\">Resolve this step before submitting.</div>\n    </div>\n    <div class=\"card-footer d-flex justify-content-end gap-2\">\n      <button type=\"button\" class=\"btn btn-outline-secondary\">Back</button>\n      <button type=\"button\" class=\"btn btn-primary\">Save step</button>\n    </div>\n  </div>\n</form>"
   },
   {
-    "name": "form-wizard-step-complete",
+    "name": "wizard-step-exit",
     "level": "extended",
     "category": "form-wizard",
     "directory": "form-wizard",
-    "className": "bsx-form-wizard-step-complete",
+    "className": "bsx-wizard-step-exit",
     "component": "form-wizard",
-    "requiresJs": false,
-    "runtimeBehavior": null,
+    "requiresJs": true,
+    "runtimeBehavior": "wizard step state",
+    "runtimeAction": "wizard-step",
     "motion": "color + opacity",
-    "kind": "form-state",
-    "density": "medium",
-    "risk": "medium",
+    "kind": "navigation",
+    "density": "normal-ui",
+    "risk": "requires-js",
     "cssProperties": [
-      "opacity",
       "transform"
     ],
     "bootstrapStates": [
       ".is-valid",
       ".is-invalid",
-      ":focus-within",
-      ".bsx-is-success"
+      ":focus-within"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "show a form wizard step leaving",
     "bestFor": "multi-step forms with validation and review states",
     "avoidFor": "single-page forms without steps",
     "reducedMotion": "opacity-only near-instant state",
-    "snippetPath": "snippets/extended/form-wizard/form-wizard-step-complete.html",
-    "snippet": "<form class=\"bsx-form-wizard-step-complete\">\n  <ol class=\"list-unstyled d-flex mb-3\" aria-label=\"Form Wizard Step Complete\">\n    <li class=\"bsx-step bsx-is-complete\"><span class=\"bsx-step-marker\" aria-hidden=\"true\">✓</span>Account</li>\n    <li class=\"bsx-step bsx-is-active\" aria-current=\"step\"><span class=\"bsx-step-marker\" aria-hidden=\"true\">2</span>Details</li>\n    <li class=\"bsx-step \"><span class=\"bsx-step-marker\" aria-hidden=\"true\">3</span>Review</li>\n  </ol>\n  <div class=\"card\">\n    <div class=\"card-body\">\n      <label class=\"form-label\" for=\"bsxFormWizardStepComplete\">Company name</label>\n      <input class=\"form-control \" id=\"bsxFormWizardStepComplete\" type=\"text\" value=\"Acme Ltd\">\n      <div class=\"invalid-feedback\">Resolve this step before submitting.</div>\n    </div>\n    <div class=\"card-footer d-flex justify-content-end gap-2\">\n      <button type=\"button\" class=\"btn btn-outline-secondary\">Back</button>\n      <button type=\"submit\" class=\"btn btn-primary\">Save step</button>\n    </div>\n  </div>\n</form>"
+    "snippetPath": "snippets/extended/form-wizard/wizard-step-exit.html",
+    "snippet": "<!-- Requires Bootstrap bundle and assets/js/bootstrap5-transitions.js. -->\n<form class=\"bsx-wizard-step-exit\">\n  <ol class=\"list-unstyled d-flex mb-3\" aria-label=\"Wizard Step Exit\">\n    <li class=\"bsx-step bsx-is-complete\"><span class=\"bsx-step-marker\" aria-hidden=\"true\">✓</span>Account</li>\n    <li class=\"bsx-step bsx-is-active\" aria-current=\"step\" data-bsx-action=\"wizard-step\"><span class=\"bsx-step-marker\" aria-hidden=\"true\">2</span>Details</li>\n    <li class=\"bsx-step \"><span class=\"bsx-step-marker\" aria-hidden=\"true\">3</span>Review</li>\n  </ol>\n  <div class=\"card\">\n    <div class=\"card-body\">\n      <label class=\"form-label\" for=\"bsxWizardStepExit\">Company name</label>\n      <input class=\"form-control \" id=\"bsxWizardStepExit\" type=\"text\" value=\"Acme Ltd\">\n      <div class=\"invalid-feedback\">Resolve this step before submitting.</div>\n    </div>\n    <div class=\"card-footer d-flex justify-content-end gap-2\">\n      <button type=\"button\" class=\"btn btn-outline-secondary\">Back</button>\n      <button type=\"button\" class=\"btn btn-primary\">Save step</button>\n    </div>\n  </div>\n</form>"
   },
   {
-    "name": "form-wizard-step-error",
+    "name": "wizard-step-invalid-shake",
     "level": "extended",
     "category": "form-wizard",
     "directory": "form-wizard",
-    "className": "bsx-form-wizard-step-error",
+    "className": "bsx-wizard-step-invalid-shake",
     "component": "form-wizard",
     "requiresJs": false,
     "runtimeBehavior": null,
-    "motion": "color + opacity",
-    "kind": "form-state",
-    "density": "medium",
+    "runtimeAction": null,
+    "motion": "shake",
+    "kind": "validation",
+    "density": "normal-ui",
     "risk": "medium",
     "cssProperties": [
       "opacity",
-      "background-color",
-      "border-color",
-      "color"
+      "transform"
     ],
     "bootstrapStates": [
       ".is-valid",
@@ -6856,25 +7465,28 @@ window.bsxEffects = [
       ":focus-within",
       ".bsx-is-error"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "show an invalid wizard step",
     "bestFor": "multi-step forms with validation and review states",
     "avoidFor": "single-page forms without steps",
     "reducedMotion": "opacity-only near-instant state",
-    "snippetPath": "snippets/extended/form-wizard/form-wizard-step-error.html",
-    "snippet": "<form class=\"bsx-form-wizard-step-error\">\n  <ol class=\"list-unstyled d-flex mb-3\" aria-label=\"Form Wizard Step Error\">\n    <li class=\"bsx-step bsx-is-complete\"><span class=\"bsx-step-marker\" aria-hidden=\"true\">✓</span>Account</li>\n    <li class=\"bsx-step bsx-is-active\" aria-current=\"step\"><span class=\"bsx-step-marker\" aria-hidden=\"true\">2</span>Details</li>\n    <li class=\"bsx-step bsx-is-error\"><span class=\"bsx-step-marker\" aria-hidden=\"true\">3</span>Review</li>\n  </ol>\n  <div class=\"card\">\n    <div class=\"card-body\">\n      <label class=\"form-label\" for=\"bsxFormWizardStepError\">Company name</label>\n      <input class=\"form-control is-invalid\" id=\"bsxFormWizardStepError\" type=\"text\" value=\"Acme Ltd\">\n      <div class=\"invalid-feedback\">Resolve this step before submitting.</div>\n    </div>\n    <div class=\"card-footer d-flex justify-content-end gap-2\">\n      <button type=\"button\" class=\"btn btn-outline-secondary\">Back</button>\n      <button type=\"submit\" class=\"btn btn-primary\">Save step</button>\n    </div>\n  </div>\n</form>"
+    "snippetPath": "snippets/extended/form-wizard/wizard-step-invalid-shake.html",
+    "snippet": "<form class=\"bsx-wizard-step-invalid-shake\">\n  <ol class=\"list-unstyled d-flex mb-3\" aria-label=\"Wizard Step Invalid Shake\">\n    <li class=\"bsx-step bsx-is-complete\"><span class=\"bsx-step-marker\" aria-hidden=\"true\">✓</span>Account</li>\n    <li class=\"bsx-step bsx-is-active\" aria-current=\"step\"><span class=\"bsx-step-marker\" aria-hidden=\"true\">2</span>Details</li>\n    <li class=\"bsx-step bsx-is-error\"><span class=\"bsx-step-marker\" aria-hidden=\"true\">3</span>Review</li>\n  </ol>\n  <div class=\"card\">\n    <div class=\"card-body\">\n      <label class=\"form-label\" for=\"bsxWizardStepInvalidShake\">Company name</label>\n      <input class=\"form-control is-invalid\" id=\"bsxWizardStepInvalidShake\" type=\"text\" value=\"Acme Ltd\">\n      <div class=\"invalid-feedback\">Resolve this step before submitting.</div>\n    </div>\n    <div class=\"card-footer d-flex justify-content-end gap-2\">\n      <button type=\"button\" class=\"btn btn-outline-secondary\">Back</button>\n      <button type=\"submit\" class=\"btn btn-primary\">Save step</button>\n    </div>\n  </div>\n</form>"
   },
   {
-    "name": "form-wizard-progress-sync",
+    "name": "wizard-step-complete-check",
     "level": "extended",
     "category": "form-wizard",
     "directory": "form-wizard",
-    "className": "bsx-form-wizard-progress-sync",
+    "className": "bsx-wizard-step-complete-check",
     "component": "form-wizard",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "color + opacity",
-    "kind": "form-state",
-    "density": "medium",
-    "risk": "medium",
+    "kind": "success",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "opacity",
       "transform"
@@ -6882,29 +7494,32 @@ window.bsxEffects = [
     "bootstrapStates": [
       ".is-valid",
       ".is-invalid",
-      ":focus-within"
+      ":focus-within",
+      ".bsx-is-success"
     ],
+    "requiresMarkupChange": true,
+    "scenario": "confirm a completed wizard step",
     "bestFor": "multi-step forms with validation and review states",
     "avoidFor": "single-page forms without steps",
     "reducedMotion": "opacity-only near-instant state",
-    "snippetPath": "snippets/extended/form-wizard/form-wizard-progress-sync.html",
-    "snippet": "<form class=\"bsx-form-wizard-progress-sync\">\n  <ol class=\"list-unstyled d-flex mb-3\" aria-label=\"Form Wizard Progress Sync\">\n    <li class=\"bsx-step bsx-is-complete\"><span class=\"bsx-step-marker\" aria-hidden=\"true\">✓</span>Account</li>\n    <li class=\"bsx-step bsx-is-active\" aria-current=\"step\"><span class=\"bsx-step-marker\" aria-hidden=\"true\">2</span>Details</li>\n    <li class=\"bsx-step \"><span class=\"bsx-step-marker\" aria-hidden=\"true\">3</span>Review</li>\n  </ol>\n  <div class=\"card\">\n    <div class=\"card-body\">\n      <label class=\"form-label\" for=\"bsxFormWizardProgressSync\">Company name</label>\n      <input class=\"form-control \" id=\"bsxFormWizardProgressSync\" type=\"text\" value=\"Acme Ltd\">\n      <div class=\"invalid-feedback\">Resolve this step before submitting.</div>\n    </div>\n    <div class=\"card-footer d-flex justify-content-end gap-2\">\n      <button type=\"button\" class=\"btn btn-outline-secondary\">Back</button>\n      <button type=\"submit\" class=\"btn btn-primary\">Save step</button>\n    </div>\n  </div>\n</form>"
+    "snippetPath": "snippets/extended/form-wizard/wizard-step-complete-check.html",
+    "snippet": "<form class=\"bsx-wizard-step-complete-check\">\n  <ol class=\"list-unstyled d-flex mb-3\" aria-label=\"Wizard Step Complete Check\">\n    <li class=\"bsx-step bsx-is-complete\"><span class=\"bsx-step-marker\" aria-hidden=\"true\">✓</span>Account</li>\n    <li class=\"bsx-step bsx-is-active\" aria-current=\"step\"><span class=\"bsx-step-marker\" aria-hidden=\"true\">2</span>Details</li>\n    <li class=\"bsx-step \"><span class=\"bsx-step-marker\" aria-hidden=\"true\">3</span>Review</li>\n  </ol>\n  <div class=\"card\">\n    <div class=\"card-body\">\n      <label class=\"form-label\" for=\"bsxWizardStepCompleteCheck\">Company name</label>\n      <input class=\"form-control \" id=\"bsxWizardStepCompleteCheck\" type=\"text\" value=\"Acme Ltd\">\n      <div class=\"invalid-feedback\">Resolve this step before submitting.</div>\n    </div>\n    <div class=\"card-footer d-flex justify-content-end gap-2\">\n      <button type=\"button\" class=\"btn btn-outline-secondary\">Back</button>\n      <button type=\"submit\" class=\"btn btn-primary\">Save step</button>\n    </div>\n  </div>\n</form>"
   },
   {
-    "name": "form-wizard-section-enter",
+    "name": "wizard-summary-reveal",
     "level": "extended",
     "category": "form-wizard",
     "directory": "form-wizard",
-    "className": "bsx-form-wizard-section-enter",
+    "className": "bsx-wizard-summary-reveal",
     "component": "form-wizard",
     "requiresJs": false,
     "runtimeBehavior": null,
-    "motion": "color + opacity",
-    "kind": "form-state",
-    "density": "medium",
-    "risk": "medium",
+    "runtimeAction": null,
+    "motion": "translate",
+    "kind": "navigation",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
-      "opacity",
       "transform"
     ],
     "bootstrapStates": [
@@ -6912,27 +7527,59 @@ window.bsxEffects = [
       ".is-invalid",
       ":focus-within"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "reveal the wizard review summary",
     "bestFor": "multi-step forms with validation and review states",
     "avoidFor": "single-page forms without steps",
     "reducedMotion": "opacity-only near-instant state",
-    "snippetPath": "snippets/extended/form-wizard/form-wizard-section-enter.html",
-    "snippet": "<form class=\"bsx-form-wizard-section-enter\">\n  <ol class=\"list-unstyled d-flex mb-3\" aria-label=\"Form Wizard Section Enter\">\n    <li class=\"bsx-step bsx-is-complete\"><span class=\"bsx-step-marker\" aria-hidden=\"true\">✓</span>Account</li>\n    <li class=\"bsx-step bsx-is-active\" aria-current=\"step\"><span class=\"bsx-step-marker\" aria-hidden=\"true\">2</span>Details</li>\n    <li class=\"bsx-step \"><span class=\"bsx-step-marker\" aria-hidden=\"true\">3</span>Review</li>\n  </ol>\n  <div class=\"card\">\n    <div class=\"card-body\">\n      <label class=\"form-label\" for=\"bsxFormWizardSectionEnter\">Company name</label>\n      <input class=\"form-control \" id=\"bsxFormWizardSectionEnter\" type=\"text\" value=\"Acme Ltd\">\n      <div class=\"invalid-feedback\">Resolve this step before submitting.</div>\n    </div>\n    <div class=\"card-footer d-flex justify-content-end gap-2\">\n      <button type=\"button\" class=\"btn btn-outline-secondary\">Back</button>\n      <button type=\"submit\" class=\"btn btn-primary\">Save step</button>\n    </div>\n  </div>\n</form>"
+    "snippetPath": "snippets/extended/form-wizard/wizard-summary-reveal.html",
+    "snippet": "<form class=\"bsx-wizard-summary-reveal\">\n  <ol class=\"list-unstyled d-flex mb-3\" aria-label=\"Wizard Summary Reveal\">\n    <li class=\"bsx-step bsx-is-complete\"><span class=\"bsx-step-marker\" aria-hidden=\"true\">✓</span>Account</li>\n    <li class=\"bsx-step bsx-is-active\" aria-current=\"step\"><span class=\"bsx-step-marker\" aria-hidden=\"true\">2</span>Details</li>\n    <li class=\"bsx-step \"><span class=\"bsx-step-marker\" aria-hidden=\"true\">3</span>Review</li>\n  </ol>\n  <div class=\"card\">\n    <div class=\"card-body\">\n      <label class=\"form-label\" for=\"bsxWizardSummaryReveal\">Company name</label>\n      <input class=\"form-control \" id=\"bsxWizardSummaryReveal\" type=\"text\" value=\"Acme Ltd\">\n      <div class=\"invalid-feedback\">Resolve this step before submitting.</div>\n    </div>\n    <div class=\"card-footer d-flex justify-content-end gap-2\">\n      <button type=\"button\" class=\"btn btn-outline-secondary\">Back</button>\n      <button type=\"submit\" class=\"btn btn-primary\">Save step</button>\n    </div>\n  </div>\n</form>"
   },
   {
-    "name": "form-wizard-section-exit",
+    "name": "wizard-back-soft",
     "level": "extended",
     "category": "form-wizard",
     "directory": "form-wizard",
-    "className": "bsx-form-wizard-section-exit",
+    "className": "bsx-wizard-back-soft",
     "component": "form-wizard",
     "requiresJs": false,
     "runtimeBehavior": null,
-    "motion": "color + opacity",
-    "kind": "form-state",
-    "density": "medium",
-    "risk": "medium",
+    "runtimeAction": null,
+    "motion": "opacity",
+    "kind": "navigation",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
-      "opacity",
+      "opacity"
+    ],
+    "bootstrapStates": [
+      ".is-valid",
+      ".is-invalid",
+      ":focus-within"
+    ],
+    "requiresMarkupChange": false,
+    "scenario": "soften backward wizard navigation",
+    "bestFor": "multi-step forms with validation and review states",
+    "avoidFor": "single-page forms without steps",
+    "reducedMotion": "opacity-only near-instant state",
+    "snippetPath": "snippets/extended/form-wizard/wizard-back-soft.html",
+    "snippet": "<form class=\"bsx-wizard-back-soft\">\n  <ol class=\"list-unstyled d-flex mb-3\" aria-label=\"Wizard Back Soft\">\n    <li class=\"bsx-step bsx-is-complete\"><span class=\"bsx-step-marker\" aria-hidden=\"true\">✓</span>Account</li>\n    <li class=\"bsx-step bsx-is-active\" aria-current=\"step\"><span class=\"bsx-step-marker\" aria-hidden=\"true\">2</span>Details</li>\n    <li class=\"bsx-step \"><span class=\"bsx-step-marker\" aria-hidden=\"true\">3</span>Review</li>\n  </ol>\n  <div class=\"card\">\n    <div class=\"card-body\">\n      <label class=\"form-label\" for=\"bsxWizardBackSoft\">Company name</label>\n      <input class=\"form-control \" id=\"bsxWizardBackSoft\" type=\"text\" value=\"Acme Ltd\">\n      <div class=\"invalid-feedback\">Resolve this step before submitting.</div>\n    </div>\n    <div class=\"card-footer d-flex justify-content-end gap-2\">\n      <button type=\"button\" class=\"btn btn-outline-secondary\">Back</button>\n      <button type=\"submit\" class=\"btn btn-primary\">Save step</button>\n    </div>\n  </div>\n</form>"
+  },
+  {
+    "name": "wizard-next-press",
+    "level": "extended",
+    "category": "form-wizard",
+    "directory": "form-wizard",
+    "className": "bsx-wizard-next-press",
+    "component": "form-wizard",
+    "requiresJs": false,
+    "runtimeBehavior": null,
+    "runtimeAction": null,
+    "motion": "scale",
+    "kind": "navigation",
+    "density": "normal-ui",
+    "risk": "safe",
+    "cssProperties": [
       "transform"
     ],
     "bootstrapStates": [
@@ -6940,24 +7587,114 @@ window.bsxEffects = [
       ".is-invalid",
       ":focus-within"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "add press feedback to the next-step button",
     "bestFor": "multi-step forms with validation and review states",
     "avoidFor": "single-page forms without steps",
     "reducedMotion": "opacity-only near-instant state",
-    "snippetPath": "snippets/extended/form-wizard/form-wizard-section-exit.html",
-    "snippet": "<form class=\"bsx-form-wizard-section-exit\">\n  <ol class=\"list-unstyled d-flex mb-3\" aria-label=\"Form Wizard Section Exit\">\n    <li class=\"bsx-step bsx-is-complete\"><span class=\"bsx-step-marker\" aria-hidden=\"true\">✓</span>Account</li>\n    <li class=\"bsx-step bsx-is-active\" aria-current=\"step\"><span class=\"bsx-step-marker\" aria-hidden=\"true\">2</span>Details</li>\n    <li class=\"bsx-step \"><span class=\"bsx-step-marker\" aria-hidden=\"true\">3</span>Review</li>\n  </ol>\n  <div class=\"card\">\n    <div class=\"card-body\">\n      <label class=\"form-label\" for=\"bsxFormWizardSectionExit\">Company name</label>\n      <input class=\"form-control \" id=\"bsxFormWizardSectionExit\" type=\"text\" value=\"Acme Ltd\">\n      <div class=\"invalid-feedback\">Resolve this step before submitting.</div>\n    </div>\n    <div class=\"card-footer d-flex justify-content-end gap-2\">\n      <button type=\"button\" class=\"btn btn-outline-secondary\">Back</button>\n      <button type=\"submit\" class=\"btn btn-primary\">Save step</button>\n    </div>\n  </div>\n</form>"
+    "snippetPath": "snippets/extended/form-wizard/wizard-next-press.html",
+    "snippet": "<form class=\"bsx-wizard-next-press\">\n  <ol class=\"list-unstyled d-flex mb-3\" aria-label=\"Wizard Next Press\">\n    <li class=\"bsx-step bsx-is-complete\"><span class=\"bsx-step-marker\" aria-hidden=\"true\">✓</span>Account</li>\n    <li class=\"bsx-step bsx-is-active\" aria-current=\"step\"><span class=\"bsx-step-marker\" aria-hidden=\"true\">2</span>Details</li>\n    <li class=\"bsx-step \"><span class=\"bsx-step-marker\" aria-hidden=\"true\">3</span>Review</li>\n  </ol>\n  <div class=\"card\">\n    <div class=\"card-body\">\n      <label class=\"form-label\" for=\"bsxWizardNextPress\">Company name</label>\n      <input class=\"form-control \" id=\"bsxWizardNextPress\" type=\"text\" value=\"Acme Ltd\">\n      <div class=\"invalid-feedback\">Resolve this step before submitting.</div>\n    </div>\n    <div class=\"card-footer d-flex justify-content-end gap-2\">\n      <button type=\"button\" class=\"btn btn-outline-secondary\">Back</button>\n      <button type=\"submit\" class=\"btn btn-primary\">Save step</button>\n    </div>\n  </div>\n</form>"
   },
   {
-    "name": "form-wizard-review-dirty",
+    "name": "wizard-saving-overlay",
     "level": "extended",
     "category": "form-wizard",
     "directory": "form-wizard",
-    "className": "bsx-form-wizard-review-dirty",
+    "className": "bsx-wizard-saving-overlay",
     "component": "form-wizard",
+    "requiresJs": true,
+    "runtimeBehavior": "wizard saving state",
+    "runtimeAction": "wizard-step",
+    "motion": "color + opacity",
+    "kind": "loading",
+    "density": "normal-ui",
+    "risk": "requires-js",
+    "cssProperties": [
+      "transform",
+      "opacity"
+    ],
+    "bootstrapStates": [
+      ".is-valid",
+      ".is-invalid",
+      ":focus-within",
+      "[aria-busy]",
+      ".bsx-is-loading"
+    ],
+    "requiresMarkupChange": true,
+    "scenario": "show wizard saving without replacing form semantics",
+    "bestFor": "multi-step forms with validation and review states",
+    "avoidFor": "single-page forms without steps",
+    "reducedMotion": "opacity-only near-instant state",
+    "snippetPath": "snippets/extended/form-wizard/wizard-saving-overlay.html",
+    "snippet": "<!-- Requires Bootstrap bundle and assets/js/bootstrap5-transitions.js. -->\n<form class=\"bsx-wizard-saving-overlay\">\n  <ol class=\"list-unstyled d-flex mb-3\" aria-label=\"Wizard Saving Overlay\">\n    <li class=\"bsx-step bsx-is-complete\"><span class=\"bsx-step-marker\" aria-hidden=\"true\">✓</span>Account</li>\n    <li class=\"bsx-step bsx-is-active\" aria-current=\"step\"><span class=\"bsx-step-marker\" aria-hidden=\"true\">2</span>Details</li>\n    <li class=\"bsx-step \"><span class=\"bsx-step-marker\" aria-hidden=\"true\">3</span>Review</li>\n  </ol>\n  <div class=\"card\">\n    <div class=\"card-body\">\n      <label class=\"form-label\" for=\"bsxWizardSavingOverlay\">Company name</label>\n      <input class=\"form-control \" id=\"bsxWizardSavingOverlay\" type=\"text\" value=\"Acme Ltd\">\n      <div class=\"invalid-feedback\">Resolve this step before submitting.</div>\n    </div>\n    <div class=\"card-footer d-flex justify-content-end gap-2\">\n      <button type=\"button\" class=\"btn btn-outline-secondary\">Back</button>\n      <button type=\"button\" class=\"btn btn-primary\" data-bsx-action=\"wizard-step\">Save step</button>\n    </div>\n  </div>\n</form>"
+  },
+  {
+    "name": "state-empty-pop",
+    "level": "extended",
+    "category": "state",
+    "directory": "state",
+    "className": "bsx-state-empty-pop",
+    "component": "state",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
+    "motion": "scale",
+    "kind": "state",
+    "density": "normal-ui",
+    "risk": "safe",
+    "cssProperties": [
+      "transform",
+      "opacity"
+    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "reveal an empty state",
+    "bestFor": "empty, error, success, warning, offline, lock, and unsaved states",
+    "avoidFor": "decorative content blocks",
+    "reducedMotion": "opacity-only near-instant state",
+    "snippetPath": "snippets/extended/state/state-empty-pop.html",
+    "snippet": "<section class=\"card bsx-state-empty-pop\" >\n  <div class=\"card-body\">\n    <h2 class=\"h5\">State Empty Pop</h2>\n    <p class=\"text-body-secondary mb-3\">Use this state for admin workflows that need a clear non-motion signal.</p>\n    <button type=\"button\" class=\"btn btn-primary\">Primary action</button>\n  </div>\n</section>"
+  },
+  {
+    "name": "state-empty-icon-float",
+    "level": "extended",
+    "category": "state",
+    "directory": "state",
+    "className": "bsx-state-empty-icon-float",
+    "component": "state",
+    "requiresJs": false,
+    "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "color + opacity",
-    "kind": "form-state",
-    "density": "medium",
+    "kind": "state",
+    "density": "normal-ui",
+    "risk": "safe",
+    "cssProperties": [
+      "transform",
+      "opacity"
+    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": true,
+    "scenario": "add quiet visual emphasis to an empty-state icon",
+    "bestFor": "empty, error, success, warning, offline, lock, and unsaved states",
+    "avoidFor": "decorative content blocks",
+    "reducedMotion": "opacity-only near-instant state",
+    "snippetPath": "snippets/extended/state/state-empty-icon-float.html",
+    "snippet": "<section class=\"card bsx-state-empty-icon-float\" >\n  <div class=\"card-body\">\n    <h2 class=\"h5\">State Empty Icon Float</h2>\n    <p class=\"text-body-secondary mb-3\">Use this state for admin workflows that need a clear non-motion signal.</p>\n    <button type=\"button\" class=\"btn btn-primary\">Primary action</button>\n  </div>\n</section>"
+  },
+  {
+    "name": "state-error-shake",
+    "level": "extended",
+    "category": "state",
+    "directory": "state",
+    "className": "bsx-state-error-shake",
+    "component": "state",
+    "requiresJs": false,
+    "runtimeBehavior": null,
+    "runtimeAction": null,
+    "motion": "shake",
+    "kind": "state",
+    "density": "normal-ui",
     "risk": "medium",
     "cssProperties": [
       "opacity",
@@ -6966,85 +7703,30 @@ window.bsxEffects = [
       "color"
     ],
     "bootstrapStates": [
-      ".is-valid",
-      ".is-invalid",
-      ":focus-within",
-      ".bsx-is-dirty"
+      ".bsx-is-error"
     ],
-    "bestFor": "multi-step forms with validation and review states",
-    "avoidFor": "single-page forms without steps",
-    "reducedMotion": "opacity-only near-instant state",
-    "snippetPath": "snippets/extended/form-wizard/form-wizard-review-dirty.html",
-    "snippet": "<form class=\"bsx-form-wizard-review-dirty\">\n  <ol class=\"list-unstyled d-flex mb-3\" aria-label=\"Form Wizard Review Dirty\">\n    <li class=\"bsx-step bsx-is-complete\"><span class=\"bsx-step-marker\" aria-hidden=\"true\">✓</span>Account</li>\n    <li class=\"bsx-step bsx-is-active\" aria-current=\"step\"><span class=\"bsx-step-marker\" aria-hidden=\"true\">2</span>Details</li>\n    <li class=\"bsx-step \"><span class=\"bsx-step-marker\" aria-hidden=\"true\">3</span>Review</li>\n  </ol>\n  <div class=\"card\">\n    <div class=\"card-body\">\n      <label class=\"form-label\" for=\"bsxFormWizardReviewDirty\">Company name</label>\n      <input class=\"form-control \" id=\"bsxFormWizardReviewDirty\" type=\"text\" value=\"Acme Ltd\">\n      <div class=\"invalid-feedback\">Resolve this step before submitting.</div>\n    </div>\n    <div class=\"card-footer d-flex justify-content-end gap-2\">\n      <button type=\"button\" class=\"btn btn-outline-secondary\">Back</button>\n      <button type=\"submit\" class=\"btn btn-primary\">Save step</button>\n    </div>\n  </div>\n</form>"
-  },
-  {
-    "name": "form-wizard-submit-ready",
-    "level": "extended",
-    "category": "form-wizard",
-    "directory": "form-wizard",
-    "className": "bsx-form-wizard-submit-ready",
-    "component": "form-wizard",
-    "requiresJs": false,
-    "runtimeBehavior": null,
-    "motion": "color + opacity",
-    "kind": "form-state",
-    "density": "medium",
-    "risk": "medium",
-    "cssProperties": [
-      "opacity"
-    ],
-    "bootstrapStates": [
-      ".is-valid",
-      ".is-invalid",
-      ":focus-within",
-      ".bsx-is-success"
-    ],
-    "bestFor": "multi-step forms with validation and review states",
-    "avoidFor": "single-page forms without steps",
-    "reducedMotion": "opacity-only near-instant state",
-    "snippetPath": "snippets/extended/form-wizard/form-wizard-submit-ready.html",
-    "snippet": "<form class=\"bsx-form-wizard-submit-ready\">\n  <ol class=\"list-unstyled d-flex mb-3\" aria-label=\"Form Wizard Submit Ready\">\n    <li class=\"bsx-step bsx-is-complete\"><span class=\"bsx-step-marker\" aria-hidden=\"true\">✓</span>Account</li>\n    <li class=\"bsx-step bsx-is-active\" aria-current=\"step\"><span class=\"bsx-step-marker\" aria-hidden=\"true\">2</span>Details</li>\n    <li class=\"bsx-step \"><span class=\"bsx-step-marker\" aria-hidden=\"true\">3</span>Review</li>\n  </ol>\n  <div class=\"card\">\n    <div class=\"card-body\">\n      <label class=\"form-label\" for=\"bsxFormWizardSubmitReady\">Company name</label>\n      <input class=\"form-control \" id=\"bsxFormWizardSubmitReady\" type=\"text\" value=\"Acme Ltd\">\n      <div class=\"invalid-feedback\">Resolve this step before submitting.</div>\n    </div>\n    <div class=\"card-footer d-flex justify-content-end gap-2\">\n      <button type=\"button\" class=\"btn btn-outline-secondary\">Back</button>\n      <button type=\"submit\" class=\"btn btn-primary\">Save step</button>\n    </div>\n  </div>\n</form>"
-  },
-  {
-    "name": "state-empty-reveal",
-    "level": "extended",
-    "category": "state",
-    "directory": "state",
-    "className": "bsx-state-empty-reveal",
-    "component": "state",
-    "requiresJs": false,
-    "runtimeBehavior": null,
-    "motion": "translate",
-    "kind": "feedback-state",
-    "density": "medium",
-    "risk": "medium",
-    "cssProperties": [
-      "transform",
-      "opacity"
-    ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
+    "requiresMarkupChange": false,
+    "scenario": "call attention to an inline error state",
     "bestFor": "empty, error, success, warning, offline, lock, and unsaved states",
     "avoidFor": "decorative content blocks",
     "reducedMotion": "opacity-only near-instant state",
-    "snippetPath": "snippets/extended/state/state-empty-reveal.html",
-    "snippet": "<section class=\"card bsx-state-empty-reveal\" >\n  <div class=\"card-body\">\n    <h2 class=\"h5\">State Empty Reveal</h2>\n    <p class=\"text-body-secondary mb-3\">Use this state for admin workflows that need a clear non-motion signal.</p>\n    <button type=\"button\" class=\"btn btn-primary\">Primary action</button>\n  </div>\n</section>"
+    "snippetPath": "snippets/extended/state/state-error-shake.html",
+    "snippet": "<section class=\"card bsx-state-error-shake\" >\n  <div class=\"card-body\">\n    <h2 class=\"h5\">State Error Shake</h2>\n    <p class=\"text-body-secondary mb-3\">Use this state for admin workflows that need a clear non-motion signal.</p>\n    <button type=\"button\" class=\"btn btn-danger\">Primary action</button>\n  </div>\n</section>"
   },
   {
-    "name": "state-error-inline",
+    "name": "state-error-retry-press",
     "level": "extended",
     "category": "state",
     "directory": "state",
-    "className": "bsx-state-error-inline",
+    "className": "bsx-state-error-retry-press",
     "component": "state",
-    "requiresJs": false,
-    "runtimeBehavior": null,
-    "motion": "translate",
-    "kind": "feedback-state",
-    "density": "medium",
-    "risk": "medium",
+    "requiresJs": true,
+    "runtimeBehavior": "retry state",
+    "runtimeAction": "retry-state",
+    "motion": "scale",
+    "kind": "state",
+    "density": "normal-ui",
+    "risk": "requires-js",
     "cssProperties": [
       "transform",
       "opacity",
@@ -7055,378 +7737,28 @@ window.bsxEffects = [
     "bootstrapStates": [
       ".bsx-is-error"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "make an error retry action feel responsive",
     "bestFor": "empty, error, success, warning, offline, lock, and unsaved states",
     "avoidFor": "decorative content blocks",
     "reducedMotion": "opacity-only near-instant state",
-    "snippetPath": "snippets/extended/state/state-error-inline.html",
-    "snippet": "<section class=\"card bsx-state-error-inline\" >\n  <div class=\"card-body\">\n    <h2 class=\"h5\">State Error Inline</h2>\n    <p class=\"text-body-secondary mb-3\">Use this state for admin workflows that need a clear non-motion signal.</p>\n    <button type=\"button\" class=\"btn btn-danger\">Primary action</button>\n  </div>\n</section>"
+    "snippetPath": "snippets/extended/state/state-error-retry-press.html",
+    "snippet": "<!-- Requires Bootstrap bundle and assets/js/bootstrap5-transitions.js. -->\n<section class=\"card bsx-state-error-retry-press\" >\n  <div class=\"card-body\">\n    <h2 class=\"h5\">State Error Retry Press</h2>\n    <p class=\"text-body-secondary mb-3\">Use this state for admin workflows that need a clear non-motion signal.</p>\n    <button type=\"button\" class=\"btn btn-danger\" data-bsx-action=\"retry-state\">Retry</button>\n  </div>\n</section>"
   },
   {
-    "name": "state-success-inline",
+    "name": "state-success-check",
     "level": "extended",
     "category": "state",
     "directory": "state",
-    "className": "bsx-state-success-inline",
+    "className": "bsx-state-success-check",
     "component": "state",
     "requiresJs": false,
     "runtimeBehavior": null,
-    "motion": "translate",
-    "kind": "feedback-state",
-    "density": "medium",
-    "risk": "medium",
-    "cssProperties": [
-      "transform",
-      "opacity",
-      "background-color",
-      "border-color",
-      "color"
-    ],
-    "bootstrapStates": [
-      ".bsx-is-success"
-    ],
-    "bestFor": "empty, error, success, warning, offline, lock, and unsaved states",
-    "avoidFor": "decorative content blocks",
-    "reducedMotion": "opacity-only near-instant state",
-    "snippetPath": "snippets/extended/state/state-success-inline.html",
-    "snippet": "<section class=\"card bsx-state-success-inline\" >\n  <div class=\"card-body\">\n    <h2 class=\"h5\">State Success Inline</h2>\n    <p class=\"text-body-secondary mb-3\">Use this state for admin workflows that need a clear non-motion signal.</p>\n    <button type=\"button\" class=\"btn btn-primary\">Primary action</button>\n  </div>\n</section>"
-  },
-  {
-    "name": "state-warning-inline",
-    "level": "extended",
-    "category": "state",
-    "directory": "state",
-    "className": "bsx-state-warning-inline",
-    "component": "state",
-    "requiresJs": false,
-    "runtimeBehavior": null,
-    "motion": "translate",
-    "kind": "feedback-state",
-    "density": "medium",
-    "risk": "medium",
-    "cssProperties": [
-      "transform",
-      "opacity",
-      "background-color",
-      "border-color",
-      "color"
-    ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
-    "bestFor": "empty, error, success, warning, offline, lock, and unsaved states",
-    "avoidFor": "decorative content blocks",
-    "reducedMotion": "opacity-only near-instant state",
-    "snippetPath": "snippets/extended/state/state-warning-inline.html",
-    "snippet": "<section class=\"card bsx-state-warning-inline\" >\n  <div class=\"card-body\">\n    <h2 class=\"h5\">State Warning Inline</h2>\n    <p class=\"text-body-secondary mb-3\">Use this state for admin workflows that need a clear non-motion signal.</p>\n    <button type=\"button\" class=\"btn btn-primary\">Primary action</button>\n  </div>\n</section>"
-  },
-  {
-    "name": "state-unsaved-changes",
-    "level": "extended",
-    "category": "state",
-    "directory": "state",
-    "className": "bsx-state-unsaved-changes",
-    "component": "state",
-    "requiresJs": false,
-    "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "color + opacity",
-    "kind": "feedback-state",
-    "density": "medium",
-    "risk": "medium",
-    "cssProperties": [
-      "opacity",
-      "transform"
-    ],
-    "bootstrapStates": [
-      ".bsx-is-dirty"
-    ],
-    "bestFor": "empty, error, success, warning, offline, lock, and unsaved states",
-    "avoidFor": "decorative content blocks",
-    "reducedMotion": "opacity-only near-instant state",
-    "snippetPath": "snippets/extended/state/state-unsaved-changes.html",
-    "snippet": "<section class=\"card bsx-state-unsaved-changes\" >\n  <div class=\"card-body\">\n    <h2 class=\"h5\">State Unsaved Changes</h2>\n    <p class=\"text-body-secondary mb-3\">Use this state for admin workflows that need a clear non-motion signal.</p>\n    <button type=\"button\" class=\"btn btn-primary\">Primary action</button>\n  </div>\n</section>"
-  },
-  {
-    "name": "state-offline-banner",
-    "level": "extended",
-    "category": "state",
-    "directory": "state",
-    "className": "bsx-state-offline-banner",
-    "component": "state",
-    "requiresJs": false,
-    "runtimeBehavior": null,
-    "motion": "translate",
-    "kind": "feedback-state",
-    "density": "medium",
-    "risk": "medium",
-    "cssProperties": [
-      "transform",
-      "opacity"
-    ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
-    "bestFor": "empty, error, success, warning, offline, lock, and unsaved states",
-    "avoidFor": "decorative content blocks",
-    "reducedMotion": "opacity-only near-instant state",
-    "snippetPath": "snippets/extended/state/state-offline-banner.html",
-    "snippet": "<section class=\"card bsx-state-offline-banner\" >\n  <div class=\"card-body\">\n    <h2 class=\"h5\">State Offline Banner</h2>\n    <p class=\"text-body-secondary mb-3\">Use this state for admin workflows that need a clear non-motion signal.</p>\n    <button type=\"button\" class=\"btn btn-primary\">Primary action</button>\n  </div>\n</section>"
-  },
-  {
-    "name": "state-locked-record",
-    "level": "extended",
-    "category": "state",
-    "directory": "state",
-    "className": "bsx-state-locked-record",
-    "component": "state",
-    "requiresJs": false,
-    "runtimeBehavior": null,
-    "motion": "color + opacity",
-    "kind": "feedback-state",
-    "density": "medium",
-    "risk": "medium",
-    "cssProperties": [
-      "opacity",
-      "background-color",
-      "border-color",
-      "color"
-    ],
-    "bootstrapStates": [
-      ".disabled",
-      "[disabled]",
-      "[aria-disabled]"
-    ],
-    "bestFor": "empty, error, success, warning, offline, lock, and unsaved states",
-    "avoidFor": "decorative content blocks",
-    "reducedMotion": "opacity-only near-instant state",
-    "snippetPath": "snippets/extended/state/state-locked-record.html",
-    "snippet": "<section class=\"card bsx-state-locked-record\" aria-disabled=\"true\">\n  <div class=\"card-body\">\n    <h2 class=\"h5\">State Locked Record</h2>\n    <p class=\"text-body-secondary mb-3\">Use this state for admin workflows that need a clear non-motion signal.</p>\n    <button type=\"button\" class=\"btn btn-primary\">Primary action</button>\n  </div>\n</section>"
-  },
-  {
-    "name": "data-loading-table-overlay",
-    "level": "extended",
-    "category": "data-loading",
-    "directory": "data-loading",
-    "className": "bsx-data-loading-table-overlay",
-    "component": "data-loading",
-    "requiresJs": false,
-    "runtimeBehavior": null,
-    "motion": "opacity",
-    "kind": "workflow-state",
-    "density": "high",
-    "risk": "low",
-    "cssProperties": [
-      "transform",
-      "opacity"
-    ],
-    "bootstrapStates": [
-      "[aria-busy]",
-      ".bsx-is-loading"
-    ],
-    "bestFor": "table, card, metric, filter, save, and inline loading states",
-    "avoidFor": "unknown long-running jobs without copy",
-    "reducedMotion": "opacity-only near-instant state",
-    "snippetPath": "snippets/extended/data-loading/data-loading-table-overlay.html",
-    "snippet": "<section class=\"card bsx-data-loading-table-overlay\" aria-busy=\"true\" aria-live=\"polite\">\n  <div class=\"card-body\">\n    <div class=\"d-flex align-items-center justify-content-between gap-3 mb-3\">\n      <h2 class=\"h6 mb-0\">Data Loading Table Overlay</h2>\n      <span class=\"spinner-border spinner-border-sm\" aria-hidden=\"true\"></span>\n    </div>\n    <div class=\"bsx-skeleton-line rounded mb-2\"></div>\n    <div class=\"bsx-skeleton-line rounded w-75\"></div>\n  </div>\n</section>"
-  },
-  {
-    "name": "data-loading-card-overlay",
-    "level": "extended",
-    "category": "data-loading",
-    "directory": "data-loading",
-    "className": "bsx-data-loading-card-overlay",
-    "component": "data-loading",
-    "requiresJs": false,
-    "runtimeBehavior": null,
-    "motion": "opacity",
-    "kind": "workflow-state",
-    "density": "high",
-    "risk": "low",
-    "cssProperties": [
-      "transform",
-      "opacity"
-    ],
-    "bootstrapStates": [
-      "[aria-busy]",
-      ".bsx-is-loading"
-    ],
-    "bestFor": "table, card, metric, filter, save, and inline loading states",
-    "avoidFor": "unknown long-running jobs without copy",
-    "reducedMotion": "opacity-only near-instant state",
-    "snippetPath": "snippets/extended/data-loading/data-loading-card-overlay.html",
-    "snippet": "<section class=\"card bsx-data-loading-card-overlay\" aria-busy=\"true\" aria-live=\"polite\">\n  <div class=\"card-body\">\n    <div class=\"d-flex align-items-center justify-content-between gap-3 mb-3\">\n      <h2 class=\"h6 mb-0\">Data Loading Card Overlay</h2>\n      <span class=\"spinner-border spinner-border-sm\" aria-hidden=\"true\"></span>\n    </div>\n    <div class=\"bsx-skeleton-line rounded mb-2\"></div>\n    <div class=\"bsx-skeleton-line rounded w-75\"></div>\n  </div>\n</section>"
-  },
-  {
-    "name": "data-loading-row-skeleton",
-    "level": "extended",
-    "category": "data-loading",
-    "directory": "data-loading",
-    "className": "bsx-data-loading-row-skeleton",
-    "component": "data-loading",
-    "requiresJs": false,
-    "runtimeBehavior": null,
-    "motion": "opacity",
-    "kind": "workflow-state",
-    "density": "high",
-    "risk": "low",
-    "cssProperties": [
-      "opacity"
-    ],
-    "bootstrapStates": [
-      "[aria-busy]",
-      ".bsx-is-loading"
-    ],
-    "bestFor": "table, card, metric, filter, save, and inline loading states",
-    "avoidFor": "unknown long-running jobs without copy",
-    "reducedMotion": "opacity-only near-instant state",
-    "snippetPath": "snippets/extended/data-loading/data-loading-row-skeleton.html",
-    "snippet": "<section class=\"card bsx-data-loading-row-skeleton\" aria-busy=\"true\" aria-live=\"polite\">\n  <div class=\"card-body\">\n    <div class=\"d-flex align-items-center justify-content-between gap-3 mb-3\">\n      <h2 class=\"h6 mb-0\">Data Loading Row Skeleton</h2>\n      <span class=\"spinner-border spinner-border-sm\" aria-hidden=\"true\"></span>\n    </div>\n    <div class=\"bsx-skeleton-line rounded mb-2\"></div>\n    <div class=\"bsx-skeleton-line rounded w-75\"></div>\n  </div>\n</section>"
-  },
-  {
-    "name": "data-loading-filter-pending",
-    "level": "extended",
-    "category": "data-loading",
-    "directory": "data-loading",
-    "className": "bsx-data-loading-filter-pending",
-    "component": "data-loading",
-    "requiresJs": false,
-    "runtimeBehavior": null,
-    "motion": "opacity",
-    "kind": "workflow-state",
-    "density": "high",
-    "risk": "low",
-    "cssProperties": [
-      "opacity"
-    ],
-    "bootstrapStates": [
-      "[aria-busy]",
-      ".bsx-is-loading"
-    ],
-    "bestFor": "table, card, metric, filter, save, and inline loading states",
-    "avoidFor": "unknown long-running jobs without copy",
-    "reducedMotion": "opacity-only near-instant state",
-    "snippetPath": "snippets/extended/data-loading/data-loading-filter-pending.html",
-    "snippet": "<section class=\"card bsx-data-loading-filter-pending\" aria-busy=\"true\" aria-live=\"polite\">\n  <div class=\"card-body\">\n    <div class=\"d-flex align-items-center justify-content-between gap-3 mb-3\">\n      <h2 class=\"h6 mb-0\">Data Loading Filter Pending</h2>\n      <span class=\"spinner-border spinner-border-sm\" aria-hidden=\"true\"></span>\n    </div>\n    <div class=\"bsx-skeleton-line rounded mb-2\"></div>\n    <div class=\"bsx-skeleton-line rounded w-75\"></div>\n  </div>\n</section>"
-  },
-  {
-    "name": "data-loading-save-button",
-    "level": "extended",
-    "category": "data-loading",
-    "directory": "data-loading",
-    "className": "bsx-data-loading-save-button",
-    "component": "data-loading",
-    "requiresJs": false,
-    "runtimeBehavior": null,
-    "motion": "opacity",
-    "kind": "workflow-state",
-    "density": "high",
-    "risk": "low",
-    "cssProperties": [
-      "opacity"
-    ],
-    "bootstrapStates": [
-      "[aria-busy]",
-      ".bsx-is-loading"
-    ],
-    "bestFor": "table, card, metric, filter, save, and inline loading states",
-    "avoidFor": "unknown long-running jobs without copy",
-    "reducedMotion": "opacity-only near-instant state",
-    "snippetPath": "snippets/extended/data-loading/data-loading-save-button.html",
-    "snippet": "<section class=\"card bsx-data-loading-save-button\" aria-busy=\"true\" aria-live=\"polite\">\n  <div class=\"card-body\">\n    <div class=\"d-flex align-items-center justify-content-between gap-3 mb-3\">\n      <h2 class=\"h6 mb-0\">Data Loading Save Button</h2>\n      <span class=\"spinner-border spinner-border-sm\" aria-hidden=\"true\"></span>\n    </div>\n    <div class=\"bsx-skeleton-line rounded mb-2\"></div>\n    <div class=\"bsx-skeleton-line rounded w-75\"></div>\n  </div>\n</section>"
-  },
-  {
-    "name": "data-loading-metric-refresh",
-    "level": "extended",
-    "category": "data-loading",
-    "directory": "data-loading",
-    "className": "bsx-data-loading-metric-refresh",
-    "component": "data-loading",
-    "requiresJs": false,
-    "runtimeBehavior": null,
-    "motion": "opacity",
-    "kind": "workflow-state",
-    "density": "high",
-    "risk": "low",
-    "cssProperties": [
-      "opacity"
-    ],
-    "bootstrapStates": [
-      "[aria-busy]",
-      ".bsx-is-loading"
-    ],
-    "bestFor": "table, card, metric, filter, save, and inline loading states",
-    "avoidFor": "unknown long-running jobs without copy",
-    "reducedMotion": "opacity-only near-instant state",
-    "snippetPath": "snippets/extended/data-loading/data-loading-metric-refresh.html",
-    "snippet": "<section class=\"card bsx-data-loading-metric-refresh\" aria-busy=\"true\" aria-live=\"polite\">\n  <div class=\"card-body\">\n    <div class=\"d-flex align-items-center justify-content-between gap-3 mb-3\">\n      <h2 class=\"h6 mb-0\">Data Loading Metric Refresh</h2>\n      <span class=\"spinner-border spinner-border-sm\" aria-hidden=\"true\"></span>\n    </div>\n    <div class=\"bsx-skeleton-line rounded mb-2\"></div>\n    <div class=\"bsx-skeleton-line rounded w-75\"></div>\n  </div>\n</section>"
-  },
-  {
-    "name": "data-loading-inline-spinner",
-    "level": "extended",
-    "category": "data-loading",
-    "directory": "data-loading",
-    "className": "bsx-data-loading-inline-spinner",
-    "component": "data-loading",
-    "requiresJs": false,
-    "runtimeBehavior": null,
-    "motion": "translate + opacity + rotate",
-    "kind": "workflow-state",
-    "density": "high",
-    "risk": "low",
-    "cssProperties": [
-      "transform",
-      "opacity"
-    ],
-    "bootstrapStates": [
-      "[aria-busy]",
-      ".bsx-is-loading"
-    ],
-    "bestFor": "table, card, metric, filter, save, and inline loading states",
-    "avoidFor": "unknown long-running jobs without copy",
-    "reducedMotion": "opacity-only near-instant state",
-    "snippetPath": "snippets/extended/data-loading/data-loading-inline-spinner.html",
-    "snippet": "<section class=\"card bsx-data-loading-inline-spinner\" aria-busy=\"true\" aria-live=\"polite\">\n  <div class=\"card-body\">\n    <div class=\"d-flex align-items-center justify-content-between gap-3 mb-3\">\n      <h2 class=\"h6 mb-0\">Data Loading Inline Spinner</h2>\n      <span class=\"spinner-border spinner-border-sm\" aria-hidden=\"true\"></span>\n    </div>\n    <div class=\"bsx-skeleton-line rounded mb-2\"></div>\n    <div class=\"bsx-skeleton-line rounded w-75\"></div>\n  </div>\n</section>"
-  },
-  {
-    "name": "notification-center-panel",
-    "level": "extended",
-    "category": "notification-center",
-    "directory": "notification-center",
-    "className": "bsx-notification-center-panel",
-    "component": "notification-center",
-    "requiresJs": false,
-    "runtimeBehavior": null,
-    "motion": "color + opacity",
-    "kind": "workflow-state",
-    "density": "medium",
-    "risk": "low",
-    "cssProperties": [
-      "transform"
-    ],
-    "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
-    ],
-    "bestFor": "notification inbox panels and unread/read transitions",
-    "avoidFor": "critical alerts that require modal confirmation",
-    "reducedMotion": "opacity-only near-instant state",
-    "snippetPath": "snippets/extended/notification-center/notification-center-panel.html",
-    "snippet": "<section class=\"card bsx-notification-center-panel\" aria-label=\"Notification Center Panel\">\n  <div class=\"card-header d-flex align-items-center justify-content-between\">\n    <span>Notifications</span>\n    <span class=\"badge text-bg-primary\">3</span>\n  </div>\n  <div class=\"list-group list-group-flush\">\n    <a href=\"#\" class=\"list-group-item list-group-item-action bsx-is-unread\">New lead assigned</a>\n    <a href=\"#\" class=\"list-group-item list-group-item-action\">Invoice paid</a>\n  </div>\n</section>"
-  },
-  {
-    "name": "notification-item-unread",
-    "level": "extended",
-    "category": "notification-center",
-    "directory": "notification-center",
-    "className": "bsx-notification-item-unread",
-    "component": "notification-center",
-    "requiresJs": false,
-    "runtimeBehavior": null,
-    "motion": "color + opacity",
-    "kind": "workflow-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "success",
+    "density": "normal-ui",
+    "risk": "safe",
     "cssProperties": [
       "opacity",
       "background-color",
@@ -7436,117 +7768,636 @@ window.bsxEffects = [
     "bootstrapStates": [
       ".bsx-is-success"
     ],
-    "bestFor": "notification inbox panels and unread/read transitions",
-    "avoidFor": "critical alerts that require modal confirmation",
+    "requiresMarkupChange": true,
+    "scenario": "confirm a successful state change without confetti",
+    "bestFor": "empty, error, success, warning, offline, lock, and unsaved states",
+    "avoidFor": "decorative content blocks",
     "reducedMotion": "opacity-only near-instant state",
-    "snippetPath": "snippets/extended/notification-center/notification-item-unread.html",
-    "snippet": "<section class=\"card bsx-notification-item-unread\" aria-label=\"Notification Item Unread\">\n  <div class=\"card-header d-flex align-items-center justify-content-between\">\n    <span>Notifications</span>\n    <span class=\"badge text-bg-primary\">3</span>\n  </div>\n  <div class=\"list-group list-group-flush\">\n    <a href=\"#\" class=\"list-group-item list-group-item-action bsx-is-unread\">New lead assigned</a>\n    <a href=\"#\" class=\"list-group-item list-group-item-action\">Invoice paid</a>\n  </div>\n</section>"
+    "snippetPath": "snippets/extended/state/state-success-check.html",
+    "snippet": "<section class=\"card bsx-state-success-check\" >\n  <div class=\"card-body\">\n    <h2 class=\"h5\">State Success Check</h2>\n    <p class=\"text-body-secondary mb-3\">Use this state for admin workflows that need a clear non-motion signal.</p>\n    <button type=\"button\" class=\"btn btn-primary\">Primary action</button>\n  </div>\n</section>"
   },
   {
-    "name": "notification-item-read",
+    "name": "state-warning-attention",
+    "level": "extended",
+    "category": "state",
+    "directory": "state",
+    "className": "bsx-state-warning-attention",
+    "component": "state",
+    "requiresJs": false,
+    "runtimeBehavior": null,
+    "runtimeAction": null,
+    "motion": "shake",
+    "kind": "state",
+    "density": "normal-ui",
+    "risk": "safe",
+    "cssProperties": [
+      "opacity",
+      "background-color",
+      "border-color",
+      "color"
+    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "draw restrained attention to a warning state",
+    "bestFor": "empty, error, success, warning, offline, lock, and unsaved states",
+    "avoidFor": "decorative content blocks",
+    "reducedMotion": "opacity-only near-instant state",
+    "snippetPath": "snippets/extended/state/state-warning-attention.html",
+    "snippet": "<section class=\"card bsx-state-warning-attention\" >\n  <div class=\"card-body\">\n    <h2 class=\"h5\">State Warning Attention</h2>\n    <p class=\"text-body-secondary mb-3\">Use this state for admin workflows that need a clear non-motion signal.</p>\n    <button type=\"button\" class=\"btn btn-primary\">Primary action</button>\n  </div>\n</section>"
+  },
+  {
+    "name": "state-offline-pulse",
+    "level": "extended",
+    "category": "state",
+    "directory": "state",
+    "className": "bsx-state-offline-pulse",
+    "component": "state",
+    "requiresJs": false,
+    "runtimeBehavior": null,
+    "runtimeAction": null,
+    "motion": "translate + scale",
+    "kind": "state",
+    "density": "normal-ui",
+    "risk": "medium",
+    "cssProperties": [
+      "transform",
+      "opacity"
+    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": true,
+    "scenario": "show offline status without blocking the UI",
+    "bestFor": "empty, error, success, warning, offline, lock, and unsaved states",
+    "avoidFor": "decorative content blocks",
+    "reducedMotion": "opacity-only near-instant state",
+    "snippetPath": "snippets/extended/state/state-offline-pulse.html",
+    "snippet": "<section class=\"card bsx-state-offline-pulse\" >\n  <div class=\"card-body\">\n    <h2 class=\"h5\">State Offline Pulse</h2>\n    <p class=\"text-body-secondary mb-3\">Use this state for admin workflows that need a clear non-motion signal.</p>\n    <button type=\"button\" class=\"btn btn-primary\">Primary action</button>\n  </div>\n</section>"
+  },
+  {
+    "name": "state-reconnect-fade",
+    "level": "extended",
+    "category": "state",
+    "directory": "state",
+    "className": "bsx-state-reconnect-fade",
+    "component": "state",
+    "requiresJs": false,
+    "runtimeBehavior": null,
+    "runtimeAction": null,
+    "motion": "opacity",
+    "kind": "state",
+    "density": "normal-ui",
+    "risk": "safe",
+    "cssProperties": [
+      "opacity"
+    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "show a reconnect state resolving",
+    "bestFor": "empty, error, success, warning, offline, lock, and unsaved states",
+    "avoidFor": "decorative content blocks",
+    "reducedMotion": "near-instant opacity or color state",
+    "snippetPath": "snippets/extended/state/state-reconnect-fade.html",
+    "snippet": "<section class=\"card bsx-state-reconnect-fade\" >\n  <div class=\"card-body\">\n    <h2 class=\"h5\">State Reconnect Fade</h2>\n    <p class=\"text-body-secondary mb-3\">Use this state for admin workflows that need a clear non-motion signal.</p>\n    <button type=\"button\" class=\"btn btn-primary\">Primary action</button>\n  </div>\n</section>"
+  },
+  {
+    "name": "data-card-refresh",
+    "level": "extended",
+    "category": "data-loading",
+    "directory": "data-loading",
+    "className": "bsx-data-card-refresh",
+    "component": "data-loading",
+    "requiresJs": true,
+    "runtimeBehavior": "data refresh state",
+    "runtimeAction": "data-refresh",
+    "motion": "color + opacity",
+    "kind": "loading",
+    "density": "dense-admin",
+    "risk": "requires-js",
+    "cssProperties": [
+      "opacity"
+    ],
+    "bootstrapStates": [
+      ".bsx-is-updated"
+    ],
+    "requiresMarkupChange": false,
+    "scenario": "show a card refresh after Ajax data reload",
+    "bestFor": "table, card, metric, filter, save, and inline loading states",
+    "avoidFor": "unknown long-running jobs without copy",
+    "reducedMotion": "opacity-only near-instant state",
+    "snippetPath": "snippets/extended/data-loading/data-card-refresh.html",
+    "snippet": "<!-- Requires Bootstrap bundle and assets/js/bootstrap5-transitions.js. -->\n<section class=\"card bsx-data-card-refresh\" aria-busy=\"true\" aria-live=\"polite\">\n  <div class=\"card-body\">\n    <div class=\"d-flex align-items-center justify-content-between gap-3 mb-3\">\n      <h2 class=\"h6 mb-0\">Data Card Refresh</h2>\n      <span class=\"spinner-border spinner-border-sm\" aria-hidden=\"true\"></span>\n    </div>\n    <div class=\"bsx-skeleton-line rounded mb-2\"></div>\n    <div class=\"bsx-skeleton-line rounded w-75\"></div>\n    <button type=\"button\" class=\"btn btn-sm btn-outline-primary mt-3\" data-bsx-action=\"data-refresh\">Refresh data</button>\n  </div>\n</section>"
+  },
+  {
+    "name": "data-table-refresh",
+    "level": "extended",
+    "category": "data-loading",
+    "directory": "data-loading",
+    "className": "bsx-data-table-refresh",
+    "component": "data-loading",
+    "requiresJs": true,
+    "runtimeBehavior": "data refresh state",
+    "runtimeAction": "data-refresh",
+    "motion": "color + opacity",
+    "kind": "loading",
+    "density": "dense-admin",
+    "risk": "requires-js",
+    "cssProperties": [
+      "opacity"
+    ],
+    "bootstrapStates": [
+      ".bsx-is-updated"
+    ],
+    "requiresMarkupChange": false,
+    "scenario": "show a table refresh after Ajax data reload",
+    "bestFor": "table, card, metric, filter, save, and inline loading states",
+    "avoidFor": "unknown long-running jobs without copy",
+    "reducedMotion": "opacity-only near-instant state",
+    "snippetPath": "snippets/extended/data-loading/data-table-refresh.html",
+    "snippet": "<!-- Requires Bootstrap bundle and assets/js/bootstrap5-transitions.js. -->\n<section class=\"card bsx-data-table-refresh\" aria-busy=\"true\" aria-live=\"polite\">\n  <div class=\"card-body\">\n    <div class=\"d-flex align-items-center justify-content-between gap-3 mb-3\">\n      <h2 class=\"h6 mb-0\">Data Table Refresh</h2>\n      <span class=\"spinner-border spinner-border-sm\" aria-hidden=\"true\"></span>\n    </div>\n    <div class=\"bsx-skeleton-line rounded mb-2\"></div>\n    <div class=\"bsx-skeleton-line rounded w-75\"></div>\n    <button type=\"button\" class=\"btn btn-sm btn-outline-primary mt-3\" data-bsx-action=\"data-refresh\">Refresh data</button>\n  </div>\n</section>"
+  },
+  {
+    "name": "data-section-loading-fade",
+    "level": "extended",
+    "category": "data-loading",
+    "directory": "data-loading",
+    "className": "bsx-data-section-loading-fade",
+    "component": "data-loading",
+    "requiresJs": false,
+    "runtimeBehavior": null,
+    "runtimeAction": null,
+    "motion": "opacity",
+    "kind": "loading",
+    "density": "dense-admin",
+    "risk": "safe",
+    "cssProperties": [
+      "opacity"
+    ],
+    "bootstrapStates": [
+      "[aria-busy]",
+      ".bsx-is-loading"
+    ],
+    "requiresMarkupChange": false,
+    "scenario": "fade a section while data is loading",
+    "bestFor": "table, card, metric, filter, save, and inline loading states",
+    "avoidFor": "unknown long-running jobs without copy",
+    "reducedMotion": "near-instant opacity or color state",
+    "snippetPath": "snippets/extended/data-loading/data-section-loading-fade.html",
+    "snippet": "<section class=\"card bsx-data-section-loading-fade\" aria-busy=\"true\" aria-live=\"polite\">\n  <div class=\"card-body\">\n    <div class=\"d-flex align-items-center justify-content-between gap-3 mb-3\">\n      <h2 class=\"h6 mb-0\">Data Section Loading Fade</h2>\n      <span class=\"spinner-border spinner-border-sm\" aria-hidden=\"true\"></span>\n    </div>\n    <div class=\"bsx-skeleton-line rounded mb-2\"></div>\n    <div class=\"bsx-skeleton-line rounded w-75\"></div>\n    <button type=\"button\" class=\"btn btn-sm btn-outline-primary mt-3\">Refresh data</button>\n  </div>\n</section>"
+  },
+  {
+    "name": "data-overlay-blur",
+    "level": "extended",
+    "category": "data-loading",
+    "directory": "data-loading",
+    "className": "bsx-data-overlay-blur",
+    "component": "data-loading",
+    "requiresJs": false,
+    "runtimeBehavior": null,
+    "runtimeAction": null,
+    "motion": "opacity",
+    "kind": "loading",
+    "density": "dense-admin",
+    "risk": "medium",
+    "cssProperties": [
+      "transform",
+      "opacity",
+      "filter"
+    ],
+    "bootstrapStates": [
+      "[aria-busy]",
+      ".bsx-is-loading"
+    ],
+    "requiresMarkupChange": true,
+    "scenario": "show a loading overlay without hiding context",
+    "bestFor": "table, card, metric, filter, save, and inline loading states",
+    "avoidFor": "unknown long-running jobs without copy",
+    "reducedMotion": "near-instant opacity or color state",
+    "snippetPath": "snippets/extended/data-loading/data-overlay-blur.html",
+    "snippet": "<section class=\"card bsx-data-overlay-blur\" aria-busy=\"true\" aria-live=\"polite\">\n  <div class=\"card-body\">\n    <div class=\"d-flex align-items-center justify-content-between gap-3 mb-3\">\n      <h2 class=\"h6 mb-0\">Data Overlay Blur</h2>\n      <span class=\"spinner-border spinner-border-sm\" aria-hidden=\"true\"></span>\n    </div>\n    <div class=\"bsx-skeleton-line rounded mb-2\"></div>\n    <div class=\"bsx-skeleton-line rounded w-75\"></div>\n    <button type=\"button\" class=\"btn btn-sm btn-outline-primary mt-3\">Refresh data</button>\n  </div>\n</section>"
+  },
+  {
+    "name": "data-inline-saving",
+    "level": "extended",
+    "category": "data-loading",
+    "directory": "data-loading",
+    "className": "bsx-data-inline-saving",
+    "component": "data-loading",
+    "requiresJs": false,
+    "runtimeBehavior": null,
+    "runtimeAction": null,
+    "motion": "translate",
+    "kind": "loading",
+    "density": "dense-admin",
+    "risk": "safe",
+    "cssProperties": [
+      "transform",
+      "opacity"
+    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": true,
+    "scenario": "show an inline saving state",
+    "bestFor": "table, card, metric, filter, save, and inline loading states",
+    "avoidFor": "unknown long-running jobs without copy",
+    "reducedMotion": "opacity-only near-instant state",
+    "snippetPath": "snippets/extended/data-loading/data-inline-saving.html",
+    "snippet": "<section class=\"card bsx-data-inline-saving\" aria-busy=\"true\" aria-live=\"polite\">\n  <div class=\"card-body\">\n    <div class=\"d-flex align-items-center justify-content-between gap-3 mb-3\">\n      <h2 class=\"h6 mb-0\">Data Inline Saving</h2>\n      <span class=\"spinner-border spinner-border-sm\" aria-hidden=\"true\"></span>\n    </div>\n    <div class=\"bsx-skeleton-line rounded mb-2\"></div>\n    <div class=\"bsx-skeleton-line rounded w-75\"></div>\n    <button type=\"button\" class=\"btn btn-sm btn-outline-primary mt-3\">Refresh data</button>\n  </div>\n</section>"
+  },
+  {
+    "name": "data-chart-loading",
+    "level": "extended",
+    "category": "data-loading",
+    "directory": "data-loading",
+    "className": "bsx-data-chart-loading",
+    "component": "data-loading",
+    "requiresJs": false,
+    "runtimeBehavior": null,
+    "runtimeAction": null,
+    "motion": "opacity",
+    "kind": "loading",
+    "density": "dense-admin",
+    "risk": "safe",
+    "cssProperties": [
+      "opacity"
+    ],
+    "bootstrapStates": [
+      "[aria-busy]",
+      ".bsx-is-loading"
+    ],
+    "requiresMarkupChange": false,
+    "scenario": "show a chart placeholder while data loads",
+    "bestFor": "table, card, metric, filter, save, and inline loading states",
+    "avoidFor": "unknown long-running jobs without copy",
+    "reducedMotion": "opacity-only near-instant state",
+    "snippetPath": "snippets/extended/data-loading/data-chart-loading.html",
+    "snippet": "<section class=\"card bsx-data-chart-loading\" aria-busy=\"true\" aria-live=\"polite\">\n  <div class=\"card-body\">\n    <div class=\"d-flex align-items-center justify-content-between gap-3 mb-3\">\n      <h2 class=\"h6 mb-0\">Data Chart Loading</h2>\n      <span class=\"spinner-border spinner-border-sm\" aria-hidden=\"true\"></span>\n    </div>\n    <div class=\"bsx-skeleton-line rounded mb-2\"></div>\n    <div class=\"bsx-skeleton-line rounded w-75\"></div>\n    <button type=\"button\" class=\"btn btn-sm btn-outline-primary mt-3\">Refresh data</button>\n  </div>\n</section>"
+  },
+  {
+    "name": "data-kpi-refresh",
+    "level": "extended",
+    "category": "data-loading",
+    "directory": "data-loading",
+    "className": "bsx-data-kpi-refresh",
+    "component": "data-loading",
+    "requiresJs": true,
+    "runtimeBehavior": "data refresh state",
+    "runtimeAction": "data-refresh",
+    "motion": "color + opacity",
+    "kind": "loading",
+    "density": "dense-admin",
+    "risk": "requires-js",
+    "cssProperties": [
+      "opacity"
+    ],
+    "bootstrapStates": [
+      ".bsx-is-updated"
+    ],
+    "requiresMarkupChange": false,
+    "scenario": "show a KPI card refresh",
+    "bestFor": "table, card, metric, filter, save, and inline loading states",
+    "avoidFor": "unknown long-running jobs without copy",
+    "reducedMotion": "opacity-only near-instant state",
+    "snippetPath": "snippets/extended/data-loading/data-kpi-refresh.html",
+    "snippet": "<!-- Requires Bootstrap bundle and assets/js/bootstrap5-transitions.js. -->\n<section class=\"card bsx-data-kpi-refresh\" aria-busy=\"true\" aria-live=\"polite\">\n  <div class=\"card-body\">\n    <div class=\"d-flex align-items-center justify-content-between gap-3 mb-3\">\n      <h2 class=\"h6 mb-0\">Data Kpi Refresh</h2>\n      <span class=\"spinner-border spinner-border-sm\" aria-hidden=\"true\"></span>\n    </div>\n    <div class=\"bsx-skeleton-line rounded mb-2\"></div>\n    <div class=\"bsx-skeleton-line rounded w-75\"></div>\n    <button type=\"button\" class=\"btn btn-sm btn-outline-primary mt-3\" data-bsx-action=\"data-refresh\">Refresh data</button>\n  </div>\n</section>"
+  },
+  {
+    "name": "data-diff-highlight",
+    "level": "extended",
+    "category": "data-loading",
+    "directory": "data-loading",
+    "className": "bsx-data-diff-highlight",
+    "component": "data-loading",
+    "requiresJs": true,
+    "runtimeBehavior": "data refresh state",
+    "runtimeAction": "data-refresh",
+    "motion": "color + opacity",
+    "kind": "data-change",
+    "density": "dense-admin",
+    "risk": "requires-js",
+    "cssProperties": [
+      "opacity",
+      "transform"
+    ],
+    "bootstrapStates": [
+      ".bsx-is-updated"
+    ],
+    "requiresMarkupChange": false,
+    "scenario": "highlight changed data after a refresh",
+    "bestFor": "table, card, metric, filter, save, and inline loading states",
+    "avoidFor": "unknown long-running jobs without copy",
+    "reducedMotion": "opacity-only near-instant state",
+    "snippetPath": "snippets/extended/data-loading/data-diff-highlight.html",
+    "snippet": "<!-- Requires Bootstrap bundle and assets/js/bootstrap5-transitions.js. -->\n<section class=\"card bsx-data-diff-highlight\" aria-busy=\"true\" aria-live=\"polite\">\n  <div class=\"card-body\">\n    <div class=\"d-flex align-items-center justify-content-between gap-3 mb-3\">\n      <h2 class=\"h6 mb-0\">Data Diff Highlight</h2>\n      <span class=\"spinner-border spinner-border-sm\" aria-hidden=\"true\"></span>\n    </div>\n    <div class=\"bsx-skeleton-line rounded mb-2\"></div>\n    <div class=\"bsx-skeleton-line rounded w-75\"></div>\n    <button type=\"button\" class=\"btn btn-sm btn-outline-primary mt-3\" data-bsx-action=\"data-refresh\">Refresh data</button>\n  </div>\n</section>"
+  },
+  {
+    "name": "notification-item-new",
     "level": "extended",
     "category": "notification-center",
     "directory": "notification-center",
-    "className": "bsx-notification-item-read",
+    "className": "bsx-notification-item-new",
     "component": "notification-center",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "color + opacity",
-    "kind": "workflow-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "data-change",
+    "density": "dense-admin",
+    "risk": "safe",
+    "cssProperties": [
+      "opacity"
+    ],
+    "bootstrapStates": [
+      ".bsx-is-updated"
+    ],
+    "requiresMarkupChange": false,
+    "scenario": "show a newly arrived inbox notification",
+    "bestFor": "notification inbox panels and unread/read transitions",
+    "avoidFor": "critical alerts that require modal confirmation",
+    "reducedMotion": "opacity-only near-instant state",
+    "snippetPath": "snippets/extended/notification-center/notification-item-new.html",
+    "snippet": "<section class=\"card bsx-notification-item-new\" aria-label=\"Notification Item New\">\n  <div class=\"card-header d-flex align-items-center justify-content-between\">\n    <span>Notifications</span>\n    <span class=\"badge text-bg-primary\">3</span>\n  </div>\n  <div class=\"list-group list-group-flush\">\n    <a href=\"#\" class=\"list-group-item list-group-item-action bsx-is-unread\">New lead assigned</a>\n    <a href=\"#\" class=\"list-group-item list-group-item-action\">Invoice paid</a>\n  </div>\n</section>"
+  },
+  {
+    "name": "notification-item-read-fade",
+    "level": "extended",
+    "category": "notification-center",
+    "directory": "notification-center",
+    "className": "bsx-notification-item-read-fade",
+    "component": "notification-center",
+    "requiresJs": false,
+    "runtimeBehavior": null,
+    "runtimeAction": null,
+    "motion": "opacity",
+    "kind": "data-change",
+    "density": "dense-admin",
+    "risk": "safe",
     "cssProperties": [
       "opacity"
     ],
     "bootstrapStates": [
       ".bsx-is-success"
     ],
+    "requiresMarkupChange": false,
+    "scenario": "softly mark a notification as read",
     "bestFor": "notification inbox panels and unread/read transitions",
     "avoidFor": "critical alerts that require modal confirmation",
-    "reducedMotion": "opacity-only near-instant state",
-    "snippetPath": "snippets/extended/notification-center/notification-item-read.html",
-    "snippet": "<section class=\"card bsx-notification-item-read\" aria-label=\"Notification Item Read\">\n  <div class=\"card-header d-flex align-items-center justify-content-between\">\n    <span>Notifications</span>\n    <span class=\"badge text-bg-primary\">3</span>\n  </div>\n  <div class=\"list-group list-group-flush\">\n    <a href=\"#\" class=\"list-group-item list-group-item-action bsx-is-unread\">New lead assigned</a>\n    <a href=\"#\" class=\"list-group-item list-group-item-action\">Invoice paid</a>\n  </div>\n</section>"
+    "reducedMotion": "near-instant opacity or color state",
+    "snippetPath": "snippets/extended/notification-center/notification-item-read-fade.html",
+    "snippet": "<section class=\"card bsx-notification-item-read-fade\" aria-label=\"Notification Item Read Fade\">\n  <div class=\"card-header d-flex align-items-center justify-content-between\">\n    <span>Notifications</span>\n    <span class=\"badge text-bg-primary\">3</span>\n  </div>\n  <div class=\"list-group list-group-flush\">\n    <a href=\"#\" class=\"list-group-item list-group-item-action bsx-is-unread\">New lead assigned</a>\n    <a href=\"#\" class=\"list-group-item list-group-item-action\">Invoice paid</a>\n  </div>\n</section>"
   },
   {
-    "name": "notification-item-priority",
+    "name": "notification-item-remove",
     "level": "extended",
     "category": "notification-center",
     "directory": "notification-center",
-    "className": "bsx-notification-item-priority",
+    "className": "bsx-notification-item-remove",
+    "component": "notification-center",
+    "requiresJs": true,
+    "runtimeBehavior": "notification removal",
+    "runtimeAction": "notification-remove",
+    "motion": "translate",
+    "kind": "exit",
+    "density": "dense-admin",
+    "risk": "requires-js",
+    "cssProperties": [
+      "transform"
+    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "remove a notification from an inbox list",
+    "bestFor": "notification inbox panels and unread/read transitions",
+    "avoidFor": "critical alerts that require modal confirmation",
+    "reducedMotion": "opacity-only near-instant state",
+    "snippetPath": "snippets/extended/notification-center/notification-item-remove.html",
+    "snippet": "<!-- Requires Bootstrap bundle and assets/js/bootstrap5-transitions.js. -->\n<section class=\"card bsx-notification-item-remove\" aria-label=\"Notification Item Remove\">\n  <div class=\"card-header d-flex align-items-center justify-content-between\">\n    <span>Notifications</span>\n    <span class=\"badge text-bg-primary\">3</span>\n  </div>\n  <div class=\"list-group list-group-flush\">\n    <a href=\"#\" class=\"list-group-item list-group-item-action bsx-is-unread\" data-bsx-action=\"notification-remove\">New lead assigned</a>\n    <a href=\"#\" class=\"list-group-item list-group-item-action\">Invoice paid</a>\n  </div>\n</section>"
+  },
+  {
+    "name": "notification-counter-bump",
+    "level": "extended",
+    "category": "notification-center",
+    "directory": "notification-center",
+    "className": "bsx-notification-counter-bump",
+    "component": "notification-center",
+    "requiresJs": true,
+    "runtimeBehavior": "notification counter update",
+    "runtimeAction": "data-refresh",
+    "motion": "scale",
+    "kind": "data-change",
+    "density": "dense-admin",
+    "risk": "requires-js",
+    "cssProperties": [
+      "transform"
+    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": true,
+    "scenario": "update a notification counter badge",
+    "bestFor": "notification inbox panels and unread/read transitions",
+    "avoidFor": "critical alerts that require modal confirmation",
+    "reducedMotion": "opacity-only near-instant state",
+    "snippetPath": "snippets/extended/notification-center/notification-counter-bump.html",
+    "snippet": "<!-- Requires Bootstrap bundle and assets/js/bootstrap5-transitions.js. -->\n<section class=\"card bsx-notification-counter-bump\" aria-label=\"Notification Counter Bump\">\n  <div class=\"card-header d-flex align-items-center justify-content-between\">\n    <span>Notifications</span>\n    <span class=\"badge text-bg-primary\">3</span>\n  </div>\n  <div class=\"list-group list-group-flush\">\n    <a href=\"#\" class=\"list-group-item list-group-item-action bsx-is-unread\" data-bsx-action=\"data-refresh\">New lead assigned</a>\n    <a href=\"#\" class=\"list-group-item list-group-item-action\">Invoice paid</a>\n  </div>\n</section>"
+  },
+  {
+    "name": "notification-panel-slide",
+    "level": "extended",
+    "category": "notification-center",
+    "directory": "notification-center",
+    "className": "bsx-notification-panel-slide",
     "component": "notification-center",
     "requiresJs": false,
     "runtimeBehavior": null,
-    "motion": "color + opacity",
-    "kind": "workflow-state",
-    "density": "medium",
-    "risk": "low",
+    "runtimeAction": null,
+    "motion": "translate",
+    "kind": "navigation",
+    "density": "dense-admin",
+    "risk": "safe",
     "cssProperties": [
+      "transform"
+    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "open a notification center panel",
+    "bestFor": "notification inbox panels and unread/read transitions",
+    "avoidFor": "critical alerts that require modal confirmation",
+    "reducedMotion": "opacity-only near-instant state",
+    "snippetPath": "snippets/extended/notification-center/notification-panel-slide.html",
+    "snippet": "<section class=\"card bsx-notification-panel-slide\" aria-label=\"Notification Panel Slide\">\n  <div class=\"card-header d-flex align-items-center justify-content-between\">\n    <span>Notifications</span>\n    <span class=\"badge text-bg-primary\">3</span>\n  </div>\n  <div class=\"list-group list-group-flush\">\n    <a href=\"#\" class=\"list-group-item list-group-item-action bsx-is-unread\">New lead assigned</a>\n    <a href=\"#\" class=\"list-group-item list-group-item-action\">Invoice paid</a>\n  </div>\n</section>"
+  },
+  {
+    "name": "notification-priority-pulse",
+    "level": "extended",
+    "category": "notification-center",
+    "directory": "notification-center",
+    "className": "bsx-notification-priority-pulse",
+    "component": "notification-center",
+    "requiresJs": false,
+    "runtimeBehavior": null,
+    "runtimeAction": null,
+    "motion": "scale",
+    "kind": "feedback",
+    "density": "dense-admin",
+    "risk": "safe",
+    "cssProperties": [
+      "transform",
+      "background-color",
+      "border-color",
+      "color"
+    ],
+    "bootstrapStates": [],
+    "requiresMarkupChange": false,
+    "scenario": "draw attention to a high-priority notification",
+    "bestFor": "notification inbox panels and unread/read transitions",
+    "avoidFor": "critical alerts that require modal confirmation",
+    "reducedMotion": "opacity-only near-instant state",
+    "snippetPath": "snippets/extended/notification-center/notification-priority-pulse.html",
+    "snippet": "<section class=\"card bsx-notification-priority-pulse\" aria-label=\"Notification Priority Pulse\">\n  <div class=\"card-header d-flex align-items-center justify-content-between\">\n    <span>Notifications</span>\n    <span class=\"badge text-bg-primary\">3</span>\n  </div>\n  <div class=\"list-group list-group-flush\">\n    <a href=\"#\" class=\"list-group-item list-group-item-action bsx-is-unread\">New lead assigned</a>\n    <a href=\"#\" class=\"list-group-item list-group-item-action\">Invoice paid</a>\n  </div>\n</section>"
+  },
+  {
+    "name": "mobile-bottom-bar-active",
+    "level": "extended",
+    "category": "mobile",
+    "directory": "mobile",
+    "className": "bsx-mobile-bottom-bar-active",
+    "component": "mobile",
+    "requiresJs": false,
+    "runtimeBehavior": null,
+    "runtimeAction": null,
+    "motion": "color + opacity",
+    "kind": "navigation",
+    "density": "mobile",
+    "risk": "safe",
+    "cssProperties": [
+      "transform",
+      "box-shadow",
       "background-color",
       "border-color",
       "color"
     ],
     "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
+      ".active",
+      "[aria-current]"
     ],
-    "bestFor": "notification inbox panels and unread/read transitions",
-    "avoidFor": "critical alerts that require modal confirmation",
+    "requiresMarkupChange": true,
+    "scenario": "show the active item in a mobile bottom bar",
+    "bestFor": "mobile admin actions, sticky save bars, bottom nav, and filter sheets",
+    "avoidFor": "desktop-only dense grids",
     "reducedMotion": "opacity-only near-instant state",
-    "snippetPath": "snippets/extended/notification-center/notification-item-priority.html",
-    "snippet": "<section class=\"card bsx-notification-item-priority\" aria-label=\"Notification Item Priority\">\n  <div class=\"card-header d-flex align-items-center justify-content-between\">\n    <span>Notifications</span>\n    <span class=\"badge text-bg-primary\">3</span>\n  </div>\n  <div class=\"list-group list-group-flush\">\n    <a href=\"#\" class=\"list-group-item list-group-item-action bsx-is-unread\">New lead assigned</a>\n    <a href=\"#\" class=\"list-group-item list-group-item-action\">Invoice paid</a>\n  </div>\n</section>"
+    "snippetPath": "snippets/extended/mobile/mobile-bottom-bar-active.html",
+    "snippet": "<section class=\"border rounded p-3 bsx-mobile-bottom-bar-active\" aria-label=\"Mobile Bottom Bar Active\">\n  <div class=\"d-flex align-items-center justify-content-between gap-3\">\n    <span class=\"fw-semibold\">Mobile CRM action</span>\n    <button type=\"button\" class=\"btn btn-primary btn-sm\" aria-expanded=\"false\">Save</button>\n  </div>\n  <nav class=\"nav nav-pills nav-fill mt-3\" aria-label=\"Mobile navigation\">\n    <a class=\"nav-link active\" aria-current=\"page\" href=\"#\">Today</a>\n    <a class=\"nav-link\" href=\"#\">Tasks</a>\n    <a class=\"nav-link\" href=\"#\">More</a>\n  </nav>\n</section>"
   },
   {
-    "name": "notification-batch-arrive",
+    "name": "mobile-tabbar-press",
     "level": "extended",
-    "category": "notification-center",
-    "directory": "notification-center",
-    "className": "bsx-notification-batch-arrive",
-    "component": "notification-center",
+    "category": "mobile",
+    "directory": "mobile",
+    "className": "bsx-mobile-tabbar-press",
+    "component": "mobile",
     "requiresJs": false,
     "runtimeBehavior": null,
-    "motion": "color + opacity",
-    "kind": "workflow-state",
-    "density": "medium",
-    "risk": "low",
+    "runtimeAction": null,
+    "motion": "scale",
+    "kind": "navigation",
+    "density": "mobile",
+    "risk": "safe",
     "cssProperties": [
-      "opacity",
       "transform"
     ],
     "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
+      ".active",
+      "[aria-current]"
     ],
-    "bestFor": "notification inbox panels and unread/read transitions",
-    "avoidFor": "critical alerts that require modal confirmation",
+    "requiresMarkupChange": true,
+    "scenario": "add touch feedback to a mobile tab bar",
+    "bestFor": "mobile admin actions, sticky save bars, bottom nav, and filter sheets",
+    "avoidFor": "desktop-only dense grids",
     "reducedMotion": "opacity-only near-instant state",
-    "snippetPath": "snippets/extended/notification-center/notification-batch-arrive.html",
-    "snippet": "<section class=\"card bsx-notification-batch-arrive\" aria-label=\"Notification Batch Arrive\">\n  <div class=\"card-header d-flex align-items-center justify-content-between\">\n    <span>Notifications</span>\n    <span class=\"badge text-bg-primary\">3</span>\n  </div>\n  <div class=\"list-group list-group-flush\">\n    <a href=\"#\" class=\"list-group-item list-group-item-action bsx-is-unread\">New lead assigned</a>\n    <a href=\"#\" class=\"list-group-item list-group-item-action\">Invoice paid</a>\n  </div>\n</section>"
+    "snippetPath": "snippets/extended/mobile/mobile-tabbar-press.html",
+    "snippet": "<section class=\"border rounded p-3 bsx-mobile-tabbar-press\" aria-label=\"Mobile Tabbar Press\">\n  <div class=\"d-flex align-items-center justify-content-between gap-3\">\n    <span class=\"fw-semibold\">Mobile CRM action</span>\n    <button type=\"button\" class=\"btn btn-primary btn-sm\" aria-expanded=\"false\">Save</button>\n  </div>\n  <nav class=\"nav nav-pills nav-fill mt-3\" aria-label=\"Mobile navigation\">\n    <a class=\"nav-link active\" aria-current=\"page\" href=\"#\">Today</a>\n    <a class=\"nav-link\" href=\"#\">Tasks</a>\n    <a class=\"nav-link\" href=\"#\">More</a>\n  </nav>\n</section>"
   },
   {
-    "name": "notification-empty-state",
+    "name": "mobile-fab-pop",
     "level": "extended",
-    "category": "notification-center",
-    "directory": "notification-center",
-    "className": "bsx-notification-empty-state",
-    "component": "notification-center",
+    "category": "mobile",
+    "directory": "mobile",
+    "className": "bsx-mobile-fab-pop",
+    "component": "mobile",
     "requiresJs": false,
     "runtimeBehavior": null,
-    "motion": "color + opacity",
-    "kind": "workflow-state",
-    "density": "medium",
-    "risk": "low",
+    "runtimeAction": null,
+    "motion": "scale",
+    "kind": "navigation",
+    "density": "mobile",
+    "risk": "safe",
     "cssProperties": [
-      "opacity"
+      "transform"
     ],
     "bootstrapStates": [
-      ":hover",
-      ":focus-visible"
+      ".active",
+      "[aria-current]"
     ],
-    "bestFor": "notification inbox panels and unread/read transitions",
-    "avoidFor": "critical alerts that require modal confirmation",
+    "requiresMarkupChange": false,
+    "scenario": "show a floating action button activation",
+    "bestFor": "mobile admin actions, sticky save bars, bottom nav, and filter sheets",
+    "avoidFor": "desktop-only dense grids",
     "reducedMotion": "opacity-only near-instant state",
-    "snippetPath": "snippets/extended/notification-center/notification-empty-state.html",
-    "snippet": "<section class=\"card bsx-notification-empty-state\" aria-label=\"Notification Empty State\">\n  <div class=\"card-header d-flex align-items-center justify-content-between\">\n    <span>Notifications</span>\n    <span class=\"badge text-bg-primary\">3</span>\n  </div>\n  <div class=\"list-group list-group-flush\">\n    <a href=\"#\" class=\"list-group-item list-group-item-action bsx-is-unread\">New lead assigned</a>\n    <a href=\"#\" class=\"list-group-item list-group-item-action\">Invoice paid</a>\n  </div>\n</section>"
+    "snippetPath": "snippets/extended/mobile/mobile-fab-pop.html",
+    "snippet": "<section class=\"border rounded p-3 bsx-mobile-fab-pop\" aria-label=\"Mobile Fab Pop\">\n  <div class=\"d-flex align-items-center justify-content-between gap-3\">\n    <span class=\"fw-semibold\">Mobile CRM action</span>\n    <button type=\"button\" class=\"btn btn-primary btn-sm\" aria-expanded=\"false\">Save</button>\n  </div>\n  <nav class=\"nav nav-pills nav-fill mt-3\" aria-label=\"Mobile navigation\">\n    <a class=\"nav-link active\" aria-current=\"page\" href=\"#\">Today</a>\n    <a class=\"nav-link\" href=\"#\">Tasks</a>\n    <a class=\"nav-link\" href=\"#\">More</a>\n  </nav>\n</section>"
+  },
+  {
+    "name": "mobile-fab-menu-stagger",
+    "level": "extended",
+    "category": "mobile",
+    "directory": "mobile",
+    "className": "bsx-mobile-fab-menu-stagger",
+    "component": "mobile",
+    "requiresJs": true,
+    "runtimeBehavior": "mobile FAB menu toggle",
+    "runtimeAction": "mobile-fab-toggle",
+    "motion": "translate",
+    "kind": "navigation",
+    "density": "mobile",
+    "risk": "requires-js",
+    "cssProperties": [
+      "transform"
+    ],
+    "bootstrapStates": [
+      ".active",
+      "[aria-current]"
+    ],
+    "requiresMarkupChange": true,
+    "scenario": "toggle a compact mobile FAB action menu",
+    "bestFor": "mobile admin actions, sticky save bars, bottom nav, and filter sheets",
+    "avoidFor": "desktop-only dense grids",
+    "reducedMotion": "opacity-only near-instant state",
+    "snippetPath": "snippets/extended/mobile/mobile-fab-menu-stagger.html",
+    "snippet": "<!-- Requires Bootstrap bundle and assets/js/bootstrap5-transitions.js. -->\n<section class=\"border rounded p-3 bsx-mobile-fab-menu-stagger\" aria-label=\"Mobile Fab Menu Stagger\">\n  <div class=\"d-flex align-items-center justify-content-between gap-3\">\n    <span class=\"fw-semibold\">Mobile CRM action</span>\n    <button type=\"button\" class=\"btn btn-primary btn-sm\" data-bsx-action=\"mobile-fab-toggle\" aria-expanded=\"false\">Save</button>\n  </div>\n  <nav class=\"nav nav-pills nav-fill mt-3\" aria-label=\"Mobile navigation\">\n    <a class=\"nav-link active\" aria-current=\"page\" href=\"#\">Today</a>\n    <a class=\"nav-link\" href=\"#\">Tasks</a>\n    <a class=\"nav-link\" href=\"#\">More</a>\n  </nav>\n</section>"
+  },
+  {
+    "name": "mobile-swipe-action-reveal",
+    "level": "extended",
+    "category": "mobile",
+    "directory": "mobile",
+    "className": "bsx-mobile-swipe-action-reveal",
+    "component": "mobile",
+    "requiresJs": true,
+    "runtimeBehavior": "mobile swipe action state",
+    "runtimeAction": "mobile-swipe-action",
+    "motion": "translate",
+    "kind": "navigation",
+    "density": "mobile",
+    "risk": "requires-js",
+    "cssProperties": [
+      "transform"
+    ],
+    "bootstrapStates": [
+      ".active",
+      "[aria-current]"
+    ],
+    "requiresMarkupChange": true,
+    "scenario": "reveal a mobile swipe action",
+    "bestFor": "mobile admin actions, sticky save bars, bottom nav, and filter sheets",
+    "avoidFor": "desktop-only dense grids",
+    "reducedMotion": "opacity-only near-instant state",
+    "snippetPath": "snippets/extended/mobile/mobile-swipe-action-reveal.html",
+    "snippet": "<!-- Requires Bootstrap bundle and assets/js/bootstrap5-transitions.js. -->\n<section class=\"border rounded p-3 bsx-mobile-swipe-action-reveal\" aria-label=\"Mobile Swipe Action Reveal\">\n  <div class=\"d-flex align-items-center justify-content-between gap-3\">\n    <span class=\"fw-semibold\">Mobile CRM action</span>\n    <button type=\"button\" class=\"btn btn-primary btn-sm\" data-bsx-action=\"mobile-swipe-action\" aria-expanded=\"false\">Save</button>\n  </div>\n  <nav class=\"nav nav-pills nav-fill mt-3\" aria-label=\"Mobile navigation\">\n    <a class=\"nav-link active\" aria-current=\"page\" href=\"#\">Today</a>\n    <a class=\"nav-link\" href=\"#\">Tasks</a>\n    <a class=\"nav-link\" href=\"#\">More</a>\n  </nav>\n</section>"
   },
   {
     "name": "mobile-sticky-save-bar",
@@ -7557,10 +8408,11 @@ window.bsxEffects = [
     "component": "mobile",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "color + opacity",
-    "kind": "navigation-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "navigation",
+    "density": "mobile",
+    "risk": "safe",
     "cssProperties": [
       "transform"
     ],
@@ -7568,11 +8420,42 @@ window.bsxEffects = [
       ".active",
       "[aria-current]"
     ],
+    "requiresMarkupChange": true,
+    "scenario": "keep a mobile save bar perceptible",
     "bestFor": "mobile admin actions, sticky save bars, bottom nav, and filter sheets",
     "avoidFor": "desktop-only dense grids",
     "reducedMotion": "opacity-only near-instant state",
     "snippetPath": "snippets/extended/mobile/mobile-sticky-save-bar.html",
-    "snippet": "<section class=\"border rounded p-3 bsx-mobile-sticky-save-bar\" aria-label=\"Mobile Sticky Save Bar\">\n  <div class=\"d-flex align-items-center justify-content-between gap-3\">\n    <span class=\"fw-semibold\">Mobile CRM action</span>\n    <button type=\"button\" class=\"btn btn-primary btn-sm\">Save</button>\n  </div>\n  <nav class=\"nav nav-pills nav-fill mt-3\" aria-label=\"Mobile navigation\">\n    <a class=\"nav-link active\" aria-current=\"page\" href=\"#\">Today</a>\n    <a class=\"nav-link\" href=\"#\">Tasks</a>\n    <a class=\"nav-link\" href=\"#\">More</a>\n  </nav>\n</section>"
+    "snippet": "<section class=\"border rounded p-3 bsx-mobile-sticky-save-bar\" aria-label=\"Mobile Sticky Save Bar\">\n  <div class=\"d-flex align-items-center justify-content-between gap-3\">\n    <span class=\"fw-semibold\">Mobile CRM action</span>\n    <button type=\"button\" class=\"btn btn-primary btn-sm\" aria-expanded=\"false\">Save</button>\n  </div>\n  <nav class=\"nav nav-pills nav-fill mt-3\" aria-label=\"Mobile navigation\">\n    <a class=\"nav-link active\" aria-current=\"page\" href=\"#\">Today</a>\n    <a class=\"nav-link\" href=\"#\">Tasks</a>\n    <a class=\"nav-link\" href=\"#\">More</a>\n  </nav>\n</section>"
+  },
+  {
+    "name": "mobile-keyboard-safe-panel",
+    "level": "extended",
+    "category": "mobile",
+    "directory": "mobile",
+    "className": "bsx-mobile-keyboard-safe-panel",
+    "component": "mobile",
+    "requiresJs": false,
+    "runtimeBehavior": null,
+    "runtimeAction": null,
+    "motion": "color + opacity",
+    "kind": "navigation",
+    "density": "mobile",
+    "risk": "safe",
+    "cssProperties": [
+      "transform"
+    ],
+    "bootstrapStates": [
+      ".active",
+      "[aria-current]"
+    ],
+    "requiresMarkupChange": false,
+    "scenario": "keep a mobile panel usable near the keyboard",
+    "bestFor": "mobile admin actions, sticky save bars, bottom nav, and filter sheets",
+    "avoidFor": "desktop-only dense grids",
+    "reducedMotion": "opacity-only near-instant state",
+    "snippetPath": "snippets/extended/mobile/mobile-keyboard-safe-panel.html",
+    "snippet": "<section class=\"border rounded p-3 bsx-mobile-keyboard-safe-panel\" aria-label=\"Mobile Keyboard Safe Panel\">\n  <div class=\"d-flex align-items-center justify-content-between gap-3\">\n    <span class=\"fw-semibold\">Mobile CRM action</span>\n    <button type=\"button\" class=\"btn btn-primary btn-sm\" aria-expanded=\"false\">Save</button>\n  </div>\n  <nav class=\"nav nav-pills nav-fill mt-3\" aria-label=\"Mobile navigation\">\n    <a class=\"nav-link active\" aria-current=\"page\" href=\"#\">Today</a>\n    <a class=\"nav-link\" href=\"#\">Tasks</a>\n    <a class=\"nav-link\" href=\"#\">More</a>\n  </nav>\n</section>"
   },
   {
     "name": "mobile-filter-sheet",
@@ -7583,10 +8466,11 @@ window.bsxEffects = [
     "component": "mobile",
     "requiresJs": false,
     "runtimeBehavior": null,
+    "runtimeAction": null,
     "motion": "translate",
-    "kind": "navigation-state",
-    "density": "medium",
-    "risk": "low",
+    "kind": "navigation",
+    "density": "mobile",
+    "risk": "safe",
     "cssProperties": [
       "transform"
     ],
@@ -7594,97 +8478,12 @@ window.bsxEffects = [
       ".active",
       "[aria-current]"
     ],
+    "requiresMarkupChange": true,
+    "scenario": "open a mobile filter sheet",
     "bestFor": "mobile admin actions, sticky save bars, bottom nav, and filter sheets",
     "avoidFor": "desktop-only dense grids",
     "reducedMotion": "opacity-only near-instant state",
     "snippetPath": "snippets/extended/mobile/mobile-filter-sheet.html",
-    "snippet": "<section class=\"border rounded p-3 bsx-mobile-filter-sheet\" aria-label=\"Mobile Filter Sheet\">\n  <div class=\"d-flex align-items-center justify-content-between gap-3\">\n    <span class=\"fw-semibold\">Mobile CRM action</span>\n    <button type=\"button\" class=\"btn btn-primary btn-sm\">Save</button>\n  </div>\n  <nav class=\"nav nav-pills nav-fill mt-3\" aria-label=\"Mobile navigation\">\n    <a class=\"nav-link active\" aria-current=\"page\" href=\"#\">Today</a>\n    <a class=\"nav-link\" href=\"#\">Tasks</a>\n    <a class=\"nav-link\" href=\"#\">More</a>\n  </nav>\n</section>"
-  },
-  {
-    "name": "mobile-bulk-action-bar",
-    "level": "extended",
-    "category": "mobile",
-    "directory": "mobile",
-    "className": "bsx-mobile-bulk-action-bar",
-    "component": "mobile",
-    "requiresJs": false,
-    "runtimeBehavior": null,
-    "motion": "color + opacity",
-    "kind": "navigation-state",
-    "density": "medium",
-    "risk": "low",
-    "cssProperties": [
-      "transform"
-    ],
-    "bootstrapStates": [
-      ".active",
-      "[aria-current]",
-      ".bsx-is-selected"
-    ],
-    "bestFor": "mobile admin actions, sticky save bars, bottom nav, and filter sheets",
-    "avoidFor": "desktop-only dense grids",
-    "reducedMotion": "opacity-only near-instant state",
-    "snippetPath": "snippets/extended/mobile/mobile-bulk-action-bar.html",
-    "snippet": "<section class=\"border rounded p-3 bsx-mobile-bulk-action-bar\" aria-label=\"Mobile Bulk Action Bar\">\n  <div class=\"d-flex align-items-center justify-content-between gap-3\">\n    <span class=\"fw-semibold\">Mobile CRM action</span>\n    <button type=\"button\" class=\"btn btn-primary btn-sm\">Save</button>\n  </div>\n  <nav class=\"nav nav-pills nav-fill mt-3\" aria-label=\"Mobile navigation\">\n    <a class=\"nav-link active\" aria-current=\"page\" href=\"#\">Today</a>\n    <a class=\"nav-link\" href=\"#\">Tasks</a>\n    <a class=\"nav-link\" href=\"#\">More</a>\n  </nav>\n</section>"
-  },
-  {
-    "name": "mobile-inline-error",
-    "level": "extended",
-    "category": "mobile",
-    "directory": "mobile",
-    "className": "bsx-mobile-inline-error",
-    "component": "mobile",
-    "requiresJs": false,
-    "runtimeBehavior": null,
-    "motion": "translate",
-    "kind": "navigation-state",
-    "density": "medium",
-    "risk": "medium",
-    "cssProperties": [
-      "transform",
-      "opacity",
-      "background-color",
-      "border-color",
-      "color"
-    ],
-    "bootstrapStates": [
-      ".active",
-      "[aria-current]",
-      ".bsx-is-error"
-    ],
-    "bestFor": "mobile admin actions, sticky save bars, bottom nav, and filter sheets",
-    "avoidFor": "desktop-only dense grids",
-    "reducedMotion": "opacity-only near-instant state",
-    "snippetPath": "snippets/extended/mobile/mobile-inline-error.html",
-    "snippet": "<section class=\"border rounded p-3 bsx-mobile-inline-error\" aria-label=\"Mobile Inline Error\">\n  <div class=\"d-flex align-items-center justify-content-between gap-3\">\n    <span class=\"fw-semibold\">Mobile CRM action</span>\n    <button type=\"button\" class=\"btn btn-primary btn-sm\">Save</button>\n  </div>\n  <nav class=\"nav nav-pills nav-fill mt-3\" aria-label=\"Mobile navigation\">\n    <a class=\"nav-link active\" aria-current=\"page\" href=\"#\">Today</a>\n    <a class=\"nav-link\" href=\"#\">Tasks</a>\n    <a class=\"nav-link\" href=\"#\">More</a>\n  </nav>\n</section>"
-  },
-  {
-    "name": "mobile-bottom-nav-active",
-    "level": "extended",
-    "category": "mobile",
-    "directory": "mobile",
-    "className": "bsx-mobile-bottom-nav-active",
-    "component": "mobile",
-    "requiresJs": false,
-    "runtimeBehavior": null,
-    "motion": "color + opacity",
-    "kind": "navigation-state",
-    "density": "medium",
-    "risk": "low",
-    "cssProperties": [
-      "box-shadow",
-      "background-color",
-      "border-color",
-      "color"
-    ],
-    "bootstrapStates": [
-      ".active",
-      "[aria-current]"
-    ],
-    "bestFor": "mobile admin actions, sticky save bars, bottom nav, and filter sheets",
-    "avoidFor": "desktop-only dense grids",
-    "reducedMotion": "opacity-only near-instant state",
-    "snippetPath": "snippets/extended/mobile/mobile-bottom-nav-active.html",
-    "snippet": "<section class=\"border rounded p-3 bsx-mobile-bottom-nav-active\" aria-label=\"Mobile Bottom Nav Active\">\n  <div class=\"d-flex align-items-center justify-content-between gap-3\">\n    <span class=\"fw-semibold\">Mobile CRM action</span>\n    <button type=\"button\" class=\"btn btn-primary btn-sm\">Save</button>\n  </div>\n  <nav class=\"nav nav-pills nav-fill mt-3\" aria-label=\"Mobile navigation\">\n    <a class=\"nav-link active\" aria-current=\"page\" href=\"#\">Today</a>\n    <a class=\"nav-link\" href=\"#\">Tasks</a>\n    <a class=\"nav-link\" href=\"#\">More</a>\n  </nav>\n</section>"
+    "snippet": "<section class=\"border rounded p-3 bsx-mobile-filter-sheet\" aria-label=\"Mobile Filter Sheet\">\n  <div class=\"d-flex align-items-center justify-content-between gap-3\">\n    <span class=\"fw-semibold\">Mobile CRM action</span>\n    <button type=\"button\" class=\"btn btn-primary btn-sm\" aria-expanded=\"false\">Save</button>\n  </div>\n  <nav class=\"nav nav-pills nav-fill mt-3\" aria-label=\"Mobile navigation\">\n    <a class=\"nav-link active\" aria-current=\"page\" href=\"#\">Today</a>\n    <a class=\"nav-link\" href=\"#\">Tasks</a>\n    <a class=\"nav-link\" href=\"#\">More</a>\n  </nav>\n</section>"
   }
 ];

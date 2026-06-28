@@ -1230,6 +1230,288 @@
   transform: translateY(-1px);
 }
 
+/* Scenario-first admin UX effects */
+.bsx-pagination-item-press .page-link,
+.bsx-pagination-active-slide .page-link,
+.bsx-pagination-page-change .page-link,
+.bsx-pagination-jump-focus .page-link,
+.bsx-input-group-button-press .btn,
+.bsx-wizard-back-soft .btn,
+.bsx-wizard-next-press .btn,
+.bsx-state-error-retry-press .btn,
+.bsx-mobile-tabbar-press .nav-link,
+.bsx-mobile-fab-pop .btn {
+  transition: background-color var(--bsx-duration-sm) ease, box-shadow var(--bsx-duration-md) ease, opacity var(--bsx-duration-md) ease, transform var(--bsx-duration-sm) var(--bsx-ease-out);
+}
+
+.bsx-pagination-item-press .page-link:active,
+.bsx-input-group-button-press .btn:active,
+.bsx-wizard-next-press .btn:active,
+.bsx-state-error-retry-press .btn:active,
+.bsx-mobile-tabbar-press .nav-link:active {
+  transform: scale(.96);
+}
+
+.bsx-pagination-active-slide .page-item.active .page-link,
+.bsx-pagination-page-change .page-item.active .page-link,
+.bsx-mobile-bottom-bar-active .nav-link.active {
+  box-shadow: inset 0 -3px 0 currentColor;
+  transform: translateY(-1px);
+}
+
+.bsx-pagination-loading-fade[aria-busy="true"] .page-link,
+.bsx-pagination-loading-fade .pagination[aria-busy="true"] .page-link {
+  opacity: .58;
+}
+
+.bsx-pagination-page-change.bsx-is-loading .page-item.active .page-link {
+  animation: bsx-pulse 1.1s ease-in-out infinite;
+}
+
+.bsx-pagination-jump-focus .page-link:focus-visible {
+  box-shadow: 0 0 0 .25rem rgba(var(--bs-primary-rgb), .16);
+  outline-color: var(--bs-primary);
+}
+
+.bsx-input-group-button-press .btn:active {
+  transform: scale(.97);
+}
+
+.bsx-input-group-error-shake .form-control.is-invalid,
+.bsx-crud-save-error-shake tr.bsx-is-error,
+.bsx-wizard-step-invalid-shake .bsx-is-error .bsx-step-marker,
+.bsx-state-error-shake {
+  animation: bsx-shake var(--bsx-duration-lg) ease both;
+}
+
+.bsx-input-group-success-glow .form-control.is-valid,
+.bsx-input-group-copy-success.bsx-is-success .input-group,
+.bsx-input-group-copy-success .btn.bsx-is-success {
+  box-shadow: 0 0 0 .25rem rgba(var(--bs-success-rgb), .16);
+}
+
+.bsx-crud-row-created-flash tr.bsx-is-updated,
+.bsx-crud-row-updated-flash tr.bsx-is-updated,
+.bsx-data-diff-highlight.bsx-is-updated {
+  animation: bsx-row-flash .9s ease both;
+  box-shadow: inset 4px 0 var(--bs-success);
+}
+
+.bsx-crud-row-created-flash tr.bsx-is-updated {
+  animation-name: bsx-slide-up;
+}
+
+.bsx-crud-row-deleted-collapse tr.bsx-is-error,
+.bsx-notification-item-remove .list-group-item.bsx-is-removing {
+  animation: bsx-row-remove var(--bsx-duration-md) ease both;
+}
+
+.bsx-crud-row-restored-pop tr.bsx-is-success,
+.bsx-filter-chip-pop .bsx-filter-chip,
+.bsx-notification-counter-bump .badge,
+.bsx-mobile-fab-pop .btn:focus-visible {
+  animation: bsx-pop var(--bsx-duration-md) var(--bsx-ease-spring-lite) both;
+}
+
+.bsx-crud-save-success-bar,
+.bsx-crud-save-error-shake,
+.bsx-search-loading-line,
+.bsx-data-inline-saving {
+  overflow: hidden;
+  position: relative;
+}
+
+.bsx-crud-save-success-bar::before,
+.bsx-search-loading-line::before,
+.bsx-data-inline-saving::before {
+  background: var(--bs-success);
+  content: "";
+  inset: 0 auto auto 0;
+  min-block-size: 3px;
+  position: absolute;
+  transform: scaleX(1);
+  transform-origin: left;
+  inline-size: 100%;
+}
+
+.bsx-search-loading-line::before,
+.bsx-data-inline-saving::before {
+  animation: bsx-loader-bar 1.2s var(--bsx-ease-in-out) infinite;
+  background: var(--bs-primary);
+}
+
+.bsx-crud-inline-edit-focus tr:focus-within {
+  box-shadow: inset 4px 0 var(--bs-primary);
+}
+
+.bsx-crud-inline-edit-saving tr.bsx-is-loading,
+.bsx-wizard-saving-overlay[aria-busy="true"],
+.bsx-data-card-refresh[aria-busy="true"],
+.bsx-data-table-refresh[aria-busy="true"],
+.bsx-data-section-loading-fade[aria-busy="true"],
+.bsx-data-chart-loading[aria-busy="true"],
+.bsx-data-kpi-refresh[aria-busy="true"] {
+  opacity: .68;
+}
+
+.bsx-crud-bulk-action-bar-slide > .d-flex,
+.bsx-filter-panel-slide,
+.bsx-search-results-reveal .card-body,
+.bsx-wizard-summary-reveal .card,
+.bsx-notification-panel-slide {
+  animation: bsx-slide-up var(--bsx-duration-md) var(--bsx-ease-out) both;
+}
+
+.bsx-crud-bulk-selection-bump tr.bsx-is-selected {
+  animation: bsx-pop var(--bsx-duration-md) var(--bsx-ease-spring-lite) both;
+  background-color: rgba(var(--bs-primary-rgb), .1);
+}
+
+.bsx-crud-permission-locked-soft {
+  filter: grayscale(.25);
+  opacity: .62;
+}
+
+.bsx-crud-danger-zone-pulse {
+  animation: bsx-danger-button 1.2s ease-in-out 2;
+  border-color: var(--bs-danger);
+}
+
+.bsx-filter-chip-remove .bsx-filter-chip.bsx-is-removing {
+  animation: bsx-row-remove var(--bsx-duration-md) ease both;
+}
+
+.bsx-filter-applied-flash,
+.bsx-filter-reset-fade.bsx-is-updated {
+  animation: bsx-price-flash .8s ease both;
+}
+
+.bsx-search-input-focus-glow:focus-within .input-group {
+  box-shadow: 0 0 0 .25rem rgba(var(--bs-primary-rgb), .14);
+}
+
+.bsx-search-empty-pop {
+  animation: bsx-pop var(--bsx-duration-lg) var(--bsx-ease-spring-lite) both;
+  border-style: dashed;
+}
+
+.bsx-sort-direction-flip .bsx-sort-icon,
+.bsx-sort-direction-flip [aria-sort] {
+  display: inline-block;
+  transition: color var(--bsx-duration-sm) ease, transform var(--bsx-duration-md) var(--bsx-ease-out);
+}
+
+.bsx-sort-direction-flip.bsx-is-sorted .bsx-sort-icon,
+.bsx-sort-direction-flip.bsx-is-sorted [aria-sort] {
+  transform: rotate(180deg);
+}
+
+.bsx-wizard-step-enter .bsx-is-active,
+.bsx-wizard-summary-reveal .bsx-is-active {
+  animation: bsx-slide-up var(--bsx-duration-md) var(--bsx-ease-out) both;
+}
+
+.bsx-wizard-step-exit .bsx-is-complete {
+  animation: bsx-fade-in var(--bsx-duration-md) ease both;
+}
+
+.bsx-wizard-step-complete-check .bsx-is-complete .bsx-step-marker,
+.bsx-state-success-check::before {
+  animation: bsx-pop var(--bsx-duration-md) var(--bsx-ease-spring-lite) both;
+  background: var(--bs-success);
+  color: #fff;
+}
+
+.bsx-state-success-check::before {
+  border-radius: 50%;
+  content: "✓";
+  display: inline-flex;
+  margin-right: .5rem;
+  padding: .1rem .35rem;
+}
+
+.bsx-wizard-back-soft .btn:focus-visible {
+  opacity: .82;
+  transform: translateX(calc(-1 * var(--bsx-slide-sm)));
+}
+
+.bsx-wizard-saving-overlay {
+  position: relative;
+}
+
+.bsx-wizard-saving-overlay[aria-busy="true"]::after,
+.bsx-data-overlay-blur[aria-busy="true"]::after {
+  animation: bsx-loader-bar 1.2s var(--bsx-ease-in-out) infinite;
+  background: linear-gradient(90deg, transparent, rgba(var(--bs-primary-rgb), .18), transparent);
+  content: "";
+  inset: 0;
+  position: absolute;
+  transform: translateX(-100%);
+}
+
+.bsx-state-empty-pop,
+.bsx-state-empty-icon-float {
+  animation: bsx-pop var(--bsx-duration-lg) var(--bsx-ease-spring-lite) both;
+  border-style: dashed;
+}
+
+.bsx-state-empty-icon-float::before {
+  animation: bsx-bounce 1.8s ease-in-out infinite;
+  color: var(--bs-primary);
+  content: "○";
+  display: inline-block;
+  margin-right: .5rem;
+}
+
+.bsx-state-warning-attention,
+.bsx-notification-priority-pulse .bsx-is-unread {
+  animation: bsx-warning-pulse 1.2s ease-in-out 2;
+  border-color: var(--bs-warning);
+}
+
+.bsx-state-offline-pulse {
+  animation: bsx-warning-pulse 1.6s ease-in-out infinite;
+  border-color: var(--bs-warning);
+}
+
+.bsx-state-reconnect-fade.bsx-is-success {
+  animation: bsx-fade-in var(--bsx-duration-lg) ease both;
+  border-color: var(--bs-success);
+}
+
+.bsx-data-overlay-blur {
+  position: relative;
+}
+
+.bsx-data-overlay-blur[aria-busy="true"] {
+  filter: blur(.6px);
+}
+
+.bsx-notification-item-new .bsx-is-unread {
+  animation: bsx-slide-up var(--bsx-duration-md) var(--bsx-ease-out) both;
+  box-shadow: inset 4px 0 var(--bs-primary);
+  font-weight: 600;
+}
+
+.bsx-notification-item-read-fade .list-group-item:not(.bsx-is-unread) {
+  opacity: .62;
+}
+
+.bsx-mobile-fab-menu-stagger.bsx-is-open .btn {
+  animation: bsx-pop var(--bsx-duration-md) var(--bsx-ease-spring-lite) both;
+}
+
+.bsx-mobile-swipe-action-reveal.bsx-is-revealed {
+  box-shadow: inset -4px 0 var(--bs-primary);
+  transform: translateX(calc(-1 * var(--bsx-slide-sm)));
+}
+
+.bsx-mobile-keyboard-safe-panel:focus-within,
+.bsx-mobile-filter-sheet:focus-within {
+  box-shadow: 0 .75rem 2rem rgba(0, 0, 0, .16);
+  transform: translateY(calc(-1 * var(--bsx-slide-sm)));
+}
+
 @media (prefers-reduced-motion: reduce) {
   .bsx-animated,
   .bsx-animated::before,

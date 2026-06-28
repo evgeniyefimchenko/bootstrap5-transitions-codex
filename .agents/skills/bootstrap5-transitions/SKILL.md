@@ -71,20 +71,44 @@ The goal is not decoration. The goal is to make UI state changes easier to perce
 - Validate text/icon contrast against the actual background.
 - Focus states must remain visible in light and dark themes.
 
+## Effect Selection Metadata
+
+When selecting an effect, prefer metadata over visual name matching.
+
+Use:
+
+- `kind` to match the UI state;
+- `density` to avoid excessive motion in dense admin screens;
+- `risk` to avoid unnecessary visual diff;
+- `cssProperties` to avoid layout animation;
+- `bootstrapStates` to preserve Bootstrap lifecycle;
+- `requiresMarkupChange` to decide whether markup edits are acceptable;
+- `scenario` to match the actual user task.
+
+For dense admin interfaces, prefer:
+
+- `density: dense-admin`;
+- `risk: safe`;
+- `kind: feedback`, `data-change`, `loading`, `validation`, or `selection`;
+- CSS-only effects where possible.
+
 ## Workflow
 
-1. Inspect the existing Bootstrap component and its state classes.
-2. Identify the component type: modal, dropdown, form, button, card, toast, table, or another Bootstrap pattern.
-3. Search `references/catalog.md` for the closest effect.
-4. Use `references/decision-table.md` when the best effect is not obvious.
-5. Read `references/implementation-rules.md` for component-specific constraints.
-6. Read `references/motion-quality.md`, `references/visual-polish.md`, and `references/color-contrast.md` when adjusting effect behavior or CSS.
-7. Prefer a core effect unless the request clearly needs an extended variant.
-8. Add the smallest required `bsx-*` class and preserve existing Bootstrap markup.
-9. Check `Requires JS` in the catalog. When it is `yes`, include or adapt `assets/js/bootstrap5-transitions.js`; never depend on `assets/js/demo.js`.
-10. Add custom Vanilla JS only when the runtime behavior does not match the application's state model.
-11. Verify keyboard behavior, ARIA state, Bootstrap lifecycle, contrast, focus visibility, and reduced-motion behavior.
-12. Report the result using the Before/After format in `references/review-format.md`.
+1. Detect Bootstrap component.
+2. Detect UI scenario.
+3. Select effect by `kind`, `density`, `risk`, and `scenario`.
+4. Prefer safe CSS-only effects.
+5. Avoid marketing/stagger effects in dense admin screens.
+6. Apply the smallest suitable `bsx-*` class.
+7. Preserve Bootstrap behavior, ARIA, `data-bs-*`, and business logic.
+8. Search `references/catalog.md` for the closest effect.
+9. Use `references/decision-table.md` when the best effect is not obvious.
+10. Read `references/implementation-rules.md` for component-specific constraints.
+11. Read `references/motion-quality.md`, `references/visual-polish.md`, and `references/color-contrast.md` when adjusting effect behavior or CSS.
+12. Check `Requires JS` in the catalog. When it is `yes`, include or adapt `assets/js/bootstrap5-transitions.js`; never depend on `assets/js/demo.js`.
+13. Add custom Vanilla JS only when the runtime behavior does not match the application's state model.
+14. Verify keyboard behavior, ARIA state, Bootstrap lifecycle, contrast, focus visibility, and reduced-motion behavior.
+15. Report the result using the Before/After format in `references/review-format.md`.
 
 ## Decision Table
 

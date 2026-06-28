@@ -15,6 +15,8 @@ Use this format when summarizing applied or audited Bootstrap 5 transition work.
 | `npm test` | pass/fail |
 | Skill frontmatter valid | pass/fail |
 | Catalog generated | pass/fail |
+| Effect metadata valid | pass/fail |
+| Scenario metadata present | pass/fail |
 | No `transition: all` | pass/fail |
 | Reduced motion preserved | pass/fail |
 | No forbidden dependencies | pass/fail |
@@ -23,6 +25,7 @@ Use this format when summarizing applied or audited Bootstrap 5 transition work.
 ## Notes
 
 - Selected effects:
+- Metadata:
 - JS runtime changes:
 - Accessibility concerns:
 - Reduced-motion behavior:

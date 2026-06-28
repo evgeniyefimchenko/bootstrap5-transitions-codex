@@ -162,6 +162,160 @@
     }, 240);
   }
 
+  function ee_flashClass(element, className, delay = 900) {
+    if (!element) {
+      return;
+    }
+
+    element.classList.remove(className);
+    void element.offsetWidth;
+    element.classList.add(className);
+    window.setTimeout(() => element.classList.remove(className), delay);
+  }
+
+  function ee_copyInput(action) {
+    const ee_scope = ee_scopeFor(action);
+    const ee_input = ee_scope.querySelector?.("input, textarea");
+    const ee_value = ee_input?.value ?? "";
+    const ee_done = () => {
+      ee_scope.classList.add("bsx-is-success");
+      action.classList.add("bsx-is-success");
+      window.setTimeout(() => {
+        ee_scope.classList.remove("bsx-is-success");
+        action.classList.remove("bsx-is-success");
+      }, 900);
+    };
+
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(ee_value).then(ee_done, ee_done);
+      return;
+    }
+
+    ee_input?.select?.();
+    try {
+      document.execCommand("copy");
+    } catch {
+      // Visual confirmation still helps in HTTP/local-file demos.
+    }
+    ee_done();
+  }
+
+  function ee_paginationLoading(action) {
+    const ee_scope = ee_scopeFor(action);
+    const ee_pagination = ee_scope.matches?.(".pagination") ? ee_scope : ee_scope.querySelector?.(".pagination");
+    const ee_busyTarget = ee_pagination ?? ee_scope;
+
+    ee_scope.classList.add("bsx-is-loading");
+    ee_busyTarget?.setAttribute("aria-busy", "true");
+    window.setTimeout(() => {
+      ee_scope.classList.remove("bsx-is-loading");
+      ee_busyTarget?.removeAttribute("aria-busy");
+      ee_flashClass(ee_scope, "bsx-is-updated", 700);
+    }, 650);
+  }
+
+  function ee_crudInlineSave(action) {
+    const ee_scope = ee_scopeFor(action);
+    const ee_row = action.closest("tr") ?? ee_scope.querySelector?.("tbody tr");
+    if (!ee_row) {
+      return;
+    }
+
+    ee_row.classList.remove("bsx-is-success", "bsx-is-error");
+    ee_row.classList.add("bsx-is-loading");
+    ee_row.setAttribute("aria-busy", "true");
+    window.setTimeout(() => {
+      ee_row.classList.remove("bsx-is-loading");
+      ee_row.classList.add("bsx-is-success", "bsx-is-updated");
+      ee_row.removeAttribute("aria-busy");
+      window.setTimeout(() => ee_row.classList.remove("bsx-is-success", "bsx-is-updated"), 900);
+    }, 650);
+  }
+
+  function ee_crudBulkToggle(action) {
+    const ee_scope = ee_scopeFor(action);
+    const ee_rows = ee_scope.querySelectorAll?.("tbody tr");
+    const ee_selected = !ee_scope.classList.contains("bsx-is-selected");
+
+    ee_scope.classList.toggle("bsx-is-selected", ee_selected);
+    ee_rows?.forEach((row) => row.classList.toggle("bsx-is-selected", ee_selected));
+    action.setAttribute("aria-pressed", String(ee_selected));
+  }
+
+  function ee_filterChipRemove(action) {
+    const ee_chip = action.closest(".bsx-filter-chip") ?? action;
+    ee_chip.classList.add("bsx-is-removing");
+    window.setTimeout(() => ee_chip.remove(), 240);
+  }
+
+  function ee_filterReset(action) {
+    const ee_scope = ee_scopeFor(action);
+    ee_scope.querySelectorAll?.("input").forEach((input) => {
+      input.value = "";
+      input.dispatchEvent(new Event("input", { bubbles: true }));
+    });
+    ee_scope.querySelectorAll?.(".bsx-filter-chip").forEach((chip) => chip.remove());
+    ee_flashClass(ee_scope, "bsx-is-updated", 700);
+  }
+
+  function ee_wizardStep(action) {
+    const ee_scope = ee_scopeFor(action);
+    const ee_steps = [...(ee_scope.querySelectorAll?.(".bsx-step") ?? [])];
+    if (!ee_steps.length) {
+      ee_scope.setAttribute("aria-busy", "true");
+      window.setTimeout(() => ee_scope.removeAttribute("aria-busy"), 700);
+      return;
+    }
+
+    const ee_currentIndex = Math.max(0, ee_steps.findIndex((step) => step.classList.contains("bsx-is-active")));
+    const ee_nextIndex = Math.min(ee_steps.length - 1, ee_currentIndex + 1);
+    ee_steps[ee_currentIndex]?.classList.remove("bsx-is-active");
+    ee_steps[ee_currentIndex]?.classList.add("bsx-is-complete");
+    ee_steps[ee_nextIndex]?.classList.add("bsx-is-active");
+    ee_steps[ee_nextIndex]?.setAttribute("aria-current", "step");
+  }
+
+  function ee_retryState(action) {
+    const ee_scope = ee_scopeFor(action);
+    ee_scope.classList.remove("bsx-is-error");
+    ee_scope.classList.add("bsx-is-loading");
+    ee_scope.setAttribute("aria-busy", "true");
+    window.setTimeout(() => {
+      ee_scope.classList.remove("bsx-is-loading");
+      ee_scope.classList.add("bsx-is-success");
+      ee_scope.removeAttribute("aria-busy");
+      window.setTimeout(() => ee_scope.classList.remove("bsx-is-success"), 900);
+    }, 650);
+  }
+
+  function ee_dataRefresh(action) {
+    const ee_scope = ee_scopeFor(action);
+    ee_scope.setAttribute("aria-busy", "true");
+    ee_scope.classList.add("bsx-is-loading");
+    window.setTimeout(() => {
+      ee_scope.removeAttribute("aria-busy");
+      ee_scope.classList.remove("bsx-is-loading");
+      ee_flashClass(ee_scope, "bsx-is-updated", 900);
+    }, 700);
+  }
+
+  function ee_notificationRemove(action) {
+    const ee_item = action.closest(".list-group-item") ?? action;
+    ee_item.classList.add("bsx-is-removing");
+    window.setTimeout(() => ee_item.remove(), 240);
+  }
+
+  function ee_mobileFabToggle(action) {
+    const ee_scope = ee_scopeFor(action);
+    const ee_open = !ee_scope.classList.contains("bsx-is-open");
+    ee_scope.classList.toggle("bsx-is-open", ee_open);
+    action.setAttribute("aria-expanded", String(ee_open));
+  }
+
+  function ee_mobileSwipeAction(action) {
+    ee_scopeFor(action).classList.toggle("bsx-is-revealed");
+  }
+
   function ee_refresh(root = document) {
     ee_revealObserver?.disconnect();
 
@@ -189,6 +343,10 @@
       return;
     }
 
+    if (ee_action.matches('a[href="#"]')) {
+      event.preventDefault();
+    }
+
     const ee_scope = ee_scopeFor(ee_action);
 
     switch (ee_action.dataset.bsxAction) {
@@ -212,6 +370,42 @@
         break;
       case "list-item":
         ee_removeListItem(ee_scope);
+        break;
+      case "copy-input":
+        ee_copyInput(ee_action);
+        break;
+      case "pagination-loading":
+        ee_paginationLoading(ee_action);
+        break;
+      case "crud-inline-save":
+        ee_crudInlineSave(ee_action);
+        break;
+      case "crud-bulk-toggle":
+        ee_crudBulkToggle(ee_action);
+        break;
+      case "filter-chip-remove":
+        ee_filterChipRemove(ee_action);
+        break;
+      case "filter-reset":
+        ee_filterReset(ee_action);
+        break;
+      case "wizard-step":
+        ee_wizardStep(ee_action);
+        break;
+      case "retry-state":
+        ee_retryState(ee_action);
+        break;
+      case "data-refresh":
+        ee_dataRefresh(ee_action);
+        break;
+      case "notification-remove":
+        ee_notificationRemove(ee_action);
+        break;
+      case "mobile-fab-toggle":
+        ee_mobileFabToggle(ee_action);
+        break;
+      case "mobile-swipe-action":
+        ee_mobileSwipeAction(ee_action);
         break;
       case "clear-input": {
         const ee_input = ee_action.closest(".input-group")?.querySelector("input");
@@ -267,8 +461,12 @@
   window.bsxTransitions = Object.freeze({
     buttonState: ee_buttonState,
     changeTableRow: ee_changeTableRow,
+    copyInput: ee_copyInput,
+    dataRefresh: ee_dataRefresh,
+    filterReset: ee_filterReset,
     refresh: ee_refresh,
     removeListItem: ee_removeListItem,
+    retryState: ee_retryState,
     updateCounter: ee_updateCounter,
   });
 

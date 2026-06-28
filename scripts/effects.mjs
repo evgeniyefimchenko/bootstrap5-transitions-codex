@@ -284,12 +284,12 @@ const extendedGroups = {
     "breadcrumb-context-return",
   ],
   pagination: [
-    "pagination-active-marker",
-    "pagination-page-jump",
-    "pagination-loading-page",
+    "pagination-item-press",
+    "pagination-active-slide",
+    "pagination-loading-fade",
     "pagination-disabled-soft",
-    "pagination-compact-hover",
-    "pagination-count-update",
+    "pagination-page-change",
+    "pagination-jump-focus",
   ],
   "button-group": [
     "button-group-active-marker",
@@ -302,10 +302,10 @@ const extendedGroups = {
   "input-group": [
     "input-group-focus-ring",
     "input-group-addon-highlight",
-    "input-group-copy-confirm",
-    "input-group-search-pending",
-    "input-group-validation-sync",
-    "input-group-password-toggle",
+    "input-group-button-press",
+    "input-group-error-shake",
+    "input-group-success-glow",
+    "input-group-copy-success",
   ],
   "close-button": [
     "close-button-hover-ring",
@@ -315,67 +315,78 @@ const extendedGroups = {
     "close-button-clear-filter",
   ],
   "admin/crud": [
-    "crud-row-create",
-    "crud-row-save-pending",
-    "crud-row-save-success",
-    "crud-row-save-error",
+    "crud-row-created-flash",
+    "crud-row-updated-flash",
+    "crud-row-deleted-collapse",
+    "crud-row-restored-pop",
+    "crud-save-success-bar",
+    "crud-save-error-shake",
     "crud-inline-edit-focus",
-    "crud-inline-edit-dirty",
-    "crud-bulk-toolbar-reveal",
-    "crud-delete-confirm-row",
-    "crud-permission-disabled",
+    "crud-inline-edit-saving",
+    "crud-bulk-action-bar-slide",
+    "crud-bulk-selection-bump",
+    "crud-permission-locked-soft",
+    "crud-danger-zone-pulse",
   ],
   "filter/search": [
-    "filter-chip-active",
+    "filter-panel-slide",
+    "filter-chip-pop",
     "filter-chip-remove",
-    "filter-panel-reveal",
-    "filter-reset-flash",
-    "search-input-focus",
-    "search-results-update",
-    "search-no-results-state",
+    "filter-applied-flash",
+    "filter-reset-fade",
+    "search-input-focus-glow",
+    "search-results-reveal",
+    "search-empty-pop",
+    "search-loading-line",
+    "sort-direction-flip",
   ],
   "form-wizard": [
-    "form-wizard-step-current",
-    "form-wizard-step-complete",
-    "form-wizard-step-error",
-    "form-wizard-progress-sync",
-    "form-wizard-section-enter",
-    "form-wizard-section-exit",
-    "form-wizard-review-dirty",
-    "form-wizard-submit-ready",
+    "wizard-step-enter",
+    "wizard-step-exit",
+    "wizard-step-invalid-shake",
+    "wizard-step-complete-check",
+    "wizard-summary-reveal",
+    "wizard-back-soft",
+    "wizard-next-press",
+    "wizard-saving-overlay",
   ],
   state: [
-    "state-empty-reveal",
-    "state-error-inline",
-    "state-success-inline",
-    "state-warning-inline",
-    "state-unsaved-changes",
-    "state-offline-banner",
-    "state-locked-record",
+    "state-empty-pop",
+    "state-empty-icon-float",
+    "state-error-shake",
+    "state-error-retry-press",
+    "state-success-check",
+    "state-warning-attention",
+    "state-offline-pulse",
+    "state-reconnect-fade",
   ],
   "data-loading": [
-    "data-loading-table-overlay",
-    "data-loading-card-overlay",
-    "data-loading-row-skeleton",
-    "data-loading-filter-pending",
-    "data-loading-save-button",
-    "data-loading-metric-refresh",
-    "data-loading-inline-spinner",
+    "data-card-refresh",
+    "data-table-refresh",
+    "data-section-loading-fade",
+    "data-overlay-blur",
+    "data-inline-saving",
+    "data-chart-loading",
+    "data-kpi-refresh",
+    "data-diff-highlight",
   ],
   "notification-center": [
-    "notification-center-panel",
-    "notification-item-unread",
-    "notification-item-read",
-    "notification-item-priority",
-    "notification-batch-arrive",
-    "notification-empty-state",
+    "notification-item-new",
+    "notification-item-read-fade",
+    "notification-item-remove",
+    "notification-counter-bump",
+    "notification-panel-slide",
+    "notification-priority-pulse",
   ],
   mobile: [
+    "mobile-bottom-bar-active",
+    "mobile-tabbar-press",
+    "mobile-fab-pop",
+    "mobile-fab-menu-stagger",
+    "mobile-swipe-action-reveal",
     "mobile-sticky-save-bar",
+    "mobile-keyboard-safe-panel",
     "mobile-filter-sheet",
-    "mobile-bulk-action-bar",
-    "mobile-inline-error",
-    "mobile-bottom-nav-active",
   ],
 };
 
@@ -388,6 +399,7 @@ const runtimeBehaviors = new Map([
   ["button-ripple-lite", "pointer ripple"],
   ["form-file-drop-highlight", "file drag state"],
   ["form-input-clear-pop", "input clearing"],
+  ["input-group-copy-success", "copy value confirmation"],
   ["counter-bump", "counter update"],
   ["metric-card-update", "counter update"],
   ["counter-change-up", "counter update"],
@@ -399,7 +411,49 @@ const runtimeBehaviors = new Map([
   ["table-row-selected", "table row selection"],
   ["table-sort-icon-rotate", "table sort state"],
   ["list-item-remove", "list item removal"],
+  ["pagination-loading-fade", "pagination loading state"],
+  ["pagination-page-change", "pagination loading state"],
+  ["crud-inline-edit-saving", "inline save state"],
+  ["crud-bulk-action-bar-slide", "bulk selection state"],
+  ["crud-bulk-selection-bump", "bulk selection state"],
+  ["filter-chip-remove", "filter chip removal"],
+  ["filter-reset-fade", "filter reset state"],
+  ["wizard-step-enter", "wizard step state"],
+  ["wizard-step-exit", "wizard step state"],
+  ["wizard-saving-overlay", "wizard saving state"],
+  ["state-error-retry-press", "retry state"],
+  ["data-card-refresh", "data refresh state"],
+  ["data-table-refresh", "data refresh state"],
+  ["data-kpi-refresh", "data refresh state"],
+  ["data-diff-highlight", "data refresh state"],
+  ["notification-item-remove", "notification removal"],
+  ["notification-counter-bump", "notification counter update"],
+  ["mobile-fab-menu-stagger", "mobile FAB menu toggle"],
+  ["mobile-swipe-action-reveal", "mobile swipe action state"],
   ["scroll-reveal-lite", "intersection observer"],
+]);
+
+const runtimeActions = new Map([
+  ["input-group-copy-success", "copy-input"],
+  ["pagination-loading-fade", "pagination-loading"],
+  ["pagination-page-change", "pagination-loading"],
+  ["crud-inline-edit-saving", "crud-inline-save"],
+  ["crud-bulk-action-bar-slide", "crud-bulk-toggle"],
+  ["crud-bulk-selection-bump", "crud-bulk-toggle"],
+  ["filter-chip-remove", "filter-chip-remove"],
+  ["filter-reset-fade", "filter-reset"],
+  ["wizard-step-enter", "wizard-step"],
+  ["wizard-step-exit", "wizard-step"],
+  ["wizard-saving-overlay", "wizard-step"],
+  ["state-error-retry-press", "retry-state"],
+  ["data-card-refresh", "data-refresh"],
+  ["data-table-refresh", "data-refresh"],
+  ["data-kpi-refresh", "data-refresh"],
+  ["data-diff-highlight", "data-refresh"],
+  ["notification-item-remove", "notification-remove"],
+  ["notification-counter-bump", "data-refresh"],
+  ["mobile-fab-menu-stagger", "mobile-fab-toggle"],
+  ["mobile-swipe-action-reveal", "mobile-swipe-action"],
 ]);
 
 function getRuntimeBehavior(name) {
@@ -409,6 +463,31 @@ function getRuntimeBehavior(name) {
   return runtimeBehaviors.get(name) ?? null;
 }
 
+function getRuntimeAction(name) {
+  if (name.startsWith("toast-")) {
+    return "show-toast";
+  }
+  if (["button-loading-spinner", "button-loading-dots", "button-success-pop", "button-success-check", "button-ripple-lite"].includes(name)) {
+    return "button-state";
+  }
+  if (["counter-bump", "metric-card-update", "counter-change-up", "counter-change-down", "price-change-flash"].includes(name)) {
+    return "counter";
+  }
+  if (["table-row-insert", "table-row-remove", "table-row-update-flash", "table-row-selected"].includes(name)) {
+    return "table-row";
+  }
+  if (name === "table-sort-icon-rotate") {
+    return "sort";
+  }
+  if (name === "list-item-remove") {
+    return "list-item";
+  }
+  if (name === "form-input-clear-pop") {
+    return "clear-input";
+  }
+  return runtimeActions.get(name) ?? null;
+}
+
 const directoryRules = [
   [/^breadcrumb-/, "breadcrumb"],
   [/^pagination-/, "pagination"],
@@ -416,10 +495,12 @@ const directoryRules = [
   [/^input-group-/, "input-group"],
   [/^close-button-/, "close-button"],
   [/^crud-/, "admin/crud"],
-  [/^(filter|search)-/, "filter/search"],
+  [/^(filter|search|sort)-/, "filter/search"],
   [/^form-wizard-/, "form-wizard"],
+  [/^wizard-(?:step|summary|back|next|saving)-/, "form-wizard"],
   [/^state-/, "state"],
   [/^data-loading-/, "data-loading"],
+  [/^data-/, "data-loading"],
   [/^notification-/, "notification-center"],
   [/^mobile-/, "mobile"],
   [/^modal-/, "modal"],
@@ -485,37 +566,129 @@ const descriptions = {
 };
 
 const densityByCategory = {
-  "admin/crud": "high",
-  "filter/search": "high",
-  "data-loading": "high",
-  pagination: "high",
-  breadcrumb: "medium",
-  "button-group": "medium",
-  "input-group": "medium",
-  "close-button": "medium",
-  "form-wizard": "medium",
-  state: "medium",
-  "notification-center": "medium",
-  mobile: "medium",
+  "admin/crud": "dense-admin",
+  "filter/search": "dense-admin",
+  "data-loading": "dense-admin",
+  "input-group": "dense-admin",
+  "notification-center": "dense-admin",
+  pagination: "dense-admin",
+  breadcrumb: "normal-ui",
+  "button-group": "normal-ui",
+  "close-button": "normal-ui",
+  "form-wizard": "normal-ui",
+  state: "normal-ui",
+  mobile: "mobile",
+  "image/media": "marketing",
+  "page/layout": "marketing",
 };
 
-function getKind(category, directory) {
-  if (["admin/crud", "filter/search", "data-loading", "notification-center"].includes(category)) {
-    return "workflow-state";
+const scenarioOverrides = {
+  "pagination-item-press": "provide tactile feedback when a page item is pressed",
+  "pagination-active-slide": "show the active page in a paged admin list",
+  "pagination-loading-fade": "soften pagination while the next page is loading",
+  "pagination-disabled-soft": "make disabled pagination controls visibly inactive",
+  "pagination-page-change": "indicate a page change request without a full page animation",
+  "pagination-jump-focus": "highlight a jump-to-page control on keyboard focus",
+  "input-group-focus-ring": "show focus across a compound input group",
+  "input-group-addon-highlight": "highlight an addon when its input is active",
+  "input-group-button-press": "add press feedback to an input group action button",
+  "input-group-error-shake": "sync validation feedback across a compound input group",
+  "input-group-success-glow": "confirm a successful input group action",
+  "input-group-copy-success": "confirm that an API key or token was copied",
+  "crud-row-created-flash": "highlight a newly created table row",
+  "crud-row-updated-flash": "highlight a table row after an Ajax update",
+  "crud-row-deleted-collapse": "softly remove a deleted table row",
+  "crud-row-restored-pop": "show that a previously deleted row was restored",
+  "crud-save-success-bar": "show a quiet save success bar in a module configuration screen",
+  "crud-save-error-shake": "draw attention to a failed save without hiding inline errors",
+  "crud-inline-edit-focus": "highlight the active inline edit row",
+  "crud-inline-edit-saving": "show an inline row save in progress",
+  "crud-bulk-action-bar-slide": "reveal a bulk action bar after rows are selected",
+  "crud-bulk-selection-bump": "confirm bulk row selection count changes",
+  "crud-permission-locked-soft": "show that a record is locked by permissions",
+  "crud-danger-zone-pulse": "warn before a destructive admin action",
+  "filter-panel-slide": "reveal an admin filter panel",
+  "filter-chip-pop": "confirm an applied filter chip",
+  "filter-chip-remove": "remove a filter chip without shifting attention",
+  "filter-applied-flash": "confirm that filters were applied to a product list",
+  "filter-reset-fade": "softly reset filter state",
+  "search-input-focus-glow": "show focus on a dense search input",
+  "search-results-reveal": "reveal refreshed search results",
+  "search-empty-pop": "show an empty search result state",
+  "search-loading-line": "show search loading with a slim line indicator",
+  "sort-direction-flip": "show a table sort direction change",
+  "wizard-step-enter": "show a form wizard step entering",
+  "wizard-step-exit": "show a form wizard step leaving",
+  "wizard-step-invalid-shake": "show an invalid wizard step",
+  "wizard-step-complete-check": "confirm a completed wizard step",
+  "wizard-summary-reveal": "reveal the wizard review summary",
+  "wizard-back-soft": "soften backward wizard navigation",
+  "wizard-next-press": "add press feedback to the next-step button",
+  "wizard-saving-overlay": "show wizard saving without replacing form semantics",
+  "state-empty-pop": "reveal an empty state",
+  "state-empty-icon-float": "add quiet visual emphasis to an empty-state icon",
+  "state-error-shake": "call attention to an inline error state",
+  "state-error-retry-press": "make an error retry action feel responsive",
+  "state-success-check": "confirm a successful state change without confetti",
+  "state-warning-attention": "draw restrained attention to a warning state",
+  "state-offline-pulse": "show offline status without blocking the UI",
+  "state-reconnect-fade": "show a reconnect state resolving",
+  "data-card-refresh": "show a card refresh after Ajax data reload",
+  "data-table-refresh": "show a table refresh after Ajax data reload",
+  "data-section-loading-fade": "fade a section while data is loading",
+  "data-overlay-blur": "show a loading overlay without hiding context",
+  "data-inline-saving": "show an inline saving state",
+  "data-chart-loading": "show a chart placeholder while data loads",
+  "data-kpi-refresh": "show a KPI card refresh",
+  "data-diff-highlight": "highlight changed data after a refresh",
+  "notification-item-new": "show a newly arrived inbox notification",
+  "notification-item-read-fade": "softly mark a notification as read",
+  "notification-item-remove": "remove a notification from an inbox list",
+  "notification-counter-bump": "update a notification counter badge",
+  "notification-panel-slide": "open a notification center panel",
+  "notification-priority-pulse": "draw attention to a high-priority notification",
+  "mobile-bottom-bar-active": "show the active item in a mobile bottom bar",
+  "mobile-tabbar-press": "add touch feedback to a mobile tab bar",
+  "mobile-fab-pop": "show a floating action button activation",
+  "mobile-fab-menu-stagger": "toggle a compact mobile FAB action menu",
+  "mobile-swipe-action-reveal": "reveal a mobile swipe action",
+  "mobile-sticky-save-bar": "keep a mobile save bar perceptible",
+  "mobile-keyboard-safe-panel": "keep a mobile panel usable near the keyboard",
+  "mobile-filter-sheet": "open a mobile filter sheet",
+};
+
+function getKind(name, category, directory) {
+  if (/deleted|delete|danger|permission-locked/.test(name)) {
+    return "danger";
   }
-  if (["breadcrumb", "pagination", "button-group", "mobile"].includes(category)) {
-    return "navigation-state";
+  if (/invalid|validation|error-shake|success-glow/.test(name) && ["form", "input-group", "form-wizard"].includes(directory)) {
+    return "validation";
   }
-  if (["form", "input-group", "form-wizard"].includes(category)) {
-    return "form-state";
+  if (/loading|saving|pending|refresh|skeleton|spinner|overlay|chart|kpi|inline-saving/.test(name) || directory === "loading" || category === "skeleton/loading") {
+    return "loading";
   }
-  if (["state", "alert", "toast", "badge/counter"].includes(category)) {
-    return "feedback-state";
+  if (/success|complete|restored|copy-success|check|saved/.test(name)) {
+    return "success";
   }
-  if (directory === "loading" || category === "skeleton/loading") {
-    return "loading-state";
+  if (/updated|created|diff|results|counter|read-fade|item-new|applied|reset|sort|page-change|path-update/.test(name)) {
+    return "data-change";
   }
-  return "component-state";
+  if (/selected|selection|chip|bulk|active-marker/.test(name)) {
+    return "selection";
+  }
+  if (/breadcrumb|pagination|tabs|nav|wizard|mobile|dropdown|offcanvas|panel|sheet|menu|page-jump|active-slide|bottom-bar|tabbar/.test(name)) {
+    return "navigation";
+  }
+  if (/empty|error|warning|offline|reconnect|locked|disabled/.test(name) || category === "state") {
+    return "state";
+  }
+  if (/enter|reveal|slide-up|fade-in|pop/.test(name)) {
+    return "entry";
+  }
+  if (/exit|remove|dismiss|collapse|fade/.test(name)) {
+    return "exit";
+  }
+  return "feedback";
 }
 
 function getDensity(category, directory) {
@@ -523,30 +696,33 @@ function getDensity(category, directory) {
     return densityByCategory[category];
   }
   if (["table", "list", "sidebar", "counter"].includes(directory)) {
-    return "high";
+    return "dense-admin";
   }
-  if (["modal", "offcanvas", "popover", "tooltip", "page"].includes(directory)) {
-    return "low";
+  if (["modal", "offcanvas", "popover", "tooltip", "page", "image", "media"].includes(directory)) {
+    return "marketing";
   }
-  return "medium";
+  return "normal-ui";
 }
 
-function getRisk(name, category) {
-  if (/delete|danger|error|invalid|offline|locked|permission|unsaved|dismiss|close/.test(name)) {
+function getRisk(name, category, requiresJs) {
+  if (requiresJs) {
+    return "requires-js";
+  }
+  if (/delete|danger|error|invalid|offline|locked|permission|unsaved|dismiss|close|shake|overlay|blur/.test(name)) {
     return "medium";
   }
-  if (["admin/crud", "form-wizard", "state"].includes(category)) {
-    return "medium";
+  if (["image/media", "page/layout"].includes(category) || /stagger|fullscreen|zoom/.test(name)) {
+    return "visual-diff";
   }
-  return "low";
+  return "safe";
 }
 
 function getCssProperties(name) {
   const properties = [];
-  if (/slide|lift|reveal|stagger|sheet|marker|underline|line|fill|insert|remove|jump|return|bar|panel|overlay/.test(name)) {
+  if (/slide|lift|reveal|stagger|sheet|marker|underline|line|fill|insert|remove|jump|return|bar|panel|overlay|enter|exit|press|pop|bump|float|flip|collapse|tabbar|fab|swipe/.test(name)) {
     properties.push("transform");
   }
-  if (/fade|soft|blur|glow|flash|loading|skeleton|shimmer|wave|pending|empty|read|unread|disabled|locked|dirty|focus|success|error|warning|offline/.test(name)) {
+  if (/fade|soft|blur|glow|flash|loading|skeleton|shimmer|wave|pending|empty|read|unread|disabled|locked|dirty|focus|success|error|warning|offline|reconnect|saving|refresh|new/.test(name)) {
     properties.push("opacity");
   }
   if (/scale|pop|press|bump|zoom|bounce|pulse|ping/.test(name)) {
@@ -558,14 +734,17 @@ function getCssProperties(name) {
   if (/color|status|success|error|warning|danger|active|dirty|disabled|locked|permission|unread|priority/.test(name)) {
     properties.push("background-color", "border-color", "color");
   }
+  if (/focus|ring/.test(name)) {
+    properties.push("outline-color");
+  }
+  if (/underline/.test(name)) {
+    properties.push("text-decoration-color");
+  }
   if (/blur/.test(name)) {
     properties.push("filter");
   }
   if (/mini-expand/.test(name)) {
     properties.push("clip-path");
-  }
-  if (/striped-motion/.test(name)) {
-    properties.push("background-position");
   }
   if (properties.length === 0) {
     properties.push("opacity", "transform");
@@ -603,23 +782,34 @@ function getBootstrapStates(name, directory) {
     states.add("[aria-busy]");
     states.add(".bsx-is-loading");
   }
-  if (/success|complete|read/.test(name)) {
+  if (/success|complete|read|restored|copy-success/.test(name)) {
     states.add(".bsx-is-success");
   }
-  if (/error|invalid|delete/.test(name)) {
+  if (/error|invalid|delete|danger/.test(name)) {
     states.add(".bsx-is-error");
   }
   if (/dirty|unsaved/.test(name)) {
     states.add(".bsx-is-dirty");
   }
-  if (/selected|bulk/.test(name)) {
+  if (/selected|bulk|selection/.test(name)) {
     states.add(".bsx-is-selected");
   }
-  if (states.size === 0) {
-    states.add(":hover");
-    states.add(":focus-visible");
+  if (/updated|refresh|diff|created|new/.test(name)) {
+    states.add(".bsx-is-updated");
   }
   return [...states];
+}
+
+function getRequiresMarkupChange(name) {
+  return /bar|line|marker|dot|icon|overlay|check|progress|ripple|stagger|counter|skeleton|loader|spinner|fab-menu|swipe|sheet/.test(name);
+}
+
+function getScenario(name, category, directory) {
+  if (scenarioOverrides[name]) {
+    return scenarioOverrides[name];
+  }
+  const [bestFor] = descriptions[category];
+  return `apply ${name.replaceAll("-", " ")} to ${bestFor} in a Bootstrap 5 ${directory} pattern`;
 }
 
 function getDirectory(name) {
@@ -643,6 +833,7 @@ function makeEffects(groups, level) {
       const directory = getDirectory(name);
       const [bestFor, avoidFor] = descriptions[category];
       const runtimeBehavior = getRuntimeBehavior(name);
+      const requiresJs = Boolean(runtimeBehavior);
       return {
         name,
         level,
@@ -650,14 +841,17 @@ function makeEffects(groups, level) {
         directory,
         className: `bsx-${name}`,
         component: directory === "loading" ? "loading state" : directory,
-        requiresJs: Boolean(runtimeBehavior),
+        requiresJs,
         runtimeBehavior,
+        runtimeAction: getRuntimeAction(name),
         motion: getMotion(name),
-        kind: getKind(category, directory),
+        kind: getKind(name, category, directory),
         density: getDensity(category, directory),
-        risk: getRisk(name, category),
+        risk: getRisk(name, category, requiresJs),
         cssProperties: getCssProperties(name),
         bootstrapStates: getBootstrapStates(name, directory),
+        requiresMarkupChange: getRequiresMarkupChange(name),
+        scenario: getScenario(name, category, directory),
         bestFor,
         avoidFor,
         reducedMotion: /fade|blur|glow|color|shadow/.test(name)

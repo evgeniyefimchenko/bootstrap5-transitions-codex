@@ -50,3 +50,13 @@
 - Pass the visual class through `data-bs-custom-class`.
 - Initialize with Bootstrap's Vanilla JS API when the application does not already do so.
 - Do not put primary task content only in a tooltip.
+
+## Dense Admin Scenarios
+
+- Prefer effects with `density: dense-admin` and `risk: safe`.
+- For Ajax row updates, prefer `bsx-crud-row-updated-flash`.
+- For bulk selection, prefer `bsx-crud-bulk-action-bar-slide` or `bsx-crud-bulk-selection-bump`.
+- For filters and search, prefer `bsx-filter-applied-flash`, `bsx-filter-chip-remove`, `bsx-search-results-reveal`, or `bsx-search-loading-line`.
+- For data refresh, prefer `bsx-data-table-refresh`, `bsx-data-card-refresh`, or `bsx-data-diff-highlight`.
+- Keep feedback close to the changed control or row. Avoid page-level reveal effects in dense admin screens.
+- If a selected effect has `Requires JS: yes`, use only `assets/js/bootstrap5-transitions.js`; never use `assets/js/demo.js`.

@@ -183,6 +183,36 @@ bsx-skeleton-shimmer
 
 Репозиторий не поставляет отдельные UI-компоненты и не заменяет Bootstrap API. Он добавляет CSS-классы, HTML-сниппеты и небольшой runtime для явно отмеченных интерактивных примеров.
 
+## Scenario-first effect selection
+
+Проект — не просто список анимаций. Каждый effect содержит metadata, чтобы Codex и разработчик выбирали его по реальному UI-сценарию:
+
+* `kind`;
+* `density`;
+* `risk`;
+* `cssProperties`;
+* `bootstrapStates`;
+* `requiresMarkupChange`;
+* `scenario`.
+
+Это помогает выбирать тихий admin-safe feedback вместо декоративного motion.
+
+Пример запроса:
+
+```text
+Use $bootstrap5-transitions.
+Improve this Bootstrap 5 admin table.
+Context: dense admin UI.
+Scenario: row updated after Ajax save.
+Prefer safe CSS-only effect.
+
+Expected selection:
+bsx-crud-row-updated-flash
+kind: data-change
+density: dense-admin
+risk: safe
+```
+
 ## Codex Agent Skill
 
 В репозитории есть Codex Agent Skill:
